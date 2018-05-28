@@ -1,0 +1,28 @@
+{
+  "name": "cmt-breeze",
+  "title": "Breeze",
+  "version": "1.0.0-alpha1",
+  "homepage": "http://breeze.cmsgtools.org/",
+  "authors": [
+    "Bhagwat Singh Chouhan"
+  ],
+  "description": "Breeze is CSS Framework which provide responsive grid, commonly used mixins, themeable color scheme and several re-usable components.",
+  "keywords": [
+	"cmgtools",
+	"CSS Framework",
+	"cmsgears",
+	"responsive grid",
+	"components",
+	"themes"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    ".gitignore",
+    "gruntfile.js",
+    "package.json",
+    "examples"
+  ],
+  "main": "dist/css/breeze.css",
+  "dependencies": {
+  }
+}

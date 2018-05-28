@@ -1,0 +1,106 @@
+/**********************************************************************
+Description: It defines the styles of data card components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card components as listed below:
+
+* Card        - The barebone card class with minimum styles.
+*
+* Element     - The element cards will be used by blocks to show content having header icon and text.
+***********************************************************************/
+
+// == Structure - Card ==============
+
+.card {
+	position: relative;
+
+	// background cover
+	.card-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.card-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		.card-header {
+			position: relative;
+
+			.card-header-icon {
+				// Header Icon or Avatar
+			}
+
+			.card-header-title {
+				// Header Title
+			}
+
+			.card-header-info {
+				// Header Info
+			}
+
+			.card-header-actions {
+				// Header Actions
+			}
+		}
+
+		.card-data {
+			position: relative;
+		}
+
+		.card-footer {
+			position: relative;
+
+			.card-footer-icon {
+				// Footer Icon
+			}
+
+			.card-footer-title {
+				// Footer Title
+			}
+
+			.card-footer-info {
+				// Footer Info
+			}
+
+			.card-footer-actions {
+				// Footer Actions
+			}
+		}
+	}
+}
+
+// == Element Card ==================
+
+.card-element {
+
+	.card-content-wrap {
+
+		.card-header {
+			text-align: center;
+			padding: 1em;
+		}
+
+		 .card-data {
+			text-align: center;
+			padding: 1em;
+		}
+
+		 .card-footer {
+			text-align: center;
+			padding: 1em;
+		}
+	}
+}

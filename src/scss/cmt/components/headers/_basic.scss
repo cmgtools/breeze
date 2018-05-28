@@ -1,0 +1,145 @@
+/**********************************************************************
+Description: It defines the styles for header components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
+*
+* Basic       - The basic header define the styles for primary header having logo and menus.
+***********************************************************************/
+
+// == Structure - Header ============
+
+.header {
+	position: relative;
+
+	&.header-fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10001; // modal popups must override this index
+	}
+
+	&.header-absolute {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 10001; // modal popups must override this index
+	}
+}
+
+// == Basic Header ==================
+
+/* Basic Header having fixed width logo, main menu and mobile menu icon.
+ * Responsive approach - Desktop first
+ * Logo - Placed on left side
+ * Main Menu - Placed on right side, hidden for tablet and mobile
+ * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
+ * Main menu can alone do the job in most of the cases.
+ */
+.header-basic {
+	background-color: $color-header;
+	color: $color-header-text;
+	position: relative;
+	z-index: 10001;
+	@extend %clearfix;
+
+	// Absolute positioned on left side wrapping the logo
+	.header-logo {
+		cursor: pointer;
+		padding: 10px;
+		display: block;
+		z-index: 2;
+		float: left;
+
+		.logo {
+			width: 140px;
+		}
+	}
+
+	#menu-main {
+		padding: 10px;
+		text-align: right;
+		display: block;
+		z-index: 1;
+		float: right;
+	}
+
+	// Should be wrapped within #menu-mobile-wrap
+	#menu-main-mobile {
+		position: absolute;
+		display: none;
+
+		li {
+			background-color: $color-primary-l;
+			color: $color-primary-text-l;
+			padding: 0.75em 0;
+
+			a, .link {
+				color: $color-primary-text-l;
+				
+				&:hover {
+					color: $color-link;
+				}
+			}
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.header-logo {
+			
+			.logo {
+				width: 70px;
+			}
+		}
+
+		#menu-main {
+			margin-top: 55px;
+			display: none;
+		}
+
+		#mobile-actions {
+			padding: 20px 10px;
+			text-align: right;
+			display: block;
+			z-index: 1;
+			float: right;
+
+			.mobile-action {
+				cursor: pointer;
+				margin-left: 0.5em;
+			}
+		}
+		
+		#menu-main-mobile {
+			width: 320px;
+			right: 0;
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+		
+		#menu-main-mobile {
+			width: 100%;
+		}
+	}
+
+    @include responsive-min( screen-tablet-large ) {
+		padding: 0 5%;
+
+		.header-logo {
+			padding-left: 0;
+		}
+
+		#menu-main {
+			padding-right: 0;
+		}
+		
+		#mobile-actions, #menu-mobile-wrap {
+			display: none;
+		}
+	}
+}

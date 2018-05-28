@@ -1,0 +1,476 @@
+/**********************************************************************
+Description: This file define the basic and common styling used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the basic styles as listed below:
+* Box border        - It's applied to html and all elements in order to calculate width including border and padding.
+* Screen            - The default classes having screen sizes using variables defined in variable file.
+* Floats            - The floating classes either clear the float, no float or add left/right float.
+* Width & Height    - This section define width and height classes having predefined values in percentage.
+* Alignments        - The alignment classes allows to align either the element itself or it's children.
+* Height Filler     - These classes can be used to add vertical spacing.
+* Tab Filler        - These classes can be used to add horizontal spacing between inline boxes.
+* Positioning       - This section define the positioning classes.
+* Display           - The display classes control the display property i.e. inline, block or inline block.
+* Visibility        - These classes control the display property i.e. block or none. The visibility property specific
+*                     classes can be used to show or hide an element keeping it's space on screen.
+* Cursor            - The cursor classes.
+* Disabled          - It disable an element by changing color to gray and cursor to default.
+* Fluid             - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
+* Message           - These classes can be used to show message according to failure, warning or success.
+***********************************************************************/
+
+/**
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including
+ * border and padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+
+html {
+  -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+	 -moz-box-sizing: inherit;
+		  box-sizing: inherit;
+}
+
+// The primary color will be used as default color for document body and text.
+
+html, body {
+	background-color: $color-primary;
+	color: $color-primary-text;
+}
+
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is
+ * a tedius task without going responsive. CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ */
+
+.screen {
+
+	&.screen-mobile-small {
+		width: $screen-mobile-small;
+	}
+
+	&.screen-mobile-large {
+		width: $screen-mobile-large;
+	}
+
+	&.screen-tablet-small {
+		width: $screen-tablet-small;
+	}
+
+	&.screen-tablet-large {
+		width: $screen-tablet-large;
+	}
+
+	&.screen-desktop-small {
+		width: $screen-desktop-small;
+	}
+
+	&.screen-desktop-medium {
+		width: $screen-desktop-medium;
+	}
+
+	&.screen-desktop-large {
+		width: $screen-desktop-large;
+	}
+
+	&.screen-desktop-xlarge {
+		width: $screen-desktop-xlarge;
+	}
+}
+
+/**
+ * Floating Blocks - These classes can be used to clear or float the elements.
+ */
+
+.clear {
+	clear: both !important;
+}
+
+.left {
+	float: left !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.clear-none {
+	clear: none !important;
+}
+
+.float-none {
+	float: none !important;
+}
+
+.float-none-center {
+	float: none !important;
+	margin: 0 auto;
+}
+
+/**
+ * Pre-defined width and height, handy at few places.
+ */
+
+// Width
+
+.width {
+	width: 100%;
+
+	&.width-auto {
+		width: auto;
+	}
+
+	&.width-1 {
+		width: 1%;
+	}
+
+	&.width-5 {
+		width: 5%;
+	}
+
+	&.width-10 {
+		width: 10%;
+	}
+
+	&.width-25 {
+		width: 25%;
+	}
+
+	&.width-50 {
+		width: 50%;
+	}
+
+	&.width-75 {
+		width: 75%;
+	}
+
+	&.width-80 {
+		width: 80%;
+	}
+}
+
+// Height
+
+.height {
+	height: 100%;
+
+	&.height-auto {
+		height: auto;
+	}
+
+	&.height-25 {
+		height: 25%;
+	}
+
+	&.height-50 {
+		height: 50%;
+	}
+
+	&.height-75 {
+		height: 75%;
+	}
+}
+
+/**
+ * Alignments for centered box and text.
+ */
+
+// Horizontally center align the element
+.center {
+	margin: 0 auto !important;
+}
+
+// Align the children of an element - left, horizontally center and right
+.align {
+	text-align: left !important;
+
+	&.align-center {
+		text-align: center !important;
+	}
+
+	&.align-right {
+		text-align: right !important;
+	}
+}
+
+/**
+ * Height fillers to seperate boxes.
+ */
+
+.filler-height {
+	height: 1rem;
+
+	&.filler-height-small {
+		height: 1.5rem;
+	}
+
+	&.filler-height-medium {
+		height: 2rem;
+	}
+
+	&.filler-height-large {
+		height: 2.5rem;
+	}
+
+	&.filler-height-xlarge {
+		height: 3rem;
+	}
+}
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+	width: 1em;
+	height: 1px;
+	display: inline-block;
+
+	&.filler-tab-small {
+		width: 2em;
+	}
+
+	&.filler-tab-medium {
+		width: 4em;
+	}
+
+	&.filler-tab-large {
+		width: 8em;
+	}
+
+	&.filler-tab-xlarge {
+		width: 10em;
+	}
+}
+
+// Positioning
+
+.absolute {
+	position: absolute !important;
+
+	// Horizontally center
+	&.absolute-center {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// Vertically center - both parent and child needs fixed width and height
+	&.absolute-middle {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.absolute-top-left {
+		top: 0px;
+		left: 0px;
+	}
+
+	// Horizontally center at top - child needs fixed width smaller than parent
+	&.absolute-top-center {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+	}
+
+	&.absolute-top-right {
+		top: 0px;
+		right: 0px;
+	}
+
+	&.absolute-bottom-left {
+		bottom: 0px;
+		left: 0px;
+	}
+
+	// Horizontally center at bottom - child needs fixed width smaller than parent
+	&.absolute-bottom-center {
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+
+	&.absolute-bottom-right {
+		bottom: 0px;
+		right: 0px;
+	}
+}
+
+.relative {
+	position: relative !important;
+}
+
+.fixed {
+	position: fixed !important;
+}
+
+// Stacked
+.layer {
+	z-index: 1;
+
+	&.layer-1 {
+		z-index: 10;
+	}
+	
+	&.layer-2 {
+		z-index: 20;
+	}
+	
+	&.layer-3 {
+		z-index: 30;
+	}
+	
+	&.layer-4 {
+		z-index: 40;
+	}
+	
+	&.layer-5 {
+		z-index: 50;
+	}
+}
+
+// Display Type
+
+.block {
+	display: block !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
+
+.inline {
+	display: inline !important;
+}
+
+// Visibility - Without own space
+
+.visible {
+	display: block !important;
+}
+
+// Strictly hidden
+.hidden {
+	display: none !important;
+}
+
+.hidden-easy {
+	display: none;
+}
+
+// Visibility - Hidden/Displayed occupying space on screen
+
+.visible-space {
+	visibility: visible !important;
+}
+
+.hidden-space {
+	visibility: hidden !important;
+}
+
+// Cursors - Direct
+
+.pointer {
+	cursor: pointer;
+}
+
+.crosshair {
+	cursor: crosshair;
+}
+
+.help {
+	cursor: help;
+}
+
+.wait {
+	cursor: wait;
+}
+
+// Cursors - Standard
+
+.cursor {
+	cursor: default;
+
+	&.cursor-pointer {
+		cursor: pointer;
+	}
+
+	&.cursor-crosshair {
+		cursor: crosshair;
+	}
+
+	&.cursor-help {
+		cursor: help;
+	}
+
+	&.cursor-wait {
+		cursor: wait;
+	}
+}
+
+// Disabled
+.disabled {
+	background-color: $color-gray !important;
+	color: $color-white !important;
+	cursor: default !important;
+
+	&:hover {
+		background-color: $color-gray !important;
+		color: $color-white !important;
+	}
+}
+
+// Fluid Elements (blocks, images)
+
+.fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+// Messages
+
+.warning, .error, .success, .info, .help-block {
+	font-size: $font-size-8;
+	width: 100%;
+
+	&.highlight {
+		background-color: $color-secondary;
+	}
+}
+
+.error {
+	color: $color-error;
+}
+
+.warning {
+	color: $color-warning;
+}
+
+.success {
+	color: $color-success;
+}
+
+.info {
+	color: $color-info;
+}
+
+// Required for Yii Forms
+.form-group .help-block {
+	color: $color-error;
+}
+
+.error-field {
+	@include border( $size-default, solid, $color-error );
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
+}
