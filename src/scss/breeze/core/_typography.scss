@@ -208,6 +208,48 @@ p, span, em, div, a {
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
 		padding: 0.5em 0;
 	}
+
+	.reader-left {
+		text-align: left !important;
+	}
+	
+	.reader-center {
+		text-align: center !important;
+	}
+
+	.reader-right {
+		text-align: right !important;
+	}
+	
+	.reader-justify {
+		text-align: justify !important;
+	}
+	
+	ol {
+
+		li {
+			list-style-position: inside;
+			list-style-type: decimal;
+			line-height: 2.5;
+		}
+
+		ul, ol {
+			margin-left: 2em;
+		}
+	}
+
+	ul {
+
+		li {
+			list-style-position: inside;
+			list-style-type: disc;
+			line-height: 2.5;
+		}
+
+		ul, ol {
+			margin-left: 2em;
+		}
+	}
 }
 
 // icons alignment

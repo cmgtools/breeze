@@ -32,12 +32,10 @@ Details: It defines the styles for header components as listed below:
 
 // == Basic Header ==================
 
-/* Basic Header having fixed width logo, main menu and mobile menu icon.
- * Responsive approach - Desktop first
+/* Basic Header having fixed height logo, main menu and mobile menu.
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
- * Main menu can alone do the job in most of the cases.
+ * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
 	background-color: $color-header;
@@ -49,37 +47,76 @@ Details: It defines the styles for header components as listed below:
 	// Absolute positioned on left side wrapping the logo
 	.header-logo {
 		cursor: pointer;
-		padding: 10px;
 		display: block;
 		z-index: 2;
 		float: left;
+	}
 
-		.logo {
-			width: 140px;
+	@include responsive-max( screen-tablet-large ) {
+		height: 50px;
+
+		.header-logo {
+			padding: 5px 10px;
+
+			.logo {
+
+				img {
+					height: 40px;
+				}
+			}
 		}
-	}
 
-	#menu-main {
-		padding: 10px;
-		text-align: right;
-		display: block;
-		z-index: 1;
-		float: right;
-	}
+		#menu-main {
+			display: none;
+		}
 
-	// Should be wrapped within #menu-mobile-wrap
-	#menu-main-mobile {
-		position: absolute;
-		display: none;
+		// Should be wrapped within #menu-mobile-wrap
+		#menu-main-mobile {
+			position: absolute;
+			display: none;
+			width: 320px;
+			right: 0;
 
-		li {
-			background-color: $color-primary-l;
-			color: $color-primary-text-l;
-			padding: 0.75em 0;
+			li {
+				box-shadow: 0 -4px 2px -5px $color-tertiary;
 
-			a, .link {
-				color: $color-primary-text-l;
+				a, .link {
+					background-color: $color-primary-l;
+					color: $color-primary-text-l;
+					padding: 1em 0;
+					@include transit-all( $transit-eio, $transit-time-small );
+
+					&:hover {
+						background-color: $color-primary-d;
+						color: $color-link;
+					}
+				}
 				
+				&:active {
+					
+					a, .link {
+						background-color: $color-tertiary;
+						color: $color-tertiary-text;
+					}
+				}
+			}
+		}
+
+		#mobile-actions {
+			margin: 5px 10px;
+			line-height: 40px;
+			text-align: right;
+			display: block;
+			z-index: 1;
+			float: right;
+
+			.mobile-action {
+				color: $color-primary-text-l;
+				cursor: pointer;
+				margin-left: 0.5em;
+				font-size: 2em;
+				@include transit-all( $transit-eio, $transit-time-small );
+
 				&:hover {
 					color: $color-link;
 				}
@@ -87,59 +124,80 @@ Details: It defines the styles for header components as listed below:
 		}
 	}
 
-	@include responsive-max( screen-tablet-large ) {
-
-		.header-logo {
-			
-			.logo {
-				width: 70px;
-			}
-		}
-
-		#menu-main {
-			margin-top: 55px;
-			display: none;
-		}
-
-		#mobile-actions {
-			padding: 20px 10px;
-			text-align: right;
-			display: block;
-			z-index: 1;
-			float: right;
-
-			.mobile-action {
-				cursor: pointer;
-				margin-left: 0.5em;
-			}
-		}
-		
-		#menu-main-mobile {
-			width: 320px;
-			right: 0;
-		}
-	}
-
 	@include responsive-max( screen-mobile-large ) {
-		
+
 		#menu-main-mobile {
 			width: 100%;
 		}
 	}
 
     @include responsive-min( screen-tablet-large ) {
+		height: 80px;
 		padding: 0 5%;
 
 		.header-logo {
-			padding-left: 0;
+			padding: 5px 10px 5px 0;
+
+			.logo {
+
+				img {
+					height: 70px;
+				}
+			}
 		}
 
 		#menu-main {
+			padding: 10px;
 			padding-right: 0;
+			text-align: right;
+			display: block;
+			z-index: 1;
+			float: right;
 		}
-		
+
 		#mobile-actions, #menu-mobile-wrap {
 			display: none;
+		}
+		
+		// Header height reduced on scroll
+		&.header-small {
+			height: 50px;
+
+			#menu-main {
+				height: 50px;
+				line-height: 50px;
+				padding: 0;
+			}
+		}
+	}
+}
+
+// Basic header with two logos
+.header-basic-duo {
+
+	.header-logo {
+
+		.logo-small {
+			display: none;
+		}
+	}
+
+	// Header height reduced on scroll
+	&.header-small {
+
+		.logo {
+			display: none;
+		}
+
+		.header-logo {
+
+			.logo-small {
+				display: inline-block;
+
+				img {
+					height: 40px;
+				}
+			}
 		}
 	}
 }

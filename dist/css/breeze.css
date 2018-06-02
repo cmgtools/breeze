@@ -3360,6 +3360,26 @@ p, span, em, div, a {
   line-height: 1.5; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
     padding: 0.5em 0; }
+  .reader .reader-left {
+    text-align: left !important; }
+  .reader .reader-center {
+    text-align: center !important; }
+  .reader .reader-right {
+    text-align: right !important; }
+  .reader .reader-justify {
+    text-align: justify !important; }
+  .reader ol li {
+    list-style-position: inside;
+    list-style-type: decimal;
+    line-height: 2.5; }
+  .reader ol ul, .reader ol ol {
+    margin-left: 2em; }
+  .reader ul li {
+    list-style-position: inside;
+    list-style-type: disc;
+    line-height: 2.5; }
+  .reader ul ul, .reader ul ol {
+    margin-left: 2em; }
 
 .cmti, .fa {
   vertical-align: middle; }
@@ -6580,12 +6600,10 @@ Details: It defines the styles for header components as listed below:
     width: 100%;
     z-index: 10001; }
 
-/* Basic Header having fixed width logo, main menu and mobile menu icon.
- * Responsive approach - Desktop first
+/* Basic Header having fixed height logo, main menu and mobile menu.
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
- * Main menu can alone do the job in most of the cases.
+ * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
   background-color: #363636;
@@ -6594,59 +6612,96 @@ Details: It defines the styles for header components as listed below:
   z-index: 10001; }
   .header-basic .header-logo {
     cursor: pointer;
-    padding: 10px;
     display: block;
     z-index: 2;
     float: left; }
-    .header-basic .header-logo .logo {
-      width: 140px; }
-  .header-basic #menu-main {
-    padding: 10px;
-    text-align: right;
-    display: block;
-    z-index: 1;
-    float: right; }
-  .header-basic #menu-main-mobile {
-    position: absolute;
-    display: none; }
-    .header-basic #menu-main-mobile li {
-      background-color: white;
-      color: #171717;
-      padding: 0.75em 0; }
-      .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
-        color: #171717; }
-        .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
-          color: #298ccf; }
   @media only screen and (max-width: 1024px) {
-    .header-basic .header-logo .logo {
-      width: 70px; }
-    .header-basic #menu-main {
-      margin-top: 55px;
-      display: none; }
-    .header-basic #mobile-actions {
-      padding: 20px 10px;
-      text-align: right;
-      display: block;
-      z-index: 1;
-      float: right; }
-      .header-basic #mobile-actions .mobile-action {
-        cursor: pointer;
-        margin-left: 0.5em; }
-    .header-basic #menu-main-mobile {
-      width: 320px;
-      right: 0; } }
+    .header-basic {
+      height: 50px; }
+      .header-basic .header-logo {
+        padding: 5px 10px; }
+        .header-basic .header-logo .logo img {
+          height: 40px; }
+      .header-basic #menu-main {
+        display: none; }
+      .header-basic #menu-main-mobile {
+        position: absolute;
+        display: none;
+        width: 320px;
+        right: 0; }
+        .header-basic #menu-main-mobile li {
+          box-shadow: 0 -4px 2px -5px #87BA45; }
+          .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
+            background-color: white;
+            color: #171717;
+            padding: 1em 0;
+            -webkit-transition: all 250ms ease-in-out 0s;
+            -moz-transition: all 250ms ease-in-out 0s;
+            -ms-transition: all 250ms ease-in-out 0s;
+            -o-transition: all 250ms ease-in-out 0s;
+            transition: all 250ms ease-in-out 0s; }
+            .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
+              background-color: lightgray;
+              color: #298ccf; }
+          .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
+            background-color: #87BA45;
+            color: #E6E6E6; }
+      .header-basic #mobile-actions {
+        margin: 5px 10px;
+        line-height: 40px;
+        text-align: right;
+        display: block;
+        z-index: 1;
+        float: right; }
+        .header-basic #mobile-actions .mobile-action {
+          color: #171717;
+          cursor: pointer;
+          margin-left: 0.5em;
+          font-size: 2em;
+          -webkit-transition: all 250ms ease-in-out 0s;
+          -moz-transition: all 250ms ease-in-out 0s;
+          -ms-transition: all 250ms ease-in-out 0s;
+          -o-transition: all 250ms ease-in-out 0s;
+          transition: all 250ms ease-in-out 0s; }
+          .header-basic #mobile-actions .mobile-action:hover {
+            color: #298ccf; } }
   @media only screen and (max-width: 480px) {
     .header-basic #menu-main-mobile {
       width: 100%; } }
   @media only screen and (min-width: 1025px) {
     .header-basic {
+      height: 80px;
       padding: 0 5%; }
       .header-basic .header-logo {
-        padding-left: 0; }
+        padding: 5px 10px 5px 0; }
+        .header-basic .header-logo .logo img {
+          height: 70px; }
       .header-basic #menu-main {
-        padding-right: 0; }
+        padding: 10px;
+        padding-right: 0;
+        text-align: right;
+        display: block;
+        z-index: 1;
+        float: right; }
       .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
-        display: none; } }
+        display: none; }
+      .header-basic.header-small {
+        height: 50px; }
+        .header-basic.header-small #menu-main {
+          height: 50px;
+          line-height: 50px;
+          padding: 0; } }
+
+.header-basic-duo .header-logo .logo-small {
+  display: none; }
+
+.header-basic-duo.header-small .logo {
+  display: none; }
+
+.header-basic-duo.header-small .header-logo .logo-small {
+  display: inline-block; }
+  .header-basic-duo.header-small .header-logo .logo-small img {
+    height: 40px; }
 
 /**********************************************************************
 Description: It defines the styles for footer components available in CMT-UI css framework.
@@ -7387,34 +7442,15 @@ Details: It defines the styles of card components as listed below:
     .card .card-content-wrap .card-footer {
       position: relative; }
 
-.card-element .card-content-wrap .card-header {
-  text-align: center;
-  padding: 1em; }
-
-.card-element .card-content-wrap .card-data {
-  text-align: center;
-  padding: 1em; }
-
-.card-element .card-content-wrap .card-footer {
-  text-align: center;
-  padding: 1em; }
-
 /**********************************************************************
-Description: It defines the styles of box components available in CMT-UI css framework.
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+			 components displayed on search pages, panels having content, form etc.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of box components as listed below:
 
-* Footer      - The barebone box class with minimum styles.
-*
-* Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
-*               content within content box. The content is aligned center by default.
-*				The Avatar, Banner and Video can be placed any any position within the Box. The possible postions 
-*				are before header, within header, within content, within footer.
-*
-* Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
-*               header and footer visible. The content collapse on clicking header / collapse button on header.
+* Box      - The barebone box class with minimum styles.
 ***********************************************************************/
 .box {
   position: relative; }
@@ -7452,39 +7488,54 @@ Details: It defines the styles of box components as listed below:
       .box .box-content-wrap .box-footer-wrap .box-footer {
         position: relative; }
 
-.box-basic {
-  padding: 1rem; }
-  .box-basic .box-content-wrap .box-header-wrap {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.5rem; }
-  .box-basic .box-content-wrap .box-content {
-    background-color: #F2F2F2;
-    color: #363636;
-    padding: 0.5rem; }
-  .box-basic .box-content-wrap .box-footer-wrap {
-    background-color: #556479;
-    color: #6a8fc5;
-    padding: 0.25rem; }
+/**********************************************************************
+Description: It defines the styles of box panels used to display data and forms.
 
-.box-basic-icon {
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				are outside content wrapper as background, within header, within content and within footer.
+*
+* Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+.box-panel .box-content-wrap .box-header-wrap {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem; }
+
+.box-panel .box-content-wrap .box-content {
+  background-color: #F2F2F2;
+  color: #363636;
+  padding: 0.5rem; }
+
+.box-panel .box-content-wrap .box-footer-wrap {
+  background-color: #556479;
+  color: #6a8fc5;
+  padding: 0.25rem; }
+
+.box-panel-icon {
   padding: 1rem; }
-  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-icon {
+  .box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-icon {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
     left: 0.5rem; }
-  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
+  .box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
     padding-left: 1.5rem; }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger {
+.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -7533,7 +7584,7 @@ Details: It defines the styles of form box components as listed below:
 ***********************************************************************/
 .box-form {
   position: relative; }
-  .box-form .box-form-trigger {
+  .box-form .box-trigger-form {
     cursor: pointer; }
   .box-form .box-form-info-wrap {
     display: block; }
@@ -7543,14 +7594,14 @@ Details: It defines the styles of form box components as listed below:
 .box-form-basic {
   background-color: #F2F2F2;
   color: #363636; }
-  .box-form-basic .box-form-trigger {
+  .box-form-basic .box-trigger-form {
     position: absolute;
     display: inline-block;
-    top: 10px;
-    right: 10px;
+    top: 0.5rem;
+    right: 0.5rem;
     color: #298ccf;
     cursor: pointer; }
-    .box-form-basic .box-form-trigger:hover {
+    .box-form-basic .box-trigger-form:hover {
       color: #E74343; }
 
 .box-form-collapsible .box-form-collapsible-trigger {
@@ -7676,9 +7727,9 @@ Details: It defines the styles of widget components as listed below:
     color: #c2d1e7; }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -7687,13 +7738,12 @@ Details: It defines the styles for header components as listed below:
 * Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
 *               listed options:
 *                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
 *                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
 *
 * Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
 *               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
 ***********************************************************************/
 .block {
   position: relative; }
@@ -8037,286 +8087,99 @@ Details: It defines the styles for data table components as listed below:
     text-align: left; }
 
 /**********************************************************************
-Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
-			 related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+Description: It defines the styles of the page component. We can devide the entire page 
+			 in multiple sections. Each page can have background image with or without 
+			 parallax effect, a content wrapper which wraps page header, content and footer.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles of blog components as listed below:
-* Blog          - The barebone blog class with minimum styles common for all the blog components. The base class can
-*                 have below listed options:
-*                     - It wraps multiple posts having banner, title, summary, author and publish info.
-*                     - It might also show pagination to navigate through pages.
-*                     - It might support ajax based pagination following either traditional page links or scroll
-*                       based pagination.
-* Basic         - It shows banner floated left and content flowing below banner. Author is next to banner with time
-*                 details. Title is below author and than content flows.
-* Regular       - It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and
-*                 post info in 4th row.
-* Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
-*                 Content in 3rd row and post info in 4th row.
-***********************************************************************/
-.blog > .texture {
-  z-index: 10; }
+Details: It defines the styles for header components as listed below:
 
-.blog .blog-posts .blog-post {
+* Page       - The barebone page class with minimum styles common for all the pages. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*                   - Height of page must not be set using min-height to get background with parallax working.
+***********************************************************************/
+.page {
   position: relative; }
-  .blog .blog-posts .blog-post .blog-post-banner > .texture {
+  .page .page-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-scroll {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 50% 50% 9 !important;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-parallax {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: 5; }
+  .page > .texture {
     z-index: 10; }
-  .blog .blog-posts .blog-post .blog-post-banner .blog-post-title {
-    z-index: 20; }
-  .blog .blog-posts .blog-post .blog-post-banner .blog-post-view {
-    z-index: 30; }
-    .blog .blog-posts .blog-post .blog-post-banner .blog-post-view .blog-post-title {
-      z-index: 40; }
-
-.blog-basic .blog-post {
-  margin-bottom: 1em; }
-  .blog-basic .blog-post .blog-post-banner {
-    padding: 1em; }
-    .blog-basic .blog-post .blog-post-banner img {
-      width: 100%; }
-      .blog-basic .blog-post .blog-post-banner img.bkg-fill {
-        background-color: #F2F2F2; }
-  .blog-basic .blog-post .blog-post-author {
-    position: relative; }
-    .blog-basic .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 80px;
-      height: 80px; }
-      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .blog-basic .blog-post .blog-post-author .blog-post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .blog-basic .blog-post .blog-post-content-wrap .blog-post-content {
-    padding: 1em; }
-    .blog-basic .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
-      font-size: 1.17em; }
-  @media only screen and (min-width: 769px) {
-    .blog-basic .blog-post .blog-post-banner {
-      float: left;
-      width: 350px; }
-    .blog-basic .blog-post .blog-post-author {
-      width: 100%;
-      padding-left: 350px;
-      position: relative; } }
-
-.blog-regular .blog-post {
-  margin-bottom: 1em; }
-  .blog-regular .blog-post .blog-post-banner {
-    padding: 1em; }
-    .blog-regular .blog-post .blog-post-banner img {
-      width: 100%; }
-      .blog-regular .blog-post .blog-post-banner img.bkg-fill {
-        background-color: #F2F2F2; }
-  .blog-regular .blog-post .blog-post-author {
-    position: relative; }
-    .blog-regular .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 80px;
-      height: 80px; }
-      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .blog-regular .blog-post .blog-post-author .blog-post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .blog-regular .blog-post .blog-post-content-wrap .blog-post-content {
-    padding: 1em; }
-    .blog-regular .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
-      font-size: 1.17em; }
-  @media only screen and (min-width: 769px) {
-    .blog-regular .blog-post .blog-post-banner {
-      float: left;
-      width: 350px; }
-    .blog-regular .blog-post .blog-post-author {
-      width: 100%;
-      padding-left: 350px;
-      position: relative; } }
-
-.blog-banner .blog-post {
-  margin-bottom: 1em;
-  background-color: #F2F2F2;
-  color: #363636; }
-  .blog-banner .blog-post .blog-post-banner {
+  .page .page-content-wrap {
     position: relative;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    .blog-banner .blog-post .blog-post-banner .blog-post-view {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 50;
-      visibility: hidden;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      -moz-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -ms-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -o-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -webkit-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s; }
-      .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
-        text-align: center; }
-        .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary .blog-post-icon {
-          color: #FFFFFF; }
-    .blog-banner .blog-post .blog-post-banner:hover .blog-post-view {
-      visibility: visible;
-      opacity: 1; }
-  .blog-banner .blog-post .blog-post-author {
-    position: relative; }
-    .blog-banner .blog-post .blog-post-author span {
-      display: inline-block; }
-    .blog-banner .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 40px;
-      height: 40px; }
-      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-  .blog-banner .blog-post .blog-post-content-wrap {
-    padding: 1rem;
-    line-height: 1.5em; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-title {
-      margin: 0; }
-      .blog-banner .blog-post .blog-post-content-wrap .blog-post-title a {
-        display: inline-block;
-        width: 100%; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
-      text-align: center; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-content {
-      padding: 1rem 0; }
-  @media only screen and (min-width: 769px) {
-    .blog-banner .blog-post .blog-post-banner {
-      height: 180px; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
-      text-align: right; } }
-  @media only screen and (min-width: 1025px) {
-    .blog-banner .blog-post .blog-post-banner {
-      height: 250px; } }
-
-.blog-banner-recent .blog-post {
-  padding: 0.5rem;
-  margin-bottom: 1em;
-  background-color: #F2F2F2;
-  color: #363636; }
-  .blog-banner-recent .blog-post .blog-post-banner {
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 65px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    .blog-banner-recent .blog-post .blog-post-banner .blog-post-view {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 50;
-      visibility: hidden;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      -moz-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -ms-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -o-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -webkit-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s; }
-      .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
-        text-align: center; }
-        .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary .icon {
-          color: #FFFFFF; }
-    .blog-banner-recent .blog-post .blog-post-banner:hover .blog-post-view {
-      visibility: visible;
-      opacity: 1; }
-  .blog-banner-recent .blog-post .blog-post-author {
-    display: none; }
-  .blog-banner-recent .blog-post .blog-post-content-wrap {
-    padding: 0;
-    padding-left: 0.5rem;
-    float: left;
-    width: 50%;
-    height: 65px; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 0.5em; }
-      .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title a {
-        display: inline-block;
-        width: 100%; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-info {
-      display: none; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-content {
-      padding: 0;
-      height: 60px;
-      overflow: hidden; }
-  @media only screen and (min-width: 769px) {
-    .blog-banner-recent .blog-post .blog-post-banner {
-      height: 80px; } }
-  @media only screen and (min-width: 1025px) {
-    .blog-banner-recent .blog-post .blog-post-banner {
-      height: 120px; } }
-
-/**********************************************************************
-Description: It defines the styles of the blog post single page.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles of blog post as listed below:
-* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
-*                 and author details.
-* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
-***********************************************************************/
-.post .post-banner > .texture {
-  z-index: 10; }
-
-.post .post-banner .post-title {
-  z-index: 20; }
-
-.post-basic {
-  padding: 1em;
-  background-color: white; }
-  .post-basic .post-banner {
-    height: 150px; }
-    .post-basic .post-banner img {
-      width: 100%; }
-  .post-basic .post-author {
-    position: relative; }
-    .post-basic .post-author .post-author-avatar {
-      display: inline-block;
-      width: 80px;
-      height: 80px; }
-      .post-basic .post-author .post-author-avatar img {
-        width: 100%; }
-      .post-basic .post-author .post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .post-basic .post-author .post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .post-basic .post-content {
-    margin-bottom: 1em; }
-  @media only screen and (min-width: 481px) {
-    .post-basic .post-banner {
-      height: 200px; } }
-  @media only screen and (min-width: 1025px) {
-    .post-basic .post-banner {
-      height: 250px; } }
+    z-index: 15; }
+    .page .page-content-wrap .page-header-wrap {
+      position: relative; }
+      .page .page-content-wrap .page-header-wrap .page-header {
+        position: relative;
+        z-index: 15; }
+    .page .page-content-wrap .page-content {
+      position: relative; }
+      .page .page-content-wrap .page-content .page-content-data {
+        position: relative; }
+      .page .page-content-wrap .page-content .page-content-buffer {
+        position: relative; }
+    .page .page-content-wrap .page-footer-wrap {
+      position: relative; }
+      .page .page-content-wrap .page-footer-wrap .page-footer {
+        position: relative; }
 
 /**********************************************************************
 Description: It defines the styles for flipper components available in CMT-UI css framework.

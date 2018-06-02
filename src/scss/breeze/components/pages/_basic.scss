@@ -80,6 +80,7 @@ Details: It defines the styles for header components as listed below:
 
 			.page-header {
 				position: relative;
+				z-index: 15;
 
 				.page-header-icon {
 					// Header icon
@@ -125,33 +126,33 @@ Details: It defines the styles for header components as listed below:
 				// Additional data
 			}
 
-			// Wraps Block Boxes
+			// Wraps Page Boxes
 			.page-box-wrap {
 				
 				.page-box {
 					// Box layout - derived from box component
 				}
 			}
+		}
 
-			// Wraps Page Blocks
-			.page-block-wrap {
-				// Block Data
+		// Wraps Page Blocks
+		.page-block-wrap {
+			// Block Data
 
-				.page-block {
-					// Block layout - derived from block component
-				}
-			}
-
-			// Wraps Block Widgets
-			.page-widget-wrap {
-				// Widget Data
-
-				.page-widget {
-					// Widget layout - derived from widget component
-				}
+			.page-block {
+				// Block layout - derived from block component
 			}
 		}
 
+		// Wraps Page Widgets
+		.page-widget-wrap {
+			// Widget Data
+
+			.page-widget {
+				// Widget layout - derived from widget component
+			}
+		}
+		
 		// Page Sidebar Top
 		.page-sidebar-top {
 			// Top Sidebar

@@ -1,7 +1,7 @@
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -10,13 +10,12 @@ Details: It defines the styles for header components as listed below:
 * Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
 *               listed options:
 *                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
 *                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
 *
 * Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
 *               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
 ***********************************************************************/
 
 // == Structure - Block =============

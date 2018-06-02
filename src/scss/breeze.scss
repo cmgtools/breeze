@@ -2,7 +2,7 @@
 // Core Division - Required
 // ---------------------------------------//
 
-@import "cmt/core/variables";
+@import "breeze/core/variables";
 
 /*! 
 CMGTools	-	CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and 
@@ -61,33 +61,33 @@ Baidu		- <min>
 
 // project - variables
 
-@import "cmt/core/variables-ext";
+@import "breeze/core/variables-ext";
 // project - extended variables
 
-@import "cmt/core/mixins";
+@import "breeze/core/mixins";
 // project - mixins
 
-@import "cmt/core/transitions";
+@import "breeze/core/transitions";
 // project - transitions
-@import "cmt/core/transformations";
+@import "breeze/core/transformations";
 // project - transformations
-@import "cmt/core/animations";
+@import "breeze/core/animations";
 // project - animations
 
-@import "cmt/core/reset";
+@import "breeze/core/reset";
 // project - reset
-@import "cmt/core/basic";
+@import "breeze/core/basic";
 // project - basic
 
-@import "cmt/core/coloring";
+@import "breeze/core/coloring";
 // project - coloring
-@import "cmt/core/spacing";
+@import "breeze/core/spacing";
 // project - spacing
 
-@import "cmt/core/typography";
+@import "breeze/core/typography";
 // project - typography
 
-@import "cmt/core/containers";
+@import "breeze/core/containers";
 // project - containers
 
 // ---------------------------------------//
@@ -95,12 +95,12 @@ Baidu		- <min>
 // Custom effects including animations, transtitions and transformations
 // ---------------------------------------//
 
-@import "cmt/effects/hover/color";
-@import "cmt/effects/hover/transform";
-@import "cmt/effects/hover/animate";
+@import "breeze/effects/hover/color";
+@import "breeze/effects/hover/transform";
+@import "breeze/effects/hover/animate";
 // project - hover
 
-@import "cmt/effects/animations/basic";
+@import "breeze/effects/animations/basic";
 // project - animations
 
 // ---------------------------------------//
@@ -108,29 +108,29 @@ Baidu		- <min>
 // Custom elements need cmt-iconlib
 // ---------------------------------------//
 
-@import "cmt/elements/basic";
+@import "breeze/elements/basic";
 // project - native
 
-@import "cmt/elements/icon-picker";
-@import "cmt/elements/time-picker";
-@import "cmt/elements/list";
-@import "cmt/elements/select";
-@import "cmt/elements/choice";
-@import "cmt/elements/rating";
-@import "cmt/elements/switch";
-@import "cmt/elements/button";
+@import "breeze/elements/icon-picker";
+@import "breeze/elements/time-picker";
+@import "breeze/elements/list";
+@import "breeze/elements/select";
+@import "breeze/elements/choice";
+@import "breeze/elements/rating";
+@import "breeze/elements/switch";
+@import "breeze/elements/button";
 // project - custom
 
-@import "cmt/elements/form";
-@import "cmt/elements/table";
+@import "breeze/elements/form";
+@import "breeze/elements/table";
 // project - native
 
-@import "cmt/elements/splitter";
-@import "cmt/elements/tabs";
-@import "cmt/elements/accordian";
-@import "cmt/elements/breadcrumb";
-@import "cmt/elements/auto-fill";
-@import "cmt/elements/uploader";
+@import "breeze/elements/splitter";
+@import "breeze/elements/tabs";
+@import "breeze/elements/accordian";
+@import "breeze/elements/breadcrumb";
+@import "breeze/elements/auto-fill";
+@import "breeze/elements/uploader";
 // project - custom
 
 // ---------------------------------------//
@@ -138,78 +138,76 @@ Baidu		- <min>
 // Re-usable components having barebone structure and default implementations.
 // ---------------------------------------//
 
-@import "cmt/components/menus/basic";
-@import "cmt/components/menus/collapsible";
-@import "cmt/components/menus/social";
+@import "breeze/components/menus/basic";
+@import "breeze/components/menus/collapsible";
+@import "breeze/components/menus/social";
 // project - menus
 
-@import "cmt/components/headers/basic";
+@import "breeze/components/headers/basic";
 // project - headers
 
-@import "cmt/components/footers/basic";
+@import "breeze/components/footers/basic";
 // project - footers
 
-@import "cmt/components/sidebars/basic";
+@import "breeze/components/sidebars/basic";
 // project - sidebars
 
-@import "cmt/components/mappers/basic";
+@import "breeze/components/mappers/basic";
 // project - mappers
 
-@import "cmt/components/popups/basic";
-@import "cmt/components/popups/popouts";
+@import "breeze/components/popups/basic";
+@import "breeze/components/popups/popouts";
 // project - popups & popouts
 
-@import "cmt/components/sliders/basic";
+@import "breeze/components/sliders/basic";
 // project - sliders
 
-@import "cmt/components/galleries/basic";
+@import "breeze/components/galleries/basic";
 // project - galleries
 
-// Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Blog
+// Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Page
 
-@import "cmt/components/cards/basic";
-@import "cmt/components/cards/icon";
-@import "cmt/components/cards/banner";
+@import "breeze/components/cards/basic";
 // project - data cards
 
-// Notes: Boxes can be used in Widgets, Blocks, Grid, Blog
+// Notes: Boxes can be used in Widgets, Blocks, Grid, Page
 
-@import "cmt/components/boxes/basic";
-@import "cmt/components/boxes/login";
-@import "cmt/components/boxes/form";
-@import "cmt/components/boxes/file";
+@import "breeze/components/boxes/basic";
+@import "breeze/components/boxes/panel";
+@import "breeze/components/boxes/login";
+@import "breeze/components/boxes/form";
+@import "breeze/components/boxes/file";
 // project - boxes
 
-// Notes: Widgets can be used in Blocks, Grid, Blog
+// Notes: Widgets can be used in Blocks, Grid, Page
 
-@import "cmt/components/widgets/basic";
-@import "cmt/components/widgets/blog/post";
-@import "cmt/components/widgets/cart/cart";
-@import "cmt/components/widgets/cart/product";
+@import "breeze/components/widgets/basic";
+@import "breeze/components/widgets/cart";
 // project - widgets
 
 // Notes: Blocks can be used to form pages
 
-@import "cmt/components/blocks/basic";
+@import "breeze/components/blocks/basic";
 // project - blocks
 
-@import "cmt/components/grid/pagination";
-@import "cmt/components/grid/sorting";
-@import "cmt/components/grid/filters";
-@import "cmt/components/grid/data";
-@import "cmt/components/grid/table";
+@import "breeze/components/grid/pagination";
+@import "breeze/components/grid/sorting";
+@import "breeze/components/grid/filters";
+@import "breeze/components/grid/data";
+@import "breeze/components/grid/table";
 // project - data grids
 
-@import "cmt/components/blog/blog";
-@import "cmt/components/blog/post";
-// project - blog
+// Notes: Pages are largest components accomodating grid, blocks, widgets, boxes and cards
 
-@import "cmt/components/cart/product";
-@import "cmt/components/cart/cart";
-@import "cmt/components/cart/shop";
+@import "breeze/components/pages/basic";
+// project - pages
+
+@import "breeze/components/cart/product";
+@import "breeze/components/cart/cart";
+@import "breeze/components/cart/shop";
 // project - cart
 
-@import "cmt/components/flippers/basic";
+@import "breeze/components/flippers/basic";
 // project - flippers
 
 // ---------------------------------------//

@@ -23,7 +23,7 @@ Details: It defines the styles of form box components as listed below:
 .box-form {
 	position: relative;
 
-	.box-form-trigger {
+	.box-trigger-form {
 		cursor: pointer;
 	}
 
@@ -42,11 +42,11 @@ Details: It defines the styles of form box components as listed below:
     background-color: $color-primary;
 	color: $color-primary-text;
 
-	.box-form-trigger {
+	.box-trigger-form {
 		position: absolute;
 		display: inline-block;
-		top: 10px;
-		right: 10px;
+		top: 0.5rem;
+		right: 0.5rem;
 		color: $color-link;
 		cursor: pointer;
 

@@ -1,0 +1,129 @@
+/**********************************************************************
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+			 components displayed on search pages, panels having content, form etc.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Box      - The barebone box class with minimum styles.
+***********************************************************************/
+
+// == Structure - Box ===============
+
+.box {
+	position: relative;
+
+	// background cover
+	.box-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.box-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		.box-header-wrap {
+			position: relative;
+			
+			.box-header {
+				position: relative;
+
+				.box-header-icon {
+					// Header Icon or Avatar
+				}
+
+				.box-header-title {
+					// Header Title
+				}
+
+				.box-header-info {
+					// Header Info
+				}
+
+				.box-header-actions {
+					// Header Actions
+				}
+				
+				.box-header-content {
+					// Header Content
+				}
+			}
+		}
+
+		.box-content {
+			position: relative;
+
+			.box-content-banner {
+				// Banner
+			}
+
+			.box-content-video {
+				// Video
+			}
+
+			.box-content-title {
+				// Content Title
+			}
+
+			.box-content-info {
+				// Content Info
+			}
+
+			.box-content-summary {
+				// Content Summary
+			}
+
+			.box-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.box-content-buffer {
+				position: relative;
+				// Widget buffer data
+			}
+		}
+
+		.box-footer-wrap {
+			// Footer having box info
+			position: relative;
+
+			.box-footer {
+				position: relative;
+
+				.box-footer-icon {
+					// Footer Icon
+				}
+
+				.box-footer-title {
+					// Footer Title
+				}
+
+				.box-footer-info {
+					// Footer Info
+				}
+
+				.box-footer-actions {
+					// Footer Actions
+				}
+
+				.box-footer-content {
+					// Footer Content
+				}
+			}
+		}
+	}
+}
