@@ -22,8 +22,8 @@ Details: It defines the styles of box components as listed below:
 	.box-content-wrap {
 
 		.box-header-wrap {
-			background-color: $color-secondary;
-			color: $color-secondary-text;
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
 			padding: 0.5rem;
 		 }
 
@@ -35,16 +35,15 @@ Details: It defines the styles of box components as listed below:
 
 		.box-footer-wrap {
 			// Footer having box info
-			background-color: $color-secondary-l;
-			color: $color-secondary-text-l;
-			padding: 0.25rem;
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.5rem;
 		}
 	}
 }
 
 // Panel box with header icon
 .box-panel-icon {
-	padding: 1rem;
 
 	.box-content-wrap {
 

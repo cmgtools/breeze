@@ -49,6 +49,7 @@ Details: It defines the styles of form box components as listed below:
 		right: 0.5rem;
 		color: $color-link;
 		cursor: pointer;
+		z-index: 20;
 
 		&:hover {
 			color: $color-link-h;

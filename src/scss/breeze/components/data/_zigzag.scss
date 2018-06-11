@@ -1,0 +1,77 @@
+.data-zigzag {
+
+	.data-zigzag-row {
+		margin-bottom: 2em;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		.data-zigzag-part-1 {
+			width: 100%;
+			display: inline-block;
+
+			img {
+				display: block;
+			}
+		}
+
+		.data-zigzag-part-2 {
+			width: 100%;
+			display: inline-block;
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		.data-zigzag-row {
+
+			.data-zigzag-part-1 {
+				width: 50%;
+
+				img {
+					display: none;
+				}
+			}
+
+			.data-zigzag-part-2 {
+				width: 50%;
+				
+				img {
+					display: block;
+				}
+			}
+		}
+
+		.data-zigzag-row:nth-child(odd) {
+
+			.data-zigzag-part-1 {
+				float: left;
+				padding-right: 1em;
+			}
+
+			.data-zigzag-part-2 {
+				float: right;
+				padding-left: 1em;
+			}
+		}
+
+		.data-zigzag-row:nth-child(even) {
+
+			.data-zigzag-part-1 {
+				float: right;
+				padding-left: 1em;
+			}
+
+			.data-zigzag-part-2 {
+				float: left;
+				padding-right: 1em;
+			}
+		}
+	}
+}

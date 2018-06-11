@@ -1,21 +1,21 @@
 /**********************************************************************
 Description: It defines the styles of the page component. We can devide the entire page 
-			 in multiple sections. Each page can have background image with or without 
-			 parallax effect, a content wrapper which wraps page header, content and footer.
+in multiple sections. Each page can have background image with or without parallax effect, 
+a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
+and widgets.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for header components as listed below:
+Details: It defines the styles for page components as listed below:
 
-* Page       - The barebone page class with minimum styles common for all the pages. The base class can have below
-*               listed options:
-*                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
-*                     background and even content wrapper background in the form of image or texture.
-*                   - Height of page must not be set using min-height to get background with parallax working.
+1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+can have below listed options:
+1.1. It can have background image with or without parallax effects.
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+page background and even content wrapper background in the form of image or texture.
 ***********************************************************************/
 
-// == Structure - Block =============
+// == Structure - Page ==============
 
 .page {
 	position: relative;
@@ -80,7 +80,7 @@ Details: It defines the styles for header components as listed below:
 
 			.page-header {
 				position: relative;
-				z-index: 15;
+				z-index: 20;
 
 				.page-header-icon {
 					// Header icon
@@ -104,6 +104,14 @@ Details: It defines the styles for header components as listed below:
 		.page-content {
 			position: relative;
 
+			.page-content-banner {
+				// Banner
+			}
+
+			.page-content-video {
+				// Video
+			}
+
 			.page-content-title {
 				// Content title
 			}
@@ -125,22 +133,21 @@ Details: It defines the styles for header components as listed below:
 				position: relative;
 				// Additional data
 			}
+		}
 
-			// Wraps Page Boxes
-			.page-box-wrap {
-				
-				.page-box {
-					// Box layout - derived from box component
-				}
+		// Wraps Page Cards
+		.page-card-wrap {
+
+			.page-card {
+				// Card layout - derived from card component
 			}
 		}
 
-		// Wraps Page Blocks
-		.page-block-wrap {
-			// Block Data
+		// Wraps Page Boxes
+		.page-box-wrap {
 
-			.page-block {
-				// Block layout - derived from block component
+			.page-box {
+				// Box layout - derived from box component
 			}
 		}
 
@@ -153,24 +160,36 @@ Details: It defines the styles for header components as listed below:
 			}
 		}
 		
-		// Page Sidebar Top
-		.page-sidebar-top {
-			// Top Sidebar
+		// Wraps Page Blocks
+		.page-block-wrap {
+			// Block Data
+
+			.page-block {
+				// Block layout - derived from block component
+			}
 		}
 
-		// Page Sidebar Right
-		.page-sidebar-right {
-			// Right Sidebar
-		}
+		.page-sidebar {
 
-		// Page Sidebar Bottom
-		.page-sidebar-bottom {
-			// Bottom Sidebar
-		}
-		
-		// Page Sidebar Left
-		.page-sidebar-left {
-			// Left Sidebar
+			// Page Sidebar Top
+			&.page-sidebar-top {
+				// Top Sidebar
+			}
+
+			// Page Sidebar Right
+			&.page-sidebar-right {
+				// Right Sidebar
+			}
+
+			// Page Sidebar Bottom
+			&.page-sidebar-bottom {
+				// Bottom Sidebar
+			}
+
+			// Page Sidebar Left
+			&.page-sidebar-left {
+				// Left Sidebar
+			}
 		}
 
 		// Page Footer
@@ -179,6 +198,7 @@ Details: It defines the styles for header components as listed below:
 
 			.page-footer {
 				position: relative;
+				z-index: 20;
 
 				.page-footer-icon {
 					// Footer icon

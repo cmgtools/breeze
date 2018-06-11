@@ -83,6 +83,7 @@ Details: It defines the styles for header components as listed below:
 
 			.block-header {
 				position: relative;
+				z-index: 20;
 
 				.block-header-icon {
 					// Header icon
@@ -127,33 +128,54 @@ Details: It defines the styles for header components as listed below:
 				position: relative;
 				// Additional data
 			}
+		}
 
-			// Wraps Block Boxes
-			.block-box-wrap {
-				
-				.block-box {
-					// Box layout - derived from box component
-				}
-			}
-			
-			// Wraps Block Widgets
-			.block-widget-wrap {
-				// Widget Data
+		// Wraps Block Cards
+		.block-card-wrap {
 
-				.block-widget {
-					// Widget layout - derived from widget component
-				}
+			.block-card {
+				// Card layout - derived from card component
 			}
 		}
 
-		// Block Sidebar
+		// Wraps Block Boxes
+		.block-box-wrap {
+
+			.block-box {
+				// Box layout - derived from box component
+			}
+		}
+
+		// Wraps Block Widgets
+		.block-widget-wrap {
+			// Widget Data
+
+			.block-widget {
+				// Widget layout - derived from widget component
+			}
+		}
+
 		.block-sidebar {
-			// Block sidebar in case block is splitted into content and sidebar
-		}
 
-		// Wraps Blocks
-		.block-wrap {
-			// Blocks embedded within the block
+			// Block Sidebar Top
+			&.block-sidebar-top {
+				// Top Sidebar
+			}
+
+			// Block Sidebar Right
+			&.block-sidebar-right {
+				// Right Sidebar
+			}
+
+			// Block Sidebar Bottom
+			&.block-sidebar-bottom {
+				// Bottom Sidebar
+			}
+
+			// Block Sidebar Left
+			&.block-sidebar-left {
+				// Left Sidebar
+			}
 		}
 
 		// Block Footer
@@ -162,6 +184,7 @@ Details: It defines the styles for header components as listed below:
 
 			.block-footer {
 				position: relative;
+				z-index: 20;
 
 				.block-footer-icon {
 					// Footer icon

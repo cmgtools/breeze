@@ -1,13 +1,13 @@
 /**********************************************************************
-Description: It defines the styles of data card components available in CMT-UI css framework.
+Description: It defines the styles of data card components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of card components as listed below:
 
-* Card        - The barebone card class with minimum styles.
+* Card		-	The barebone card class with minimum styles.
 *
-* Element     - The element cards will be used by blocks to show content having header icon and text.
+* Element	-	The element cards will be used by blocks to show content having header icon and text.
 ***********************************************************************/
 
 // == Structure - Card ==============
@@ -15,7 +15,7 @@ Details: It defines the styles of card components as listed below:
 .card {
 	position: relative;
 
-	// background cover
+	// Background cover
 	.card-bkg {
 		@include bkg-image;
 		width: 100%;

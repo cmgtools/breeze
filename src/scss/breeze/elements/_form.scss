@@ -426,16 +426,20 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
 	width: 60%;
 	float: left;
 }
 
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-checkbox label {
+	width: 100%;
+	float: left;
+}
+
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.element-60 .cmt-select-wrap, .element-60 .icon-picker {
 	width: 100%;
 }
 
@@ -476,7 +480,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .form {
 
-	input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	input[type="text"], input[type="email"], input[type="password"], textarea, select, .icon-picker-wrap {
 		margin-bottom: 0.5rem;
 	}
 

@@ -16,6 +16,7 @@ Details: It defines the custom element styles as listed below:
 
 .icon-picker-wrap {
 	width: 100%;
+	@extend %clearfix;
 
 	.icon-picker {
 		position: relative;
@@ -24,8 +25,8 @@ Details: It defines the custom element styles as listed below:
 		.picker-icon-wrap {
 			display: inline-block;
 			position: relative;
-			width: 64px;
-			height: 64px;
+			width: 48px;
+			height: 48px;
 			text-align: center;
 			cursor: pointer;
 			background-color: $color-secondary;
@@ -39,9 +40,9 @@ Details: It defines the custom element styles as listed below:
 
 			.picker-icon {
 				display: inline-block;
-				height: 64px;
-				line-height: 64px;
-				font-size: 48px;
+				height: 48px;
+				line-height: 48px;
+				font-size: 32px;
 				cursor: pointer;
 			}
 		}

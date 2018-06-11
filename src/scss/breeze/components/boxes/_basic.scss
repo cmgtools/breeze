@@ -40,6 +40,7 @@ Details: It defines the styles of box components as listed below:
 			
 			.box-header {
 				position: relative;
+				z-index: 20;
 
 				.box-header-icon {
 					// Header Icon or Avatar
@@ -97,12 +98,23 @@ Details: It defines the styles of box components as listed below:
 			}
 		}
 
+		// Wraps Box Cards
+		.box-card-wrap {
+			// Box Cards
+			position: relative;
+
+			.box-card {
+				// Card layout - derived from card component
+			}
+		}
+
 		.box-footer-wrap {
 			// Footer having box info
 			position: relative;
 
 			.box-footer {
 				position: relative;
+				z-index: 20;
 
 				.box-footer-icon {
 					// Footer Icon
