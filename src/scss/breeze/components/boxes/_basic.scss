@@ -64,6 +64,10 @@ Details: It defines the styles of box components as listed below:
 			}
 		}
 
+		.box-data {
+			position: relative;
+		}
+
 		.box-content {
 			position: relative;
 
@@ -134,6 +138,122 @@ Details: It defines the styles of box components as listed below:
 
 				.box-footer-content {
 					// Footer Content
+				}
+			}
+		}
+	}
+	
+	&.box-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+	
+	&.box-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+	
+	&.box-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Box =====================
+
+// Basic box with default spacing
+.box-basic {
+
+	.box-content-wrap {
+
+		.box-header-wrap {
+			padding: 1rem 0;
+
+			.box-header {
+
+				.box-header-title {
+					font-size: $font-size-3;
+					font-family: $font-heading;
+				}
+
+				.box-header-info {
+					font-size: $font-size-5;
+				}
+				
+				.box-header-content {
+					font-size: $font-size-6;
+				}
+
+				.box-header-icon + .box-header-title, .box-header-icon + .box-header-info, .box-header-icon + .box-header-content {
+					margin-top: 1rem;
+				}
+
+				.box-header-title + .box-header-info, .box-header-title + .box-header-content {
+					margin-top: 1rem;
+				}
+
+				.box-header-info + .box-header-content {
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		.box-data {
+			padding: 1rem 0;
+		}
+
+		.box-content {
+
+			.box-content-title {
+				font-size: $font-size-3;
+				font-family: $font-heading;
+			}
+
+			.box-content-info {
+				font-size: $font-size-5;
+			}
+
+			.box-content-summary {
+				font-size: $font-size-6;
+			}
+
+			.box-content-title + .box-content-info, .box-content-title + .box-content-data {
+				margin-top: 1rem;
+			}
+
+			.box-content-info + .box-content-data {
+				margin-top: 1rem;
+			}
+
+			.box-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.box-footer-wrap {
+
+			.box-footer {
+				padding: 1rem 0;
+
+				.box-footer-title {
+					font-size: $font-size-5;
+					font-family: $font-heading;
+				}
+
+				.box-footer-info {
+					font-size: $font-size-6;
+				}
+
+				.box-footer-icon + .box-header-title, .box-footer-icon + .box-header-info, .box-footer-icon + .box-header-content {
+					margin-top: 1rem;
+				}
+
+				.box-footer-title + .box-footer-info, .box-footer-title + .box-footer-content {
+					margin-top: 1rem;
+				}
+
+				.box-footer-info + .box-footer-content {
+					margin-top: 1rem;
 				}
 			}
 		}

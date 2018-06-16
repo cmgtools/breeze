@@ -26,7 +26,7 @@ Details: It defines the styles of card components as listed below:
 		z-index: 1;
 	}
 
-	// Texture on top of box background but under content
+	// Texture on top of card background but under content
 	> .texture {
 		z-index: 10;
 	}
@@ -51,6 +51,10 @@ Details: It defines the styles of card components as listed below:
 				// Header Info
 			}
 
+			.card-header-content {
+				// Header Content
+			}
+
 			.card-header-actions {
 				// Header Actions
 			}
@@ -58,6 +62,32 @@ Details: It defines the styles of card components as listed below:
 
 		.card-data {
 			position: relative;
+		}
+
+		.card-content {
+			position: relative;
+
+			.card-content-title {
+				// Content Title
+			}
+
+			.card-content-info {
+				// Content Info
+			}
+
+			.card-content-summary {
+				// Content Summary
+			}
+
+			.card-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.card-content-buffer {
+				position: relative;
+				// Widget buffer data
+			}
 		}
 
 		.card-footer {
@@ -75,8 +105,115 @@ Details: It defines the styles of card components as listed below:
 				// Footer Info
 			}
 
+			.card-footer-content {
+				// Footer Content
+			}
+
 			.card-footer-actions {
 				// Footer Actions
+			}
+		}
+	}
+	
+	&.card-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+	
+	&.card-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+	
+	&.card-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Card ====================
+
+// Basic card with default spacing
+.card-basic {
+
+	.card-content-wrap {
+
+		.card-header {
+			padding: 1rem 0;
+
+			.card-header-title {
+				font-size: $font-size-4;
+				font-family: $font-heading;
+			}
+
+			.card-header-info {
+				font-size: $font-size-6;
+			}
+			
+			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
+				margin-top: 1rem;
+			}
+
+			.card-header-title + .card-header-info, .card-header-title + .card-header-content {
+				margin-top: 1rem;
+			}
+
+			.card-header-info + .card-header-content {
+				margin-top: 1rem;
+			}
+		}
+
+		.card-data {
+			padding: 1rem 0;
+		}
+
+		.card-content {
+			padding: 1rem 0;
+
+			.card-content-title {
+				font-size: $font-size-4;
+				font-family: $font-heading;
+			}
+
+			.card-content-info {
+				font-size: $font-size-6;
+			}
+
+			.card-content-title + .card-content-info, .card-content-title + .card-content-data {
+				margin-top: 1rem;
+			}
+
+			.card-content-info + .card-content-data {
+				margin-top: 1rem;
+			}
+
+			.card-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.card-footer {
+			padding: 1rem 0;
+
+			.card-footer-title {
+				font-size: $font-size-5;
+				font-family: $font-heading;
+			}
+
+			.card-footer-info {
+				font-size: $font-size-6;
+			}
+			
+			.card-footer-icon + .card-header-title, .card-footer-icon + .card-header-info, .card-footer-icon + .card-header-content {
+				margin-top: 1rem;
+			}
+
+			.card-footer-title + .card-footer-info, .card-footer-title + .card-footer-content {
+				margin-top: 1rem;
+			}
+
+			.card-footer-info + .card-footer-content {
+				margin-top: 1rem;
 			}
 		}
 	}

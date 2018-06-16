@@ -3,12 +3,15 @@
 .accordian {
 	position: relative;
 
-	.accordian-trigger {
-		position: relative;
-	}
+	.accordian-tab {
 
-	.accordian-view {
-		position: relative;
+		.accordian-trigger {
+			position: relative;
+		}
+
+		.accordian-view {
+			position: relative;
+		}
 	}
 }
 
@@ -16,62 +19,74 @@
 
 .accordian-basic {
 
-	.accordian-trigger {
-		background-color: $color-tertiary;
-		color: $color-tertiary-text;
-		font-family: $font-heading;
-		font-size: $font-size-6;
-		padding: 0.25em 1em;
-		cursor: pointer;
-	}
-
-	.accordian-view {
-		background-color: $color-secondary;
-		color: $color-secondary-text;
-		padding: 1em;
-	}
-	
-	&.accordian-primary {
+	.accordian-tab {
 
 		.accordian-trigger {
-			background-color: $color-primary;
-			color: $color-tertiary;
-		}
-
-		.accordian-view {
-			background-color: $color-primary;
-			color: $color-primary-text;
-		}
-	}
-	
-	&.accordian-secondary {
-
-		.accordian-trigger {
-			background-color: $color-secondary;
-			color: $color-secondary;
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			font-family: $font-heading;
+			font-size: $font-size-6;
+			padding: 1em;
+			cursor: pointer;
 		}
 
 		.accordian-view {
 			background-color: $color-secondary;
 			color: $color-secondary-text;
+			padding: 1em;
+		}
+	}
+
+	&.accordian-primary {
+
+		.accordian-tab {
+
+			.accordian-trigger {
+				background-color: $color-primary;
+				color: $color-tertiary;
+			}
+
+			.accordian-view {
+				background-color: $color-primary;
+				color: $color-primary-text;
+			}
+		}
+	}
+	
+	&.accordian-secondary {
+
+		.accordian-tab {
+
+			.accordian-trigger {
+				background-color: $color-secondary;
+				color: $color-secondary;
+			}
+
+			.accordian-view {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+			}
 		}
 	}
 }
 
 .accordian-border {
 
-	.accordian-trigger {
+	.accordian-tab {
 
-		&.active {
-			border-left: 2px solid $color-tertiary;
+		.accordian-trigger {
+
+			&.active {
+				border-left: 2px solid $color-tertiary;
+			}
 		}
-	}
 
-	.accordian-view {
-		border: 1px solid $color-border;
-		
-		&.active {
-			border-left: 2px solid $color-tertiary;
+		.accordian-view {
+			border: 1px solid $color-border;
+
+			&.active {
+				border-left: 2px solid $color-tertiary;
+			}
 		}
 	}
 }

@@ -1,15 +1,14 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze Framework. Most of 
+these elements are also dependent on Velocity. Though the JS implementation can also be 
+done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Select          - The custom select allows user to select an item. It override the default select ui dependent
-*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
-*
+1. Select - The custom select allows user to select an item. It override the default select ui 
+dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
 ***********************************************************************/
 
 // == Select ========================
@@ -17,6 +16,7 @@ Details: It defines the custom element styles as listed below:
 .cmt-select-wrap {
 	width: 100%;
 	display: inline-block;
+	margin: 0;
 
 	// Hide native select
 	select {
@@ -25,14 +25,15 @@ Details: It defines the custom element styles as listed below:
 
 	.cmt-select {
 		position: relative;
-		background-color: $color-field;
 
 		// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
 		.cmt-selected {
 			cursor: pointer;
 			position: relative;
 			z-index: 100000;
-			padding-right: 1.5em;
+			width: 100%;
+			padding: 0.30em;
+			background-color: $color-field;
 			@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 			// text for selected value
@@ -43,8 +44,6 @@ Details: It defines the custom element styles as listed below:
 				white-space: nowrap;
 				text-align: left;
 				color: $color-field-text;
-				font-size: 1em;
-				padding: 0.30em 0.25em;
 			}
 
 			// icon for select box
@@ -53,7 +52,7 @@ Details: It defines the custom element styles as listed below:
 				top: 0;
 				right: 0;
 				display: inline-block;
-				padding: 0.25em;
+				padding: 0.3em 0.5em;
 			}
 
 			// disabled
@@ -76,7 +75,7 @@ Details: It defines the custom element styles as listed below:
 				width: 100%;
 				overflow: hidden;
 				cursor: pointer;
-				background-color: $color-white;
+				background-color: $color-field;
 				padding: 0.25em;
 			}
 
@@ -90,7 +89,7 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-multiselect {
 	position: relative;
-	background-color: $color-field;
+	margin: 0;
 
 	// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
 	.cmt-selected {
@@ -98,6 +97,9 @@ Details: It defines the custom element styles as listed below:
 		position: relative;
 		z-index: 100000;
 		padding-right: 1.5em;
+		width: 100%;
+		padding: 0.30em;
+		background-color: $color-field;
 		@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 		// text for selected value
@@ -109,7 +111,6 @@ Details: It defines the custom element styles as listed below:
 			text-align: left;
 			color: $color-field-text;
 			font-size: 1em;
-			padding: 0.30em 0.25em;
 		}
 
 		// icon for select box
@@ -118,7 +119,7 @@ Details: It defines the custom element styles as listed below:
 			top: 0;
 			right: 0;
 			display: inline-block;
-			padding: 0.25em;
+			padding: 0 0.5em;
 		}
 
 		// disabled

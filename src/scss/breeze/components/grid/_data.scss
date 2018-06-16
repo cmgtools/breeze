@@ -142,6 +142,7 @@ Details: It defines the styles for data grid components as listed below:
 
 						.grid-row-data {
 							// row data - it can be anything ex: content box
+							display: block;
 
 							// support classes for mobile views
 							.data {
@@ -225,7 +226,7 @@ Details: It defines the styles for data grid components as listed below:
 				.grid-rows-wrap {
 
 					.grid-rows-header {
-						display: block;
+						display: flex;
 					}
 
 					.grid-rows {
@@ -237,6 +238,7 @@ Details: It defines the styles for data grid components as listed below:
 							}
 
 							.grid-row-data {
+								display: flex;
 
 								.data {
 									width: 100%;

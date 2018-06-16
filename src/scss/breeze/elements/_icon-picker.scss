@@ -48,28 +48,31 @@ Details: It defines the custom element styles as listed below:
 		}
 
 		.picker-icon-sets {
+			background-color: $color-primary-d;
 			display: none;
 			position: absolute;
 			left: 0;
-			top: 64px;
-			width: 264px;
-			padding: 5px;
-			height: 216px;
-			background-color: $color-primary-d;
+			top: 48px;
 			z-index: 1000000;
 
-			.picker-icon-wrap {
-				margin: 2px;
-				width: 48px;
-				height: 48px;
+			.picker-icon-set {
+				width: 264px;
+				padding: 5px;
+				height: 216px;
 
-				.picker-icon {
-					display: inline-block;
+				.picker-icon-wrap {
+					margin: 2px;
 					width: 48px;
 					height: 48px;
-					line-height: 48px;
-					font-size: 36px;
-					cursor: pointer;
+
+					.picker-icon {
+						display: inline-block;
+						width: 48px;
+						height: 48px;
+						line-height: 48px;
+						font-size: 36px;
+						cursor: pointer;
+					}
 				}
 			}
 		}

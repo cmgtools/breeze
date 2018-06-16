@@ -229,13 +229,120 @@ Details: It defines the styles for header components as listed below:
 			height: 100px;
 		}
 	}
+	
+	&.block-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+
+	&.block-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	&.block-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
 }
 
 // == Basic Block ===================
 
+// Basic block with default spacing
 .block-basic {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+
+	.block-content-wrap {
+
+		.block-header-wrap {
+			padding: 1rem 0;
+
+			.block-header {
+
+				.block-header-title {
+					font-size: $font-size-2;
+					font-family: $font-heading;
+				}
+
+				.block-header-info {
+					font-size: $font-size-4;
+				}
+
+				.block-header-content {
+					font-size: $font-size-6;
+				}
+				
+				.block-header-icon + .block-header-title, .block-header-icon + .block-header-info, .block-header-icon + .block-header-content {
+					margin-top: 1rem;
+				}
+
+				.block-header-title + .block-header-info, .block-header-title + .block-header-content {
+					margin-top: 1rem;
+				}
+
+				.block-header-info + .block-header-content {
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		.block-content {
+
+			.block-content-title {
+				font-size: $font-size-2;
+				font-family: $font-heading;
+			}
+
+			.block-content-info {
+				font-size: $font-size-4;
+			}
+			
+			.block-content-summary {
+				font-size: $font-size-6;
+			}
+			
+			.block-content-title + .block-content-info, .block-content-title + .block-content-data {
+				margin-top: 1rem;
+			}
+
+			.block-content-info + .block-content-data {
+				margin-top: 1rem;
+			}
+
+			.block-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.block-footer-wrap {
+
+			.block-footer {
+				padding: 1rem 0;
+
+				.block-footer-title {
+					font-size: $font-size-4;
+					font-family: $font-heading;
+				}
+
+				.block-footer-info {
+					font-size: $font-size-5;
+				}
+
+				.block-footer-content {
+					font-size: $font-size-6;
+				}
+				
+				.block-footer-icon + .block-header-title, .block-footer-icon + .block-header-info, .block-footer-icon + .block-header-content {
+					margin-top: 1rem;
+				}
+
+				.block-footer-title + .block-footer-info, .block-footer-title + .block-footer-content {
+					margin-top: 1rem;
+				}
+
+				.block-footer-info + .block-footer-content {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
 }

@@ -1166,6 +1166,26 @@ Notes:
 .gradient.gradient-radial {
   background-image: radial-gradient(circle at center top, #F2F2F2, #3C4655); }
 
+.circled.circled-tiny {
+  width: 80px;
+  height: 80px; }
+
+.circled.circled-small {
+  width: 120px;
+  height: 120px; }
+
+.circled.circled-medium {
+  width: 150px;
+  height: 150px; }
+
+.circled.circled-large {
+  width: 180px;
+  height: 180px; }
+
+.circled.circled-xlarge {
+  width: 220px;
+  height: 220px; }
+
 .circled.circled1 {
   overflow: hidden;
   text-align: center;
@@ -1989,11 +2009,11 @@ table {
 
 th {
   font-weight: bold;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 td {
   font-weight: normal;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 ins {
   background-color: #3C4655;
@@ -3487,13 +3507,26 @@ a, .link {
 
 .text-with-line {
   width: 100%;
-  height: 0.75em;
-  border-bottom: 1px solid #7F7F7F;
+  border-top: 1px solid #7F7F7F;
   text-align: center; }
   .text-with-line .text-content {
     display: inline-block;
     padding: 0 1em;
-    background-color: #F2F2F2; }
+    background-color: #F2F2F2;
+    margin-top: -0.5em;
+    vertical-align: top; }
+
+.note {
+  padding: 0.5em;
+  background-color: #3C4655; }
+  .note .note-info {
+    color: #3F62A0; }
+  .note .note-success {
+    color: #A5D75A; }
+  .note .note-warning {
+    color: #EF9300; }
+  .note .note-error {
+    color: #E74343; }
 
 /**********************************************************************
 Description: This file define the grid system and basic containers of CMT-UI css framework.
@@ -4788,26 +4821,27 @@ Details: It defines the custom element styles as listed below:
         font-size: 32px;
         cursor: pointer; }
     .icon-picker-wrap .icon-picker .picker-icon-sets {
+      background-color: lightgray;
       display: none;
       position: absolute;
       left: 0;
-      top: 64px;
-      width: 264px;
-      padding: 5px;
-      height: 216px;
-      background-color: lightgray;
+      top: 48px;
       z-index: 1000000; }
-      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap {
-        margin: 2px;
-        width: 48px;
-        height: 48px; }
-        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap .picker-icon {
-          display: inline-block;
+      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set {
+        width: 264px;
+        padding: 5px;
+        height: 216px; }
+        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap {
+          margin: 2px;
           width: 48px;
-          height: 48px;
-          line-height: 48px;
-          font-size: 36px;
-          cursor: pointer; }
+          height: 48px; }
+          .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap .picker-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 36px;
+            cursor: pointer; }
 
 .cmt-timepicker {
   position: absolute;
@@ -4878,31 +4912,32 @@ Details: It defines the custom element styles as listed below:
   clear: none; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze Framework. Most of 
+these elements are also dependent on Velocity. Though the JS implementation can also be 
+done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Select          - The custom select allows user to select an item. It override the default select ui dependent
-*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
-*
+1. Select - The custom select allows user to select an item. It override the default select ui 
+dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
 ***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  margin: 0; }
   .cmt-select-wrap select {
     display: none; }
   .cmt-select-wrap .cmt-select {
-    position: relative;
-    background-color: #F2F2F2; }
+    position: relative; }
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
       z-index: 100000;
-      padding-right: 1.5em;
+      width: 100%;
+      padding: 0.30em;
+      background-color: #F2F2F2;
       -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
       -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
       box-shadow: inset 0 0 0 1px #F2F2F2; }
@@ -4912,15 +4947,13 @@ Details: It defines the custom element styles as listed below:
         overflow: hidden;
         white-space: nowrap;
         text-align: left;
-        color: #363636;
-        font-size: 1em;
-        padding: 0.30em 0.25em; }
+        color: #363636; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
         position: absolute;
         top: 0;
         right: 0;
         display: inline-block;
-        padding: 0.25em; }
+        padding: 0.3em 0.5em; }
       .cmt-select-wrap .cmt-select .cmt-selected.disabled {
         cursor: default; }
     .cmt-select-wrap .cmt-select .cmt-select-list {
@@ -4937,7 +4970,7 @@ Details: It defines the custom element styles as listed below:
         width: 100%;
         overflow: hidden;
         cursor: pointer;
-        background-color: #FFFFFF;
+        background-color: #F2F2F2;
         padding: 0.25em; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
         color: #FFFFFF;
@@ -4945,12 +4978,15 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-multiselect {
   position: relative;
-  background-color: #F2F2F2; }
+  margin: 0; }
   .cmt-multiselect .cmt-selected {
     cursor: pointer;
     position: relative;
     z-index: 100000;
     padding-right: 1.5em;
+    width: 100%;
+    padding: 0.30em;
+    background-color: #F2F2F2;
     -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
     -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
     box-shadow: inset 0 0 0 1px #F2F2F2; }
@@ -4961,14 +4997,13 @@ Details: It defines the custom element styles as listed below:
       white-space: nowrap;
       text-align: left;
       color: #363636;
-      font-size: 1em;
-      padding: 0.30em 0.25em; }
+      font-size: 1em; }
     .cmt-multiselect .cmt-selected .s-icon {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block;
-      padding: 0.25em; }
+      padding: 0 0.5em; }
     .cmt-multiselect .cmt-selected.disabled {
       cursor: default; }
   .cmt-multiselect .cmt-select-list {
@@ -5021,19 +5056,22 @@ Details: It defines the custom element styles as listed below:
     margin: 0; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze Framework. 
+Most of these elements are also dependent on CMT-JS library. Though the JS implementation 
+can also be done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Choice          - The choice allows user to select single or multiple options from available options. It include
-*                   radio and checkbox html components and change their default behaviour by showing good looking
-*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
-*
+1. Choice - The choice allows user to select single or multiple options from available 
+options. It include radio and checkbox html components and change their default behaviour 
+by showing good looking icons instead of browser dependentent graphics. These are indepedent 
+of JS and purely css solutions.
 ***********************************************************************/
+.cmt-choice span, .cmt-choice a {
+  vertical-align: middle; }
+
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -5042,9 +5080,6 @@ Details: It defines the custom element styles as listed below:
 .cmt-choice label {
   cursor: pointer;
   padding: 0; }
-
-.cmt-choice .label {
-  margin-top: 0.25em; }
 
 .cmt-choice input[type=checkbox] + .label.pad-label::before,
 .cmt-choice input[type=radio] + .label.pad-label::before {
@@ -5471,7 +5506,7 @@ form {
   margin: 0 auto;
   position: relative; }
 
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .cmt-select-wrap .cmt-selected, .form .cmt-checkbox, .form .cmt-switch {
   border: none;
   box-shadow: none;
   outline: none;
@@ -5497,7 +5532,7 @@ form {
   .element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .cmt-select-wrap .cmt-selected {
   background-color: #F2F2F2;
   color: #363636;
   text-align: left;
@@ -5509,24 +5544,39 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
   box-shadow: inset 0 0 0 1px #F2F2F2; }
-  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .form .cmt-select-wrap .cmt-selected:hover {
     background-color: #E9E9E9;
     color: #363636;
     -webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
     -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
     box-shadow: inset 0 0 0 1px #E9E9E9; }
-  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .form .cmt-select-wrap .cmt-selected:focus {
     background-color: #E1E1E1;
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
     background-color: #CCCCCC;
     color: #909090;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
+
+.form .cmt-checkbox, .form .cmt-switch {
+  color: #363636;
+  text-align: left;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s; }
+  .form .cmt-checkbox:hover, .form .cmt-switch:hover {
+    color: #363636; }
+  .form .cmt-checkbox:focus, .form .cmt-switch:focus {
+    color: #4F688E; }
+  .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
+    color: #909090; }
 
 .btn, .btn-icon, input[type="submit"], input[type="button"], button {
   -webkit-transition: all 420ms ease-in-out 0s;
@@ -5560,11 +5610,11 @@ label {
 .element {
   display: inline-block; }
 
-input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
-  line-height: 1.4; }
+input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
+  line-height: 1.4em; }
 
 label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
-  line-height: 1.4; }
+  line-height: 1.4em; }
 
 .btn-icon {
   padding: 0.30em 0.5em;
@@ -5638,9 +5688,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .cmt-checkbox, .cmt-switch {
   -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 0px #F2F2F2;
-  box-shadow: inset 0 0 0 0px #F2F2F2; }
-
-.cmt-checkbox, .cmt-switch {
+  box-shadow: inset 0 0 0 0px #F2F2F2;
   background: none;
   padding-left: 0; }
   .cmt-checkbox:hover, .cmt-switch:hover {
@@ -5649,7 +5697,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button,
-.frm-rounded-all .btn {
+.frm-rounded-all .btn, .frm-rounded-all select, .frm-rounded-all .cmt-selected {
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -5657,7 +5705,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button,
-.frm-rounded-top .btn {
+.frm-rounded-top .btn, .frm-rounded-top select, .frm-rounded-top .cmt-selected {
   border-radius: 5px 5px 0 0;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-top-right: 5px;
@@ -5668,7 +5716,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button,
-.frm-rounded-right .btn {
+.frm-rounded-right .btn, .frm-rounded-right select, .frm-rounded-right .cmt-selected {
   border-radius: 0 5px 5px 0;
   -webkit-border-radius-top-right: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -5679,7 +5727,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button,
-.frm-rounded-bottom .btn {
+.frm-rounded-bottom .btn, .frm-rounded-bottom select, .frm-rounded-bottom .cmt-selected {
   border-radius: 0 0 5px 5px;
   -webkit-border-radius-bottom-left: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -5690,7 +5738,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button,
-.frm-rounded-left .btn {
+.frm-rounded-left .btn, .frm-rounded-left select, .frm-rounded-left .cmt-selected {
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -5757,6 +5805,10 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   width: 100%;
   float: left; }
 
+.frm-split-40-60 .cmt-switch {
+  width: 60%;
+  float: left; }
+
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select,
 .element-60 .cmt-select-wrap, .element-60 .icon-picker {
@@ -5795,7 +5847,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   margin-top: 0.5rem; }
 
 .form .form-group .help-block {
-  margin-bottom: 0.25rem; }
+  margin: 0.25rem 0; }
 
 .form .frm-split-40-60 label {
   margin-bottom: 0.5rem; }
@@ -5944,46 +5996,46 @@ Details: It defines the custom element styles as listed below:
 
 .accordian {
   position: relative; }
-  .accordian .accordian-trigger {
+  .accordian .accordian-tab .accordian-trigger {
     position: relative; }
-  .accordian .accordian-view {
+  .accordian .accordian-tab .accordian-view {
     position: relative; }
 
-.accordian-basic .accordian-trigger {
+.accordian-basic .accordian-tab .accordian-trigger {
   background-color: #87BA45;
   color: #E6E6E6;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 1.08em;
-  padding: 0.25em 1em;
+  padding: 1em;
   cursor: pointer; }
 
-.accordian-basic .accordian-view {
+.accordian-basic .accordian-tab .accordian-view {
   background-color: #3C4655;
   color: #96B0D6;
   padding: 1em; }
 
-.accordian-basic.accordian-primary .accordian-trigger {
+.accordian-basic.accordian-primary .accordian-tab .accordian-trigger {
   background-color: #F2F2F2;
   color: #87BA45; }
 
-.accordian-basic.accordian-primary .accordian-view {
+.accordian-basic.accordian-primary .accordian-tab .accordian-view {
   background-color: #F2F2F2;
   color: #363636; }
 
-.accordian-basic.accordian-secondary .accordian-trigger {
+.accordian-basic.accordian-secondary .accordian-tab .accordian-trigger {
   background-color: #3C4655;
   color: #3C4655; }
 
-.accordian-basic.accordian-secondary .accordian-view {
+.accordian-basic.accordian-secondary .accordian-tab .accordian-view {
   background-color: #3C4655;
   color: #96B0D6; }
 
-.accordian-border .accordian-trigger.active {
+.accordian-border .accordian-tab .accordian-trigger.active {
   border-left: 2px solid #87BA45; }
 
-.accordian-border .accordian-view {
+.accordian-border .accordian-tab .accordian-view {
   border: 1px solid #7F7F7F; }
-  .accordian-border .accordian-view.active {
+  .accordian-border .accordian-tab .accordian-view.active {
     border-left: 2px solid #87BA45; }
 
 /**********************************************************************
@@ -7518,8 +7570,68 @@ Details: It defines the styles of card components as listed below:
       position: relative; }
     .card .card-content-wrap .card-data {
       position: relative; }
+    .card .card-content-wrap .card-content {
+      position: relative; }
+      .card .card-content-wrap .card-content .card-content-data {
+        position: relative; }
+      .card .card-content-wrap .card-content .card-content-buffer {
+        position: relative; }
     .card .card-content-wrap .card-footer {
       position: relative; }
+  .card.card-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .card.card-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .card.card-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.card-basic .card-content-wrap .card-header {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-header .card-header-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-header .card-header-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-title, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-content {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-header .card-header-title + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-title + .card-header-content {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-header .card-header-info + .card-header-content {
+    margin-top: 1rem; }
+
+.card-basic .card-content-wrap .card-data {
+  padding: 1rem 0; }
+
+.card-basic .card-content-wrap .card-content {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-content .card-content-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-content .card-content-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-content .card-content-data {
+    padding: 1rem 0; }
+
+.card-basic .card-content-wrap .card-footer {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-footer .card-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-footer .card-footer-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
+    margin-top: 1rem; }
+  .card-basic .card-content-wrap .card-footer .card-footer-info + .card-footer-content {
+    margin-top: 1rem; }
 
 /**********************************************************************
 Description: It defines the styles of card panels used to display data and forms.
@@ -7592,6 +7704,8 @@ Details: It defines the styles of box components as listed below:
       .box .box-content-wrap .box-header-wrap .box-header {
         position: relative;
         z-index: 20; }
+    .box .box-content-wrap .box-data {
+      position: relative; }
     .box .box-content-wrap .box-content {
       position: relative; }
       .box .box-content-wrap .box-content .box-content-data {
@@ -7605,6 +7719,67 @@ Details: It defines the styles of box components as listed below:
       .box .box-content-wrap .box-footer-wrap .box-footer {
         position: relative;
         z-index: 20; }
+  .box.box-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .box.box-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .box.box-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.box-basic .box-content-wrap .box-header-wrap {
+  padding: 1rem 0; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title {
+    font-size: 1.58em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info {
+    font-size: 1.17em; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-content {
+    font-size: 1.08em; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-title, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-content {
+    margin-top: 1rem; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-content {
+    margin-top: 1rem; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info + .box-header-content {
+    margin-top: 1rem; }
+
+.box-basic .box-content-wrap .box-data {
+  padding: 1rem 0; }
+
+.box-basic .box-content-wrap .box-content .box-content-title {
+  font-size: 1.58em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.box-basic .box-content-wrap .box-content .box-content-info {
+  font-size: 1.17em; }
+
+.box-basic .box-content-wrap .box-content .box-content-summary {
+  font-size: 1.08em; }
+
+.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
+  margin-top: 1rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+  margin-top: 1rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-data {
+  padding: 1rem 0; }
+
+.box-basic .box-content-wrap .box-footer-wrap .box-footer {
+  padding: 1rem 0; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info {
+    font-size: 1.08em; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-title, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-content {
+    margin-top: 1rem; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-content {
+    margin-top: 1rem; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info + .box-footer-content {
+    margin-top: 1rem; }
 
 /**********************************************************************
 Description: It defines the styles of box panels used to display data and forms.
@@ -7626,7 +7801,7 @@ Details: It defines the styles of box components as listed below:
   color: #E6E6E6;
   padding: 0.5rem; }
 
-.box-panel .box-content-wrap .box-content {
+.box-panel .box-content-wrap .box-data {
   background-color: #F2F2F2;
   color: #363636;
   padding: 0.5rem; }
@@ -7983,12 +8158,66 @@ Details: It defines the styles for header components as listed below:
       display: inline-block;
       width: 100px;
       height: 100px; }
+  .block.block-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .block.block-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .block.block-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
-.block-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
+.block-basic .block-content-wrap .block-header-wrap {
+  padding: 1rem 0; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title {
+    font-size: 2em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info {
+    font-size: 1.33em; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-content {
+    font-size: 1.08em; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-title, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-content {
+    margin-top: 1rem; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-content {
+    margin-top: 1rem; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info + .block-header-content {
+    margin-top: 1rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.block-basic .block-content-wrap .block-content .block-content-info {
+  font-size: 1.33em; }
+
+.block-basic .block-content-wrap .block-content .block-content-summary {
+  font-size: 1.08em; }
+
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+  margin-top: 1rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 1rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-data {
+  padding: 1rem 0; }
+
+.block-basic .block-content-wrap .block-footer-wrap .block-footer {
+  padding: 1rem 0; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info {
+    font-size: 1.17em; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
+    font-size: 1.08em; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
+    margin-top: 1rem; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
+    margin-top: 1rem; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
+    margin-top: 1rem; }
 
 /**********************************************************************
 Description: It defines the styles of the pagination components having links to navigate pages.
@@ -8111,13 +8340,15 @@ Details: It defines the styles for data grid components as listed below:
     font-weight: bold; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
     background-color: #3C4655; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    display: inline-block;
-    width: 68%;
-    padding: 1%;
-    word-wrap: break-word; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      width: 28%; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data {
+    display: block; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+      display: inline-block;
+      width: 68%;
+      padding: 1%;
+      word-wrap: break-word; }
+      .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+        width: 28%; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: none;
     font-weight: bold; }
@@ -8129,14 +8360,16 @@ Details: It defines the styles for data grid components as listed below:
 
 @media only screen and (min-width: 1025px) {
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
-    display: block; }
+    display: flex; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
     display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    width: 100%;
-    padding: 0; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data {
+    display: flex; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+      width: 100%;
+      padding: 0; }
+      .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+        display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: block; } }
 
@@ -8326,5 +8559,66 @@ page background and even content wrapper background in the form of image or text
       .page .page-content-wrap .page-footer-wrap .page-footer {
         position: relative;
         z-index: 20; }
+  .page.page-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .page.page-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .page.page-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.page-basic .page-content-wrap .page-header-wrap .page-header {
+  padding: 1rem 0; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title {
+    font-size: 2.67em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info {
+    font-size: 1.58em; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-content {
+    font-size: 1.08em; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-title, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-content {
+    margin-top: 1rem; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-content {
+    margin-top: 1rem; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info + .page-header-content {
+    margin-top: 1rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-title {
+  font-size: 2.67em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.page-basic .page-content-wrap .page-content .page-content-info {
+  font-size: 1.58em; }
+
+.page-basic .page-content-wrap .page-content .page-content-summary {
+  padding: 1rem 0;
+  font-size: 1.08em; }
+
+.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+  margin-top: 1rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+  margin-top: 1rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-data {
+  padding: 1rem 0; }
+
+.page-basic .page-content-wrap .page-footer-wrap .page-footer {
+  padding: 1rem 0; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title {
+    font-size: 1.58em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info {
+    font-size: 1.17em; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-content {
+    font-size: 1.08em; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-title, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-content {
+    margin-top: 1rem; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-content {
+    margin-top: 1rem; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info + .page-footer-content {
+    margin-top: 1rem; }
 
 /*# sourceMappingURL=breeze.css.map */

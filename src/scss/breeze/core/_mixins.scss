@@ -1519,6 +1519,31 @@ Notes:
 .circled {
 	// No Defaults
 
+	&.circled-tiny {
+		width: 80px;
+		height: 80px;
+	}
+
+	&.circled-small {
+		width: 120px;
+		height: 120px;
+	}
+
+	&.circled-medium {
+		width: 150px;
+		height: 150px;
+	}
+
+	&.circled-large {
+		width: 180px;
+		height: 180px;
+	}
+
+	&.circled-xlarge {
+		width: 220px;
+		height: 220px;
+	}
+
 	&.circled1 {
 		@include circled1( $color-secondary, $color-secondary-text );
 	}
