@@ -651,11 +651,11 @@ Details: It defines the grid system and basic containers as listed below:
 	position: relative;
 	z-index: 1;
 
-	& >.header {
+	& >.container-header {
 		// Header within container.
 	}
 
-	& >.sidebar {
+	& >.container-sidebar {
 		// Sidebar within container.
 	}
 
@@ -663,11 +663,11 @@ Details: It defines the grid system and basic containers as listed below:
 		position: relative;
 		z-index: 1;
 
-		& >.header {
+		& >.container-header {
 			// Header within content wrapper.
 		}
 
-		& >.sidebar {
+		& >.container-sidebar {
 			// Sidebar within content wrapper.
 		}
 
@@ -675,12 +675,12 @@ Details: It defines the grid system and basic containers as listed below:
 			// Content within content wrapper
 		}
 
-		& >.footer {
+		& >.container-footer {
 			// Footer within content wrapper.
 		}
 	}
 
-	& >.footer {
+	& >.container-footer {
 		// Footer within container.
 	}
 }

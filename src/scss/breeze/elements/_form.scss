@@ -188,9 +188,21 @@ input[type="submit"], input[type="button"], button {
 	color: $color-red;
 }
 
+// Element
 .element {
 	@extend %element-size;
 	display: inline-block;
+}
+
+// Disabled
+.disabled {
+	background-color: $color-btn-d !important;
+	color: $color-btn-text-d !important;
+
+	&:hover {
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
+	}
 }
 
 // Line Height Fix

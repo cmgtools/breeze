@@ -185,15 +185,15 @@ Details: It defines the styles of box components as listed below:
 				}
 
 				.box-header-icon + .box-header-title, .box-header-icon + .box-header-info, .box-header-icon + .box-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.box-header-title + .box-header-info, .box-header-title + .box-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.box-header-info + .box-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 			}
 		}
@@ -218,11 +218,11 @@ Details: It defines the styles of box components as listed below:
 			}
 
 			.box-content-title + .box-content-info, .box-content-title + .box-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.box-content-info + .box-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.box-content-data {
@@ -245,15 +245,15 @@ Details: It defines the styles of box components as listed below:
 				}
 
 				.box-footer-icon + .box-header-title, .box-footer-icon + .box-header-info, .box-footer-icon + .box-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.box-footer-title + .box-footer-info, .box-footer-title + .box-footer-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.box-footer-info + .box-footer-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 			}
 		}

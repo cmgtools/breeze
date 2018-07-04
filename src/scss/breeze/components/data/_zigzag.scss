@@ -1,3 +1,16 @@
+/**********************************************************************
+Description: It defines the styles of data zigzag components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of zigzag components as listed below:
+
+ZigZag - The barebone zigzag class with minimum styles with each section having either 
+100% width or sub-divided into two parts having 50% width.
+***********************************************************************/
+
+// == Structure - ZigZag ============
+
 .data-zigzag {
 
 	.data-zigzag-row {

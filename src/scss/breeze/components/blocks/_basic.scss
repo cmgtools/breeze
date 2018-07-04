@@ -272,15 +272,15 @@ Details: It defines the styles for header components as listed below:
 				}
 				
 				.block-header-icon + .block-header-title, .block-header-icon + .block-header-info, .block-header-icon + .block-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.block-header-title + .block-header-info, .block-header-title + .block-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.block-header-info + .block-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 			}
 		}
@@ -301,11 +301,11 @@ Details: It defines the styles for header components as listed below:
 			}
 			
 			.block-content-title + .block-content-info, .block-content-title + .block-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.block-content-info + .block-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.block-content-data {
@@ -332,15 +332,15 @@ Details: It defines the styles for header components as listed below:
 				}
 				
 				.block-footer-icon + .block-header-title, .block-footer-icon + .block-header-info, .block-footer-icon + .block-header-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.block-footer-title + .block-footer-info, .block-footer-title + .block-footer-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 
 				.block-footer-info + .block-footer-content {
-					margin-top: 1rem;
+					margin-top: 0.5rem;
 				}
 			}
 		}

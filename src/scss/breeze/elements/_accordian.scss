@@ -1,3 +1,20 @@
+/**********************************************************************
+Description: It defines the styles of accordial element. The accordian is a multi 
+section arrangement keeping only one section visible at a time.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of accordian elements as listed below:
+
+Accordian - The barebone accordian class with minimum styles common for all the accordians. 
+The base class define the structure of accordian having tab with trigger and view.
+
+Basic Accordian - It arrange the accordian sections vertically and provide options to select 
+multiple themes using the color scheme.
+
+Border Accordian - It's extension of Basic Accordian with default borders.
+***********************************************************************/
+
 // == Structure - Accordian =========
 
 .accordian {

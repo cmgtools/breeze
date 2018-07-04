@@ -151,15 +151,15 @@ Details: It defines the styles of card components as listed below:
 			}
 			
 			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-header-title + .card-header-info, .card-header-title + .card-header-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-header-info + .card-header-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 		}
 
@@ -180,11 +180,11 @@ Details: It defines the styles of card components as listed below:
 			}
 
 			.card-content-title + .card-content-info, .card-content-title + .card-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-content-info + .card-content-data {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-content-data {
@@ -205,15 +205,15 @@ Details: It defines the styles of card components as listed below:
 			}
 			
 			.card-footer-icon + .card-header-title, .card-footer-icon + .card-header-info, .card-footer-icon + .card-header-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-footer-title + .card-footer-info, .card-footer-title + .card-footer-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 
 			.card-footer-info + .card-footer-content {
-				margin-top: 1rem;
+				margin-top: 0.5rem;
 			}
 		}
 	}
