@@ -1,0 +1,261 @@
+/**********************************************************************
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+			 components displayed on search pages, panels having content, form etc.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Box      - The barebone box class with minimum styles.
+***********************************************************************/
+
+// == Structure - Box ===============
+
+.box {
+	position: relative;
+
+	// background cover
+	.box-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.box-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		.box-header-wrap {
+			position: relative;
+			
+			.box-header {
+				position: relative;
+				z-index: 20;
+
+				.box-header-icon {
+					// Header Icon or Avatar
+				}
+
+				.box-header-title {
+					// Header Title
+				}
+
+				.box-header-info {
+					// Header Info
+				}
+
+				.box-header-actions {
+					// Header Actions
+				}
+				
+				.box-header-content {
+					// Header Content
+				}
+			}
+		}
+
+		.box-data {
+			position: relative;
+		}
+
+		.box-content {
+			position: relative;
+
+			.box-content-banner {
+				// Banner
+			}
+
+			.box-content-video {
+				// Video
+			}
+
+			.box-content-title {
+				// Content Title
+			}
+
+			.box-content-info {
+				// Content Info
+			}
+
+			.box-content-summary {
+				// Content Summary
+			}
+
+			.box-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.box-content-buffer {
+				position: relative;
+				// Widget buffer data
+			}
+		}
+
+		// Wraps Box Cards
+		.box-card-wrap {
+			// Box Cards
+			position: relative;
+
+			.box-card {
+				// Card layout - derived from card component
+			}
+		}
+
+		.box-footer-wrap {
+			// Footer having box info
+			position: relative;
+
+			.box-footer {
+				position: relative;
+				z-index: 20;
+
+				.box-footer-icon {
+					// Footer Icon
+				}
+
+				.box-footer-title {
+					// Footer Title
+				}
+
+				.box-footer-info {
+					// Footer Info
+				}
+
+				.box-footer-actions {
+					// Footer Actions
+				}
+
+				.box-footer-content {
+					// Footer Content
+				}
+			}
+		}
+	}
+	
+	&.box-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+	
+	&.box-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+	
+	&.box-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Box =====================
+
+// Basic box with default spacing
+.box-basic {
+
+	.box-content-wrap {
+
+		.box-header-wrap {
+			padding: 1rem 0;
+
+			.box-header {
+
+				.box-header-title {
+					font-size: $font-size-3;
+					font-family: $font-heading;
+				}
+
+				.box-header-info {
+					font-size: $font-size-5;
+				}
+				
+				.box-header-content {
+					font-size: $font-size-6;
+				}
+
+				.box-header-icon + .box-header-title, .box-header-icon + .box-header-info, .box-header-icon + .box-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.box-header-title + .box-header-info, .box-header-title + .box-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.box-header-info + .box-header-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+
+		.box-data {
+			padding: 1rem 0;
+		}
+
+		.box-content {
+
+			.box-content-title {
+				font-size: $font-size-3;
+				font-family: $font-heading;
+			}
+
+			.box-content-info {
+				font-size: $font-size-5;
+			}
+
+			.box-content-summary {
+				font-size: $font-size-6;
+			}
+
+			.box-content-title + .box-content-info, .box-content-title + .box-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.box-content-info + .box-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.box-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.box-footer-wrap {
+
+			.box-footer {
+				padding: 1rem 0;
+
+				.box-footer-title {
+					font-size: $font-size-5;
+					font-family: $font-heading;
+				}
+
+				.box-footer-info {
+					font-size: $font-size-6;
+				}
+
+				.box-footer-icon + .box-header-title, .box-footer-icon + .box-header-info, .box-footer-icon + .box-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.box-footer-title + .box-footer-info, .box-footer-title + .box-footer-content {
+					margin-top: 0.5rem;
+				}
+
+				.box-footer-info + .box-footer-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+}

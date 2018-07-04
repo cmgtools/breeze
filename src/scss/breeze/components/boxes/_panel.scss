@@ -1,0 +1,96 @@
+/**********************************************************************
+Description: It defines the styles of box panels used to display data and forms.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				are outside content wrapper as background, within header, within content and within footer.
+*
+* Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+
+// == Panel Box =====================
+
+// Panel box with default colors and padding
+.box-panel {
+
+	.box-content-wrap {
+
+		.box-header-wrap {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			padding: 0.5rem;
+		 }
+
+		 .box-data {
+			background-color: $color-primary;
+			color: $color-primary-text;
+			padding: 0.5rem;
+		 }
+
+		.box-footer-wrap {
+			// Footer having box info
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.5rem;
+		}
+	}
+}
+
+// Panel box with header icon
+.box-panel-icon {
+
+	.box-content-wrap {
+
+		// Icon, text at center
+		.box-header-wrap {
+
+			.box-header {
+
+				.box-header-icon {
+					position: absolute;
+					display: inline-block;
+					top: 0.5rem;
+					left: 0.5rem;
+				}
+
+				.box-header-title {
+					padding-left: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+// == Collapsible Box ===============
+
+// Collapsible panels with trigger on header
+.box-collapsible {
+
+	.box-content-wrap {
+
+		.box-header-wrap {
+
+			.box-header {
+
+				.box-trigger-collapse {
+					position: absolute;
+					display: inline-block;
+					top: 0.5em;
+					right: 0.5em;
+					color: $color-secondary-text;
+					cursor: pointer;
+
+					&:hover {
+						color: $color-link-h;
+					}
+				}
+			}
+		}
+	}
+}

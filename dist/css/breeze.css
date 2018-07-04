@@ -53,7 +53,7 @@ Social network		-	This section define the standard colors used by social network
 						snapchat, twitter, tumblr, vimeo, vine, vk, whatsapp, youtube.
 ***********************************************************************/
 /*! 
-CMGTools	-	CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and 
+CMGTools	-	Breeze is a responsive and component oriented css framework having pre-defined and 
 				commonly used components that can be easily adapted by all the desktop, tablet and mobile screens.
 
 Version		-	1.0.0-alpha
@@ -62,15 +62,15 @@ License		-	GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
 
 Copyright © 2015-2018 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
 
-Introduction	-	CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and 
-					commonly used components that can be easily adapted by all the desktop, tablet and mobile screens.
+Introduction	-	Breeze is a responsive and component oriented css framework having pre-defined and commonly used 
+					components that can be easily adapted by all the desktop, tablet and mobile screens.
 
 					It's divided on high level into core, elements, components and extension where each division consist 
 					of SASS files having specific features and components according to file name. All the divisions are 
 					arranged in such a way that these can be overriden by the project SASS either following the same 
 					divisions or it's own directory and file arrangements.
 
-Core			-	The core division is most important and foundation of CMT-UI. It consist of variables, reset, typography, 
+Core			-	The core division is most important and foundation of Breeze. It consist of variables, reset, typography, 
 					effects(animations, transitions and transformations), mixins, basic elements and containers(12 and 15 
 					columns grid using rows and columns, with and without margins). Every project must include all the core 
 					files in order to work properly.
@@ -82,14 +82,14 @@ Elements		-	This division consist of styling of form, form elements, tables and 
 
 Components		-	The components are either self dependent or associated with CMT-JS framework in order to be fully 
 					functional. The JS part of these components can also be implemented either using plain JS or widely 
-					used frameworks and libraries. The components available with CMT-UI are headers, footers, sidebars, 
-					menus, cards, boxes, blocks, popups, grid, sliders, galleries, flippers, widgets, blog and cart. CMT-UI 
+					used frameworks and libraries. The components available with Breeze are headers, footers, sidebars, 
+					menus, cards, boxes, blocks, popups, grid, sliders, galleries, widgets, blog and cart. Breeze 
 					provide the layout and basic structure of each component and few implementations of each barebone 
 					component which can be used directly.
 
-Extensions		-	This division defines the styling and themes of 3rd party components like jQuery UI etc to match with CMT-UI.
+Extensions		-	This division defines the styling and themes of 3rd party components like jQuery UI etc to match with Breeze.
 
-Support	- CMT-UI supports wide range of browsers as listed below:
+Support	- Breeze supports wide range of browsers as listed below:
 
 // TODO Test on browsers and identify minimum supported version
 
@@ -189,14 +189,14 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group, .header-basic, .sidebar-basic .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-basic .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -1166,6 +1166,26 @@ Notes:
 .gradient.gradient-radial {
   background-image: radial-gradient(circle at center top, #F2F2F2, #3C4655); }
 
+.circled.circled-tiny {
+  width: 80px;
+  height: 80px; }
+
+.circled.circled-small {
+  width: 120px;
+  height: 120px; }
+
+.circled.circled-medium {
+  width: 150px;
+  height: 150px; }
+
+.circled.circled-large {
+  width: 180px;
+  height: 180px; }
+
+.circled.circled-xlarge {
+  width: 220px;
+  height: 220px; }
+
 .circled.circled1 {
   overflow: hidden;
   text-align: center;
@@ -1989,11 +2009,11 @@ table {
 
 th {
   font-weight: bold;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 td {
   font-weight: normal;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 ins {
   background-color: #3C4655;
@@ -3360,6 +3380,26 @@ p, span, em, div, a {
   line-height: 1.5; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
     padding: 0.5em 0; }
+  .reader .reader-left {
+    text-align: left !important; }
+  .reader .reader-center {
+    text-align: center !important; }
+  .reader .reader-right {
+    text-align: right !important; }
+  .reader .reader-justify {
+    text-align: justify !important; }
+  .reader ol li {
+    list-style-position: inside;
+    list-style-type: decimal;
+    line-height: 2.5; }
+  .reader ol ul, .reader ol ol {
+    margin-left: 2em; }
+  .reader ul li {
+    list-style-position: inside;
+    list-style-type: disc;
+    line-height: 2.5; }
+  .reader ul ul, .reader ul ol {
+    margin-left: 2em; }
 
 .cmti, .fa {
   vertical-align: middle; }
@@ -3467,13 +3507,26 @@ a, .link {
 
 .text-with-line {
   width: 100%;
-  height: 0.75em;
-  border-bottom: 1px solid #7F7F7F;
+  border-top: 1px solid #7F7F7F;
   text-align: center; }
   .text-with-line .text-content {
     display: inline-block;
     padding: 0 1em;
-    background-color: #F2F2F2; }
+    background-color: #F2F2F2;
+    margin-top: -0.5em;
+    vertical-align: top; }
+
+.note {
+  padding: 0.5em;
+  background-color: #3C4655; }
+  .note .note-info {
+    color: #3F62A0; }
+  .note .note-success {
+    color: #A5D75A; }
+  .note .note-warning {
+    color: #EF9300; }
+  .note .note-error {
+    color: #E74343; }
 
 /**********************************************************************
 Description: This file define the grid system and basic containers of CMT-UI css framework.
@@ -4747,8 +4800,8 @@ Details: It defines the custom element styles as listed below:
     .icon-picker-wrap .icon-picker .picker-icon-wrap {
       display: inline-block;
       position: relative;
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
       text-align: center;
       cursor: pointer;
       background-color: #3C4655;
@@ -4763,31 +4816,32 @@ Details: It defines the custom element styles as listed below:
         color: #FFFFFF; }
       .icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
         display: inline-block;
-        height: 64px;
-        line-height: 64px;
-        font-size: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 32px;
         cursor: pointer; }
     .icon-picker-wrap .icon-picker .picker-icon-sets {
+      background-color: lightgray;
       display: none;
       position: absolute;
       left: 0;
-      top: 64px;
-      width: 264px;
-      padding: 5px;
-      height: 216px;
-      background-color: lightgray;
+      top: 48px;
       z-index: 1000000; }
-      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap {
-        margin: 2px;
-        width: 48px;
-        height: 48px; }
-        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap .picker-icon {
-          display: inline-block;
+      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set {
+        width: 264px;
+        padding: 5px;
+        height: 216px; }
+        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap {
+          margin: 2px;
           width: 48px;
-          height: 48px;
-          line-height: 48px;
-          font-size: 36px;
-          cursor: pointer; }
+          height: 48px; }
+          .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap .picker-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 36px;
+            cursor: pointer; }
 
 .cmt-timepicker {
   position: absolute;
@@ -4858,31 +4912,32 @@ Details: It defines the custom element styles as listed below:
   clear: none; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze Framework. Most of 
+these elements are also dependent on Velocity. Though the JS implementation can also be 
+done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Select          - The custom select allows user to select an item. It override the default select ui dependent
-*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
-*
+1. Select - The custom select allows user to select an item. It override the default select ui 
+dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
 ***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  margin: 0; }
   .cmt-select-wrap select {
     display: none; }
   .cmt-select-wrap .cmt-select {
-    position: relative;
-    background-color: #F2F2F2; }
+    position: relative; }
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
       z-index: 100000;
-      padding-right: 1.5em;
+      width: 100%;
+      padding: 0.30em;
+      background-color: #F2F2F2;
       -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
       -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
       box-shadow: inset 0 0 0 1px #F2F2F2; }
@@ -4892,15 +4947,13 @@ Details: It defines the custom element styles as listed below:
         overflow: hidden;
         white-space: nowrap;
         text-align: left;
-        color: #363636;
-        font-size: 1em;
-        padding: 0.30em 0.25em; }
+        color: #363636; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
         position: absolute;
         top: 0;
         right: 0;
         display: inline-block;
-        padding: 0.25em; }
+        padding: 0.3em 0.5em; }
       .cmt-select-wrap .cmt-select .cmt-selected.disabled {
         cursor: default; }
     .cmt-select-wrap .cmt-select .cmt-select-list {
@@ -4917,7 +4970,7 @@ Details: It defines the custom element styles as listed below:
         width: 100%;
         overflow: hidden;
         cursor: pointer;
-        background-color: #FFFFFF;
+        background-color: #F2F2F2;
         padding: 0.25em; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
         color: #FFFFFF;
@@ -4925,12 +4978,15 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-multiselect {
   position: relative;
-  background-color: #F2F2F2; }
+  margin: 0; }
   .cmt-multiselect .cmt-selected {
     cursor: pointer;
     position: relative;
     z-index: 100000;
     padding-right: 1.5em;
+    width: 100%;
+    padding: 0.30em;
+    background-color: #F2F2F2;
     -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
     -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
     box-shadow: inset 0 0 0 1px #F2F2F2; }
@@ -4941,14 +4997,13 @@ Details: It defines the custom element styles as listed below:
       white-space: nowrap;
       text-align: left;
       color: #363636;
-      font-size: 1em;
-      padding: 0.30em 0.25em; }
+      font-size: 1em; }
     .cmt-multiselect .cmt-selected .s-icon {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block;
-      padding: 0.25em; }
+      padding: 0 0.5em; }
     .cmt-multiselect .cmt-selected.disabled {
       cursor: default; }
   .cmt-multiselect .cmt-select-list {
@@ -5001,19 +5056,22 @@ Details: It defines the custom element styles as listed below:
     margin: 0; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze Framework. 
+Most of these elements are also dependent on CMT-JS library. Though the JS implementation 
+can also be done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Choice          - The choice allows user to select single or multiple options from available options. It include
-*                   radio and checkbox html components and change their default behaviour by showing good looking
-*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
-*
+1. Choice - The choice allows user to select single or multiple options from available 
+options. It include radio and checkbox html components and change their default behaviour 
+by showing good looking icons instead of browser dependentent graphics. These are indepedent 
+of JS and purely css solutions.
 ***********************************************************************/
+.cmt-choice span, .cmt-choice a {
+  vertical-align: middle; }
+
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -5022,9 +5080,6 @@ Details: It defines the custom element styles as listed below:
 .cmt-choice label {
   cursor: pointer;
   padding: 0; }
-
-.cmt-choice .label {
-  margin-top: 0.25em; }
 
 .cmt-choice input[type=checkbox] + .label.pad-label::before,
 .cmt-choice input[type=radio] + .label.pad-label::before {
@@ -5451,7 +5506,7 @@ form {
   margin: 0 auto;
   position: relative; }
 
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .cmt-select-wrap .cmt-selected, .form .cmt-checkbox, .form .cmt-switch {
   border: none;
   box-shadow: none;
   outline: none;
@@ -5477,7 +5532,7 @@ form {
   .element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .cmt-select-wrap .cmt-selected {
   background-color: #F2F2F2;
   color: #363636;
   text-align: left;
@@ -5489,24 +5544,39 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
   box-shadow: inset 0 0 0 1px #F2F2F2; }
-  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .form .cmt-select-wrap .cmt-selected:hover {
     background-color: #E9E9E9;
     color: #363636;
     -webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
     -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
     box-shadow: inset 0 0 0 1px #E9E9E9; }
-  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .form .cmt-select-wrap .cmt-selected:focus {
     background-color: #E1E1E1;
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
     background-color: #CCCCCC;
     color: #909090;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
+
+.form .cmt-checkbox, .form .cmt-switch {
+  color: #363636;
+  text-align: left;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s; }
+  .form .cmt-checkbox:hover, .form .cmt-switch:hover {
+    color: #363636; }
+  .form .cmt-checkbox:focus, .form .cmt-switch:focus {
+    color: #4F688E; }
+  .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
+    color: #909090; }
 
 .btn, .btn-icon, input[type="submit"], input[type="button"], button {
   -webkit-transition: all 420ms ease-in-out 0s;
@@ -5540,11 +5610,18 @@ label {
 .element {
   display: inline-block; }
 
-input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
-  line-height: 1.4; }
+.disabled {
+  background-color: gray !important;
+  color: #363636 !important; }
+  .disabled:hover {
+    background-color: gray !important;
+    color: #363636 !important; }
+
+input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
+  line-height: 1.4em; }
 
 label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
-  line-height: 1.4; }
+  line-height: 1.4em; }
 
 .btn-icon {
   padding: 0.30em 0.5em;
@@ -5618,9 +5695,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .cmt-checkbox, .cmt-switch {
   -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 0px #F2F2F2;
-  box-shadow: inset 0 0 0 0px #F2F2F2; }
-
-.cmt-checkbox, .cmt-switch {
+  box-shadow: inset 0 0 0 0px #F2F2F2;
   background: none;
   padding-left: 0; }
   .cmt-checkbox:hover, .cmt-switch:hover {
@@ -5629,7 +5704,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button,
-.frm-rounded-all .btn {
+.frm-rounded-all .btn, .frm-rounded-all select, .frm-rounded-all .cmt-selected {
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -5637,7 +5712,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button,
-.frm-rounded-top .btn {
+.frm-rounded-top .btn, .frm-rounded-top select, .frm-rounded-top .cmt-selected {
   border-radius: 5px 5px 0 0;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-top-right: 5px;
@@ -5648,7 +5723,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button,
-.frm-rounded-right .btn {
+.frm-rounded-right .btn, .frm-rounded-right select, .frm-rounded-right .cmt-selected {
   border-radius: 0 5px 5px 0;
   -webkit-border-radius-top-right: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -5659,7 +5734,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button,
-.frm-rounded-bottom .btn {
+.frm-rounded-bottom .btn, .frm-rounded-bottom select, .frm-rounded-bottom .cmt-selected {
   border-radius: 0 0 5px 5px;
   -webkit-border-radius-bottom-left: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -5670,7 +5745,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button,
-.frm-rounded-left .btn {
+.frm-rounded-left .btn, .frm-rounded-left select, .frm-rounded-left .cmt-selected {
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -5728,15 +5803,22 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   clear: none; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
+  width: 60%;
+  float: left; }
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-checkbox label {
+  width: 100%;
+  float: left; }
+
+.frm-split-40-60 .cmt-switch {
   width: 60%;
   float: left; }
 
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.element-60 .cmt-select-wrap, .element-60 .icon-picker {
   width: 100%; }
 
 .frm-split-40-60 .frm-icon-element {
@@ -5756,7 +5838,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
 
-.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select {
+.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap {
   margin-bottom: 0.5rem; }
 
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
@@ -5772,7 +5854,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   margin-top: 0.5rem; }
 
 .form .form-group .help-block {
-  margin-bottom: 0.25rem; }
+  margin: 0.25rem 0; }
 
 .form .frm-split-40-60 label {
   margin-bottom: 0.5rem; }
@@ -5904,6 +5986,20 @@ Details: It defines the custom element styles as listed below:
     .splitter.splitter-v.splitter-v-large {
       height: 500px; }
 
+/**********************************************************************
+Description: It defines the styles of tab components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of tab components as listed below:
+
+Tabs - The barebone card class with minimum styles defining tab links and content.
+
+Basic - It define the styles of basic tab with borders. The bordered tabs are commonly 
+used for bordered boxes and panels.
+
+Underline - The underlined tabs use underline to hightlight the tabs and active tab.
+***********************************************************************/
 .tabs-basic .tab-links-wrap {
   border-bottom: 1px solid #595959; }
   .tabs-basic .tab-links-wrap .tab-link {
@@ -5919,48 +6015,79 @@ Details: It defines the custom element styles as listed below:
 .tabs-basic .tab-content-wrap .tab-content {
   display: none; }
 
+.tabs-underline .tab-links-wrap {
+  border-bottom: 1px solid #7F7F7F; }
+  .tabs-underline .tab-links-wrap .tab-link {
+    display: inline-block;
+    padding: 0.75em 1.25em;
+    cursor: pointer; }
+    .tabs-underline .tab-links-wrap .tab-link.active {
+      color: #678d34;
+      border-bottom: 2px solid #678d34; }
+    .tabs-underline .tab-links-wrap .tab-link:hover {
+      color: #678d34; }
+
+.tabs-underline .tab-content-wrap .tab-content {
+  display: none; }
+
+/**********************************************************************
+Description: It defines the styles of accordial element. The accordian is a multi 
+section arrangement keeping only one section visible at a time.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of accordian elements as listed below:
+
+Accordian - The barebone accordian class with minimum styles common for all the accordians. 
+The base class define the structure of accordian having tab with trigger and view.
+
+Basic Accordian - It arrange the accordian sections vertically and provide options to select 
+multiple themes using the color scheme.
+
+Border Accordian - It's extension of Basic Accordian with default borders.
+***********************************************************************/
 .accordian {
   position: relative; }
-  .accordian .accordian-trigger {
+  .accordian .accordian-tab .accordian-trigger {
     position: relative; }
-  .accordian .accordian-view {
+  .accordian .accordian-tab .accordian-view {
     position: relative; }
 
-.accordian-basic .accordian-trigger {
+.accordian-basic .accordian-tab .accordian-trigger {
   background-color: #87BA45;
   color: #E6E6E6;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 1.08em;
-  padding: 0.25em 1em;
+  padding: 1em;
   cursor: pointer; }
 
-.accordian-basic .accordian-view {
+.accordian-basic .accordian-tab .accordian-view {
   background-color: #3C4655;
   color: #96B0D6;
   padding: 1em; }
 
-.accordian-basic.accordian-primary .accordian-trigger {
+.accordian-basic.accordian-primary .accordian-tab .accordian-trigger {
   background-color: #F2F2F2;
   color: #87BA45; }
 
-.accordian-basic.accordian-primary .accordian-view {
+.accordian-basic.accordian-primary .accordian-tab .accordian-view {
   background-color: #F2F2F2;
   color: #363636; }
 
-.accordian-basic.accordian-secondary .accordian-trigger {
+.accordian-basic.accordian-secondary .accordian-tab .accordian-trigger {
   background-color: #3C4655;
   color: #3C4655; }
 
-.accordian-basic.accordian-secondary .accordian-view {
+.accordian-basic.accordian-secondary .accordian-tab .accordian-view {
   background-color: #3C4655;
   color: #96B0D6; }
 
-.accordian-border .accordian-trigger.active {
+.accordian-border .accordian-tab .accordian-trigger.active {
   border-left: 2px solid #87BA45; }
 
-.accordian-border .accordian-view {
+.accordian-border .accordian-tab .accordian-view {
   border: 1px solid #7F7F7F; }
-  .accordian-border .accordian-view.active {
+  .accordian-border .accordian-tab .accordian-view.active {
     border-left: 2px solid #87BA45; }
 
 /**********************************************************************
@@ -6047,6 +6174,102 @@ and open the template in the editor.
     Created on : 27 Jan, 2018, 2:02:01 PM
     Author     : bhagwatchouhan
 */
+/**********************************************************************
+Description: It defines the styles for flipper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for flipper components as listed below:
+
+* Flipper     - It flip the content on hover hiding the face and showing content.
+
+***********************************************************************/
+.flipper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 4px 8px;
+  perspective: 1000; }
+  .flipper:hover .flipper-content {
+    transform: rotateY(180deg); }
+  .flipper .flipper-content {
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear; }
+    .flipper .flipper-content .flipper-face {
+      width: 100%;
+      backface-visibility: hidden; }
+    .flipper .flipper-content .flipper-face.flipper-back {
+      display: block;
+      transform: rotateY(180deg);
+      box-sizing: border-box;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      background-color: #3C4655; }
+    .flipper .flipper-content .flipper-back {
+      position: absolute;
+      top: 0;
+      height: 100%; }
+
+/**********************************************************************
+Description: It defines the styles of data zigzag components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of zigzag components as listed below:
+
+ZigZag - The barebone zigzag class with minimum styles with each section having either 
+100% width or sub-divided into two parts having 50% width.
+***********************************************************************/
+.data-zigzag .data-zigzag-row {
+  margin-bottom: 2em; }
+  .data-zigzag .data-zigzag-row img {
+    width: 100%;
+    height: auto; }
+  .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
+    width: 100%;
+    display: inline-block; }
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+      display: block; }
+  .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
+    width: 100%;
+    display: inline-block; }
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+      display: none; }
+
+@media only screen and (min-width: 1025px) {
+  .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
+    width: 50%; }
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+      display: none; }
+  .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
+    width: 50%; }
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+      display: block; }
+  .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-1 {
+    float: left;
+    padding-right: 1em; }
+  .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-2 {
+    float: right;
+    padding-left: 1em; }
+  .data-zigzag .data-zigzag-row:nth-child(even) .data-zigzag-part-1 {
+    float: right;
+    padding-left: 1em; }
+  .data-zigzag .data-zigzag-row:nth-child(even) .data-zigzag-part-2 {
+    float: left;
+    padding-right: 1em; } }
+
+/**********************************************************************
+Description: It defines the styles of CRUD components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of CRUD components as listed below:
+
+CRUD - The barebone class with minimum styles having main and sidebar container
+to show forms and widgets.
+***********************************************************************/
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
 
@@ -6580,12 +6803,10 @@ Details: It defines the styles for header components as listed below:
     width: 100%;
     z-index: 10001; }
 
-/* Basic Header having fixed width logo, main menu and mobile menu icon.
- * Responsive approach - Desktop first
+/* Basic Header having fixed height logo, main menu and mobile menu.
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
- * Main menu can alone do the job in most of the cases.
+ * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
   background-color: #363636;
@@ -6594,59 +6815,96 @@ Details: It defines the styles for header components as listed below:
   z-index: 10001; }
   .header-basic .header-logo {
     cursor: pointer;
-    padding: 10px;
     display: block;
     z-index: 2;
     float: left; }
-    .header-basic .header-logo .logo {
-      width: 140px; }
-  .header-basic #menu-main {
-    padding: 10px;
-    text-align: right;
-    display: block;
-    z-index: 1;
-    float: right; }
-  .header-basic #menu-main-mobile {
-    position: absolute;
-    display: none; }
-    .header-basic #menu-main-mobile li {
-      background-color: white;
-      color: #171717;
-      padding: 0.75em 0; }
-      .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
-        color: #171717; }
-        .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
-          color: #298ccf; }
   @media only screen and (max-width: 1024px) {
-    .header-basic .header-logo .logo {
-      width: 70px; }
-    .header-basic #menu-main {
-      margin-top: 55px;
-      display: none; }
-    .header-basic #mobile-actions {
-      padding: 20px 10px;
-      text-align: right;
-      display: block;
-      z-index: 1;
-      float: right; }
-      .header-basic #mobile-actions .mobile-action {
-        cursor: pointer;
-        margin-left: 0.5em; }
-    .header-basic #menu-main-mobile {
-      width: 320px;
-      right: 0; } }
+    .header-basic {
+      height: 50px; }
+      .header-basic .header-logo {
+        padding: 5px 10px; }
+        .header-basic .header-logo .logo img {
+          height: 40px; }
+      .header-basic #menu-main {
+        display: none; }
+      .header-basic #menu-main-mobile {
+        position: absolute;
+        display: none;
+        width: 320px;
+        right: 0; }
+        .header-basic #menu-main-mobile li {
+          box-shadow: 0 -4px 2px -5px #87BA45; }
+          .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
+            background-color: white;
+            color: #171717;
+            padding: 1em 0;
+            -webkit-transition: all 250ms ease-in-out 0s;
+            -moz-transition: all 250ms ease-in-out 0s;
+            -ms-transition: all 250ms ease-in-out 0s;
+            -o-transition: all 250ms ease-in-out 0s;
+            transition: all 250ms ease-in-out 0s; }
+            .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
+              background-color: lightgray;
+              color: #298ccf; }
+          .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
+            background-color: #87BA45;
+            color: #E6E6E6; }
+      .header-basic #mobile-actions {
+        margin: 5px 10px;
+        line-height: 40px;
+        text-align: right;
+        display: block;
+        z-index: 1;
+        float: right; }
+        .header-basic #mobile-actions .mobile-action {
+          color: #171717;
+          cursor: pointer;
+          margin-left: 0.5em;
+          font-size: 2em;
+          -webkit-transition: all 250ms ease-in-out 0s;
+          -moz-transition: all 250ms ease-in-out 0s;
+          -ms-transition: all 250ms ease-in-out 0s;
+          -o-transition: all 250ms ease-in-out 0s;
+          transition: all 250ms ease-in-out 0s; }
+          .header-basic #mobile-actions .mobile-action:hover {
+            color: #298ccf; } }
   @media only screen and (max-width: 480px) {
     .header-basic #menu-main-mobile {
       width: 100%; } }
   @media only screen and (min-width: 1025px) {
     .header-basic {
+      height: 80px;
       padding: 0 5%; }
       .header-basic .header-logo {
-        padding-left: 0; }
+        padding: 5px 10px 5px 0; }
+        .header-basic .header-logo .logo img {
+          height: 70px; }
       .header-basic #menu-main {
-        padding-right: 0; }
+        padding: 10px;
+        padding-right: 0;
+        text-align: right;
+        display: block;
+        z-index: 1;
+        float: right; }
       .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
-        display: none; } }
+        display: none; }
+      .header-basic.header-small {
+        height: 50px; }
+        .header-basic.header-small #menu-main {
+          height: 50px;
+          line-height: 50px;
+          padding: 0; } }
+
+.header-basic-duo .header-logo .logo-small {
+  display: none; }
+
+.header-basic-duo.header-small .logo {
+  display: none; }
+
+.header-basic-duo.header-small .header-logo .logo-small {
+  display: inline-block; }
+  .header-basic-duo.header-small .header-logo .logo-small img {
+    height: 40px; }
 
 /**********************************************************************
 Description: It defines the styles for footer components available in CMT-UI css framework.
@@ -7349,15 +7607,15 @@ Details: It defines the styles for mapper components as listed below:
 }
 */
 /**********************************************************************
-Description: It defines the styles of data card components available in CMT-UI css framework.
+Description: It defines the styles of data card components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of card components as listed below:
 
-* Card        - The barebone card class with minimum styles.
+* Card		-	The barebone card class with minimum styles.
 *
-* Element     - The element cards will be used by blocks to show content having header icon and text.
+* Element	-	The element cards will be used by blocks to show content having header icon and text.
 ***********************************************************************/
 .card {
   position: relative; }
@@ -7384,37 +7642,113 @@ Details: It defines the styles of card components as listed below:
       position: relative; }
     .card .card-content-wrap .card-data {
       position: relative; }
+    .card .card-content-wrap .card-content {
+      position: relative; }
+      .card .card-content-wrap .card-content .card-content-data {
+        position: relative; }
+      .card .card-content-wrap .card-content .card-content-buffer {
+        position: relative; }
     .card .card-content-wrap .card-footer {
       position: relative; }
+  .card.card-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .card.card-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .card.card-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
-.card-element .card-content-wrap .card-header {
-  text-align: center;
-  padding: 1em; }
+.card-basic .card-content-wrap .card-header {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-header .card-header-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-header .card-header-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-title, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-content {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-header .card-header-title + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-title + .card-header-content {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-header .card-header-info + .card-header-content {
+    margin-top: 0.5rem; }
 
-.card-element .card-content-wrap .card-data {
-  text-align: center;
-  padding: 1em; }
+.card-basic .card-content-wrap .card-data {
+  padding: 1rem 0; }
 
-.card-element .card-content-wrap .card-footer {
-  text-align: center;
-  padding: 1em; }
+.card-basic .card-content-wrap .card-content {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-content .card-content-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-content .card-content-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-content .card-content-data {
+    padding: 1rem 0; }
+
+.card-basic .card-content-wrap .card-footer {
+  padding: 1rem 0; }
+  .card-basic .card-content-wrap .card-footer .card-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .card-basic .card-content-wrap .card-footer .card-footer-info {
+    font-size: 1.08em; }
+  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-footer .card-footer-info + .card-footer-content {
+    margin-top: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of box components available in CMT-UI css framework.
+Description: It defines the styles of card panels used to display data and forms.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card panels as listed below:
+
+* Panel	-	The panel card define the styles of simple card having icon and header within header wrapper and
+*			content within content box. The content is aligned center by default.
+***********************************************************************/
+.card-panel .card-content-wrap .card-header {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  padding: 0.5rem; }
+
+.card-panel .card-content-wrap .card-data {
+  background-color: #F2F2F2;
+  color: #363636;
+  padding: 0.5rem; }
+
+.card-panel .card-content-wrap .card-footer {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem; }
+
+.card-panel-icon {
+  padding: 1rem; }
+  .card-panel-icon .card-content-wrap .card-header .card-header-icon {
+    position: absolute;
+    display: inline-block;
+    top: 0.5rem;
+    left: 0.5rem; }
+  .card-panel-icon .card-content-wrap .card-header .card-header-title {
+    padding-left: 1.5rem; }
+
+/**********************************************************************
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+			 components displayed on search pages, panels having content, form etc.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of box components as listed below:
 
-* Footer      - The barebone box class with minimum styles.
-*
-* Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
-*               content within content box. The content is aligned center by default.
-*				The Avatar, Banner and Video can be placed any any position within the Box. The possible postions 
-*				are before header, within header, within content, within footer.
-*
-* Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
-*               header and footer visible. The content collapse on clicking header / collapse button on header.
+* Box      - The barebone box class with minimum styles.
 ***********************************************************************/
 .box {
   position: relative; }
@@ -7440,51 +7774,132 @@ Details: It defines the styles of box components as listed below:
     .box .box-content-wrap .box-header-wrap {
       position: relative; }
       .box .box-content-wrap .box-header-wrap .box-header {
-        position: relative; }
+        position: relative;
+        z-index: 20; }
+    .box .box-content-wrap .box-data {
+      position: relative; }
     .box .box-content-wrap .box-content {
       position: relative; }
       .box .box-content-wrap .box-content .box-content-data {
         position: relative; }
       .box .box-content-wrap .box-content .box-content-buffer {
         position: relative; }
+    .box .box-content-wrap .box-card-wrap {
+      position: relative; }
     .box .box-content-wrap .box-footer-wrap {
       position: relative; }
       .box .box-content-wrap .box-footer-wrap .box-footer {
-        position: relative; }
-
-.box-basic {
-  padding: 1rem; }
-  .box-basic .box-content-wrap .box-header-wrap {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.5rem; }
-  .box-basic .box-content-wrap .box-content {
+        position: relative;
+        z-index: 20; }
+  .box.box-primary {
     background-color: #F2F2F2;
-    color: #363636;
-    padding: 0.5rem; }
-  .box-basic .box-content-wrap .box-footer-wrap {
-    background-color: #556479;
-    color: #6a8fc5;
-    padding: 0.25rem; }
+    color: #363636; }
+  .box.box-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .box.box-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
-.box-basic-icon {
-  padding: 1rem; }
-  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-icon {
-    position: absolute;
-    display: inline-block;
-    top: 0.5rem;
-    left: 0.5rem; }
-  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
-    padding-left: 1.5rem; }
+.box-basic .box-content-wrap .box-header-wrap {
+  padding: 1rem 0; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title {
+    font-size: 1.58em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info {
+    font-size: 1.17em; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-content {
+    font-size: 1.08em; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-title, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-content {
+    margin-top: 0.5rem; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-content {
+    margin-top: 0.5rem; }
+  .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info + .box-header-content {
+    margin-top: 0.5rem; }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger {
+.box-basic .box-content-wrap .box-data {
+  padding: 1rem 0; }
+
+.box-basic .box-content-wrap .box-content .box-content-title {
+  font-size: 1.58em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.box-basic .box-content-wrap .box-content .box-content-info {
+  font-size: 1.17em; }
+
+.box-basic .box-content-wrap .box-content .box-content-summary {
+  font-size: 1.08em; }
+
+.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
+  margin-top: 0.5rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+  margin-top: 0.5rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-data {
+  padding: 1rem 0; }
+
+.box-basic .box-content-wrap .box-footer-wrap .box-footer {
+  padding: 1rem 0; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info {
+    font-size: 1.08em; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-title, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-content {
+    margin-top: 0.5rem; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-content {
+    margin-top: 0.5rem; }
+  .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info + .box-footer-content {
+    margin-top: 0.5rem; }
+
+/**********************************************************************
+Description: It defines the styles of box panels used to display data and forms.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				are outside content wrapper as background, within header, within content and within footer.
+*
+* Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+.box-panel .box-content-wrap .box-header-wrap {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  padding: 0.5rem; }
+
+.box-panel .box-content-wrap .box-data {
+  background-color: #F2F2F2;
+  color: #363636;
+  padding: 0.5rem; }
+
+.box-panel .box-content-wrap .box-footer-wrap {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem; }
+
+.box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-icon {
+  position: absolute;
+  display: inline-block;
+  top: 0.5rem;
+  left: 0.5rem; }
+
+.box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
+  padding-left: 1.5rem; }
+
+.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -7533,7 +7948,7 @@ Details: It defines the styles of form box components as listed below:
 ***********************************************************************/
 .box-form {
   position: relative; }
-  .box-form .box-form-trigger {
+  .box-form .box-trigger-form {
     cursor: pointer; }
   .box-form .box-form-info-wrap {
     display: block; }
@@ -7543,14 +7958,15 @@ Details: It defines the styles of form box components as listed below:
 .box-form-basic {
   background-color: #F2F2F2;
   color: #363636; }
-  .box-form-basic .box-form-trigger {
+  .box-form-basic .box-trigger-form {
     position: absolute;
     display: inline-block;
-    top: 10px;
-    right: 10px;
+    top: 0.5rem;
+    right: 0.5rem;
     color: #298ccf;
-    cursor: pointer; }
-    .box-form-basic .box-form-trigger:hover {
+    cursor: pointer;
+    z-index: 20; }
+    .box-form-basic .box-trigger-form:hover {
       color: #E74343; }
 
 .box-form-collapsible .box-form-collapsible-trigger {
@@ -7644,41 +8060,66 @@ Details: It defines the styles of form box components as listed below:
       display: none; }
 
 /**********************************************************************
-Description: It defines the styles of widget components available in CMT-UI css framework.
+Description: It defines the styles of widget components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of widget components as listed below:
 
-* Widget	  - The barebone widget with minimum styles.
+* Widget	-	The barebone widget with minimum styles.
 *
-* Basic       - The basic widget defines the styles of widget having text and background colors.
+* Basic		-	The basic widget defines the styles of widget having text and background colors.
 
 ***********************************************************************/
 .widget {
   position: relative; }
-  .widget .widget-header {
-    position: relative; }
+  .widget .box-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .widget > .texture {
+    z-index: 10; }
   .widget .widget-content-wrap {
-    position: relative; }
+    position: relative;
+    z-index: 15; }
+    .widget .widget-content-wrap .widget-header {
+      position: relative; }
+    .widget .widget-content-wrap .widget-content {
+      position: relative; }
+      .widget .widget-content-wrap .widget-content .widget-content-data {
+        position: relative; }
+      .widget .widget-content-wrap .widget-content .widget-content-buffer {
+        position: relative; }
 
-.widget-basic {
+.widget-basic .widget-content-wrap .widget-header {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  padding: 0.5rem; }
+
+.widget-basic .widget-content-wrap .widget-content-wrap {
   background-color: #F2F2F2;
-  color: #363636; }
-  .widget-basic .widget-header {
-    background-color: #87BA45;
-    color: #E6E6E6; }
-  .widget-basic .widget-content-wrap {
-    background-color: #3C4655;
-    color: #96B0D6; }
-  .widget-basic .widget-footer {
-    background-color: #232831;
-    color: #c2d1e7; }
+  color: #363636;
+  padding: 0.5rem; }
+
+.widget-basic .widget-content-wrap .widget-footer {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -7687,13 +8128,12 @@ Details: It defines the styles for header components as listed below:
 * Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
 *               listed options:
 *                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
 *                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
 *
 * Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
 *               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
 ***********************************************************************/
 .block {
   position: relative; }
@@ -7761,7 +8201,8 @@ Details: It defines the styles for header components as listed below:
     .block .block-content-wrap .block-header-wrap {
       position: relative; }
       .block .block-content-wrap .block-header-wrap .block-header {
-        position: relative; }
+        position: relative;
+        z-index: 20; }
     .block .block-content-wrap .block-content {
       position: relative; }
       .block .block-content-wrap .block-content .block-content-data {
@@ -7771,7 +8212,8 @@ Details: It defines the styles for header components as listed below:
     .block .block-content-wrap .block-footer-wrap {
       position: relative; }
       .block .block-content-wrap .block-footer-wrap .block-footer {
-        position: relative; }
+        position: relative;
+        z-index: 20; }
   .block .block-splitter {
     position: absolute;
     width: 100%;
@@ -7788,12 +8230,66 @@ Details: It defines the styles for header components as listed below:
       display: inline-block;
       width: 100px;
       height: 100px; }
+  .block.block-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .block.block-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .block.block-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
-.block-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
+.block-basic .block-content-wrap .block-header-wrap {
+  padding: 1rem 0; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title {
+    font-size: 2em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info {
+    font-size: 1.33em; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-content {
+    font-size: 1.08em; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-title, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-content {
+    margin-top: 0.5rem; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-content {
+    margin-top: 0.5rem; }
+  .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info + .block-header-content {
+    margin-top: 0.5rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.block-basic .block-content-wrap .block-content .block-content-info {
+  font-size: 1.33em; }
+
+.block-basic .block-content-wrap .block-content .block-content-summary {
+  font-size: 1.08em; }
+
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+  margin-top: 0.5rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 0.5rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-data {
+  padding: 1rem 0; }
+
+.block-basic .block-content-wrap .block-footer-wrap .block-footer {
+  padding: 1rem 0; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info {
+    font-size: 1.17em; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
+    font-size: 1.08em; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
+    margin-top: 0.5rem; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
+    margin-top: 0.5rem; }
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
+    margin-top: 0.5rem; }
 
 /**********************************************************************
 Description: It defines the styles of the pagination components having links to navigate pages.
@@ -7916,13 +8412,15 @@ Details: It defines the styles for data grid components as listed below:
     font-weight: bold; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
     background-color: #3C4655; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    display: inline-block;
-    width: 68%;
-    padding: 1%;
-    word-wrap: break-word; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      width: 28%; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data {
+    display: block; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+      display: inline-block;
+      width: 68%;
+      padding: 1%;
+      word-wrap: break-word; }
+      .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+        width: 28%; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: none;
     font-weight: bold; }
@@ -7934,14 +8432,16 @@ Details: It defines the styles for data grid components as listed below:
 
 @media only screen and (min-width: 1025px) {
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
-    display: block; }
+    display: flex; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
     display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    width: 100%;
-    padding: 0; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data {
+    display: flex; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+      width: 100%;
+      padding: 0; }
+      .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+        display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: block; } }
 
@@ -8037,323 +8537,160 @@ Details: It defines the styles for data table components as listed below:
     text-align: left; }
 
 /**********************************************************************
-Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
-			 related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+Description: It defines the styles of the page component. We can devide the entire page 
+in multiple sections. Each page can have background image with or without parallax effect, 
+a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
+and widgets.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles of blog components as listed below:
-* Blog          - The barebone blog class with minimum styles common for all the blog components. The base class can
-*                 have below listed options:
-*                     - It wraps multiple posts having banner, title, summary, author and publish info.
-*                     - It might also show pagination to navigate through pages.
-*                     - It might support ajax based pagination following either traditional page links or scroll
-*                       based pagination.
-* Basic         - It shows banner floated left and content flowing below banner. Author is next to banner with time
-*                 details. Title is below author and than content flows.
-* Regular       - It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and
-*                 post info in 4th row.
-* Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
-*                 Content in 3rd row and post info in 4th row.
-***********************************************************************/
-.blog > .texture {
-  z-index: 10; }
+Details: It defines the styles for page components as listed below:
 
-.blog .blog-posts .blog-post {
+1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+can have below listed options:
+1.1. It can have background image with or without parallax effects.
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+page background and even content wrapper background in the form of image or texture.
+***********************************************************************/
+.page {
   position: relative; }
-  .blog .blog-posts .blog-post .blog-post-banner > .texture {
-    z-index: 10; }
-  .blog .blog-posts .blog-post .blog-post-banner .blog-post-title {
-    z-index: 20; }
-  .blog .blog-posts .blog-post .blog-post-banner .blog-post-view {
-    z-index: 30; }
-    .blog .blog-posts .blog-post .blog-post-banner .blog-post-view .blog-post-title {
-      z-index: 40; }
-
-.blog-basic .blog-post {
-  margin-bottom: 1em; }
-  .blog-basic .blog-post .blog-post-banner {
-    padding: 1em; }
-    .blog-basic .blog-post .blog-post-banner img {
-      width: 100%; }
-      .blog-basic .blog-post .blog-post-banner img.bkg-fill {
-        background-color: #F2F2F2; }
-  .blog-basic .blog-post .blog-post-author {
-    position: relative; }
-    .blog-basic .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 80px;
-      height: 80px; }
-      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .blog-basic .blog-post .blog-post-author .blog-post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .blog-basic .blog-post .blog-post-content-wrap .blog-post-content {
-    padding: 1em; }
-    .blog-basic .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
-      font-size: 1.17em; }
-  @media only screen and (min-width: 769px) {
-    .blog-basic .blog-post .blog-post-banner {
-      float: left;
-      width: 350px; }
-    .blog-basic .blog-post .blog-post-author {
-      width: 100%;
-      padding-left: 350px;
-      position: relative; } }
-
-.blog-regular .blog-post {
-  margin-bottom: 1em; }
-  .blog-regular .blog-post .blog-post-banner {
-    padding: 1em; }
-    .blog-regular .blog-post .blog-post-banner img {
-      width: 100%; }
-      .blog-regular .blog-post .blog-post-banner img.bkg-fill {
-        background-color: #F2F2F2; }
-  .blog-regular .blog-post .blog-post-author {
-    position: relative; }
-    .blog-regular .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 80px;
-      height: 80px; }
-      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .blog-regular .blog-post .blog-post-author .blog-post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .blog-regular .blog-post .blog-post-content-wrap .blog-post-content {
-    padding: 1em; }
-    .blog-regular .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
-      font-size: 1.17em; }
-  @media only screen and (min-width: 769px) {
-    .blog-regular .blog-post .blog-post-banner {
-      float: left;
-      width: 350px; }
-    .blog-regular .blog-post .blog-post-author {
-      width: 100%;
-      padding-left: 350px;
-      position: relative; } }
-
-.blog-banner .blog-post {
-  margin-bottom: 1em;
-  background-color: #F2F2F2;
-  color: #363636; }
-  .blog-banner .blog-post .blog-post-banner {
-    position: relative;
-    height: 120px;
+  .page .page-bkg {
     background-repeat: no-repeat;
     background-position: center center;
     background-position: 50% 50% 9 !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; }
-    .blog-banner .blog-post .blog-post-banner .blog-post-view {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 50;
-      visibility: hidden;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      -moz-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -ms-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -o-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -webkit-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s; }
-      .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
-        text-align: center; }
-        .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary .blog-post-icon {
-          color: #FFFFFF; }
-    .blog-banner .blog-post .blog-post-banner:hover .blog-post-view {
-      visibility: visible;
-      opacity: 1; }
-  .blog-banner .blog-post .blog-post-author {
-    position: relative; }
-    .blog-banner .blog-post .blog-post-author span {
-      display: inline-block; }
-    .blog-banner .blog-post .blog-post-author .blog-post-author-avatar {
-      width: 40px;
-      height: 40px; }
-      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar img {
-        width: 100%; }
-      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-  .blog-banner .blog-post .blog-post-content-wrap {
-    padding: 1rem;
-    line-height: 1.5em; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-title {
-      margin: 0; }
-      .blog-banner .blog-post .blog-post-content-wrap .blog-post-title a {
-        display: inline-block;
-        width: 100%; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
-      text-align: center; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-content {
-      padding: 1rem 0; }
-  @media only screen and (min-width: 769px) {
-    .blog-banner .blog-post .blog-post-banner {
-      height: 180px; }
-    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
-      text-align: right; } }
-  @media only screen and (min-width: 1025px) {
-    .blog-banner .blog-post .blog-post-banner {
-      height: 250px; } }
-
-.blog-banner-recent .blog-post {
-  padding: 0.5rem;
-  margin-bottom: 1em;
-  background-color: #F2F2F2;
-  color: #363636; }
-  .blog-banner-recent .blog-post .blog-post-banner {
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 65px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    .blog-banner-recent .blog-post .blog-post-banner .blog-post-view {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 50;
-      visibility: hidden;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      -moz-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -ms-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -o-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      -webkit-transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s;
-      transition: opacity 420ms ease-in-out 0s, visibility 420ms ease-in-out 0s; }
-      .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
-        text-align: center; }
-        .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary .icon {
-          color: #FFFFFF; }
-    .blog-banner-recent .blog-post .blog-post-banner:hover .blog-post-view {
-      visibility: visible;
-      opacity: 1; }
-  .blog-banner-recent .blog-post .blog-post-author {
-    display: none; }
-  .blog-banner-recent .blog-post .blog-post-content-wrap {
-    padding: 0;
-    padding-left: 0.5rem;
-    float: left;
-    width: 50%;
-    height: 65px; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 0.5em; }
-      .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title a {
-        display: inline-block;
-        width: 100%; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-info {
-      display: none; }
-    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-content {
-      padding: 0;
-      height: 60px;
-      overflow: hidden; }
-  @media only screen and (min-width: 769px) {
-    .blog-banner-recent .blog-post .blog-post-banner {
-      height: 80px; } }
-  @media only screen and (min-width: 1025px) {
-    .blog-banner-recent .blog-post .blog-post-banner {
-      height: 120px; } }
-
-/**********************************************************************
-Description: It defines the styles of the blog post single page.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles of blog post as listed below:
-* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
-*                 and author details.
-* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
-***********************************************************************/
-.post .post-banner > .texture {
-  z-index: 10; }
-
-.post .post-banner .post-title {
-  z-index: 20; }
-
-.post-basic {
-  padding: 1em;
-  background-color: white; }
-  .post-basic .post-banner {
-    height: 150px; }
-    .post-basic .post-banner img {
-      width: 100%; }
-  .post-basic .post-author {
-    position: relative; }
-    .post-basic .post-author .post-author-avatar {
-      display: inline-block;
-      width: 80px;
-      height: 80px; }
-      .post-basic .post-author .post-author-avatar img {
-        width: 100%; }
-      .post-basic .post-author .post-author-avatar.circled1 {
-        background-color: #F2F2F2; }
-    .post-basic .post-author .post-author-info {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block; }
-  .post-basic .post-content {
-    margin-bottom: 1em; }
-  @media only screen and (min-width: 481px) {
-    .post-basic .post-banner {
-      height: 200px; } }
-  @media only screen and (min-width: 1025px) {
-    .post-basic .post-banner {
-      height: 250px; } }
-
-/**********************************************************************
-Description: It defines the styles for flipper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for flipper components as listed below:
-
-* Flipper     - It flip the content on hover hiding the face and showing content.
-
-***********************************************************************/
-.flipper {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 0 4px 8px;
-  perspective: 1000; }
-  .flipper:hover .flipper-content {
-    transform: rotateY(180deg); }
-  .flipper .flipper-content {
+    background-size: cover;
     width: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.5s linear; }
-    .flipper .flipper-content .flipper-face {
-      width: 100%;
-      backface-visibility: hidden; }
-    .flipper .flipper-content .flipper-face.flipper-back {
-      display: block;
-      transform: rotateY(180deg);
-      box-sizing: border-box;
-      padding: 10px;
-      color: white;
-      text-align: center;
-      background-color: #3C4655; }
-    .flipper .flipper-content .flipper-back {
-      position: absolute;
-      top: 0;
-      height: 100%; }
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-scroll {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 50% 50% 9 !important;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .page .page-bkg-parallax {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: 5; }
+  .page > .texture {
+    z-index: 10; }
+  .page .page-content-wrap {
+    position: relative;
+    z-index: 15; }
+    .page .page-content-wrap .page-header-wrap {
+      position: relative; }
+      .page .page-content-wrap .page-header-wrap .page-header {
+        position: relative;
+        z-index: 20; }
+    .page .page-content-wrap .page-content {
+      position: relative; }
+      .page .page-content-wrap .page-content .page-content-data {
+        position: relative; }
+      .page .page-content-wrap .page-content .page-content-buffer {
+        position: relative; }
+    .page .page-content-wrap .page-footer-wrap {
+      position: relative; }
+      .page .page-content-wrap .page-footer-wrap .page-footer {
+        position: relative;
+        z-index: 20; }
+  .page.page-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .page.page-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .page.page-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.page-basic .page-content-wrap .page-header-wrap .page-header {
+  padding: 1rem 0; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title {
+    font-size: 2.67em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info {
+    font-size: 1.58em; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-content {
+    font-size: 1.08em; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-title, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-content {
+    margin-top: 0.5rem; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-content {
+    margin-top: 0.5rem; }
+  .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info + .page-header-content {
+    margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-title {
+  font-size: 2.67em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.page-basic .page-content-wrap .page-content .page-content-info {
+  font-size: 1.58em; }
+
+.page-basic .page-content-wrap .page-content .page-content-summary {
+  padding: 1rem 0;
+  font-size: 1.08em; }
+
+.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-data {
+  padding: 1rem 0; }
+
+.page-basic .page-content-wrap .page-footer-wrap .page-footer {
+  padding: 1rem 0; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title {
+    font-size: 1.58em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info {
+    font-size: 1.17em; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-content {
+    font-size: 1.08em; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-title, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-content {
+    margin-top: 0.5rem; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-content {
+    margin-top: 0.5rem; }
+  .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info + .page-footer-content {
+    margin-top: 0.5rem; }
 
 /*# sourceMappingURL=breeze.css.map */

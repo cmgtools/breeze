@@ -1,0 +1,220 @@
+/**********************************************************************
+Description: It defines the styles of data card components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card components as listed below:
+
+* Card		-	The barebone card class with minimum styles.
+*
+* Element	-	The element cards will be used by blocks to show content having header icon and text.
+***********************************************************************/
+
+// == Structure - Card ==============
+
+.card {
+	position: relative;
+
+	// Background cover
+	.card-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of card background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.card-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		.card-header {
+			position: relative;
+
+			.card-header-icon {
+				// Header Icon or Avatar
+			}
+
+			.card-header-title {
+				// Header Title
+			}
+
+			.card-header-info {
+				// Header Info
+			}
+
+			.card-header-content {
+				// Header Content
+			}
+
+			.card-header-actions {
+				// Header Actions
+			}
+		}
+
+		.card-data {
+			position: relative;
+		}
+
+		.card-content {
+			position: relative;
+
+			.card-content-title {
+				// Content Title
+			}
+
+			.card-content-info {
+				// Content Info
+			}
+
+			.card-content-summary {
+				// Content Summary
+			}
+
+			.card-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.card-content-buffer {
+				position: relative;
+				// Widget buffer data
+			}
+		}
+
+		.card-footer {
+			position: relative;
+
+			.card-footer-icon {
+				// Footer Icon
+			}
+
+			.card-footer-title {
+				// Footer Title
+			}
+
+			.card-footer-info {
+				// Footer Info
+			}
+
+			.card-footer-content {
+				// Footer Content
+			}
+
+			.card-footer-actions {
+				// Footer Actions
+			}
+		}
+	}
+	
+	&.card-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+	
+	&.card-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+	
+	&.card-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Card ====================
+
+// Basic card with default spacing
+.card-basic {
+
+	.card-content-wrap {
+
+		.card-header {
+			padding: 1rem 0;
+
+			.card-header-title {
+				font-size: $font-size-4;
+				font-family: $font-heading;
+			}
+
+			.card-header-info {
+				font-size: $font-size-6;
+			}
+			
+			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.card-header-title + .card-header-info, .card-header-title + .card-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.card-header-info + .card-header-content {
+				margin-top: 0.5rem;
+			}
+		}
+
+		.card-data {
+			padding: 1rem 0;
+		}
+
+		.card-content {
+			padding: 1rem 0;
+
+			.card-content-title {
+				font-size: $font-size-4;
+				font-family: $font-heading;
+			}
+
+			.card-content-info {
+				font-size: $font-size-6;
+			}
+
+			.card-content-title + .card-content-info, .card-content-title + .card-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.card-content-info + .card-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.card-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.card-footer {
+			padding: 1rem 0;
+
+			.card-footer-title {
+				font-size: $font-size-5;
+				font-family: $font-heading;
+			}
+
+			.card-footer-info {
+				font-size: $font-size-6;
+			}
+			
+			.card-footer-icon + .card-header-title, .card-footer-icon + .card-header-info, .card-footer-icon + .card-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.card-footer-title + .card-footer-info, .card-footer-title + .card-footer-content {
+				margin-top: 0.5rem;
+			}
+
+			.card-footer-info + .card-footer-content {
+				margin-top: 0.5rem;
+			}
+		}
+	}
+}

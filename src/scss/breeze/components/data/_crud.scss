@@ -1,0 +1,45 @@
+/**********************************************************************
+Description: It defines the styles of CRUD components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of CRUD components as listed below:
+
+CRUD - The barebone class with minimum styles having main and sidebar container
+to show forms and widgets.
+***********************************************************************/
+
+// == Structure - CRUD ==============
+
+.data-crud-wrap {
+
+	.data-crud-wrap-main {
+		// The main container having data and plugin forms
+		// The forms can be either wrapped by data-crud or box-panel
+	}
+
+	.data-crud-wrap-sidebar {
+		// The sidebar container having widgets and additional data forms
+	}
+
+	.data-crud {
+		// The crud container having single form with actions
+		// A box panel can be used alternately for forms wrapped in a panel
+
+		.data-crud-title {
+			// Form Title
+		}
+
+		.data-crud-form {
+			// The content having form
+		}
+
+		.data-crud-message {
+			// The form messages
+		}
+
+		.data-crud-actions {
+			// The content having actions
+		}
+	}
+}

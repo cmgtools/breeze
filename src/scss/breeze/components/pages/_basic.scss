@@ -1,0 +1,338 @@
+/**********************************************************************
+Description: It defines the styles of the page component. We can devide the entire page 
+in multiple sections. Each page can have background image with or without parallax effect, 
+a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
+and widgets.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for page components as listed below:
+
+1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+can have below listed options:
+1.1. It can have background image with or without parallax effects.
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+page background and even content wrapper background in the form of image or texture.
+***********************************************************************/
+
+// == Structure - Page ==============
+
+.page {
+	position: relative;
+
+	// responsive background
+	.page-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// fixed background
+	.page-bkg-fixed {
+		@include bkg-image-fixed;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// scrollable background
+	.page-bkg-scroll {
+		@include bkg-image-scroll;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// parallax background
+	.page-bkg-parallax {
+		@include bkg-image;
+		width: 100%;
+		height: 150%;
+		position: absolute;
+		top: -50%;
+		left: 0;
+		z-index: 5;
+	}
+
+	// Texture on top of block background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.page-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		// Page Header
+		.page-header-wrap {
+			position: relative;
+
+			.page-header {
+				position: relative;
+				z-index: 20;
+
+				.page-header-icon {
+					// Header icon
+				}
+
+				.page-header-title {
+					// Header title
+				}
+
+				.page-header-info {
+					// Header Info
+				}
+
+				.page-header-content {
+					// Header content
+				}
+			}
+		}
+
+		// Page Content
+		.page-content {
+			position: relative;
+
+			.page-content-banner {
+				// Banner
+			}
+
+			.page-content-video {
+				// Video
+			}
+
+			.page-content-title {
+				// Content title
+			}
+			
+			.page-content-info {
+				// Content info
+			}
+
+			.page-content-summary {
+				// Content info
+			}
+
+			.page-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.page-content-buffer {
+				position: relative;
+				// Additional data
+			}
+		}
+
+		// Wraps Page Cards
+		.page-page-wrap {
+
+			.page-card {
+				// Card layout - derived from card component
+			}
+		}
+
+		// Wraps Page Boxes
+		.page-box-wrap {
+
+			.page-box {
+				// Box layout - derived from box component
+			}
+		}
+
+		// Wraps Page Widgets
+		.page-widget-wrap {
+			// Widget Data
+
+			.page-widget {
+				// Widget layout - derived from widget component
+			}
+		}
+		
+		// Wraps Page Blocks
+		.page-block-wrap {
+			// Block Data
+
+			.page-block {
+				// Block layout - derived from block component
+			}
+		}
+
+		.page-sidebar {
+
+			// Page Sidebar Top
+			&.page-sidebar-top {
+				// Top Sidebar
+			}
+
+			// Page Sidebar Right
+			&.page-sidebar-right {
+				// Right Sidebar
+			}
+
+			// Page Sidebar Bottom
+			&.page-sidebar-bottom {
+				// Bottom Sidebar
+			}
+
+			// Page Sidebar Left
+			&.page-sidebar-left {
+				// Left Sidebar
+			}
+		}
+
+		// Page Footer
+		.page-footer-wrap {
+			position: relative;
+
+			.page-footer {
+				position: relative;
+				z-index: 20;
+
+				.page-footer-icon {
+					// Footer icon
+				}
+
+				.page-footer-title {
+					// Footer title
+				}
+
+				.page-footer-info {
+					// Footer Info
+				}
+
+				.page-footer-content {
+					// Footer Content
+				}
+			}
+		}
+	}
+
+	&.page-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+
+	&.page-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	&.page-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Page ====================
+
+// Basic page with default spacing
+.page-basic {
+
+	.page-content-wrap {
+
+		.page-header-wrap {
+
+			.page-header {
+				padding: 1rem 0;
+
+				.page-header-title {
+					font-size: $font-size-1;
+					font-family: $font-heading;
+				}
+
+				.page-header-info {
+					font-size: $font-size-3;
+				}
+
+				.page-header-content {
+					font-size: $font-size-6;
+				}
+				
+				.page-header-icon + .page-header-title, .page-header-icon + .page-header-info, .page-header-icon + .page-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.page-header-title + .page-header-info, .page-header-title + .page-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.page-header-info + .page-header-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+
+		 .page-content {
+
+			.page-content-title {
+				font-size: $font-size-1;
+				font-family: $font-heading;
+			}
+
+			.page-content-info {
+				font-size: $font-size-3;
+			}
+			
+			.page-content-summary {
+				padding: 1rem 0;
+				font-size: $font-size-6;
+			}
+
+			.page-content-title + .page-content-info, .page-content-title + .page-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.page-content-info + .page-content-data {
+				margin-top: 0.5rem;
+			}
+			
+			.page-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.page-footer-wrap {
+
+			.page-footer {
+				padding: 1rem 0;
+
+				.page-footer-title {
+					font-size: $font-size-3;
+					font-family: $font-heading;
+				}
+
+				.page-footer-info {
+					font-size: $font-size-5;
+				}
+
+				.page-footer-content {
+					font-size: $font-size-6;
+				}
+				
+				.page-footer-icon + .page-header-title, .page-footer-icon + .page-header-info, .page-footer-icon + .page-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.page-footer-title + .page-footer-info, .page-footer-title + .page-footer-content {
+					margin-top: 0.5rem;
+				}
+
+				.page-footer-info + .page-footer-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+}

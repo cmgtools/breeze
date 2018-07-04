@@ -1,0 +1,61 @@
+/**********************************************************************
+Description: It defines the styles of card panels used to display data and forms.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card panels as listed below:
+
+* Panel	-	The panel card define the styles of simple card having icon and header within header wrapper and
+*			content within content box. The content is aligned center by default.
+***********************************************************************/
+
+// == Panel Card ====================
+
+// Panel card with default colors and padding
+.card-panel {
+
+	.card-content-wrap {
+
+		.card-header {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			padding: 0.5rem;
+		 }
+
+		 .card-data {
+			background-color: $color-primary;
+			color: $color-primary-text;
+			padding: 0.5rem;
+		 }
+
+		.card-footer {
+			// Footer having box info
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.5rem;
+		}
+	}
+}
+
+// Panel box with header icon
+.card-panel-icon {
+	padding: 1rem;
+
+	.card-content-wrap {
+
+		// Icon, text at center
+		.card-header {
+
+			.card-header-icon {
+				position: absolute;
+				display: inline-block;
+				top: 0.5rem;
+				left: 0.5rem;
+			}
+
+			.card-header-title {
+				padding-left: 1.5rem;
+			}
+		}
+	}
+}

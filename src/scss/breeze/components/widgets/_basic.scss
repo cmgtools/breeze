@@ -1,0 +1,118 @@
+/**********************************************************************
+Description: It defines the styles of widget components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of widget components as listed below:
+
+* Widget	-	The barebone widget with minimum styles.
+*
+* Basic		-	The basic widget defines the styles of widget having text and background colors.
+
+***********************************************************************/
+
+// == Structure - Widget ============
+
+.widget {
+	position: relative;
+
+	// background cover
+	.box-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	.widget-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		.widget-header {
+			position: relative;
+
+			.widget-header-icon {
+				// Header icon
+			}
+
+			.widget-header-title {
+				// Header Title
+			}
+
+			.widget-header-info {
+				// Header Info
+			}
+
+			.widget-header-content {
+				// Header Content
+			}
+		}
+
+		.widget-content {
+			position: relative;
+
+			.widget-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.widget-content-buffer {
+				position: relative;
+				// Additional data
+			}
+		}
+
+		.widget-footer {
+
+			.widget-footer-icon {
+				// Header icon
+			}
+
+			.widget-footer-title {
+				// Header Title
+			}
+
+			.widget-footer-info {
+				// Footer Info
+			}
+
+			.widget-footer-content {
+				// Footer Content
+			}
+		}
+	}
+}
+
+// == Basic =========================
+
+.widget-basic {
+
+	.widget-content-wrap {
+
+		.widget-header {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			padding: 0.5rem;
+		}
+
+		.widget-content-wrap {
+			background-color: $color-primary;
+			color: $color-primary-text;
+			padding: 0.5rem;
+		}
+
+		.widget-footer {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.5rem;
+		}
+	}
+}

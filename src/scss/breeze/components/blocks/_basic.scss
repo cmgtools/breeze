@@ -1,0 +1,348 @@
+/**********************************************************************
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*
+* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
+*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
+***********************************************************************/
+
+// == Structure - Block =============
+
+.block {
+	position: relative;
+
+	// responsive background
+	.block-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// fixed background
+	.block-bkg-fixed {
+		@include bkg-image-fixed;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// scrollable background
+	.block-bkg-scroll {
+		@include bkg-image-scroll;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// parallax background
+	.block-bkg-parallax {
+		@include bkg-image;
+		width: 100%;
+		height: 150%;
+		position: absolute;
+		top: -50%;
+		left: 0;
+		z-index: 5;
+	}
+
+	// Texture on top of block background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.block-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		// Block Header
+		.block-header-wrap {
+			position: relative;
+
+			.block-header {
+				position: relative;
+				z-index: 20;
+
+				.block-header-icon {
+					// Header icon
+				}
+
+				.block-header-title {
+					// Header title
+				}
+
+				.block-header-info {
+					// Header Info
+				}
+
+				.block-header-content {
+					// Header content
+				}
+			}
+		}
+
+		// Block Content
+		.block-content {
+			position: relative;
+
+			.block-content-title {
+				// Content title
+			}
+			
+			.block-content-info {
+				// Content info
+			}
+
+			.block-content-summary {
+				// Content info
+			}
+
+			.block-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.block-content-buffer {
+				position: relative;
+				// Additional data
+			}
+		}
+
+		// Wraps Block Cards
+		.block-card-wrap {
+
+			.block-card {
+				// Card layout - derived from card component
+			}
+		}
+
+		// Wraps Block Boxes
+		.block-box-wrap {
+
+			.block-box {
+				// Box layout - derived from box component
+			}
+		}
+
+		// Wraps Block Widgets
+		.block-widget-wrap {
+			// Widget Data
+
+			.block-widget {
+				// Widget layout - derived from widget component
+			}
+		}
+
+		.block-sidebar {
+
+			// Block Sidebar Top
+			&.block-sidebar-top {
+				// Top Sidebar
+			}
+
+			// Block Sidebar Right
+			&.block-sidebar-right {
+				// Right Sidebar
+			}
+
+			// Block Sidebar Bottom
+			&.block-sidebar-bottom {
+				// Bottom Sidebar
+			}
+
+			// Block Sidebar Left
+			&.block-sidebar-left {
+				// Left Sidebar
+			}
+		}
+
+		// Block Footer
+		.block-footer-wrap {
+			position: relative;
+
+			.block-footer {
+				position: relative;
+				z-index: 20;
+
+				.block-footer-icon {
+					// Footer icon
+				}
+
+				.block-footer-title {
+					// Footer title
+				}
+
+				.block-footer-info {
+					// Footer Info
+				}
+
+				.block-footer-content {
+					// Footer Content
+				}
+			}
+		}
+	}
+
+	// The splitter seperate a block from it's immediate successor
+	.block-splitter {
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		z-index: 10000;
+
+		&.block-splitter-top {
+			top: 0;
+			margin-top: -50px;
+		}
+
+		&.block-splitter-bottom {
+			bottom: 0;
+			margin-bottom: -50px;
+		}
+
+		.block-splitter-icon {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+		}
+	}
+	
+	&.block-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+
+	&.block-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	&.block-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}
+
+// == Basic Block ===================
+
+// Basic block with default spacing
+.block-basic {
+
+	.block-content-wrap {
+
+		.block-header-wrap {
+			padding: 1rem 0;
+
+			.block-header {
+
+				.block-header-title {
+					font-size: $font-size-2;
+					font-family: $font-heading;
+				}
+
+				.block-header-info {
+					font-size: $font-size-4;
+				}
+
+				.block-header-content {
+					font-size: $font-size-6;
+				}
+				
+				.block-header-icon + .block-header-title, .block-header-icon + .block-header-info, .block-header-icon + .block-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.block-header-title + .block-header-info, .block-header-title + .block-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.block-header-info + .block-header-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+
+		.block-content {
+
+			.block-content-title {
+				font-size: $font-size-2;
+				font-family: $font-heading;
+			}
+
+			.block-content-info {
+				font-size: $font-size-4;
+			}
+			
+			.block-content-summary {
+				font-size: $font-size-6;
+			}
+			
+			.block-content-title + .block-content-info, .block-content-title + .block-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.block-content-info + .block-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.block-content-data {
+				padding: 1rem 0;
+			}
+		}
+
+		.block-footer-wrap {
+
+			.block-footer {
+				padding: 1rem 0;
+
+				.block-footer-title {
+					font-size: $font-size-4;
+					font-family: $font-heading;
+				}
+
+				.block-footer-info {
+					font-size: $font-size-5;
+				}
+
+				.block-footer-content {
+					font-size: $font-size-6;
+				}
+				
+				.block-footer-icon + .block-header-title, .block-footer-icon + .block-header-info, .block-footer-icon + .block-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.block-footer-title + .block-footer-info, .block-footer-title + .block-footer-content {
+					margin-top: 0.5rem;
+				}
+
+				.block-footer-info + .block-footer-content {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+}
