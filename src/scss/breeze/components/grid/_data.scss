@@ -5,14 +5,14 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for data grid components as listed below:
 
-* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
-*
-* Basic       - The basic data grid having default coloring.
+Data Grid - The barebone grid class with minimum styles common for all the data grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 
 // == Structure - Data Grid =========
 
-// The Grid Data acts as wrapper to the data. It follows mobile first approach.
+// The Grid Data acts as wrapper to the data. Mobile First Approach
 .grid-data {
 
 	// Grid Search
@@ -92,15 +92,15 @@ Details: It defines the styles for data grid components as listed below:
 		.grid-header {
 
 			.grid-header-info {
-				// footer content
+				// header info - pagination
 			}
 
 			.grid-header-options {
-				// footer content
+				// header options - import/export
 			}
 
 			.grid-header-content {
-				// header content
+				// header content - notes, message
 			}
 		}
 	}
@@ -182,16 +182,19 @@ Details: It defines the styles for data grid components as listed below:
 
 					.grid-card {
 
-						.grid-card-header {
-							// card title
-						}
+						.card-content-wrap {
 
-						.grid-card-data {
-							// card data - it can be anything ex: content box
-						}
+							.grid-card-header {
+								// card title
+							}
 
-						.grid-card-footer {
-							// card footer
+							.grid-card-data {
+								// card data - it can be anything ex: content box
+							}
+
+							.grid-card-footer {
+								// card footer
+							}
 						}
 					}
 				}
@@ -206,11 +209,15 @@ Details: It defines the styles for data grid components as listed below:
 		.grid-footer {
 
 			.grid-footer-info {
-				// footer content
+				// footer info - pagination
 			}
 
 			.grid-footer-options {
-				// footer content
+				// footer options - import/export
+			}
+
+			.grid-footer-content {
+				// footer content - notes, message
 			}
 		}
 	}
@@ -253,7 +260,7 @@ Details: It defines the styles for data grid components as listed below:
 					}
 
 					.grid-rows-footer {
-						display: block;
+						display: flex;
 					}
 				}
 			}

@@ -1,12 +1,16 @@
 // == File Uploader Box =============
 
 .box-file-uploader {
-
-	.btn-chooser {
+	
+	.uploader-actions {
 		position: absolute;
 		right: 0;
 		cursor: pointer;
 		z-index: 10;
+
+		.uploader-action {
+			display: inline-block;
+		}
 	}
 
 	.box-content {

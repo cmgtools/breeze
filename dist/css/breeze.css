@@ -6224,28 +6224,28 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 ***********************************************************************/
 .data-zigzag .data-zigzag-row {
   margin-bottom: 2em; }
-  .data-zigzag .data-zigzag-row img {
+  .data-zigzag .data-zigzag-row .data-zigzag-banner {
     width: 100%;
     height: auto; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: none; }
 
 @media only screen and (min-width: 1025px) {
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: none; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-1 {
     float: left;
@@ -7972,11 +7972,13 @@ Details: It defines the styles of form box components as listed below:
 .box-form-collapsible .box-form-collapsible-trigger {
   cursor: pointer; }
 
-.box-file-uploader .btn-chooser {
+.box-file-uploader .uploader-actions {
   position: absolute;
   right: 0;
   cursor: pointer;
   z-index: 10; }
+  .box-file-uploader .uploader-actions .uploader-action {
+    display: inline-block; }
 
 .box-file-uploader .box-content .box-content-data .file-wrap {
   position: relative;
@@ -8292,17 +8294,17 @@ Details: It defines the styles for header components as listed below:
     margin-top: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of the pagination components having links to navigate pages.
+Description: It defines the styles of the pagination having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for pagination components as listed below:
+Details: It defines the styles of pagination components as listed below:
 
-* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
-*
-* Basic       - The basic pagination. It uses button colors to decorate pagination states.
-*
-* Full        - Full pagination having both info and pagination links.
+Pagination - The barebone pagination class with minimum styles common for all the data grids.
+
+Basic - The basic pagination. It uses button colors to decorate pagination states.
+
+Full - Full pagination having both info and pagination links.
 ***********************************************************************/
 .pagination {
   display: inline-block; }
@@ -8375,13 +8377,13 @@ Details: It defines the styles for pagination components as listed below:
     text-align: center; } }
 
 /**********************************************************************
-Description: It defines the styles of the sorting components available in CMT-UI css framework.
+Description: It defines the styles of the grid sort.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles of sorting components as listed below:
+Details: It defines the styles of grid sort as listed below:
 
-* Sort        - The barebone sort class with minimum styles common for all the sorting.
+Grid Sort - The barebone sort class with minimum styles common for all the sorting.
 ***********************************************************************/
 .grid-sort .sort {
   cursor: pointer; }
@@ -8393,15 +8395,24 @@ Details: It defines the styles of sorting components as listed below:
     color: #E74343 !important; }
 
 /**********************************************************************
+Description: It defines the styles of grid filters.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of grid filters as listed below:
+
+Grid Filter - The barebone grid filter class with minimum styles common for all the filters.
+***********************************************************************/
+/**********************************************************************
 Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for data grid components as listed below:
 
-* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
-*
-* Basic       - The basic data grid having default coloring.
+Data Grid - The barebone grid class with minimum styles common for all the data grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
   display: none; }
@@ -8443,7 +8454,7 @@ Details: It defines the styles for data grid components as listed below:
       .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
         display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
-    display: block; } }
+    display: flex; } }
 
 .grid-data-basic {
   background-color: lightgray;
@@ -8474,15 +8485,15 @@ Details: It defines the styles for data grid components as listed below:
       width: 48px; }
 
 /**********************************************************************
-Description: It defines the styles of the table grid components forming the grid using html tables.
+Description: It defines the styles of the grid table forming the grid using html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for data table components as listed below:
+Details: It defines the styles of grid table as listed below:
 
-* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
-*
-* Basic       - The basic data grid having default coloring.
+Table Grid - The barebone grid class with minimum styles common for all the table grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-table .grid-table-header {
   display: none; }
