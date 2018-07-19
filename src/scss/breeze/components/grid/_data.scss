@@ -122,6 +122,7 @@ Basic - The basic data grid having default coloring.
 				// rows header hidden for mobile
 				.grid-rows-header {
 					display: none;
+					font-size: $font-size-6;
 					font-weight: bold;
 				}
 

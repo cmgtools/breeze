@@ -7661,7 +7661,7 @@ Details: It defines the styles of card components as listed below:
     color: #E6E6E6; }
 
 .card-basic .card-content-wrap .card-header {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-header .card-header-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -7675,24 +7675,26 @@ Details: It defines the styles of card components as listed below:
     margin-top: 0.5rem; }
 
 .card-basic .card-content-wrap .card-data {
-  padding: 1rem 0; }
+  padding: 1rem; }
 
 .card-basic .card-content-wrap .card-content {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-content .card-content-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-content .card-content-info {
     font-size: 1.08em; }
-  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
+  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
     margin-top: 0.5rem; }
-  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-content .card-content-summary + .card-content-data {
     margin-top: 0.5rem; }
   .card-basic .card-content-wrap .card-content .card-content-data {
     padding: 1rem 0; }
 
 .card-basic .card-content-wrap .card-footer {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title {
     font-size: 1.17em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -8420,6 +8422,7 @@ Basic - The basic data grid having default coloring.
     display: block; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: none;
+    font-size: 1.08em;
     font-weight: bold; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
     background-color: #3C4655; }
