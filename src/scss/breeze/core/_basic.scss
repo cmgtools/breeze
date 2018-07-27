@@ -178,6 +178,38 @@ html, body {
 	}
 }
 
+.avatar {
+	width: 32px;
+
+	img {
+		width: 32px;
+	}
+
+	&.avatar-small {
+		width: 48px;
+
+		img {
+			width: 48px;
+		}
+	}
+
+	&.avatar-medium {
+		width: 64px;
+
+		img {
+			width: 64px;
+		}
+	}
+	
+	&.avatar-large {
+		width: 100px;
+
+		img {
+			width: 100px;
+		}
+	}
+}
+
 /**
  * Alignments for centered box and text.
  */

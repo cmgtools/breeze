@@ -2370,6 +2370,23 @@ html, body {
   .height.height-75 {
     height: 75%; }
 
+.avatar {
+  width: 32px; }
+  .avatar img {
+    width: 32px; }
+  .avatar.avatar-small {
+    width: 48px; }
+    .avatar.avatar-small img {
+      width: 48px; }
+  .avatar.avatar-medium {
+    width: 64px; }
+    .avatar.avatar-medium img {
+      width: 64px; }
+  .avatar.avatar-large {
+    width: 100px; }
+    .avatar.avatar-large img {
+      width: 100px; }
+
 /**
  * Alignments for centered box and text.
  */
@@ -2622,6 +2639,54 @@ Details: It defines the text and background colors as listed below:
     color: #000000; }
   .color.color-black {
     background-color: #000000;
+    color: #FFFFFF; }
+  .color.color-blue {
+    background-color: #0074D9;
+    color: #FFFFFF; }
+  .color.color-purple {
+    background-color: #8946C4;
+    color: #FFFFFF; }
+  .color.color-orange {
+    background-color: #FF851B;
+    color: #FFFFFF; }
+  .color.color-yellow {
+    background-color: #FFDC00;
+    color: #FFFFFF; }
+  .color.color-red {
+    background-color: #FF4136;
+    color: #FFFFFF; }
+  .color.color-pink {
+    background-color: #E4287C;
+    color: #FFFFFF; }
+  .color.color-magenta {
+    background-color: #B200B2;
+    color: #FFFFFF; }
+  .color.color-green {
+    background-color: #7CAA2D;
+    color: #FFFFFF; }
+  .color.color-brown {
+    background-color: #8B4513;
+    color: #FFFFFF; }
+  .color.color-aqua {
+    background-color: #8AE2E3;
+    color: #FFFFFF; }
+  .color.color-golden {
+    background-color: #E9C011;
+    color: #FFFFFF; }
+  .color.color-silver {
+    background-color: #E7E8E7;
+    color: #FFFFFF; }
+  .color.color-maroon {
+    background-color: #542628;
+    color: #FFFFFF; }
+  .color.color-olive {
+    background-color: #A3A54C;
+    color: #FFFFFF; }
+  .color.color-lime {
+    background-color: #D3F235;
+    color: #FFFFFF; }
+  .color.color-navy {
+    background-color: #003653;
     color: #FFFFFF; }
 
 .bkg.bkg-primary {
@@ -6137,8 +6202,12 @@ Details: It defines the custom element styles as listed below:
   .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
     background-color: lightgray;
     color: #555555;
+    border: 1px solid #7F7F7F;
     padding: 0.5em;
     cursor: pointer; }
+    .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item:hover {
+      background-color: #F2F2F2;
+      color: #363636; }
   .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
     background-color: lightgray;
     color: #555555; }

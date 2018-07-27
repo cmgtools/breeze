@@ -27,19 +27,23 @@ to show forms and widgets.
 		// A box panel can be used alternately for forms wrapped in a panel
 
 		.data-crud-title {
-			// Form Title
+			// Title
 		}
 
 		.data-crud-form {
-			// The content having form
+			// Form
+		}
+
+		.data-crud-content {
+			// Content
 		}
 
 		.data-crud-message {
-			// The form messages
+			// Messages
 		}
 
 		.data-crud-actions {
-			// The content having actions
+			// Actions
 		}
 	}
 }
