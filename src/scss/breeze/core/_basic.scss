@@ -154,6 +154,22 @@ html, body {
 	&.width-80 {
 		width: 80%;
 	}
+	
+	&.width-default {
+		width: 64px;
+	}
+
+	&.width-small {
+		width: 128px;
+	}
+
+	&.width-medium {
+		width: 256px;
+	}
+
+	&.width-large {
+		width: 512px;
+	}
 }
 
 // Height
@@ -176,13 +192,38 @@ html, body {
 	&.height-75 {
 		height: 75%;
 	}
+	
+	&.height-default {
+		width: 64px;
+	}
+
+	&.height-small {
+		width: 128px;
+	}
+
+	&.height-medium {
+		width: 256px;
+	}
+
+	&.height-large {
+		width: 512px;
+	}
 }
 
+/**
+ * Avatar and Icon width
+ */
+
 .avatar {
+	display: inline-block;
 	width: 32px;
 
 	img {
 		width: 32px;
+	}
+
+	&.avatar-center {
+		margin: 0 auto;
 	}
 
 	&.avatar-small {
@@ -207,6 +248,30 @@ html, body {
 		img {
 			width: 100px;
 		}
+	}
+}
+
+.icon {
+	display: inline-block;
+
+	&.icon-center {
+		margin: 0 auto;
+	}
+
+	&.icon-default {
+		width: 32px;
+	}
+
+	&.icon-small {
+		width: 48px;
+	}
+
+	&.icon-medium {
+		width: 64px;
+	}
+
+	&.icon-large {
+		width: 100px;
 	}
 }
 
