@@ -482,6 +482,14 @@ html, body {
 	cursor: pointer;
 }
 
+.pointer-none {
+	pointer-events: none;
+}
+
+.pointer-auto {
+	pointer-events: auto;
+}
+
 .crosshair {
 	cursor: crosshair;
 }

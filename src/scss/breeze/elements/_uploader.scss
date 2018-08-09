@@ -1,10 +1,212 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 27 Jan, 2018, 2:02:01 PM
-    Author     : bhagwatchouhan
-*/
+/**********************************************************************
+Description: It defines the styles of file uploader elements.
 
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of file uploader elements as listed below:
+
+Uploader - The barebone uploader class with minimum styles common for all the uploaders. 
+The base class define the structure of uploader having tab with trigger and view.
+
+Basic Uploader - It decorate the uploader element with minimum styles keeping same dimensions 
+of dragger, chooser and file.
+***********************************************************************/
+
+// == Structure - Uploader ==========
+
+.uploader {
+	position: relative;
+
+	.file-dragger {
+		// File Dragger
+		position: relative;
+
+		.drag-wrap {
+			// Drag Area
+		}
+	}
+
+	.file-chooser {
+		// Chhoser parent
+		position: relative;
+
+		input[type="file"] {
+			opacity: 0;
+			cursor: pointer !important;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	}
+
+	.file-data {
+		// Image or Icon container
+	}
+
+	.file-preloader {
+		// Pre-loader wrapper
+
+		.file-preloader-bar {
+			// Pre-loader
+		}
+	}
+	
+	.file-fields {
+		// Fields wrapper
+	}
+}
+
+// == Basic Uploader ================
+
+.uploader-basic {
+	background-color: $color-secondary;
+	color: $color-secondary-text;
+	position: relative;
+	width: 120px;
+	height: 122px;
+
+	// Same dimensions for dragger, chooser and file
+	.file-dragger, .file-data {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120px;
+		height: 120px;
+	}
+	
+	// Top
+	.file-chooser {
+		z-index: 50;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 120px;
+		height: auto;
+		display: none;
+		@include transit-all( $transit-eio, $transit-time-medium );
+
+		&.show-chooser {
+			display: block;
+		}
+	}
+
+	// Middle
+	.file-dragger {
+		z-index: 25;
+
+		.drag-wrap {
+			width: 120px;
+			height: 120px;
+			pointer-events: auto;
+			
+			&.dragger-hover {
+				background-color: $color-secondary-d;
+			}
+		}
+	}
+
+	// Bottom
+	.file-data {
+		z-index: 5;
+		overflow: hidden;
+
+		img {
+			width: 120px;
+		}
+	}
+
+	.file-preloader {
+		position: absolute;
+		top: 120px;
+		width: 120px;
+
+		.file-preloader-bar {
+			background-color: blue;
+			width: 0;
+			height: 2px;
+		}
+	}
+
+	&:hover {
+
+		.file-chooser {
+			display: block;
+		}
+	}
+	
+	&.uploader-small {
+		width: 150px;
+		height: 152px;
+
+		.file-dragger, .file-data {
+			width: 150px;
+			height: 150px;
+		}
+
+		// Top
+		.file-chooser {
+			width: 150px;
+		}
+
+		// Middle
+		.file-dragger {
+
+			.drag-wrap {
+				width: 150px;
+				height: 150px;
+			}
+		}
+
+		// Bottom
+		.file-data {
+
+			img {
+				width: 150px;
+			}
+		}
+		
+		.file-preloader {
+			top: 150px;
+			width: 150px;
+		}
+	}
+
+	&.uploader-medium {
+		width: 200px;
+		height: 202px;
+
+		.file-dragger, .file-data {
+			width: 200px;
+			height: 200px;
+		}
+
+		// Top
+		.file-chooser {
+			width: 200px;
+		}
+
+		// Middle
+		.file-dragger {
+
+			.drag-wrap {
+				width: 200px;
+				height: 200px;
+			}
+		}
+
+		// Bottom
+		.file-data {
+
+			img {
+				width: 200px;
+			}
+		}
+		
+		.file-preloader {
+			top: 200px;
+			width: 200px;
+		}
+	}
+}

@@ -2546,6 +2546,12 @@ html, body {
 .pointer {
   cursor: pointer; }
 
+.pointer-none {
+  pointer-events: none; }
+
+.pointer-auto {
+  pointer-events: auto; }
+
 .crosshair {
   cursor: crosshair; }
 
@@ -2643,86 +2649,86 @@ Details: It defines the text and background colors as listed below:
  * 18. tertiary text dark: #c1db9e
  */ }
   .color.color-primary {
-    background-color: #F2F2F2;
-    color: #363636; }
+    background-color: #F2F2F2 !important;
+    color: #363636 !important; }
   .color.color-primary-l {
-    background-color: white;
-    color: #171717; }
+    background-color: white !important;
+    color: #171717 !important; }
   .color.color-primary-d {
-    background-color: lightgray;
-    color: #555555; }
+    background-color: lightgray !important;
+    color: #555555 !important; }
   .color.color-secondary {
-    background-color: #3C4655;
-    color: #96B0D6; }
+    background-color: #3C4655 !important;
+    color: #96B0D6 !important; }
   .color.color-secondary-l {
-    background-color: #556479;
-    color: #6a8fc5; }
+    background-color: #556479 !important;
+    color: #6a8fc5 !important; }
   .color.color-secondary-d {
-    background-color: #232831;
-    color: #c2d1e7; }
+    background-color: #232831 !important;
+    color: #c2d1e7 !important; }
   .color.color-tertiary {
-    background-color: #87BA45;
-    color: #E6E6E6; }
+    background-color: #87BA45 !important;
+    color: #E6E6E6 !important; }
   .color.color-tertiary-l {
-    background-color: #a4cb72;
-    color: #678d34; }
+    background-color: #a4cb72 !important;
+    color: #678d34 !important; }
   .color.color-tertiary-d {
-    background-color: #678d34;
-    color: #c1db9e; }
+    background-color: #678d34 !important;
+    color: #c1db9e !important; }
   .color.color-white {
-    background-color: #FFFFFF;
-    color: #000000; }
+    background-color: #FFFFFF !important;
+    color: #000000 !important; }
   .color.color-black {
-    background-color: #000000;
-    color: #FFFFFF; }
+    background-color: #000000 !important;
+    color: #FFFFFF !important; }
   .color.color-blue {
-    background-color: #0074D9;
-    color: #FFFFFF; }
+    background-color: #0074D9 !important;
+    color: #FFFFFF !important; }
   .color.color-purple {
-    background-color: #8946C4;
-    color: #FFFFFF; }
+    background-color: #8946C4 !important;
+    color: #FFFFFF !important; }
   .color.color-orange {
-    background-color: #FF851B;
-    color: #FFFFFF; }
+    background-color: #FF851B !important;
+    color: #FFFFFF !important; }
   .color.color-yellow {
-    background-color: #FFDC00;
-    color: #FFFFFF; }
+    background-color: #FFDC00 !important;
+    color: #FFFFFF !important; }
   .color.color-red {
-    background-color: #FF4136;
-    color: #FFFFFF; }
+    background-color: #FF4136 !important;
+    color: #FFFFFF !important; }
   .color.color-pink {
-    background-color: #E4287C;
-    color: #FFFFFF; }
+    background-color: #E4287C !important;
+    color: #FFFFFF !important; }
   .color.color-magenta {
-    background-color: #B200B2;
-    color: #FFFFFF; }
+    background-color: #B200B2 !important;
+    color: #FFFFFF !important; }
   .color.color-green {
-    background-color: #7CAA2D;
-    color: #FFFFFF; }
+    background-color: #7CAA2D !important;
+    color: #FFFFFF !important; }
   .color.color-brown {
-    background-color: #8B4513;
-    color: #FFFFFF; }
+    background-color: #8B4513 !important;
+    color: #FFFFFF !important; }
   .color.color-aqua {
-    background-color: #8AE2E3;
-    color: #FFFFFF; }
+    background-color: #8AE2E3 !important;
+    color: #FFFFFF !important; }
   .color.color-golden {
-    background-color: #E9C011;
-    color: #FFFFFF; }
+    background-color: #E9C011 !important;
+    color: #FFFFFF !important; }
   .color.color-silver {
-    background-color: #E7E8E7;
-    color: #FFFFFF; }
+    background-color: #E7E8E7 !important;
+    color: #FFFFFF !important; }
   .color.color-maroon {
-    background-color: #542628;
-    color: #FFFFFF; }
+    background-color: #542628 !important;
+    color: #FFFFFF !important; }
   .color.color-olive {
-    background-color: #A3A54C;
-    color: #FFFFFF; }
+    background-color: #A3A54C !important;
+    color: #FFFFFF !important; }
   .color.color-lime {
-    background-color: #D3F235;
-    color: #FFFFFF; }
+    background-color: #D3F235 !important;
+    color: #FFFFFF !important; }
   .color.color-navy {
-    background-color: #003653;
-    color: #FFFFFF; }
+    background-color: #003653 !important;
+    color: #FFFFFF !important; }
 
 .bkg.bkg-primary {
   background-color: #F2F2F2 !important; }
@@ -6413,15 +6419,117 @@ Details: It defines the custom element styles as listed below:
         background-color: #3C4655;
         color: #96B0D6; }
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 27 Jan, 2018, 2:02:01 PM
-    Author     : bhagwatchouhan
-*/
+/**********************************************************************
+Description: It defines the styles of file uploader elements.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of file uploader elements as listed below:
+
+Uploader - The barebone uploader class with minimum styles common for all the uploaders. 
+The base class define the structure of uploader having tab with trigger and view.
+
+Basic Uploader - It decorate the uploader element with minimum styles keeping same dimensions 
+of dragger, chooser and file.
+***********************************************************************/
+.uploader {
+  position: relative; }
+  .uploader .file-dragger {
+    position: relative; }
+  .uploader .file-chooser {
+    position: relative; }
+    .uploader .file-chooser input[type="file"] {
+      opacity: 0;
+      cursor: pointer !important;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+
+.uploader-basic {
+  background-color: #3C4655;
+  color: #96B0D6;
+  position: relative;
+  width: 120px;
+  height: 122px; }
+  .uploader-basic .file-dragger, .uploader-basic .file-data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px; }
+  .uploader-basic .file-chooser {
+    z-index: 50;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: auto;
+    display: none;
+    -webkit-transition: all 420ms ease-in-out 0s;
+    -moz-transition: all 420ms ease-in-out 0s;
+    -ms-transition: all 420ms ease-in-out 0s;
+    -o-transition: all 420ms ease-in-out 0s;
+    transition: all 420ms ease-in-out 0s; }
+    .uploader-basic .file-chooser.show-chooser {
+      display: block; }
+  .uploader-basic .file-dragger {
+    z-index: 25; }
+    .uploader-basic .file-dragger .drag-wrap {
+      width: 120px;
+      height: 120px;
+      pointer-events: auto; }
+      .uploader-basic .file-dragger .drag-wrap.dragger-hover {
+        background-color: #232831; }
+  .uploader-basic .file-data {
+    z-index: 5;
+    overflow: hidden; }
+    .uploader-basic .file-data img {
+      width: 120px; }
+  .uploader-basic .file-preloader {
+    position: absolute;
+    top: 120px;
+    width: 120px; }
+    .uploader-basic .file-preloader .file-preloader-bar {
+      background-color: blue;
+      width: 0;
+      height: 2px; }
+  .uploader-basic:hover .file-chooser {
+    display: block; }
+  .uploader-basic.uploader-small {
+    width: 150px;
+    height: 152px; }
+    .uploader-basic.uploader-small .file-dragger, .uploader-basic.uploader-small .file-data {
+      width: 150px;
+      height: 150px; }
+    .uploader-basic.uploader-small .file-chooser {
+      width: 150px; }
+    .uploader-basic.uploader-small .file-dragger .drag-wrap {
+      width: 150px;
+      height: 150px; }
+    .uploader-basic.uploader-small .file-data img {
+      width: 150px; }
+    .uploader-basic.uploader-small .file-preloader {
+      top: 150px;
+      width: 150px; }
+  .uploader-basic.uploader-medium {
+    width: 200px;
+    height: 202px; }
+    .uploader-basic.uploader-medium .file-dragger, .uploader-basic.uploader-medium .file-data {
+      width: 200px;
+      height: 200px; }
+    .uploader-basic.uploader-medium .file-chooser {
+      width: 200px; }
+    .uploader-basic.uploader-medium .file-dragger .drag-wrap {
+      width: 200px;
+      height: 200px; }
+    .uploader-basic.uploader-medium .file-data img {
+      width: 200px; }
+    .uploader-basic.uploader-medium .file-preloader {
+      top: 200px;
+      width: 200px; }
+
 /**********************************************************************
 Description: It defines the styles for flipper components available in CMT-UI css framework.
 
@@ -7464,119 +7572,119 @@ Details: It defines the styles of cmt slider as listed below:
 				around the slides.
 
 ***********************************************************************/
-.cmt-slider {
+.slider {
   position: relative; }
-  .cmt-slider .cmt-slider-slides-wrap {
+  .slider .slider-slides-wrap {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden; }
-    .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides {
+    .slider .slider-slides-wrap .slider-slides {
       position: absolute;
       top: 0px;
       width: 100%;
       height: 100%; }
-      .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+      .slider .slider-slides-wrap .slider-slides .slider-slide {
         position: absolute;
         top: 0px;
         left: 0px;
         overflow: hidden; }
-  .cmt-slider .cmt-slider-control {
+  .slider .slider-control {
     cursor: pointer;
     position: absolute; }
-    .cmt-slider .cmt-slider-control.cmt-slider-control-left {
+    .slider .slider-control.slider-control-left {
       top: 0;
       left: 0; }
-    .cmt-slider .cmt-slider-control.cmt-slider-control-right {
+    .slider .slider-control.slider-control-right {
       top: 0;
       right: 0; }
 
-.cmt-slider-basic {
+.slider-basic {
   margin: 0px auto;
   width: 450px; }
-  .cmt-slider-basic .cmt-slider-slides-wrap {
+  .slider-basic .slider-slides-wrap {
     height: 150px; }
-    .cmt-slider-basic .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+    .slider-basic .slider-slides-wrap .slider-slides .slider-slide {
       width: 150px;
       height: 150px;
       background-color: #3C4655;
       color: #96B0D6;
       text-align: center; }
-  .cmt-slider-basic .cmt-slider-control {
+  .slider-basic .slider-control {
     background-color: #87BA45;
     color: #E6E6E6;
     top: 35px;
     width: 64px;
     height: 80px; }
-    .cmt-slider-basic .cmt-slider-control:hover {
+    .slider-basic .slider-control:hover {
       background-color: #a4cb72; }
-    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg {
+    .slider-basic .slider-control.slider-control-bkg {
       background-image: url("../images/slider-arrow.png");
       background-repeat: none;
       background-position: 0px 0px; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left {
+      .slider-basic .slider-control.slider-control-bkg.slider-control-left {
         left: 20px;
         background-position: 0px 80px; }
-        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left:hover {
+        .slider-basic .slider-control.slider-control-bkg.slider-control-left:hover {
           background-position: 0px 0px; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right {
+      .slider-basic .slider-control.slider-control-bkg.slider-control-right {
         right: 20px;
         background-position: -48px 80px; }
-        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right:hover {
+        .slider-basic .slider-control.slider-control-bkg.slider-control-right:hover {
           background-position: -48px 0px; }
 
-.cmt-slider-basic-fixed {
+.slider-basic-fixed {
   width: 1628px; }
-  .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+  .slider-basic-fixed .slider-slides-wrap {
     width: 1500px;
     margin: 0 64px; }
   @media only screen and (max-width: 1600px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 1328px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 1200px; } }
   @media only screen and (max-width: 1360px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 1028px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 900px; } }
   @media only screen and (max-width: 1024px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 690px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 600px;
         height: 100px;
         margin: 0 45px; }
-        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+        .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
           width: 100px;
           height: 100px; }
-      .cmt-slider-basic-fixed .cmt-slider-control {
+      .slider-basic-fixed .slider-control {
         width: 45px;
         height: 100px; } }
   @media only screen and (max-width: 768px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 440px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 360px;
         height: 90px; }
-        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+        .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
           width: 90px;
           height: 90px; }
-      .cmt-slider-basic-fixed .cmt-slider-control {
+      .slider-basic-fixed .slider-control {
         width: 40px;
         height: 90px; } }
   @media only screen and (max-width: 480px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 260px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 180px; } }
 
-.cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+.slider-lightbox .slider-slides-wrap .slider-slides .slider-slide {
   cursor: pointer;
   -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
   -moz-box-shadow: inset 1px 1px 100px 0px #000000;
   box-shadow: inset 1px 1px 100px 0px #000000; }
-  .cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide:hover {
+  .slider-lightbox .slider-slides-wrap .slider-slides .slider-slide:hover {
     -webkit-transition: all 250ms ease-in-out 0s;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
