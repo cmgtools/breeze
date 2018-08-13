@@ -189,14 +189,14 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-basic .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -4318,6 +4318,35 @@ Details: It defines the grid system and basic containers as listed below:
   position: absolute;
   width: 100%; }
 
+.shape {
+  margin: 0 auto; }
+  .shape.shape-hexagon {
+    background: white;
+    height: 29px;
+    position: relative;
+    width: 50px;
+    top: -12px; }
+  .shape.shape-hexagon:before {
+    content: "";
+    position: absolute;
+    top: -11.5px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 12.5px solid white;
+    border-left: 25px solid rgba(0, 0, 0, 0);
+    border-right: 25px solid rgba(0, 0, 0, 0); }
+  .shape.shape-hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -12.5px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 13.5px solid white; }
+
 .hover-color-primary {
   -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
   -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -7307,31 +7336,78 @@ Details: It defines the styles for sidebar components as listed below:
 ***********************************************************************/
 .sidebar {
   position: relative; }
-  .sidebar .sidebar-header {
-    position: relative; }
+  .sidebar .sidebar-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .sidebar > .texture {
+    z-index: 10; }
   .sidebar .sidebar-content-wrap {
-    position: relative; }
+    position: relative;
+    z-index: 15; }
+    .sidebar .sidebar-content-wrap .sidebar-header {
+      position: relative; }
+    .sidebar .sidebar-content-wrap .sidebar-content {
+      position: relative; }
+      .sidebar .sidebar-content-wrap .sidebar-content .sidebar-content-data {
+        position: relative; }
 
-.sidebar-basic {
-  position: relative; }
-  .sidebar-basic .sidebar-header {
-    display: none; }
-    .sidebar-basic .sidebar-header .sidebar-title {
-      background-color: #87BA45;
-      line-height: 1.33em;
-      padding: 0.5rem;
-      font-size: 1.17em; }
-    .sidebar-basic .sidebar-header .sidebar-control {
-      float: right;
-      display: inline-block;
-      cursor: pointer; }
-  .sidebar-basic .sidebar-content-wrap {
+.sidebar-basic .sidebar-content-wrap .sidebar-header .sidebar-header-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-header .sidebar-header-icon + .sidebar-header-title {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info {
+  font-size: 1.33em; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-summary {
+  font-size: 1.08em; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-info, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-data {
+  padding: 1rem 0; }
+
+.sidebar-control .sidebar-content-wrap .sidebar-header {
+  display: none; }
+  .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+    background-color: #87BA45;
+    line-height: 1.33em;
+    padding: 0.5rem;
+    font-size: 1.17em; }
+  .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-control {
+    float: right;
+    display: inline-block;
+    cursor: pointer; }
+
+.sidebar-control .sidebar-content-wrap .sidebar-content {
+  display: block; }
+
+@media only screen and (max-width: 1024px) {
+  .sidebar-control .sidebar-content-wrap .sidebar-header {
     display: block; }
-  @media only screen and (max-width: 1024px) {
-    .sidebar-basic .sidebar-header {
-      display: block; }
-      .sidebar-basic .sidebar-header .sidebar-content-wrap {
-        display: none; } }
+  .sidebar-control .sidebar-content-wrap .sidebar-content {
+    display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for mapper components available in CMT-UI css framework.
@@ -8426,9 +8502,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of widget components as listed below:
 
-* Widget	-	The barebone widget with minimum styles.
-*
-* Basic		-	The basic widget defines the styles of widget having text and background colors.
+Widget - The barebone widget with minimum styles.
+
+Basic - The basic widget defines the styles of widget having text and background colors.
 
 ***********************************************************************/
 .widget {
@@ -8460,21 +8536,50 @@ Details: It defines the styles of widget components as listed below:
         position: relative; }
       .widget .widget-content-wrap .widget-content .widget-content-buffer {
         position: relative; }
+  .widget.widget-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .widget.widget-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .widget.widget-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
 .widget-basic .widget-content-wrap .widget-header {
-  background-color: #87BA45;
-  color: #E6E6E6;
-  padding: 0.5rem; }
+  padding: 1rem; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-info {
+    font-size: 1.08em; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-info + .widget-header-content {
+    margin-top: 0.5rem; }
 
-.widget-basic .widget-content-wrap .widget-content-wrap {
-  background-color: #F2F2F2;
-  color: #363636;
-  padding: 0.5rem; }
+.widget-basic .widget-content-wrap .widget-content {
+  padding: 1rem; }
+  .widget-basic .widget-content-wrap .widget-content .widget-content-data {
+    padding: 1rem 0; }
+  .widget-basic .widget-content-wrap .widget-content .widget-content-data + .widget-content-buffer {
+    margin-top: 0.5rem; }
 
 .widget-basic .widget-content-wrap .widget-footer {
-  background-color: #3C4655;
-  color: #96B0D6;
-  padding: 0.5rem; }
+  padding: 1rem; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
+    font-size: 1.08em; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-info + .widget-footer-content {
+    margin-top: 0.5rem; }
 
 /**********************************************************************
 Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 

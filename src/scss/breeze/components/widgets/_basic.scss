@@ -5,9 +5,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of widget components as listed below:
 
-* Widget	-	The barebone widget with minimum styles.
-*
-* Basic		-	The basic widget defines the styles of widget having text and background colors.
+Widget - The barebone widget with minimum styles.
+
+Basic - The basic widget defines the styles of widget having text and background colors.
 
 ***********************************************************************/
 
@@ -89,30 +89,90 @@ Details: It defines the styles of widget components as listed below:
 			}
 		}
 	}
+	
+	&.widget-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+	
+	&.widget-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+	
+	&.widget-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
 }
 
-// == Basic =========================
+// == Basic Widget ==================
 
+// Basic widget with default spacing
 .widget-basic {
 
 	.widget-content-wrap {
 
 		.widget-header {
-			background-color: $color-tertiary;
-			color: $color-tertiary-text;
-			padding: 0.5rem;
+			padding: 1rem;
+
+			.widget-header-title {
+				font-size: $font-size-4;
+				font-family: $font-heading;
+			}
+
+			.widget-header-info {
+				font-size: $font-size-6;
+			}
+			
+			.widget-header-icon + .widget-header-title, .widget-header-icon + .widget-header-info, .widget-header-icon + .widget-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.widget-header-title + .widget-header-info, .widget-header-title + .widget-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.widget-header-info + .widget-header-content {
+				margin-top: 0.5rem;
+			}
 		}
 
-		.widget-content-wrap {
-			background-color: $color-primary;
-			color: $color-primary-text;
-			padding: 0.5rem;
+		.widget-content {
+			padding: 1rem;
+
+			.widget-content-data {
+				padding: 1rem 0;
+			}
+			
+			.widget-content-data + .widget-content-buffer {
+				margin-top: 0.5rem;
+			}
 		}
 
 		.widget-footer {
-			background-color: $color-secondary;
-			color: $color-secondary-text;
-			padding: 0.5rem;
+			padding: 1rem;
+
+			.widget-footer-title {
+				font-size: $font-size-5;
+				font-family: $font-heading;
+			}
+
+			.widget-footer-info {
+				font-size: $font-size-6;
+			}
+			
+			.widget-footer-icon + .widget-header-title, .widget-footer-icon + .widget-header-info, .widget-footer-icon + .widget-header-content {
+				margin-top: 0.5rem;
+			}
+
+			.widget-footer-title + .widget-footer-info, .widget-footer-title + .widget-footer-content {
+				margin-top: 0.5rem;
+			}
+
+			.widget-footer-info + .widget-footer-content {
+				margin-top: 0.5rem;
+			}
 		}
 	}
 }

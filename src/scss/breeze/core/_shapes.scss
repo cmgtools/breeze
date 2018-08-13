@@ -1,0 +1,35 @@
+.shape {
+    margin: 0 auto;
+
+    &.shape-hexagon { 
+        background: $color-primary-l;
+        height: 29px;
+        position: relative;
+        width: 50px;
+        top: -12px;        
+    }
+
+    &.shape-hexagon:before {
+        content: "";
+        position: absolute;
+        top: -11.5px;
+        left: 0;
+        width: 0;
+        height: 0;     
+        border-bottom: 12.5px solid $color-primary-l;
+        border-left: 25px solid rgba(0, 0, 0, 0);
+        border-right: 25px solid rgba(0, 0, 0, 0);
+    }
+
+    &.shape-hexagon:after {
+        content: "";
+        position: absolute;
+        bottom: -12.5px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 13.5px solid $color-primary-l;
+    }
+}

@@ -90,6 +90,8 @@ Baidu		- <min>
 @import "breeze/core/containers";
 // project - containers
 
+@import "breeze/core/shapes";
+
 // ---------------------------------------//
 // Effects Division - Optional
 // Custom effects including animations, transtitions and transformations
@@ -206,11 +208,6 @@ Baidu		- <min>
 
 @import "breeze/components/pages/basic";
 // project - pages
-
-@import "breeze/components/cart/product";
-@import "breeze/components/cart/cart";
-@import "breeze/components/cart/shop";
-// project - cart
 
 // ---------------------------------------//
 // Extensions Division - Optional

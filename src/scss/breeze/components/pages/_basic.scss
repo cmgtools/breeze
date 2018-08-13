@@ -138,7 +138,7 @@ page background and even content wrapper background in the form of image or text
 		// Wraps Page Cards
 		.page-card-wrap {
 
-			.page-card {
+			.card {
 				// Card layout - derived from card component
 			}
 		}
@@ -146,7 +146,7 @@ page background and even content wrapper background in the form of image or text
 		// Wraps Page Boxes
 		.page-box-wrap {
 
-			.page-box {
+			.box {
 				// Box layout - derived from box component
 			}
 		}
@@ -155,7 +155,7 @@ page background and even content wrapper background in the form of image or text
 		.page-widget-wrap {
 			// Widget Data
 
-			.page-widget {
+			.widget {
 				// Widget layout - derived from widget component
 			}
 		}
@@ -164,30 +164,30 @@ page background and even content wrapper background in the form of image or text
 		.page-block-wrap {
 			// Block Data
 
-			.page-block {
+			.block {
 				// Block layout - derived from block component
 			}
 		}
 
-		.page-sidebar {
+		.page-sidebar-wrap {
 
 			// Page Sidebar Top
-			&.page-sidebar-top {
+			&.page-sidebar-wrap-top {
 				// Top Sidebar
 			}
 
 			// Page Sidebar Right
-			&.page-sidebar-right {
+			&.page-sidebar-wrap-right {
 				// Right Sidebar
 			}
 
 			// Page Sidebar Bottom
-			&.page-sidebar-bottom {
+			&.page-sidebar-wrap-bottom {
 				// Bottom Sidebar
 			}
 
 			// Page Sidebar Left
-			&.page-sidebar-left {
+			&.page-sidebar-wrap-left {
 				// Left Sidebar
 			}
 		}
