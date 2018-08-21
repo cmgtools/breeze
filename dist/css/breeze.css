@@ -5205,7 +5205,7 @@ by showing good looking icons instead of browser dependentent graphics. These ar
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: middle; }
+  vertical-align: top; }
 
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
