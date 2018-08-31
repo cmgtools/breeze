@@ -99,8 +99,18 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-blue-l {
+		background-color: $color-blue-l !important;
+		color: $color-white !important;
+	}
+
 	&.color-purple {
 		background-color: $color-purple !important;
+		color: $color-white !important;
+	}
+
+	&.color-purple-l {
+		background-color: $color-purple-l !important;
 		color: $color-white !important;
 	}
 
@@ -109,8 +119,18 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-orange-l {
+		background-color: $color-orange-l !important;
+		color: $color-white !important;
+	}
+
 	&.color-yellow {
 		background-color: $color-yellow !important;
+		color: $color-white !important;
+	}
+
+	&.color-yellow-l {
+		background-color: $color-yellow-l !important;
 		color: $color-white !important;
 	}
 
@@ -119,8 +139,18 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-red-l {
+		background-color: $color-red-l !important;
+		color: $color-white !important;
+	}
+
 	&.color-pink {
 		background-color: $color-pink !important;
+		color: $color-white !important;
+	}
+
+	&.color-pink-l {
+		background-color: $color-pink-l !important;
 		color: $color-white !important;
 	}
 
@@ -129,13 +159,28 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-magenta-l {
+		background-color: $color-magenta-l !important;
+		color: $color-white !important;
+	}
+
 	&.color-green {
 		background-color: $color-green !important;
 		color: $color-white !important;
 	}
 
+	&.color-green-l {
+		background-color: $color-green-l !important;
+		color: $color-white !important;
+	}
+
 	&.color-brown {
 		background-color: $color-brown !important;
+		color: $color-white !important;
+	}
+
+	&.color-brown-l {
+		background-color: $color-brown-l !important;
 		color: $color-white !important;
 	}
 

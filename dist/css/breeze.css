@@ -2684,29 +2684,56 @@ Details: It defines the text and background colors as listed below:
   .color.color-blue {
     background-color: #0074D9 !important;
     color: #FFFFFF !important; }
+  .color.color-blue-l {
+    background-color: #1E96FF !important;
+    color: #FFFFFF !important; }
   .color.color-purple {
     background-color: #8946C4 !important;
+    color: #FFFFFF !important; }
+  .color.color-purple-l {
+    background-color: #AA7AD4 !important;
     color: #FFFFFF !important; }
   .color.color-orange {
     background-color: #FF851B !important;
     color: #FFFFFF !important; }
+  .color.color-orange-l {
+    background-color: #FFA95F !important;
+    color: #FFFFFF !important; }
   .color.color-yellow {
     background-color: #FFDC00 !important;
+    color: #FFFFFF !important; }
+  .color.color-yellow-l {
+    background-color: #FFE544 !important;
     color: #FFFFFF !important; }
   .color.color-red {
     background-color: #FF4136 !important;
     color: #FFFFFF !important; }
+  .color.color-red-l {
+    background-color: #FF6158 !important;
+    color: #FFFFFF !important; }
   .color.color-pink {
     background-color: #E4287C !important;
+    color: #FFFFFF !important; }
+  .color.color-pink-l {
+    background-color: #EC64A1 !important;
     color: #FFFFFF !important; }
   .color.color-magenta {
     background-color: #B200B2 !important;
     color: #FFFFFF !important; }
+  .color.color-magenta-l {
+    background-color: #F600F6 !important;
+    color: #FFFFFF !important; }
   .color.color-green {
     background-color: #7CAA2D !important;
     color: #FFFFFF !important; }
+  .color.color-green-l {
+    background-color: #9FCF4B !important;
+    color: #FFFFFF !important; }
   .color.color-brown {
     background-color: #8B4513 !important;
+    color: #FFFFFF !important; }
+  .color.color-brown-l {
+    background-color: #C7631B !important;
     color: #FFFFFF !important; }
   .color.color-aqua {
     background-color: #8AE2E3 !important;
@@ -7569,12 +7596,18 @@ Details: It defines the styles for popup components as listed below:
     .popup .popup-data.popup-data-small {
       height: 200px;
       width: 400px; }
+      .popup .popup-data.popup-data-small .popup-content-wrap .popup-content {
+        height: 120px; }
     .popup .popup-data.popup-data-medium {
       height: 300px;
       width: 600px; }
+      .popup .popup-data.popup-data-medium .popup-content-wrap .popup-content {
+        height: 220px; }
     .popup .popup-data.popup-data-large {
       height: 400px;
       width: 800px; }
+      .popup .popup-data.popup-data-large .popup-content-wrap .popup-content {
+        height: 320px; }
   @media only screen and (max-width: 768px) {
     .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
       width: 90% !important; } }
@@ -8547,7 +8580,7 @@ Basic - The basic widget defines the styles of widget having text and background
     color: #E6E6E6; }
 
 .widget-basic .widget-content-wrap .widget-header {
-  padding: 1rem; }
+  padding: 1rem 0; }
   .widget-basic .widget-content-wrap .widget-header .widget-header-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -8561,14 +8594,14 @@ Basic - The basic widget defines the styles of widget having text and background
     margin-top: 0.5rem; }
 
 .widget-basic .widget-content-wrap .widget-content {
-  padding: 1rem; }
+  padding: 1rem 0; }
   .widget-basic .widget-content-wrap .widget-content .widget-content-data {
     padding: 1rem 0; }
   .widget-basic .widget-content-wrap .widget-content .widget-content-data + .widget-content-buffer {
     margin-top: 0.5rem; }
 
 .widget-basic .widget-content-wrap .widget-footer {
-  padding: 1rem; }
+  padding: 1rem 0; }
   .widget-basic .widget-content-wrap .widget-footer .widget-footer-title {
     font-size: 1.17em;
     font-family: Verdana, Geneva, sans-serif; }

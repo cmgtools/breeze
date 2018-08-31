@@ -114,7 +114,7 @@ Basic - The basic widget defines the styles of widget having text and background
 	.widget-content-wrap {
 
 		.widget-header {
-			padding: 1rem;
+			padding: 1rem 0;
 
 			.widget-header-title {
 				font-size: $font-size-4;
@@ -139,19 +139,19 @@ Basic - The basic widget defines the styles of widget having text and background
 		}
 
 		.widget-content {
-			padding: 1rem;
+			padding: 1rem 0;
 
 			.widget-content-data {
 				padding: 1rem 0;
 			}
-			
+
 			.widget-content-data + .widget-content-buffer {
 				margin-top: 0.5rem;
 			}
 		}
 
 		.widget-footer {
-			padding: 1rem;
+			padding: 1rem 0;
 
 			.widget-footer-title {
 				font-size: $font-size-5;
