@@ -21,6 +21,10 @@ Details: It defines the styles for popout components as listed below:
 	.popout-content-wrap {
 		display: none; // hidden at start
 		// Popout content wrapper
+		
+		.popout-header {
+			// Popout header
+		}
 
 		.popout-content {
 			// Popout content

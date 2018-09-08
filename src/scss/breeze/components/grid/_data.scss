@@ -73,7 +73,7 @@ Basic - The basic data grid having default coloring.
 		}
 
 		.grid-head-options {
-			// grid options - sort, search, filter, bulk, report
+			// grid options - sort, search, filter, bulk, report, actions
 		}
 	}
 
@@ -100,7 +100,7 @@ Basic - The basic data grid having default coloring.
 			}
 
 			.grid-header-content {
-				// header content - notes, message
+				// header content - notes, messages
 			}
 		}
 	}
@@ -111,7 +111,7 @@ Basic - The basic data grid having default coloring.
 
 		.grid-content {
 
-			// Grid Rows
+			// Grid Rows - Responsive rows forming list or table views using row-col
 			.grid-rows-wrap {
 				display: none;
 
@@ -171,7 +171,7 @@ Basic - The basic data grid having default coloring.
 				}
 			}
 
-			// Grid Cards
+			// Grid Cards - Responsive layout using Card
 			.grid-cards-wrap {
 				display: none;
 
