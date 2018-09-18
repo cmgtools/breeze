@@ -6632,6 +6632,9 @@ of dragger, chooser and file.
     overflow: hidden; }
     .uploader-basic .file-data img {
       width: 120px; }
+    .uploader-basic .file-data .bkg-image {
+      width: 100%;
+      height: 100%; }
   .uploader-basic .file-preloader {
     position: absolute;
     top: 120px;
