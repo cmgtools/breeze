@@ -202,7 +202,7 @@ Media Queries		-	These mixins are pre-defined media queries using the screen siz
 /*
 Notes:
 1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
-2. bkg-element - It use the img tag to cover background of parent element.
+2. bkg-element - It use the img tag to cover background of parent element. The parent must use hidden overflow
 */
 .texture, .pattern {
   position: absolute;
@@ -5821,21 +5821,21 @@ form {
   margin: 0;
   display: inline-block; }
 
-.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
+.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .frm-element, .cmt-select-wrap {
   width: 100%; }
-  .element-25.btn, label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
+  .frm-element-25.btn, label.frm-element-25, input.frm-element-25[type="text"], input.frm-element-25[type="email"], input.frm-element-25[type="password"], textarea.frm-element-25, select.frm-element-25, input.frm-element-25[type="submit"], input.frm-element-25[type="button"], button.frm-element-25, .frm-element-25.frm-element, .frm-element-25.cmt-select-wrap {
     width: 25% !important; }
-  .element-50.btn, label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
+  .frm-element-50.btn, label.frm-element-50, input.frm-element-50[type="text"], input.frm-element-50[type="email"], input.frm-element-50[type="password"], textarea.frm-element-50, select.frm-element-50, input.frm-element-50[type="submit"], input.frm-element-50[type="button"], button.frm-element-50, .frm-element-50.frm-element, .frm-element-50.cmt-select-wrap {
     width: 50% !important; }
-  .element-75.btn, label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
+  .frm-element-75.btn, label.frm-element-75, input.frm-element-75[type="text"], input.frm-element-75[type="email"], input.frm-element-75[type="password"], textarea.frm-element-75, select.frm-element-75, input.frm-element-75[type="submit"], input.frm-element-75[type="button"], button.frm-element-75, .frm-element-75.frm-element, .frm-element-75.cmt-select-wrap {
     width: 75% !important; }
-  .element-small.btn, label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
+  .frm-element-small.btn, label.frm-element-small, input.frm-element-small[type="text"], input.frm-element-small[type="email"], input.frm-element-small[type="password"], textarea.frm-element-small, select.frm-element-small, input.frm-element-small[type="submit"], input.frm-element-small[type="button"], button.frm-element-small, .frm-element-small.frm-element, .frm-element-small.cmt-select-wrap {
     width: 80px !important; }
-  .element-medium.btn, label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
+  .frm-element-medium.btn, label.frm-element-medium, input.frm-element-medium[type="text"], input.frm-element-medium[type="email"], input.frm-element-medium[type="password"], textarea.frm-element-medium, select.frm-element-medium, input.frm-element-medium[type="submit"], input.frm-element-medium[type="button"], button.frm-element-medium, .frm-element-medium.frm-element, .frm-element-medium.cmt-select-wrap {
     width: 120px !important; }
-  .element-large.btn, label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
+  .frm-element-large.btn, label.frm-element-large, input.frm-element-large[type="text"], input.frm-element-large[type="email"], input.frm-element-large[type="password"], textarea.frm-element-large, select.frm-element-large, input.frm-element-large[type="submit"], input.frm-element-large[type="button"], button.frm-element-large, .frm-element-large.frm-element, .frm-element-large.cmt-select-wrap {
     width: 180px !important; }
-  .element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
+  .frm-element-xlarge.btn, label.frm-element-xlarge, input.frm-element-xlarge[type="text"], input.frm-element-xlarge[type="email"], input.frm-element-xlarge[type="password"], textarea.frm-element-xlarge, select.frm-element-xlarge, input.frm-element-xlarge[type="submit"], input.frm-element-xlarge[type="button"], button.frm-element-xlarge, .frm-element-xlarge.frm-element, .frm-element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .cmt-select-wrap .cmt-selected {
@@ -5913,7 +5913,7 @@ label {
   content: " *";
   color: #FF4136; }
 
-.element {
+.frm-element {
   display: inline-block; }
 
 .disabled {
@@ -5938,19 +5938,19 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   position: relative;
   display: inline-block;
   width: 100%; }
-  .frm-icon-element.element-25 {
+  .frm-icon-element.frm-element-25 {
     width: 25% !important; }
-  .frm-icon-element.element-50 {
+  .frm-icon-element.frm-element-50 {
     width: 50% !important; }
-  .frm-icon-element.element-75 {
+  .frm-icon-element.frm-element-75 {
     width: 75% !important; }
-  .frm-icon-element.element-small {
+  .frm-icon-element.frm-element-small {
     width: 80px !important; }
-  .frm-icon-element.element-medium {
+  .frm-icon-element.frm-element-medium {
     width: 120px !important; }
-  .frm-icon-element.element-large {
+  .frm-icon-element.frm-element-large {
     width: 180px !important; }
-  .frm-icon-element.element-xlarge {
+  .frm-icon-element.frm-element-xlarge {
     width: 250px !important; }
   .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
   .frm-icon-element .btn {
@@ -6090,26 +6090,26 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   float: none;
   width: auto; }
 
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
   width: 100%; }
 
 .frm-split-40-60 .auto-fill-items-wrap {
   width: 60%;
   margin-left: 40%; }
 
-.frm-split-40-60 label, .element-40 {
+.frm-split-40-60 label, .frm-element-40 {
   clear: both;
   width: 40%;
   float: left; }
 
-.element-40 label {
+.frm-element-40 label {
   width: 100%; }
 
-.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .element-40 {
+.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .frm-element-40 {
   clear: none; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
   width: 60%;
   float: left; }
@@ -6122,9 +6122,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   width: 60%;
   float: left; }
 
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.frm-element-60 input[type="text"], .frm-element-60 input[type="email"], .frm-element-60 input[type="password"],
+.frm-element-60 textarea, .frm-element-60 select,
+.frm-element-60 .cmt-select-wrap, .frm-element-60 .icon-picker {
   width: 100%; }
 
 .frm-split-40-60 .frm-icon-element {
@@ -6139,7 +6139,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 @media only screen and (max-width: 480px) {
   .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
     width: 100%; }
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
@@ -8912,57 +8912,57 @@ Full - Full pagination having both info and pagination links.
   .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
     margin-top: -0.2em; }
 
-.pagination-basic li.first.disabled span, .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span, .pagination-basic li.last.disabled span, .pagination-basic .page-link.first.disabled span, .pagination-basic .page-link.prev.disabled span, .pagination-basic .page-link.next.disabled span, .pagination-basic .page-link.last.disabled span {
+.pagination-basic li.first.link-disabled span, .pagination-basic li.prev.link-disabled span, .pagination-basic li.next.link-disabled span, .pagination-basic li.last.link-disabled span, .pagination-basic .page-link.first.link-disabled span, .pagination-basic .page-link.prev.link-disabled span, .pagination-basic .page-link.next.link-disabled span, .pagination-basic .page-link.last.link-disabled span {
   background-color: gray;
   color: #363636; }
-  .pagination-basic li.first.disabled span:hover, .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover, .pagination-basic li.last.disabled span:hover, .pagination-basic .page-link.first.disabled span:hover, .pagination-basic .page-link.prev.disabled span:hover, .pagination-basic .page-link.next.disabled span:hover, .pagination-basic .page-link.last.disabled span:hover {
+  .pagination-basic li.first.link-disabled span:hover, .pagination-basic li.prev.link-disabled span:hover, .pagination-basic li.next.link-disabled span:hover, .pagination-basic li.last.link-disabled span:hover, .pagination-basic .page-link.first.link-disabled span:hover, .pagination-basic .page-link.prev.link-disabled span:hover, .pagination-basic .page-link.next.link-disabled span:hover, .pagination-basic .page-link.last.link-disabled span:hover {
     background-color: gray;
     color: #363636; }
-  .pagination-basic li.first.disabled span .icon, .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon, .pagination-basic li.last.disabled span .icon, .pagination-basic .page-link.first.disabled span .icon, .pagination-basic .page-link.prev.disabled span .icon, .pagination-basic .page-link.next.disabled span .icon, .pagination-basic .page-link.last.disabled span .icon {
+  .pagination-basic li.first.link-disabled span .icon, .pagination-basic li.prev.link-disabled span .icon, .pagination-basic li.next.link-disabled span .icon, .pagination-basic li.last.link-disabled span .icon, .pagination-basic .page-link.first.link-disabled span .icon, .pagination-basic .page-link.prev.link-disabled span .icon, .pagination-basic .page-link.next.link-disabled span .icon, .pagination-basic .page-link.last.link-disabled span .icon {
     color: #363636; }
-    .pagination-basic li.first.disabled span .icon:hover, .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover, .pagination-basic li.last.disabled span .icon:hover, .pagination-basic .page-link.first.disabled span .icon:hover, .pagination-basic .page-link.prev.disabled span .icon:hover, .pagination-basic .page-link.next.disabled span .icon:hover, .pagination-basic .page-link.last.disabled span .icon:hover {
+    .pagination-basic li.first.link-disabled span .icon:hover, .pagination-basic li.prev.link-disabled span .icon:hover, .pagination-basic li.next.link-disabled span .icon:hover, .pagination-basic li.last.link-disabled span .icon:hover, .pagination-basic .page-link.first.link-disabled span .icon:hover, .pagination-basic .page-link.prev.link-disabled span .icon:hover, .pagination-basic .page-link.next.link-disabled span .icon:hover, .pagination-basic .page-link.last.link-disabled span .icon:hover {
       color: #363636; }
 
 .pagination-basic li.active a, .pagination-basic .page-link.active a {
   background-color: #b51717;
   color: #FFFFFF; }
 
-.pagination-full .page-info {
-  display: inline-block;
-  width: 40%;
-  text-align: left;
-  font-weight: normal; }
-
-.pagination-full .page-links {
-  display: inline-block;
-  width: 59%;
-  text-align: right; }
-  .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
+.pagination-full {
+  display: block; }
+  .pagination-full .page-info {
     display: inline-block;
-    list-style: none;
-    margin: 0;
-    margin-left: 3px;
-    height: 2.1em;
-    line-height: 2.1em; }
-    .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
-      background-color: #87BA45;
-      color: #96B0D6;
-      padding: 0.5em 0.75em;
-      text-decoration: none; }
-    .pagination-full .page-links .pagination li .active a, .pagination-full .page-links .pagination .page-link .active a {
-      background-color: #678d34;
-      color: #c1db9e; }
-    .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link a:hover {
-      background-color: #F2F2F2;
-      color: #363636; }
-    .pagination-full .page-links .pagination li .disabled span, .pagination-full .page-links .pagination .page-link .disabled span {
-      background-color: #7F7F7F;
-      color: #FFFFFF; }
-
-@media only screen and (max-width: 1024px) {
-  .pagination-full .page-info, .pagination-full .page-links {
-    width: 100%;
-    text-align: center; } }
+    width: 40%;
+    text-align: left;
+    font-weight: normal; }
+  .pagination-full .page-links {
+    display: inline-block;
+    width: 59%;
+    text-align: right; }
+    .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      margin-left: 3px;
+      height: 2.1em;
+      line-height: 2.1em; }
+      .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
+        background-color: #87BA45;
+        color: #96B0D6;
+        padding: 0.5em 0.75em;
+        text-decoration: none; }
+        .pagination-full .page-links .pagination li span:hover, .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link span:hover, .pagination-full .page-links .pagination .page-link a:hover {
+          background-color: #F2F2F2;
+          color: #363636; }
+      .pagination-full .page-links .pagination li.first.link-disabled span, .pagination-full .page-links .pagination li.prev.link-disabled span, .pagination-full .page-links .pagination li.next.link-disabled span, .pagination-full .page-links .pagination li.last.link-disabled span, .pagination-full .page-links .pagination .page-link.first.link-disabled span, .pagination-full .page-links .pagination .page-link.prev.link-disabled span, .pagination-full .page-links .pagination .page-link.next.link-disabled span, .pagination-full .page-links .pagination .page-link.last.link-disabled span {
+        background-color: #7F7F7F;
+        color: #FFFFFF; }
+      .pagination-full .page-links .pagination li.active a, .pagination-full .page-links .pagination .page-link.active a {
+        background-color: #678d34;
+        color: #c1db9e; }
+  @media only screen and (max-width: 1024px) {
+    .pagination-full .page-info, .pagination-full .page-links {
+      width: 100%;
+      text-align: center; } }
 
 /**********************************************************************
 Description: It defines the styles of the grid sort.
@@ -9267,6 +9267,12 @@ page background and even content wrapper background in the form of image or text
 .page-basic .page-content-wrap .page-content .page-content-summary {
   padding: 1rem 0;
   font-size: 1.08em; }
+
+.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
+  margin-top: 0.5rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
   margin-top: 0.5rem; }

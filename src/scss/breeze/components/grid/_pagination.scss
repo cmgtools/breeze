@@ -37,7 +37,7 @@ Full - Full pagination having both info and pagination links.
 
 		&.first, &.prev, &.next, &.last {
 
-			&.disabled {
+			&.link-disabled {
 
 				span {
 					// Prev - Next in disabled state
@@ -105,7 +105,7 @@ Full - Full pagination having both info and pagination links.
 
 		&.first, &.prev, &.next, &.last {
 
-			&.disabled {
+			&.link-disabled {
 
 				span {
 					background-color: $color-btn-d;
@@ -140,6 +140,7 @@ Full - Full pagination having both info and pagination links.
 // == Full Pagination ===============
 
 .pagination-full {
+	display: block;
 
 	.page-info {
 		display: inline-block;
@@ -168,21 +169,24 @@ Full - Full pagination having both info and pagination links.
 					color: $color-secondary-text;
 					padding: 0.5em 0.75em;
 					text-decoration: none;
+					
+					&:hover {
+						background-color: $color-primary;
+						color: $color-primary-text;
+					}
 				}
 
-				.active a {
+				&.first, &.prev, &.next, &.last {
+					
+					&.link-disabled span {
+						background-color: $color-gray;
+						color: $color-white;
+					}
+				}
+
+				&.active a {
 					background-color: $color-tertiary-d;
 					color: $color-tertiary-text-d;
-				}
-
-				a:hover {
-					background-color: $color-primary;
-					color: $color-primary-text;
-				}
-
-				.disabled span {
-					background-color: $color-gray;
-					color: $color-white;
 				}
 			}
 		}

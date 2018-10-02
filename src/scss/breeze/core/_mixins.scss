@@ -415,7 +415,7 @@ Media Queries		-	These mixins are pre-defined media queries using the screen siz
 /*
 Notes:
 1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
-2. bkg-element - It use the img tag to cover background of parent element.
+2. bkg-element - It use the img tag to cover background of parent element. The parent must use hidden overflow
 */
 
 // Cover the background
@@ -482,7 +482,7 @@ Notes:
 	width: 200%;
 	height: 200%;
 	overflow: hidden;
-	
+
 	img {
 		position: absolute;
 		top: 0;
