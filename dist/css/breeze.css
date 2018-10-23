@@ -7818,7 +7818,8 @@ Details: It defines the styles of cmt slider as listed below:
     width: 64px;
     height: 80px; }
     .slider-basic .slider-control:hover {
-      background-color: #a4cb72; }
+      background-color: #a4cb72;
+      color: #678d34; }
     .slider-basic .slider-control.slider-control-bkg {
       background-image: url("../images/slider-arrow.png");
       background-repeat: none;
