@@ -3784,7 +3784,7 @@ Details: It defines the grid system and basic containers as listed below:
     width: 100%; }
   .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%; }
-  .max-cols-25 > .col:nth-child(4), .max-cols-25s > .col:nth-child(4) {
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
     clear: both; }
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-50s > .col1, .max-cols-50s > .col2, .max-cols-50s > .col3, .max-cols-50s > .col4, .max-cols-50s > .col5, .max-cols-50s > .col6, .max-cols-50s > .col7, .max-cols-50s > .col8, .max-cols-50s > .col9, .max-cols-50s > .col10, .max-cols-50s > .col11, .max-cols-50s > .col12, .max-cols-50s > .col13, .max-cols-50s > .col14, .max-cols-50s > .col15 {
     width: 48%; }
@@ -3932,12 +3932,12 @@ Details: It defines the grid system and basic containers as listed below:
   word-wrap: break-word;
   min-height: 1px; }
 
-.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12 {
+.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12, .colc5x2, .colc5x3, .colc5x4, .colc6x2, .colc6x3, .colc6x4, .colc6x5, .colc12x2, .colc12x3, .colc12x4, .colc12x5, .colc12x6, .colc12x7, .colc12x8, .colc12x9, .colc12x10, .colc12x11 {
   margin: 0 1%; }
-  .colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child {
+  .colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child, .colc5x2:first-child, .colc5x3:first-child, .colc5x4:first-child, .colc6x2:first-child, .colc6x3:first-child, .colc6x4:first-child, .colc6x5:first-child, .colc12x2:first-child, .colc12x3:first-child, .colc12x4:first-child, .colc12x5:first-child, .colc12x6:first-child, .colc12x7:first-child, .colc12x8:first-child, .colc12x9:first-child, .colc12x10:first-child, .colc12x11:first-child {
     margin-left: 0;
     margin-right: 1%; }
-  .colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child {
+  .colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child, .colc5x2:last-child, .colc5x3:last-child, .colc5x4:last-child, .colc6x2:last-child, .colc6x3:last-child, .colc6x4:last-child, .colc6x5:last-child, .colc12x2:last-child, .colc12x3:last-child, .colc12x4:last-child, .colc12x5:last-child, .colc12x6:last-child, .colc12x7:last-child, .colc12x8:last-child, .colc12x9:last-child, .colc12x10:last-child, .colc12x11:last-child {
     margin-left: 1%;
     margin-right: 0; }
 
@@ -3977,16 +3977,89 @@ Details: It defines the grid system and basic containers as listed below:
 .colc12 {
   width: 6.5%; }
 
+.colc5x2 {
+  width: 39.2%; }
+
+.colc5x3 {
+  width: 58.8%; }
+
+.colc5x4 {
+  width: 78.4%; }
+
+.colc6x2 {
+  width: 32.66666%; }
+
+.colc6x3 {
+  width: 49%; }
+
+.colc6x4 {
+  width: 65.33333%; }
+
+.colc6x5 {
+  width: 81.66666%; }
+
+.colc12x2 {
+  width: 16.33333%; }
+
+.colc12x3 {
+  width: 24.5%; }
+
+.colc12x4 {
+  width: 32.66666%; }
+
+.colc12x5 {
+  width: 40.83333%; }
+
+.colc12x6 {
+  width: 49%; }
+
+.colc12x7 {
+  width: 57.16666%; }
+
+.colc12x8 {
+  width: 65.33333%; }
+
+.colc12x9 {
+  width: 73.5%; }
+
+.colc12x10 {
+  width: 81.66666%; }
+
+.colc12x11 {
+  width: 89.83333%; }
+
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .colc1, .max-cols-25 > .colc2, .max-cols-25 > .colc3, .max-cols-25 > .colc4, .max-cols-25 > .colc5, .max-cols-25 > .colc6, .max-cols-25 > .colc7, .max-cols-25 > .colc8, .max-cols-25 > .colc9, .max-cols-25 > .colc10, .max-cols-25 > .colc11, .max-cols-25 > .colc12, .max-cols-25s > .colc1, .max-cols-25s > .colc2, .max-cols-25s > .colc3, .max-cols-25s > .colc4, .max-cols-25s > .colc5, .max-cols-25s > .colc6, .max-cols-25s > .colc7, .max-cols-25s > .colc8, .max-cols-25s > .colc9, .max-cols-25s > .colc10, .max-cols-25s > .colc11, .max-cols-25s > .colc12 {
+    width: 23%; }
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
+    clear: both; }
+  .max-cols-50 .colc:first-child, .max-cols-50s .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%; }
+  .max-cols-50 .colc:last-child, .max-cols-50s .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%; }
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-50s > .colc1, .max-cols-50s > .colc2, .max-cols-50s > .colc3, .max-cols-50s > .colc4, .max-cols-50s > .colc5, .max-cols-50s > .colc6, .max-cols-50s > .colc7, .max-cols-50s > .colc8, .max-cols-50s > .colc9, .max-cols-50s > .colc10, .max-cols-50s > .colc11, .max-cols-50s > .colc12 {
+    width: 48%; }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-50s > .colc5x2, .max-cols-50s > .colc5x3, .max-cols-50s > .colc5x4, .max-cols-50s > .colc6x2, .max-cols-50s > .colc6x3, .max-cols-50s > .colc6x4, .max-cols-50s > .colc6x5 {
     width: 48%; }
   .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both; }
+  .max-cols-100 .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%; }
+  .max-cols-100 .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%; }
   .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%; }
+  .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%; }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%; } }
 
 .colc3x2 {
@@ -4068,7 +4141,7 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-25s > .colf1, .max-cols-25s > .colf2, .max-cols-25s > .colf3, .max-cols-25s > .colf4, .max-cols-25s > .colf5, .max-cols-25s > .colf6, .max-cols-25s > .colf7, .max-cols-25s > .colf8, .max-cols-25s > .colf9, .max-cols-25s > .colf10, .max-cols-25s > .colf11, .max-cols-25s > .colf12, .max-cols-25s > .colf13, .max-cols-25s > .colf14, .max-cols-25s > .colf15 {
     width: 25%; }
-  .max-cols-25 > .colf:nth-child(4), .max-cols-25s > .colf:nth-child(4) {
+  .max-cols-25 > .colf:nth-child(5), .max-cols-25s > .colf:nth-child(5) {
     clear: both; }
   .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-50s > .colf1, .max-cols-50s > .colf2, .max-cols-50s > .colf3, .max-cols-50s > .colf4, .max-cols-50s > .colf5, .max-cols-50s > .colf6, .max-cols-50s > .colf7, .max-cols-50s > .colf8, .max-cols-50s > .colf9, .max-cols-50s > .colf10, .max-cols-50s > .colf11, .max-cols-50s > .colf12, .max-cols-50s > .colf13, .max-cols-50s > .colf14, .max-cols-50s > .colf15 {
     width: 50%; }
@@ -4242,6 +4315,46 @@ Details: It defines the grid system and basic containers as listed below:
     .col-filler-wrap .col-filler.col-filler-right {
       right: 0; }
 
+.col-pad.col-pad-small {
+  padding: 0.5em; }
+  .col-pad.col-pad-small .col, .col-pad.col-pad-small .colf {
+    padding: 1em; }
+
+.col-pad.col-pad-medium {
+  padding: 1em; }
+  .col-pad.col-pad-medium .col, .col-pad.col-pad-medium .colf {
+    padding: 2em; }
+
+.col-pad.col-pad-large {
+  padding: 1.5em; }
+  .col-pad.col-pad-large .col, .col-pad.col-pad-large .colf {
+    padding: 3em; }
+
+.col-pad.col-pad-xlarge {
+  padding: 2em; }
+  .col-pad.col-pad-xlarge .col, .col-pad.col-pad-xlarge .colf {
+    padding: 4em; }
+
+.col-pad-h.col-pad-small {
+  padding: 0 0.5em; }
+  .col-pad-h.col-pad-small .col, .col-pad-h.col-pad-small .colf {
+    padding: 0 1em; }
+
+.col-pad-h.col-pad-medium {
+  padding: 0 1em; }
+  .col-pad-h.col-pad-medium .col, .col-pad-h.col-pad-medium .colf {
+    padding: 0 2em; }
+
+.col-pad-h.col-pad-large {
+  padding: 0 1.5em; }
+  .col-pad-h.col-pad-large .col, .col-pad-h.col-pad-large .colf {
+    padding: 0 3em; }
+
+.col-pad-h.col-pad-xlarge {
+  padding: 0 2em; }
+  .col-pad-h.col-pad-xlarge .col, .col-pad-h.col-pad-xlarge .colf {
+    padding: 0 4em; }
+
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
  * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
@@ -4289,8 +4402,18 @@ Details: It defines the grid system and basic containers as listed below:
   width: 100% !important; }
 
 @media only screen and (max-width: 1024px) {
+  .max-content-25.content-90, .max-content-25.content-80, .max-content-25.content-75, .max-content-25.content-50, .max-content-25.content-25 {
+    width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
   .max-content-25 > .content-90, .max-content-25 > .content-80, .max-content-25 > .content-75, .max-content-25 > .content-50, .max-content-25 > .content-25 {
     width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
+  .max-content-50.content-90, .max-content-50.content-80, .max-content-50.content-75, .max-content-50.content-50, .max-content-50.content-25 {
+    width: 50% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin: 0 auto; }
@@ -4299,6 +4422,10 @@ Details: It defines the grid system and basic containers as listed below:
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin: 0 auto; }
+  .max-content-100.content-90, .max-content-100.content-80, .max-content-100.content-75, .max-content-100.content-50, .max-content-100.content-25 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
   .max-content-100 > .content-90, .max-content-100 > .content-80, .max-content-100 > .content-75, .max-content-100 > .content-50, .max-content-100 > .content-25 {
     width: 100% !important;
     padding-left: 0 !important;
@@ -5863,8 +5990,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
   input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
-    background-color: #CCCCCC;
-    color: #909090;
+    background-color: #CCCCCC !important;
+    color: #909090 !important;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
@@ -5882,7 +6009,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   .form .cmt-checkbox:focus, .form .cmt-switch:focus {
     color: #4F688E; }
   .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
-    color: #909090; }
+    color: #909090 !important; }
 
 .btn, .btn-icon, input[type="submit"], input[type="button"], button {
   -webkit-transition: all 420ms ease-in-out 0s;
@@ -5901,8 +6028,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     background-color: #b51717;
     color: #FFFFFF; }
   .btn:disabled, .btn-icon:disabled, input:disabled[type="submit"], input:disabled[type="button"], button:disabled {
-    background-color: gray;
-    color: #363636;
+    background-color: gray !important;
+    color: #363636 !important;
     cursor: default; }
 
 label {
