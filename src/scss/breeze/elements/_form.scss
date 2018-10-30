@@ -112,8 +112,8 @@ form {
 	}
 
 	&:disabled {
-		background-color: $color-field-d;
-		color: $color-field-text-d;
+		background-color: $color-field-d !important;
+		color: $color-field-text-d !important;
 		@include shadow-inset( 0, 0, 0, $color-shadow-inset-d, 1px );
 	}
 }
@@ -132,7 +132,7 @@ form {
 	}
 
 	&:disabled {
-		color: $color-field-text-d;
+		color: $color-field-text-d !important;
 	}
 }
 
@@ -154,8 +154,8 @@ form {
 	}
 
 	&:disabled {
-		background-color: $color-btn-d;
-		color: $color-btn-text-d;
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
 		cursor: default;
 	}
 }
