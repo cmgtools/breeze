@@ -118,11 +118,15 @@ Details: It defines the styles for sidebar components as listed below:
 				font-size: $font-size-6;
 			}
 			
-			.sidebar-content-title + .sidebar-content-info, .sidebar-content-title + .sidebar-content-data {
+			.sidebar-content-title + .sidebar-content-info, .sidebar-content-title + .sidebar-content-summary, .sidebar-content-title + .sidebar-content-data {
 				margin-top: 0.5rem;
 			}
 
-			.sidebar-content-info + .sidebar-content-data {
+			.sidebar-content-info + .sidebar-content-summary, .sidebar-content-info + .sidebar-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.sidebar-content-summary + .sidebar-content-data {
 				margin-top: 0.5rem;
 			}
 
@@ -133,13 +137,12 @@ Details: It defines the styles for sidebar components as listed below:
 	}
 }
 
-
 // == Control Sidebar ===============
 
 .sidebar-control {
 
 	.sidebar-content-wrap {
-		
+
 		.sidebar-header {
 			display: none;
 

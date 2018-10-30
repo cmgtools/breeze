@@ -1,0 +1,29 @@
+/**********************************************************************
+Description: It defines the styles of core data components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of data components as listed below:
+
+* Data		-	The barebone card class with minimum styles.
+***********************************************************************/
+
+// == Structure - Data ==============
+
+.data {
+
+	&.data-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+
+	&.data-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	&.data-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+}

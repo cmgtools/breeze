@@ -161,8 +161,8 @@ Basic - The basic widget defines the styles of widget having text and background
 			.widget-footer-info {
 				font-size: $font-size-6;
 			}
-			
-			.widget-footer-icon + .widget-header-title, .widget-footer-icon + .widget-header-info, .widget-footer-icon + .widget-header-content {
+
+			.widget-footer-icon + .widget-footer-title, .widget-footer-icon + .widget-footer-info, .widget-footer-icon + .widget-footer-content {
 				margin-top: 0.5rem;
 			}
 

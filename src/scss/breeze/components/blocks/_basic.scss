@@ -230,7 +230,7 @@ Details: It defines the styles for header components as listed below:
 			height: 100px;
 		}
 	}
-	
+
 	&.block-primary {
 		background-color: $color-primary;
 		color: $color-primary-text;
@@ -271,7 +271,7 @@ Details: It defines the styles for header components as listed below:
 				.block-header-content {
 					font-size: $font-size-6;
 				}
-				
+
 				.block-header-icon + .block-header-title, .block-header-icon + .block-header-info, .block-header-icon + .block-header-content {
 					margin-top: 0.5rem;
 				}
@@ -301,11 +301,15 @@ Details: It defines the styles for header components as listed below:
 				font-size: $font-size-6;
 			}
 			
-			.block-content-title + .block-content-info, .block-content-title + .block-content-data {
+			.block-content-title + .block-content-info, .block-content-title + .block-content-summary, .block-content-title + .block-content-data {
 				margin-top: 0.5rem;
 			}
 
-			.block-content-info + .block-content-data {
+			.block-content-info + .block-content-summary, .block-content-info + .block-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.block-content-summary + .block-content-data {
 				margin-top: 0.5rem;
 			}
 
@@ -331,8 +335,8 @@ Details: It defines the styles for header components as listed below:
 				.block-footer-content {
 					font-size: $font-size-6;
 				}
-				
-				.block-footer-icon + .block-header-title, .block-footer-icon + .block-header-info, .block-footer-icon + .block-header-content {
+
+				.block-footer-icon + .block-footer-title, .block-footer-icon + .block-footer-info, .block-footer-icon + .block-footer-content {
 					margin-top: 0.5rem;
 				}
 

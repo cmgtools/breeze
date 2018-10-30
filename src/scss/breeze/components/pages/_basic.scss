@@ -295,22 +295,26 @@ page background and even content wrapper background in the form of image or text
 			}
 
 			// Banner Spacing
-			.page-content-banner + .page-content-title, .page-content-banner + .page-content-info, .page-content-banner + .page-content-data {
+			.page-content-banner + .page-content-title, .page-content-banner + .page-content-info, .page-content-banner + .page-content-summary, .page-content-banner + .page-content-data {
 				margin-top: 0.5rem;
 			}
 
 			// Video Spacing
-			.page-content-video + .page-content-title, .page-content-video + .page-content-info, .page-content-video + .page-content-data {
+			.page-content-video + .page-content-title, .page-content-video + .page-content-info, .page-content-video + .page-content-summary, .page-content-video + .page-content-data {
 				margin-top: 0.5rem;
 			}
 
 			// Title Spacing
-			.page-content-title + .page-content-info, .page-content-title + .page-content-data {
+			.page-content-title + .page-content-info, .page-content-title + .page-content-summary, .page-content-title + .page-content-data {
 				margin-top: 0.5rem;
 			}
 
 			// Info Spacing
-			.page-content-info + .page-content-data {
+			.page-content-info + .page-content-summary, .page-content-info + .page-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.page-content-summary + .page-content-data {
 				margin-top: 0.5rem;
 			}
 

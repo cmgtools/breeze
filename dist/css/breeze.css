@@ -6844,6 +6844,37 @@ Details: It defines the styles for flipper components as listed below:
       height: 100%; }
 
 /**********************************************************************
+Description: It defines the styles of core data components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of data components as listed below:
+
+* Data		-	The barebone card class with minimum styles.
+***********************************************************************/
+.data.data-primary {
+  background-color: #F2F2F2;
+  color: #363636; }
+
+.data.data-secondary {
+  background-color: #3C4655;
+  color: #96B0D6; }
+
+.data.data-tertiary {
+  background-color: #87BA45;
+  color: #E6E6E6; }
+
+/**********************************************************************
+Description: It defines the styles of CRUD components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of CRUD components as listed below:
+
+CRUD - The barebone class with minimum styles having main and sidebar container
+to show forms and widgets.
+***********************************************************************/
+/**********************************************************************
 Description: It defines the styles of data zigzag components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -6891,16 +6922,6 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
     float: left;
     padding-right: 1em; } }
 
-/**********************************************************************
-Description: It defines the styles of CRUD components available in Breeze Framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles of CRUD components as listed below:
-
-CRUD - The barebone class with minimum styles having main and sidebar container
-to show forms and widgets.
-***********************************************************************/
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
 
@@ -7625,10 +7646,13 @@ Details: It defines the styles for sidebar components as listed below:
 .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-summary {
   font-size: 1.08em; }
 
-.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-info, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-data {
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-info, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-summary, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-data {
   margin-top: 0.5rem; }
 
-.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-data {
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-summary, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-summary + .sidebar-content-data {
   margin-top: 0.5rem; }
 
 .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-data {
@@ -8385,7 +8409,7 @@ Details: It defines the styles of card components as listed below:
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-footer .card-footer-info {
     font-size: 1.08em; }
-  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
+  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-content {
     margin-top: 0.5rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
     margin-top: 0.5rem; }
@@ -8517,10 +8541,13 @@ Details: It defines the styles of box components as listed below:
 .box-basic .box-content-wrap .box-content .box-content-summary {
   font-size: 1.08em; }
 
-.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
   margin-top: 0.5rem; }
 
-.box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-info + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+  margin-top: 0.5rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-summary + .box-content-data {
   margin-top: 0.5rem; }
 
 .box-basic .box-content-wrap .box-content .box-content-data {
@@ -8579,14 +8606,14 @@ Details: It defines the styles of box components as listed below:
 .box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
   padding-left: 1.5rem; }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse {
+.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -8635,7 +8662,7 @@ Details: It defines the styles of form box components as listed below:
 ***********************************************************************/
 .box-form {
   position: relative; }
-  .box-form .box-trigger-form {
+  .box-form .box-form-trigger {
     cursor: pointer; }
   .box-form .box-form-info-wrap {
     display: block; }
@@ -8645,7 +8672,7 @@ Details: It defines the styles of form box components as listed below:
 .box-form-basic {
   background-color: #F2F2F2;
   color: #363636; }
-  .box-form-basic .box-trigger-form {
+  .box-form-basic .box-form-trigger {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
@@ -8653,7 +8680,7 @@ Details: It defines the styles of form box components as listed below:
     color: #298ccf;
     cursor: pointer;
     z-index: 20; }
-    .box-form-basic .box-trigger-form:hover {
+    .box-form-basic .box-form-trigger:hover {
       color: #E74343; }
 
 .box-form-collapsible .box-form-collapsible-trigger {
@@ -8827,7 +8854,7 @@ Basic - The basic widget defines the styles of widget having text and background
     font-family: Verdana, Geneva, sans-serif; }
   .widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
     font-size: 1.08em; }
-  .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-content {
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-content {
     margin-top: 0.5rem; }
   .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-content {
     margin-top: 0.5rem; }
@@ -8984,10 +9011,13 @@ Details: It defines the styles for header components as listed below:
 .block-basic .block-content-wrap .block-content .block-content-summary {
   font-size: 1.08em; }
 
-.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
   margin-top: 0.5rem; }
 
-.block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 0.5rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-summary + .block-content-data {
   margin-top: 0.5rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-data {
@@ -9002,7 +9032,7 @@ Details: It defines the styles for header components as listed below:
     font-size: 1.17em; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
     font-size: 1.08em; }
-  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-content {
     margin-top: 0.5rem; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
     margin-top: 0.5rem; }
@@ -9396,16 +9426,19 @@ page background and even content wrapper background in the form of image or text
   padding: 1rem 0;
   font-size: 1.08em; }
 
-.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
   margin-top: 0.5rem; }
 
-.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
   margin-top: 0.5rem; }
 
-.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
   margin-top: 0.5rem; }
 
-.page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-info + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-summary + .page-content-data {
   margin-top: 0.5rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-data {

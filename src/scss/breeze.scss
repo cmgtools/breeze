@@ -142,8 +142,9 @@ Baidu		- <min>
 // Re-usable components having barebone structure and default implementations.
 // ---------------------------------------//
 
-@import "breeze/components/data/zigzag";
+@import "breeze/components/data/basic";
 @import "breeze/components/data/crud";
+@import "breeze/components/data/zigzag";
 
 @import "breeze/components/menus/basic";
 @import "breeze/components/menus/collapsible";

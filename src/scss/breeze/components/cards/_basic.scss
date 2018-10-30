@@ -114,17 +114,17 @@ Details: It defines the styles of card components as listed below:
 			}
 		}
 	}
-	
+
 	&.card-primary {
 		background-color: $color-primary;
 		color: $color-primary-text;
 	}
-	
+
 	&.card-secondary {
 		background-color: $color-secondary;
 		color: $color-secondary-text;
 	}
-	
+
 	&.card-tertiary {
 		background-color: $color-tertiary;
 		color: $color-tertiary-text;
@@ -149,7 +149,7 @@ Details: It defines the styles of card components as listed below:
 			.card-header-info {
 				font-size: $font-size-6;
 			}
-			
+
 			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
 				margin-top: 0.5rem;
 			}
@@ -208,7 +208,7 @@ Details: It defines the styles of card components as listed below:
 				font-size: $font-size-6;
 			}
 			
-			.card-footer-icon + .card-header-title, .card-footer-icon + .card-header-info, .card-footer-icon + .card-header-content {
+			.card-footer-icon + .card-footer-title, .card-footer-icon + .card-footer-info, .card-footer-icon + .card-footer-content {
 				margin-top: 0.5rem;
 			}
 
