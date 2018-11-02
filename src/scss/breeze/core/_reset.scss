@@ -133,8 +133,9 @@ input, select {
 
 // Selection text shadow
 
-::selection {
-	background: $color-secondary;
+::-moz-selection, ::selection {
+	background: $color-blue;
+	color: $color-white;
 	text-shadow: none;
 }
 

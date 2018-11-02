@@ -2047,8 +2047,9 @@ hr {
 input, select {
   vertical-align: middle; }
 
-::selection {
-  background: #3C4655;
+::-moz-selection, ::selection {
+  background: #0074D9;
+  color: #FFFFFF;
   text-shadow: none; }
 
 audio, canvas, iframe, img, svg, video {
@@ -3537,10 +3538,10 @@ p, span, em, div, a {
 .cmti, .fa {
   vertical-align: middle; }
 
-pre {
+code, pre {
   font-family: "Courier New", Courier, monospace;
-  color: #595959;
-  background-color: #A5A5A5; }
+  background-color: #363636;
+  color: #FFFFFF; }
 
 .normal {
   font-weight: normal; }

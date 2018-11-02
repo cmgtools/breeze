@@ -258,10 +258,10 @@ p, span, em, div, a {
 }
 
 // Coding - Required to highlight code snippets
-pre {
+code, pre {
 	font-family: $font-code;
-	color: $color-gray-d;
-	background-color: $color-gray-l;
+	background-color: $color-code;
+	color: $color-code-text;
 }
 
 // Font Weight
