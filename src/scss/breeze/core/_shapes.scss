@@ -1,11 +1,157 @@
+// Mixins
+@mixin shape-box( $width, $height, $background: $color-tertiary, $text: $color-tertiary-text ) {
+	background: $background;
+	color: $text;
+	width: $width;
+	height: $height;
+}
+
+@mixin shape-triangle( $min, $max, $background: $color-tertiary, $text: $color-tertiary-text ) {
+	color: $text;
+
+	&.shape-triangle-up {
+		border-left: $min solid transparent; 
+		border-right: $min solid transparent; 
+		border-bottom: $max solid $background;
+	}
+
+	&.shape-triangle-down {
+		border-left: $min solid transparent; 
+		border-right: $min solid transparent; 
+		border-top: $max solid $background;
+	}
+	
+	&.shape-triangle-left {
+		border-top: $min solid transparent;
+		border-right: $max solid $background;
+		border-bottom: $min solid transparent; 
+	}
+
+	&.shape-triangle-right {
+		border-top: $min solid transparent;
+		border-left: $max solid $background;
+		border-bottom: $min solid transparent; 
+	}
+	
+	&.shape-triangle-top-left {
+		border-top: $max solid $background;
+		border-right: $max solid transparent;
+	}
+	
+	&.shape-triangle-top-right {
+		border-top: $max solid $background;
+		border-left: $max solid transparent;
+	}
+	
+	&.shape-triangle-bottom-left {
+		border-bottom: $max solid $background;
+		border-right: $max solid transparent;
+	}
+	
+	&.shape-triangle-bottom-right {
+		border-bottom: $max solid $background;
+		border-left: $max solid transparent;
+	}
+}
+
 .shape {
-    margin: 0 auto;
+
+	&.shape-square {
+
+		&.shape-square-small {
+			@include shape-box( 50px, 50px );
+		}
+
+		&.shape-square-medium {
+			@include shape-box( 100px, 100px );
+		}
+
+		&.shape-square-large {
+			@include shape-box( 250px, 250px );
+		}
+
+		&.shape-square-xlarge {
+			@include shape-box( 500px, 500px );
+		}
+	}
+
+	&.shape-rectangle {
+		
+		&.shape-rectangle-small {
+			@include shape-box( 75px, 50px );
+		}
+
+		&.shape-rectangle-medium {
+			@include shape-box( 150px, 100px );
+		}
+		
+		&.shape-rectangle-large {
+			@include shape-box( 325px, 250px );
+		}
+		
+		&.shape-rectangle-xlarge {
+			@include shape-box( 750px, 500px );
+		}
+	}
+
+	&.shape-circle {
+		border-radius: 50%;
+
+		&.shape-circle-small {
+			@include shape-box( 50px, 50px );
+		}
+		
+		&.shape-circle-medium {
+			@include shape-box( 100px, 100px );
+		}
+		
+		&.shape-circle-large {
+			@include shape-box( 250px, 250px );
+		}
+		
+		&.shape-circle-xlarge {
+			@include shape-box( 500px, 500px );
+		}
+	}
+
+	&.shape-oval {
+		border-radius: 100%/50%;
+
+		&.shape-oval-small {
+			@include shape-box( 50px, 50px );
+		}
+		
+		&.shape-oval-medium {
+			@include shape-box( 100px, 100px );
+		}
+		
+		&.shape-oval-large {
+			@include shape-box( 250px, 250px );
+		}
+		
+		&.shape-oval-xlarge {
+			@include shape-box( 500px, 500px );
+		}
+	}
+
+	&.shape-triangle {
+		width: 0;
+		height: 0;
+
+		&.shape-triangle-small {
+			@include shape-box( 25px, 50px );
+		}
+		
+		&.shape-triangle-medium {
+			@include shape-box( 50px, 100px );
+		}
+	}
 
     &.shape-hexagon { 
-        background: $color-primary-l;
+		width: 50px;
         height: 29px;
+        background: $color-primary-l;
         position: relative;
-        width: 50px;
         top: -12px;        
     }
 

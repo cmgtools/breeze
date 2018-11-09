@@ -2544,7 +2544,7 @@ html, body {
 .hidden-space {
   visibility: hidden !important; }
 
-.pointer {
+.pointer, .cmt-click {
   cursor: pointer; }
 
 .pointer-none {
@@ -4473,34 +4473,142 @@ Details: It defines the grid system and basic containers as listed below:
   position: absolute;
   width: 100%; }
 
-.shape {
-  margin: 0 auto; }
-  .shape.shape-hexagon {
-    background: white;
-    height: 29px;
-    position: relative;
+.shape.shape-square.shape-square-small {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 50px;
+  height: 50px; }
+
+.shape.shape-square.shape-square-medium {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 100px;
+  height: 100px; }
+
+.shape.shape-square.shape-square-large {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 250px;
+  height: 250px; }
+
+.shape.shape-square.shape-square-xlarge {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 500px;
+  height: 500px; }
+
+.shape.shape-rectangle.shape-rectangle-small {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 75px;
+  height: 50px; }
+
+.shape.shape-rectangle.shape-rectangle-medium {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 150px;
+  height: 100px; }
+
+.shape.shape-rectangle.shape-rectangle-large {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 325px;
+  height: 250px; }
+
+.shape.shape-rectangle.shape-rectangle-xlarge {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 750px;
+  height: 500px; }
+
+.shape.shape-circle {
+  border-radius: 50%; }
+  .shape.shape-circle.shape-circle-small {
+    background: #87BA45;
+    color: #E6E6E6;
     width: 50px;
-    top: -12px; }
-  .shape.shape-hexagon:before {
-    content: "";
-    position: absolute;
-    top: -11.5px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 12.5px solid white;
-    border-left: 25px solid rgba(0, 0, 0, 0);
-    border-right: 25px solid rgba(0, 0, 0, 0); }
-  .shape.shape-hexagon:after {
-    content: "";
-    position: absolute;
-    bottom: -12.5px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 13.5px solid white; }
+    height: 50px; }
+  .shape.shape-circle.shape-circle-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 100px;
+    height: 100px; }
+  .shape.shape-circle.shape-circle-large {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 250px;
+    height: 250px; }
+  .shape.shape-circle.shape-circle-xlarge {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 500px;
+    height: 500px; }
+
+.shape.shape-oval {
+  border-radius: 100%/50%; }
+  .shape.shape-oval.shape-oval-small {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 50px;
+    height: 50px; }
+  .shape.shape-oval.shape-oval-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 100px;
+    height: 100px; }
+  .shape.shape-oval.shape-oval-large {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 250px;
+    height: 250px; }
+  .shape.shape-oval.shape-oval-xlarge {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 500px;
+    height: 500px; }
+
+.shape.shape-triangle {
+  width: 0;
+  height: 0; }
+  .shape.shape-triangle.shape-triangle-small {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 25px;
+    height: 50px; }
+  .shape.shape-triangle.shape-triangle-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 50px;
+    height: 100px; }
+
+.shape.shape-hexagon {
+  width: 50px;
+  height: 29px;
+  background: white;
+  position: relative;
+  top: -12px; }
+
+.shape.shape-hexagon:before {
+  content: "";
+  position: absolute;
+  top: -11.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 12.5px solid white;
+  border-left: 25px solid rgba(0, 0, 0, 0);
+  border-right: 25px solid rgba(0, 0, 0, 0); }
+
+.shape.shape-hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 13.5px solid white; }
 
 .hover-color-primary {
   -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -6897,6 +7005,99 @@ Details: It defines the styles for flipper components as listed below:
       height: 100%; }
 
 /**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
+***********************************************************************/
+.mapper {
+  position: relative; }
+  .mapper .mapper-items .mapper-item {
+    position: relative; }
+
+.mapper-list {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-list .mapper-items {
+    height: 250px;
+    background-color: #F2F2F2; }
+    .mapper-list .mapper-items .mapper-item {
+      display: inline-block;
+      width: 100%;
+      margin: 10px;
+      background-color: #FFFFFF; }
+      .mapper-list .mapper-items .mapper-item.depth-1 {
+        padding-left: 15px; }
+      .mapper-list .mapper-items .mapper-item.depth-2 {
+        padding-left: 30px; }
+      .mapper-list .mapper-items .mapper-item.depth-3 {
+        padding-left: 45px; }
+
+.mapper-auto .mapper-items .mapper-item {
+  background-color: #3C4655;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mapper-auto-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-auto-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-submit {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-submit .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.mapper-submit-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-submit-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-action {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-action .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+/**********************************************************************
 Description: It defines the styles of core data components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -6927,6 +7128,42 @@ Details: It defines the styles of CRUD components as listed below:
 CRUD - The barebone class with minimum styles having main and sidebar container
 to show forms and widgets.
 ***********************************************************************/
+.data-crud-wrap {
+  position: relative; }
+  .data-crud-wrap .data-crud {
+    position: relative; }
+    .data-crud-wrap .data-crud .data-crud-title {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-form {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-content {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-message {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-actions {
+      position: relative; }
+
+.data-crud-wrap-basic {
+  background-color: white;
+  color: #171717;
+  padding: 1em; }
+  .data-crud-wrap-basic .data-crud {
+    margin-bottom: 2em; }
+    .data-crud-wrap-basic .data-crud .data-crud-title {
+      background-color: #87BA45;
+      color: #E6E6E6;
+      padding: 1rem 0;
+      margin-bottom: 1em;
+      font-size: 1.58em; }
+    .data-crud-wrap-basic .data-crud .data-crud-form {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-content {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-message {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-actions {
+      padding: 1rem; }
+
 /**********************************************************************
 Description: It defines the styles of data zigzag components available in Breeze Framework.
 
@@ -7731,99 +7968,6 @@ Details: It defines the styles for sidebar components as listed below:
     display: block; }
   .sidebar-control .sidebar-content-wrap .sidebar-content {
     display: none; } }
-
-/**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for mapper components as listed below:
-
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
-***********************************************************************/
-.mapper {
-  position: relative; }
-  .mapper .mapper-items .mapper-item {
-    position: relative; }
-
-.mapper-list {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-list .mapper-items {
-    height: 250px;
-    background-color: #F2F2F2; }
-    .mapper-list .mapper-items .mapper-item {
-      display: inline-block;
-      width: 100%;
-      margin: 10px;
-      background-color: #FFFFFF; }
-      .mapper-list .mapper-items .mapper-item.depth-1 {
-        padding-left: 15px; }
-      .mapper-list .mapper-items .mapper-item.depth-2 {
-        padding-left: 30px; }
-      .mapper-list .mapper-items .mapper-item.depth-3 {
-        padding-left: 45px; }
-
-.mapper-auto .mapper-items .mapper-item {
-  background-color: #3C4655;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem; }
-
-.mapper-auto-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em; }
-
-.mapper-auto-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: lightgray;
-  color: #555555;
-  padding: 0.25em; }
-
-.mapper-submit {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-submit .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
-
-.mapper-submit-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em; }
-
-.mapper-submit-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: lightgray;
-  color: #555555;
-  padding: 0.25em; }
-
-.mapper-action {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-action .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
 
 /**********************************************************************
 Description: It defines the styles for popup components available in CMT-UI css framework.

@@ -12,6 +12,7 @@ to show forms and widgets.
 // == Structure - CRUD ==============
 
 .data-crud-wrap {
+	position: relative;
 
 	.data-crud-wrap-main {
 		// The main container having data and plugin forms
@@ -23,27 +24,73 @@ to show forms and widgets.
 	}
 
 	.data-crud {
+		position: relative;
 		// The crud container having single form with actions
 		// A box panel can be used alternately for forms wrapped in a panel
 
 		.data-crud-title {
+			position: relative;
 			// Title
+
+			.data-crud-title-actions {
+				// Title Actions
+			}
 		}
 
 		.data-crud-form {
+			position: relative;
 			// Form
 		}
 
 		.data-crud-content {
+			position: relative;
 			// Content
 		}
 
 		.data-crud-message {
+			position: relative;
 			// Messages
 		}
 
 		.data-crud-actions {
+			position: relative;
 			// Actions
+		}
+	}
+}
+
+// == Basic CRUD ====================
+
+.data-crud-wrap-basic {
+	background-color: $color-primary-l;
+	color: $color-primary-text-l;
+	padding: 1em;
+
+	.data-crud {
+		margin-bottom: 2em;
+
+		.data-crud-title {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			padding: 1rem 0;
+			margin-bottom: 1em;
+			font-size: $font-size-3;
+		}
+
+		.data-crud-form {
+			padding: 1rem;
+		}
+
+		.data-crud-content {
+			padding: 1rem;
+		}
+
+		.data-crud-message {
+			padding: 1rem;
+		}
+
+		.data-crud-actions {
+			padding: 1rem;
 		}
 	}
 }
