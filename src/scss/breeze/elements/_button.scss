@@ -285,7 +285,7 @@ Details: It defines the custom element styles as listed below:
 }
 
 .btn-border {
-	background: transparent;
+	background: transparent !important;
 
 	&.btn-border-primary {
 		color: $color-secondary;
@@ -293,7 +293,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-primary-text;
-			background-color: $color-primary;
+			background-color: $color-primary !important;
 		}
 	}
 
@@ -303,7 +303,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-secondary-text;
-			background-color: $color-secondary;
+			background-color: $color-secondary !important;
 		}
 	}
 
@@ -313,7 +313,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-tertiary-text;
-			background-color: $color-tertiary;
+			background-color: $color-tertiary !important;
 		}
 	}
 
@@ -323,7 +323,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-btn-text;
-			background-color: $color-link;
+			background-color: $color-link !important;
 		}
 	}
 
@@ -333,7 +333,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-black;
+			background-color: $color-black !important;
 		}
 	}
 
@@ -343,7 +343,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-white;
+			background-color: $color-white !important;
 		}
 	}
 
@@ -353,7 +353,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-blue;
+			background-color: $color-blue !important;
 		}
 	}
 
@@ -363,7 +363,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-purple;
+			background-color: $color-purple !important;
 		}
 	}
 
@@ -373,7 +373,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-orange;
+			background-color: $color-orange !important;
 		}
 	}
 
@@ -383,7 +383,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-yellow;
+			background-color: $color-yellow !important;
 		}
 	}
 
@@ -393,7 +393,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-red;
+			background-color: $color-red !important;
 		}
 	}
 
@@ -403,7 +403,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-pink;
+			background-color: $color-pink !important;
 		}
 	}
 
@@ -413,7 +413,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-magenta;
+			background-color: $color-magenta !important;
 		}
 	}
 
@@ -423,7 +423,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-aqua;
+			background-color: $color-aqua !important;
 		}
 	}
 
@@ -433,7 +433,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-green;
+			background-color: $color-green !important;
 		}
 	}
 
@@ -443,7 +443,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-brown;
+			background-color: $color-brown !important;
 		}
 	}	
 
@@ -453,7 +453,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-golden;
+			background-color: $color-golden !important;
 		}
 	}
 
@@ -463,7 +463,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-silver;
+			background-color: $color-silver !important;
 		}
 	}
 
@@ -473,7 +473,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-maroon;
+			background-color: $color-maroon !important;
 		}
 	}
 
@@ -483,7 +483,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {;
 			color: $color-white;
-			background-color: $color-olive;
+			background-color: $color-olive !important;
 		}
 	}
 
@@ -493,7 +493,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-lime;
+			background-color: $color-lime !important;
 		}
 	}
 
@@ -503,7 +503,7 @@ Details: It defines the custom element styles as listed below:
 
 		&:hover {
 			color: $color-white;
-			background-color: $color-navy;
+			background-color: $color-navy !important;
 		}
 	}
 }

@@ -24,6 +24,7 @@ Full - Full pagination having both info and pagination links.
 
 		span, a {
 			// Links, Prev and Next - Normal state
+			display: inline-block;
 			text-decoration: none;
 
 			&:hover {
