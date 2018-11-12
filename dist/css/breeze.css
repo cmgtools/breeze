@@ -5790,180 +5790,180 @@ Details: It defines the custom element styles as listed below:
 .btn-border {
   background: transparent !important; }
   .btn-border.btn-border-primary {
-    color: #3C4655;
+    color: #3C4655 !important;
     -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
     -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
     box-shadow: inset 0 0 0 1px #F2F2F2; }
     .btn-border.btn-border-primary:hover {
-      color: #363636;
+      color: #363636 !important;
       background-color: #F2F2F2 !important; }
   .btn-border.btn-border-secondary {
-    color: #3C4655;
+    color: #3C4655 !important;
     -webkit-box-shadow: inset 0 0 0 1px #3C4655;
     -moz-box-shadow: inset 0 0 0 1px #3C4655;
     box-shadow: inset 0 0 0 1px #3C4655; }
     .btn-border.btn-border-secondary:hover {
-      color: #96B0D6;
+      color: #96B0D6 !important;
       background-color: #3C4655 !important; }
   .btn-border.btn-border-tertiary {
-    color: #87BA45;
+    color: #87BA45 !important;
     -webkit-box-shadow: inset 0 0 0 1px #87BA45;
     -moz-box-shadow: inset 0 0 0 1px #87BA45;
     box-shadow: inset 0 0 0 1px #87BA45; }
     .btn-border.btn-border-tertiary:hover {
-      color: #E6E6E6;
+      color: #E6E6E6 !important;
       background-color: #87BA45 !important; }
   .btn-border.btn-border-link {
-    color: #298ccf;
+    color: #298ccf !important;
     -webkit-box-shadow: inset 0 0 0 1px #298ccf;
     -moz-box-shadow: inset 0 0 0 1px #298ccf;
     box-shadow: inset 0 0 0 1px #298ccf; }
     .btn-border.btn-border-link:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #298ccf !important; }
   .btn-border.btn-border-white {
-    color: #000000;
+    color: #000000 !important;
     -webkit-box-shadow: inset 0 0 0 1px #000000;
     -moz-box-shadow: inset 0 0 0 1px #000000;
     box-shadow: inset 0 0 0 1px #000000; }
     .btn-border.btn-border-white:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #000000 !important; }
   .btn-border.btn-border-black {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
     -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
     box-shadow: inset 0 0 0 1px #FFFFFF; }
     .btn-border.btn-border-black:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #FFFFFF !important; }
   .btn-border.btn-border-blue {
-    color: #0074D9;
+    color: #0074D9 !important;
     -webkit-box-shadow: inset 0 0 0 1px #0074D9;
     -moz-box-shadow: inset 0 0 0 1px #0074D9;
     box-shadow: inset 0 0 0 1px #0074D9; }
     .btn-border.btn-border-blue:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #0074D9 !important; }
   .btn-border.btn-border-purple {
-    color: #8946C4;
+    color: #8946C4 !important;
     -webkit-box-shadow: inset 0 0 0 1px #8946C4;
     -moz-box-shadow: inset 0 0 0 1px #8946C4;
     box-shadow: inset 0 0 0 1px #8946C4; }
     .btn-border.btn-border-purple:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #8946C4 !important; }
   .btn-border.btn-border-orange {
-    color: #FF851B;
+    color: #FF851B !important;
     -webkit-box-shadow: inset 0 0 0 1px #FF851B;
     -moz-box-shadow: inset 0 0 0 1px #FF851B;
     box-shadow: inset 0 0 0 1px #FF851B; }
     .btn-border.btn-border-orange:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #FF851B !important; }
   .btn-border.btn-border-yellow {
-    color: #FFDC00;
+    color: #FFDC00 !important;
     -webkit-box-shadow: inset 0 0 0 1px #FFDC00;
     -moz-box-shadow: inset 0 0 0 1px #FFDC00;
     box-shadow: inset 0 0 0 1px #FFDC00; }
     .btn-border.btn-border-yellow:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #FFDC00 !important; }
   .btn-border.btn-border-red {
-    color: #FF4136;
+    color: #FF4136 !important;
     -webkit-box-shadow: inset 0 0 0 1px #FF4136;
     -moz-box-shadow: inset 0 0 0 1px #FF4136;
     box-shadow: inset 0 0 0 1px #FF4136; }
     .btn-border.btn-border-red:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #FF4136 !important; }
   .btn-border.btn-border-pink {
-    color: #E4287C;
+    color: #E4287C !important;
     -webkit-box-shadow: inset 0 0 0 1px #E4287C;
     -moz-box-shadow: inset 0 0 0 1px #E4287C;
     box-shadow: inset 0 0 0 1px #E4287C; }
     .btn-border.btn-border-pink:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #E4287C !important; }
   .btn-border.btn-border-magenta {
-    color: #B200B2;
+    color: #B200B2 !important;
     -webkit-box-shadow: inset 0 0 0 1px #B200B2;
     -moz-box-shadow: inset 0 0 0 1px #B200B2;
     box-shadow: inset 0 0 0 1px #B200B2; }
     .btn-border.btn-border-magenta:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #B200B2 !important; }
   .btn-border.btn-border-aqua {
-    color: #8AE2E3;
+    color: #8AE2E3 !important;
     -webkit-box-shadow: inset 0 0 0 1px #8AE2E3;
     -moz-box-shadow: inset 0 0 0 1px #8AE2E3;
     box-shadow: inset 0 0 0 1px #8AE2E3; }
     .btn-border.btn-border-aqua:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #8AE2E3 !important; }
   .btn-border.btn-border-green {
-    color: #7CAA2D;
+    color: #7CAA2D !important;
     -webkit-box-shadow: inset 0 0 0 1px #7CAA2D;
     -moz-box-shadow: inset 0 0 0 1px #7CAA2D;
     box-shadow: inset 0 0 0 1px #7CAA2D; }
     .btn-border.btn-border-green:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #7CAA2D !important; }
   .btn-border.btn-border-brown {
-    color: #8B4513;
+    color: #8B4513 !important;
     -webkit-box-shadow: inset 0 0 0 1px #8B4513;
     -moz-box-shadow: inset 0 0 0 1px #8B4513;
     box-shadow: inset 0 0 0 1px #8B4513; }
     .btn-border.btn-border-brown:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #8B4513 !important; }
   .btn-border.btn-border-golden {
-    color: #E9C011;
+    color: #E9C011 !important;
     -webkit-box-shadow: inset 0 0 0 1px #E9C011;
     -moz-box-shadow: inset 0 0 0 1px #E9C011;
     box-shadow: inset 0 0 0 1px #E9C011; }
     .btn-border.btn-border-golden:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #E9C011 !important; }
   .btn-border.btn-border-silver {
-    color: #E7E8E7;
+    color: #E7E8E7 !important;
     -webkit-box-shadow: inset 0 0 0 1px #E7E8E7;
     -moz-box-shadow: inset 0 0 0 1px #E7E8E7;
     box-shadow: inset 0 0 0 1px #E7E8E7; }
     .btn-border.btn-border-silver:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #E7E8E7 !important; }
   .btn-border.btn-border-maroon {
-    color: #542628;
+    color: #542628 !important;
     -webkit-box-shadow: inset 0 0 0 1px #542628;
     -moz-box-shadow: inset 0 0 0 1px #542628;
     box-shadow: inset 0 0 0 1px #542628; }
     .btn-border.btn-border-maroon:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #542628 !important; }
   .btn-border.btn-border-olive {
-    color: #A3A54C;
+    color: #A3A54C !important;
     -webkit-box-shadow: inset 0 0 0 1px #A3A54C;
     -moz-box-shadow: inset 0 0 0 1px #A3A54C;
     box-shadow: inset 0 0 0 1px #A3A54C; }
     .btn-border.btn-border-olive:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #A3A54C !important; }
   .btn-border.btn-border-lime {
-    color: #D3F235;
+    color: #D3F235 !important;
     -webkit-box-shadow: inset 0 0 0 1px #D3F235;
     -moz-box-shadow: inset 0 0 0 1px #D3F235;
     box-shadow: inset 0 0 0 1px #D3F235; }
     .btn-border.btn-border-lime:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #D3F235 !important; }
   .btn-border.btn-border-navy {
-    color: #003653;
+    color: #003653 !important;
     -webkit-box-shadow: inset 0 0 0 1px #003653;
     -moz-box-shadow: inset 0 0 0 1px #003653;
     box-shadow: inset 0 0 0 1px #003653; }
     .btn-border.btn-border-navy:hover {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       background-color: #003653 !important; }
 
 a.btn, .link.btn {

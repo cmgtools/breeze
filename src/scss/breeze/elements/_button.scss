@@ -288,221 +288,221 @@ Details: It defines the custom element styles as listed below:
 	background: transparent !important;
 
 	&.btn-border-primary {
-		color: $color-secondary;
+		color: $color-secondary !important;
 		@include shadow-inset( 0, 0, 0, $color-primary, 1px );
 
 		&:hover {
-			color: $color-primary-text;
+			color: $color-primary-text !important;
 			background-color: $color-primary !important;
 		}
 	}
 
 	&.btn-border-secondary {
-		color: $color-secondary;
+		color: $color-secondary !important;
 		@include shadow-inset( 0, 0, 0, $color-secondary, 1px );
 
 		&:hover {
-			color: $color-secondary-text;
+			color: $color-secondary-text !important;
 			background-color: $color-secondary !important;
 		}
 	}
 
 	&.btn-border-tertiary {
-		color: $color-tertiary;
+		color: $color-tertiary !important;
 		@include shadow-inset( 0, 0, 0, $color-tertiary, 1px );
 
 		&:hover {
-			color: $color-tertiary-text;
+			color: $color-tertiary-text !important;
 			background-color: $color-tertiary !important;
 		}
 	}
 
 	&.btn-border-link {
-		color: $color-link;
+		color: $color-link !important;
 		@include shadow-inset( 0, 0, 0, $color-link, 1px );
 
 		&:hover {
-			color: $color-btn-text;
+			color: $color-btn-text !important;
 			background-color: $color-link !important;
 		}
 	}
 
 	&.btn-border-white {		
-		color: $color-black;
+		color: $color-black !important;
 		@include shadow-inset( 0, 0, 0, $color-black, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-black !important;
 		}
 	}
 
 	&.btn-border-black {
-		color: $color-white;
+		color: $color-white !important;
 		@include shadow-inset( 0, 0, 0, $color-white, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-white !important;
 		}
 	}
 
 	&.btn-border-blue {
-		color: $color-blue;
+		color: $color-blue !important;
 		@include shadow-inset( 0, 0, 0, $color-blue, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-blue !important;
 		}
 	}
 
 	&.btn-border-purple {
-		color: $color-purple;
+		color: $color-purple !important;
 		@include shadow-inset( 0, 0, 0, $color-purple, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-purple !important;
 		}
 	}
 
 	&.btn-border-orange {
-		color: $color-orange;
+		color: $color-orange !important;
 		@include shadow-inset( 0, 0, 0, $color-orange, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-orange !important;
 		}
 	}
 
 	&.btn-border-yellow {
-		color: $color-yellow;
+		color: $color-yellow !important;
 		@include shadow-inset( 0, 0, 0, $color-yellow, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-yellow !important;
 		}
 	}
 
 	&.btn-border-red {
-		color: $color-red;
+		color: $color-red !important;
 		@include shadow-inset( 0, 0, 0, $color-red, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-red !important;
 		}
 	}
 
 	&.btn-border-pink {
-		color: $color-pink;
+		color: $color-pink !important;
 		@include shadow-inset( 0, 0, 0, $color-pink, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-pink !important;
 		}
 	}
 
 	&.btn-border-magenta {
-		color: $color-magenta;
+		color: $color-magenta !important;
 		@include shadow-inset( 0, 0, 0, $color-magenta, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-magenta !important;
 		}
 	}
 
 	&.btn-border-aqua {
-		color: $color-aqua;
+		color: $color-aqua !important;
 		@include shadow-inset( 0, 0, 0, $color-aqua, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-aqua !important;
 		}
 	}
 
 	&.btn-border-green {
-		color: $color-green;
+		color: $color-green !important;
 		@include shadow-inset( 0, 0, 0, $color-green, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-green !important;
 		}
 	}
 
 	&.btn-border-brown {
-		color: $color-brown;
+		color: $color-brown !important;
 		@include shadow-inset( 0, 0, 0, $color-brown, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-brown !important;
 		}
 	}	
 
 	&.btn-border-golden {
-		color: $color-golden;
+		color: $color-golden !important;
 		@include shadow-inset( 0, 0, 0, $color-golden, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-golden !important;
 		}
 	}
 
 	&.btn-border-silver {
-		color: $color-silver;
+		color: $color-silver !important;
 		@include shadow-inset( 0, 0, 0, $color-silver, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-silver !important;
 		}
 	}
 
 	&.btn-border-maroon {
-		color: $color-maroon;
+		color: $color-maroon !important;
 		@include shadow-inset( 0, 0, 0, $color-maroon, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-maroon !important;
 		}
 	}
 
 	&.btn-border-olive {
-		color: $color-olive;
+		color: $color-olive !important;
 		@include shadow-inset( 0, 0, 0, $color-olive, 1px );
 
 		&:hover {;
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-olive !important;
 		}
 	}
 
 	&.btn-border-lime {
-		color: $color-lime;
+		color: $color-lime !important;
 		@include shadow-inset( 0, 0, 0, $color-lime, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-lime !important;
 		}
 	}
 
 	&.btn-border-navy {
-		color: $color-navy;
+		color: $color-navy !important;
 		@include shadow-inset( 0, 0, 0, $color-navy, 1px );
 
 		&:hover {
-			color: $color-white;
+			color: $color-white !important;
 			background-color: $color-navy !important;
 		}
 	}
