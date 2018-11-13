@@ -135,6 +135,11 @@ page background and even content wrapper background in the form of image or text
 			}
 		}
 
+		// Wraps Page Content
+		.page-content-row {
+			// Optional to wrap page content with inner objects
+		}
+
 		// Wraps Page Cards
 		.page-card-wrap {
 
@@ -159,7 +164,7 @@ page background and even content wrapper background in the form of image or text
 				// Widget layout - derived from widget component
 			}
 		}
-		
+
 		// Wraps Page Blocks
 		.page-block-wrap {
 			// Block Data
@@ -168,7 +173,7 @@ page background and even content wrapper background in the form of image or text
 				// Block layout - derived from block component
 			}
 		}
-		
+
 		// Wraps Page Sidebars
 		.page-sidebar-wrap {
 
