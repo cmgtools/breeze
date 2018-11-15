@@ -3468,6 +3468,9 @@ html, body {
 .text.text-micro {
   font-size: 0.5em; }
 
+.text.text-bottom {
+  vertical-align: text-bottom; }
+
 .line-height {
   line-height: 1em; }
   .line-height.line-height-small {
@@ -4999,6 +5002,36 @@ Details: It defines the grid system and basic containers as listed below:
     -ms-transform: scale(1, -1);
     transform: scale(1, -1); }
 
+.hover-zoom-in.hover-zoom-in-small {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-small:hover {
+    transform: scale(1.1); }
+
+.hover-zoom-in.hover-zoom-in-medium {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-medium:hover {
+    transform: scale(1.25); }
+
+.hover-zoom-in.hover-zoom-in-large {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-large:hover {
+    transform: scale(1.5); }
+
+.hover-zoom-out.hover-zoom-out-small {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-small:hover {
+    transform: scale(0.9); }
+
+.hover-zoom-out.hover-zoom-out-medium {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-medium:hover {
+    transform: scale(0.25); }
+
+.hover-zoom-out.hover-zoom-out-large {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-large:hover {
+    transform: scale(0.5); }
+
 .hover-spin:hover {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear; }
@@ -5427,7 +5460,8 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 
 .cmt-select-native {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
   .cmt-select-native select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -8546,6 +8580,10 @@ Details: It defines the styles of card components as listed below:
     z-index: 15; }
     .card .card-content-wrap .card-header {
       position: relative; }
+      .card .card-content-wrap .card-header .card-bkg {
+        z-index: 1; }
+      .card .card-content-wrap .card-header > .texture {
+        z-index: 10; }
     .card .card-content-wrap .card-data {
       position: relative; }
     .card .card-content-wrap .card-content {
@@ -8684,6 +8722,10 @@ Details: It defines the styles of box components as listed below:
       .box .box-content-wrap .box-header-wrap .box-header {
         position: relative;
         z-index: 20; }
+        .box .box-content-wrap .box-header-wrap .box-header .box-bkg {
+          z-index: 1; }
+        .box .box-content-wrap .box-header-wrap .box-header > .texture {
+          z-index: 10; }
     .box .box-content-wrap .box-data {
       position: relative; }
     .box .box-content-wrap .box-content {
@@ -9145,6 +9187,16 @@ Details: It defines the styles for header components as listed below:
       .block .block-content-wrap .block-header-wrap .block-header {
         position: relative;
         z-index: 20; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-fixed {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-scroll {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-parallax {
+          z-index: 5; }
+        .block .block-content-wrap .block-header-wrap .block-header > .texture {
+          z-index: 10; }
     .block .block-content-wrap .block-content {
       position: relative; }
       .block .block-content-wrap .block-content .block-content-data {

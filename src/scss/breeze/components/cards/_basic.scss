@@ -39,6 +39,16 @@ Details: It defines the styles of card components as listed below:
 		.card-header {
 			position: relative;
 
+			// Background cover
+			.card-bkg {
+				z-index: 1;
+			}
+
+			// Texture on top of card background but under content
+			> .texture {
+				z-index: 10;
+			}
+
 			.card-header-icon {
 				// Header Icon or Avatar
 			}

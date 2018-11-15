@@ -86,6 +86,14 @@
     }
 }
 
+@mixin hover-zoom( $scale, $duration ) {
+	transition: transform $duration;
+
+	&:hover {
+		transform: scale( $scale );
+	}
+}
+
 // Mixins Default implementation ***********************
 
 .hover-move {
@@ -166,4 +174,34 @@
 
 .hover-flip-vertical {
 	@include hover-flip( 1, -1, 2, $transit-eio, $transit-time-medium );
+}
+
+.hover-zoom-in {
+	
+	&.hover-zoom-in-small {
+		@include hover-zoom( 1.1, $transit-time-medium );
+	}
+	
+	&.hover-zoom-in-medium {
+		@include hover-zoom( 1.25, $transit-time-medium );
+	}
+	
+	&.hover-zoom-in-large {
+		@include hover-zoom( 1.5, $transit-time-medium );
+	}
+}
+
+.hover-zoom-out {
+
+	&.hover-zoom-out-small {
+		@include hover-zoom( 0.9, $transit-time-medium );
+	}
+	
+	&.hover-zoom-out-medium {
+		@include hover-zoom( 0.25, $transit-time-medium );
+	}
+	
+	&.hover-zoom-out-large {
+		@include hover-zoom( 0.5, $transit-time-medium );
+	}
 }

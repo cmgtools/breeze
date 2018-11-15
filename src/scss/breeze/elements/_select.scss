@@ -157,6 +157,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-native {
 	position: relative;
 	display: inline-block;
+	width: 100%;
 
 	// Decorate native select
 	select {

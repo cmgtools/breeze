@@ -132,6 +132,10 @@ html, body {
 	&.text-micro {
 		font-size: $font-size-micro;
 	}
+
+	&.text-bottom {
+		vertical-align: text-bottom;
+	}
 }
 
 // Standard Line Height

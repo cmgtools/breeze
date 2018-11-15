@@ -42,6 +42,16 @@ Details: It defines the styles of box components as listed below:
 				position: relative;
 				z-index: 20;
 
+				// background cover
+				.box-bkg {
+					z-index: 1;
+				}
+
+				// Texture on top of box background but under content
+				> .texture {
+					z-index: 10;
+				}
+
 				.box-header-icon {
 					// Header Icon or Avatar
 				}
