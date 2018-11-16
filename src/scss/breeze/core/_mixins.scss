@@ -495,7 +495,7 @@ Notes:
 	}
 }
 
-@mixin bkg-element-medium {
+@mixin bkg-element-large {
 	display: block;
 	position: relative;
 	top: -30%;
@@ -518,7 +518,7 @@ Notes:
 	}
 }
 
-@mixin bkg-element-small {
+@mixin bkg-element-medium {
 	display: block;
 	position: relative;
 	top: -20%;
@@ -536,6 +536,52 @@ Notes:
 		margin: auto;
 		min-width: 80%;
 		min-height: 80%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@mixin bkg-element-small {
+	display: block;
+	position: relative;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 90%;
+		min-height: 90%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@mixin bkg-element-tiny {
+	display: block;
+	position: relative;
+	top: -5%;
+	left: -5%;
+	width: 110%;
+	height: 110%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 95%;
+		min-height: 95%;
 		max-width: 100%;
 		max-height: 100%;
 	}
@@ -1782,22 +1828,22 @@ Notes:
 
 .blur {
 	transform: scale( 1.1 );
-	@include blur( $size-default );
+	@include blur( 1px );
 
 	&.blur-small {
-		@include blur( $size-small );
+		@include blur( 2px );
 	}
 
 	&.blur-medium {
-		@include blur( $size-medium );
+		@include blur( 5px );
 	}
 
 	&.blur-large {
-		@include blur( $size-large );
+		@include blur( 8px );
 	}
 
 	&.blur-xlarge {
-		@include blur( $size-xlarge );
+		@include blur( 12px );
 	}
 }
 

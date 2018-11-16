@@ -97,6 +97,8 @@ Baidu		- <min>
 // Custom effects including animations, transtitions and transformations
 // ---------------------------------------//
 
+@import "breeze/effects/filters";
+
 @import "breeze/effects/hover/color";
 @import "breeze/effects/hover/transform";
 @import "breeze/effects/hover/animate";

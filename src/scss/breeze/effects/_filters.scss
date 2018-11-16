@@ -1,0 +1,81 @@
+@mixin filter-blur( $value ) {
+	-webkit-filter: blur( $value );
+	   -moz-filter: blur( $value );
+		 -o-filter: blur( $value );
+		-ms-filter: blur( $value );
+			filter: blur( $value );
+}
+
+@mixin filter-grayscale( $value ) {
+	-webkit-filter: grayscale( $value );
+	   -moz-filter: grayscale( $value );
+		 -o-filter: grayscale( $value );
+		-ms-filter: grayscale( $value );
+			filter: grayscale( $value );
+}
+
+@mixin filter-sepia( $value ) {
+	-webkit-filter: sepia( $value );
+	   -moz-filter: sepia( $value );
+		 -o-filter: sepia( $value );
+		-ms-filter: sepia( $value );
+			filter: sepia( $value );
+}
+
+.filter-blur {
+	@include filter-blur( 1px );
+
+	&.filter-blur-small {
+		@include filter-blur( 2px );
+	}
+
+	&.filter-blur-medium {
+		@include filter-blur( 5px );
+	}
+
+	&.filter-blur-large {
+		@include filter-blur( 8px );
+	}
+
+	&.filter-blur-xlarge {
+		@include filter-blur( 12px );
+	}
+}
+
+.filter-grayscale {
+
+	&.filter-grayscale-25 {
+		@include filter-grayscale( 0.25 );
+	}
+
+	&.filter-grayscale-50 {
+		@include filter-grayscale( 0.5 );
+	}
+
+	&.filter-grayscale-75 {
+		@include filter-grayscale( 0.75 );
+	}
+
+	&.filter-grayscale-100 {
+		@include filter-grayscale( 1 );
+	}
+}
+
+.filter-sepia {
+
+	&.filter-sepia-25 {
+		@include filter-sepia( 0.25 );
+	}
+
+	&.filter-sepia-50 {
+		@include filter-sepia( 0.5 );
+	}
+
+	&.filter-sepia-75 {
+		@include filter-sepia( 0.75 );
+	}
+
+	&.filter-sepia-100 {
+		@include filter-sepia( 1 );
+	}
+}
