@@ -179,14 +179,18 @@
 .hover-zoom-in {
 	
 	&.hover-zoom-in-small {
-		@include hover-zoom( 1.1, $transit-time-medium );
+		@include hover-zoom( 1.05, $transit-time-medium );
 	}
 	
 	&.hover-zoom-in-medium {
-		@include hover-zoom( 1.25, $transit-time-medium );
+		@include hover-zoom( 1.1, $transit-time-medium );
 	}
 	
 	&.hover-zoom-in-large {
+		@include hover-zoom( 1.25, $transit-time-medium );
+	}
+	
+	&.hover-zoom-in-xlarge {
 		@include hover-zoom( 1.5, $transit-time-medium );
 	}
 }
@@ -194,14 +198,18 @@
 .hover-zoom-out {
 
 	&.hover-zoom-out-small {
-		@include hover-zoom( 0.9, $transit-time-medium );
+		@include hover-zoom( 0.95, $transit-time-medium );
 	}
 	
 	&.hover-zoom-out-medium {
-		@include hover-zoom( 0.25, $transit-time-medium );
+		@include hover-zoom( 0.9, $transit-time-medium );
 	}
 	
 	&.hover-zoom-out-large {
+		@include hover-zoom( 0.75, $transit-time-medium );
+	}
+	
+	&.hover-zoom-out-xlarge {
 		@include hover-zoom( 0.5, $transit-time-medium );
 	}
 }

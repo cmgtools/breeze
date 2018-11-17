@@ -2585,6 +2585,10 @@ html, body {
   max-width: 100%;
   height: auto; }
 
+.fluid-both {
+  max-width: 100%;
+  max-height: 100%; }
+
 .warning, .error, .success, .info, .help-block {
   font-size: 0.8em;
   width: 100%; }
@@ -5092,31 +5096,41 @@ Details: It defines the grid system and basic containers as listed below:
 .hover-zoom-in.hover-zoom-in-small {
   transition: transform 420ms; }
   .hover-zoom-in.hover-zoom-in-small:hover {
-    transform: scale(1.1); }
+    transform: scale(1.05); }
 
 .hover-zoom-in.hover-zoom-in-medium {
   transition: transform 420ms; }
   .hover-zoom-in.hover-zoom-in-medium:hover {
-    transform: scale(1.25); }
+    transform: scale(1.1); }
 
 .hover-zoom-in.hover-zoom-in-large {
   transition: transform 420ms; }
   .hover-zoom-in.hover-zoom-in-large:hover {
+    transform: scale(1.25); }
+
+.hover-zoom-in.hover-zoom-in-xlarge {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-xlarge:hover {
     transform: scale(1.5); }
 
 .hover-zoom-out.hover-zoom-out-small {
   transition: transform 420ms; }
   .hover-zoom-out.hover-zoom-out-small:hover {
-    transform: scale(0.9); }
+    transform: scale(0.95); }
 
 .hover-zoom-out.hover-zoom-out-medium {
   transition: transform 420ms; }
   .hover-zoom-out.hover-zoom-out-medium:hover {
-    transform: scale(0.25); }
+    transform: scale(0.9); }
 
 .hover-zoom-out.hover-zoom-out-large {
   transition: transform 420ms; }
   .hover-zoom-out.hover-zoom-out-large:hover {
+    transform: scale(0.75); }
+
+.hover-zoom-out.hover-zoom-out-xlarge {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-xlarge:hover {
     transform: scale(0.5); }
 
 .hover-spin:hover {
