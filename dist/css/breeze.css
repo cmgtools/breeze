@@ -2157,12 +2157,15 @@ input[type="search"]::-webkit-search-decoration {
 input[type="checkbox"], input[type="radio"] {
   padding: 0; }
 
+/*
 input[type="radio"] {
-  vertical-align: text-bottom; }
+	vertical-align: text-bottom;
+}
 
 input[type="checkbox"] {
-  vertical-align: bottom; }
-
+	vertical-align: bottom;
+}
+*/
 .wysiwyg {
   color: #363636; }
   .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
@@ -7409,6 +7412,10 @@ Details: It defines the menu components as listed below:
       display: inline-block;
       width: 100%;
       text-align: center; }
+  .vnav.vnav-left li a, .vnav.vnav-left li .link {
+    text-align: left; }
+  .vnav.vnav-right li a, .vnav.vnav-right li .link {
+    text-align: right; }
 
 .nav-table {
   display: table;

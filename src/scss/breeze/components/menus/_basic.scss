@@ -56,6 +56,26 @@ Details: It defines the menu components as listed below:
 			text-align: center;
 		}
 	}
+
+	&.vnav-left {
+
+		li {
+
+			a, .link {
+				text-align: left;
+			}
+		}
+	}
+	
+	&.vnav-right {
+
+		li {
+
+			a, .link {
+				text-align: right;
+			}
+		}
+	}
 }
 
 // == Table Nav =====================
