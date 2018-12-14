@@ -41,6 +41,12 @@ Details: It defines the styles of cmt slider as listed below:
 				left: 0px;
 				overflow: hidden;
 			}
+
+			.wrap-slide-content {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 

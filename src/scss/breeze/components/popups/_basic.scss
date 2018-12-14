@@ -198,9 +198,18 @@ Details: It defines the styles for popup components as listed below:
 // Modal Popup
 .popup-modal {
 	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 999999999; // highest z-index
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999999;
+	overflow-y: auto;
+
+	.popup-screen, .popup-screen-listener {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 }
