@@ -5479,7 +5479,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
-      z-index: 100000;
+      z-index: 99999;
       width: 100%;
       padding: 0.30em;
       background-color: #F2F2F2;
@@ -5616,7 +5616,7 @@ by showing good looking icons instead of browser dependentent graphics. These ar
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: top; }
+  vertical-align: middle; }
 
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
