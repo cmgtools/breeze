@@ -2070,13 +2070,7 @@ textarea {
 
 pre {
   white-space: pre;
-  /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 2.1 and 3 */
-  word-wrap: break-word;
-  /* IE */ }
+  /* CSS2 */ }
 
 td img {
   vertical-align: top; }
