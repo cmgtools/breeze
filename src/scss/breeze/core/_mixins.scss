@@ -474,6 +474,7 @@ Notes:
 }
 
 // background filled with img - use it inside a block having fixed height
+// Make sure that the parent wrapping bkg-element has fixed width and height with overflow hidden. 
 @mixin bkg-element {
 	display: block;
 	position: relative;
@@ -1702,6 +1703,12 @@ Notes:
 
 .bkg-image-fixed {
 	@include bkg-image-fixed;
+}
+
+.bkg-element-wrap {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 
 .bkg-element {

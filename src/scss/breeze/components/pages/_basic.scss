@@ -64,6 +64,18 @@ page background and even content wrapper background in the form of image or text
 		z-index: 5;
 	}
 
+	.page-bkg-fluid {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 5;
+
+		img {
+			width: 100%;
+		}
+	}
+
 	// Texture on top of block background but under content
 	> .texture {
 		z-index: 10;
@@ -78,9 +90,29 @@ page background and even content wrapper background in the form of image or text
 		.page-header-wrap {
 			position: relative;
 
+			&.page-header-banner {
+				// Wraps fixed height header
+			}
+
+			&.page-header-fluid {
+				// Wraps fluid header
+			}
+
 			.page-header {
 				position: relative;
 				z-index: 20;
+
+				&.page-header-scroll {
+					// Fixed height scrollable content
+				}
+
+				&.page-header-text {
+					// Fluid content
+				}
+
+				&.page-header-plain {
+					// Plain heade without background or slider
+				}
 
 				.page-header-icon {
 					// Header icon

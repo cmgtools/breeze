@@ -1399,6 +1399,11 @@ Notes:
   -moz-background-size: cover;
   background-size: cover; }
 
+.bkg-element-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
 .bkg-element {
   display: block;
   position: relative;
@@ -9917,6 +9922,14 @@ page background and even content wrapper background in the form of image or text
     top: -50%;
     left: 0;
     z-index: 5; }
+  .page .page-bkg-fluid {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+    .page .page-bkg-fluid img {
+      width: 100%; }
   .page > .texture {
     z-index: 10; }
   .page .page-content-wrap {
