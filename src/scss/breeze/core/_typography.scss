@@ -254,6 +254,20 @@ p, span, em, div, a {
 			margin-left: 2em;
 		}
 	}
+
+	p {
+		min-height: 1em; // Avoid using br to give a line.
+	}
+
+	.wrap-editor-image {
+		margin: 1em 0;
+		text-align: center;
+
+		.image-caption {
+			text-align: center;
+			margin-top: 0.5em;
+		}
+	}
 }
 
 // icons alignment
@@ -266,6 +280,8 @@ code, pre {
 	font-family: $font-code;
 	background-color: $color-code;
 	color: $color-code-text;
+	overflow-x: auto;
+	padding: 1em;
 }
 
 // Font Weight
