@@ -213,22 +213,22 @@ p, span, em, div, a {
 		padding: 0.5em 0;
 	}
 
-	.reader-left {
+	&.reader-left {
 		text-align: left !important;
 	}
 	
-	.reader-center {
+	&.reader-center {
 		text-align: center !important;
 	}
 
-	.reader-right {
+	&.reader-right {
 		text-align: right !important;
 	}
 	
-	.reader-justify {
+	&.reader-justify {
 		text-align: justify !important;
 	}
-	
+
 	ol {
 
 		li {

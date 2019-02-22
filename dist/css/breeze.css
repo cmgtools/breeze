@@ -3533,13 +3533,13 @@ p, span, em, div, a {
   line-height: 1.5; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
     padding: 0.5em 0; }
-  .reader .reader-left {
+  .reader.reader-left {
     text-align: left !important; }
-  .reader .reader-center {
+  .reader.reader-center {
     text-align: center !important; }
-  .reader .reader-right {
+  .reader.reader-right {
     text-align: right !important; }
-  .reader .reader-justify {
+  .reader.reader-justify {
     text-align: justify !important; }
   .reader ol li {
     list-style-position: inside;
