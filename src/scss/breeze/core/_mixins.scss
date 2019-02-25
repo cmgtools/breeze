@@ -85,6 +85,21 @@ Media Queries		-	These mixins are pre-defined media queries using the screen siz
 	}
 }
 
+@mixin clearfixm() {
+	zoom: 1;
+
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
 // Opacity
 @mixin opaque( $value ) {
 	zoom: 1;
