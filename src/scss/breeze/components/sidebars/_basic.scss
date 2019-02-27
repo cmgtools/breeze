@@ -17,56 +17,164 @@ Details: It defines the styles for sidebar components as listed below:
 .sidebar {
 	position: relative;
 
-	.sidebar-header {
-		position: relative;
+	// responsive background
+	.sidebar-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
 
-		.sidebar-title {
-			// Title
-		}
+	// Texture on top of background but under content
+	> .texture {
+		z-index: 10;
 	}
 
 	.sidebar-content-wrap {
 		position: relative;
+		z-index: 15;
+
+		.sidebar-header {
+			position: relative;
+
+			.sidebar-header-icon {
+				// Header icon
+			}
+
+			.sidebar-header-title {
+				// Header title
+			}
+		}
 
 		.sidebar-content {
+			position: relative;
+
+			.sidebar-content-title {
+				// Content title
+			}
+
+			.sidebar-content-info {
+				// Content info
+			}
+
+			.sidebar-content-summary {
+				// Content info
+			}
+
+			.sidebar-content-data {
+				position: relative;
+			}
+		}
+
+		.sidebar-data {
 			// Content
+		}
+
+		// Wraps Widgets
+		.sidebar-widget-wrap {
+			// Widget Data
+
+			.widget {
+				// Widget layout - derived from widget component
+			}
 		}
 	}
 }
 
 // == Basic Sidebar =================
 
+// Basic sidebar with default spacing
 .sidebar-basic {
-	position: relative;
-
-	.sidebar-header {
-		display: none;
-
-		.sidebar-title {
-			background-color: $color-tertiary;
-			line-height: $font-size-4;
-			padding: 0.5rem;
-			font-size: $font-size-5;
-			@extend %clearfix;
-		}
-
-		.sidebar-control {
-			float: right;
-			display: inline-block;
-			cursor: pointer;
-		}
-	}
 
 	.sidebar-content-wrap {
-		display: block;
+
+		.sidebar-header {
+
+			.sidebar-header-title {
+				font-size: $font-size-2;
+				font-family: $font-heading;
+			}
+
+			.sidebar-header-icon + .sidebar-header-title {
+				margin-top: 0.5rem;
+			}
+		}
+
+		.sidebar-content {
+
+			.sidebar-content-title {
+				font-size: $font-size-2;
+				font-family: $font-heading;
+			}
+
+			.sidebar-content-info {
+				font-size: $font-size-4;
+			}
+			
+			.sidebar-content-summary {
+				font-size: $font-size-6;
+			}
+			
+			.sidebar-content-title + .sidebar-content-info, .sidebar-content-title + .sidebar-content-summary, .sidebar-content-title + .sidebar-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.sidebar-content-info + .sidebar-content-summary, .sidebar-content-info + .sidebar-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.sidebar-content-summary + .sidebar-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.sidebar-content-data {
+				padding: 1rem 0;
+			}
+		}
+	}
+}
+
+// == Control Sidebar ===============
+
+.sidebar-control {
+
+	.sidebar-content-wrap {
+
+		.sidebar-header {
+			display: none;
+
+			.sidebar-title {
+				background-color: $color-tertiary;
+				line-height: $font-size-4;
+				padding: 0.5rem;
+				font-size: $font-size-5;
+				@extend %clearfix;
+			}
+
+			.sidebar-control {
+				float: right;
+				display: inline-block;
+				cursor: pointer;
+			}
+		}
+
+		.sidebar-content {
+			display: block;
+		}
 	}
 
 	@include responsive-max( screen-tablet-large ) {
 
-		.sidebar-header {
-			display: block;
+		.sidebar-content-wrap {
 
-			.sidebar-content-wrap {
+			.sidebar-header {
+				display: block;
+			}
+
+			.sidebar-content {
 				display: none;
 			}
 		}

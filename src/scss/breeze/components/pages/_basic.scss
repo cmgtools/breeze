@@ -64,6 +64,18 @@ page background and even content wrapper background in the form of image or text
 		z-index: 5;
 	}
 
+	.page-bkg-fluid {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 5;
+
+		img {
+			width: 100%;
+		}
+	}
+
 	// Texture on top of block background but under content
 	> .texture {
 		z-index: 10;
@@ -78,9 +90,29 @@ page background and even content wrapper background in the form of image or text
 		.page-header-wrap {
 			position: relative;
 
+			&.page-header-banner {
+				// Wraps fixed height header
+			}
+
+			&.page-header-fluid {
+				// Wraps fluid header
+			}
+
 			.page-header {
 				position: relative;
 				z-index: 20;
+
+				&.page-header-scroll {
+					// Fixed height scrollable content
+				}
+
+				&.page-header-text {
+					// Fluid content
+				}
+
+				&.page-header-plain {
+					// Plain heade without background or slider
+				}
 
 				.page-header-icon {
 					// Header icon
@@ -135,10 +167,15 @@ page background and even content wrapper background in the form of image or text
 			}
 		}
 
-		// Wraps Page Cards
-		.page-page-wrap {
+		// Wraps Page Content
+		.page-content-row {
+			// Optional to wrap page content with inner objects
+		}
 
-			.page-card {
+		// Wraps Page Cards
+		.page-card-wrap {
+
+			.card {
 				// Card layout - derived from card component
 			}
 		}
@@ -146,7 +183,7 @@ page background and even content wrapper background in the form of image or text
 		// Wraps Page Boxes
 		.page-box-wrap {
 
-			.page-box {
+			.box {
 				// Box layout - derived from box component
 			}
 		}
@@ -155,39 +192,40 @@ page background and even content wrapper background in the form of image or text
 		.page-widget-wrap {
 			// Widget Data
 
-			.page-widget {
+			.widget {
 				// Widget layout - derived from widget component
 			}
 		}
-		
+
 		// Wraps Page Blocks
 		.page-block-wrap {
 			// Block Data
 
-			.page-block {
+			.block {
 				// Block layout - derived from block component
 			}
 		}
 
-		.page-sidebar {
+		// Wraps Page Sidebars
+		.page-sidebar-wrap {
 
 			// Page Sidebar Top
-			&.page-sidebar-top {
+			&.page-sidebar-wrap-top {
 				// Top Sidebar
 			}
 
 			// Page Sidebar Right
-			&.page-sidebar-right {
+			&.page-sidebar-wrap-right {
 				// Right Sidebar
 			}
 
 			// Page Sidebar Bottom
-			&.page-sidebar-bottom {
+			&.page-sidebar-wrap-bottom {
 				// Bottom Sidebar
 			}
 
 			// Page Sidebar Left
-			&.page-sidebar-left {
+			&.page-sidebar-wrap-left {
 				// Left Sidebar
 			}
 		}
@@ -259,22 +297,25 @@ page background and even content wrapper background in the form of image or text
 				.page-header-content {
 					font-size: $font-size-6;
 				}
-				
+
+				// Icon Spacing
 				.page-header-icon + .page-header-title, .page-header-icon + .page-header-info, .page-header-icon + .page-header-content {
 					margin-top: 0.5rem;
 				}
 
+				// Title Spacing
 				.page-header-title + .page-header-info, .page-header-title + .page-header-content {
 					margin-top: 0.5rem;
 				}
 
+				// Info Spacing
 				.page-header-info + .page-header-content {
 					margin-top: 0.5rem;
 				}
 			}
 		}
 
-		 .page-content {
+		.page-content {
 
 			.page-content-title {
 				font-size: $font-size-1;
@@ -284,20 +325,36 @@ page background and even content wrapper background in the form of image or text
 			.page-content-info {
 				font-size: $font-size-3;
 			}
-			
+
 			.page-content-summary {
 				padding: 1rem 0;
 				font-size: $font-size-6;
 			}
 
-			.page-content-title + .page-content-info, .page-content-title + .page-content-data {
+			// Banner Spacing
+			.page-content-banner + .page-content-title, .page-content-banner + .page-content-info, .page-content-banner + .page-content-summary, .page-content-banner + .page-content-data {
 				margin-top: 0.5rem;
 			}
 
-			.page-content-info + .page-content-data {
+			// Video Spacing
+			.page-content-video + .page-content-title, .page-content-video + .page-content-info, .page-content-video + .page-content-summary, .page-content-video + .page-content-data {
 				margin-top: 0.5rem;
 			}
-			
+
+			// Title Spacing
+			.page-content-title + .page-content-info, .page-content-title + .page-content-summary, .page-content-title + .page-content-data {
+				margin-top: 0.5rem;
+			}
+
+			// Info Spacing
+			.page-content-info + .page-content-summary, .page-content-info + .page-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.page-content-summary + .page-content-data {
+				margin-top: 0.5rem;
+			}
+
 			.page-content-data {
 				padding: 1rem 0;
 			}
@@ -320,15 +377,18 @@ page background and even content wrapper background in the form of image or text
 				.page-footer-content {
 					font-size: $font-size-6;
 				}
-				
+
+				// Icon Spacing
 				.page-footer-icon + .page-header-title, .page-footer-icon + .page-header-info, .page-footer-icon + .page-header-content {
 					margin-top: 0.5rem;
 				}
 
+				// Title Spacing
 				.page-footer-title + .page-footer-info, .page-footer-title + .page-footer-content {
 					margin-top: 0.5rem;
 				}
 
+				// Info Spacing
 				.page-footer-info + .page-footer-content {
 					margin-top: 0.5rem;
 				}

@@ -90,10 +90,14 @@ Baidu		- <min>
 @import "breeze/core/containers";
 // project - containers
 
+@import "breeze/core/shapes";
+
 // ---------------------------------------//
 // Effects Division - Optional
 // Custom effects including animations, transtitions and transformations
 // ---------------------------------------//
+
+@import "breeze/effects/filters";
 
 @import "breeze/effects/hover/color";
 @import "breeze/effects/hover/transform";
@@ -128,10 +132,12 @@ Baidu		- <min>
 @import "breeze/elements/splitter";
 @import "breeze/elements/tabs";
 @import "breeze/elements/accordian";
+@import "breeze/elements/actions";
 @import "breeze/elements/breadcrumb";
 @import "breeze/elements/auto-fill";
 @import "breeze/elements/uploader";
 @import "breeze/elements/flipper";
+@import "breeze/elements/mapper";
 // project - custom
 
 // ---------------------------------------//
@@ -139,8 +145,9 @@ Baidu		- <min>
 // Re-usable components having barebone structure and default implementations.
 // ---------------------------------------//
 
-@import "breeze/components/data/zigzag";
+@import "breeze/components/data/basic";
 @import "breeze/components/data/crud";
+@import "breeze/components/data/zigzag";
 
 @import "breeze/components/menus/basic";
 @import "breeze/components/menus/collapsible";
@@ -156,14 +163,12 @@ Baidu		- <min>
 @import "breeze/components/sidebars/basic";
 // project - sidebars
 
-@import "breeze/components/mappers/basic";
-// project - mappers
-
 @import "breeze/components/popups/basic";
 @import "breeze/components/popups/popouts";
 // project - popups & popouts
 
 @import "breeze/components/sliders/basic";
+@import "breeze/components/sliders/collage";
 // project - sliders
 
 @import "breeze/components/galleries/basic";
@@ -173,6 +178,7 @@ Baidu		- <min>
 
 @import "breeze/components/cards/basic";
 @import "breeze/components/cards/panel";
+@import "breeze/components/cards/comment";
 // project - data cards
 
 // Notes: Boxes can be used in Widgets, Blocks, Grid, Page
@@ -182,6 +188,7 @@ Baidu		- <min>
 @import "breeze/components/boxes/login";
 @import "breeze/components/boxes/form";
 @import "breeze/components/boxes/file";
+@import "breeze/components/boxes/comment";
 // project - boxes
 
 // Notes: Widgets can be used in Blocks, Grid, Page
@@ -206,11 +213,6 @@ Baidu		- <min>
 
 @import "breeze/components/pages/basic";
 // project - pages
-
-@import "breeze/components/cart/product";
-@import "breeze/components/cart/cart";
-@import "breeze/components/cart/shop";
-// project - cart
 
 // ---------------------------------------//
 // Extensions Division - Optional

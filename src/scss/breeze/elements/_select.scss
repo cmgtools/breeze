@@ -30,7 +30,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 		.cmt-selected {
 			cursor: pointer;
 			position: relative;
-			z-index: 100000;
+			z-index: 99999;
 			width: 100%;
 			padding: 0.30em;
 			background-color: $color-field;
@@ -157,6 +157,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-native {
 	position: relative;
 	display: inline-block;
+	width: 100%;
 
 	// Decorate native select
 	select {

@@ -145,6 +145,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 .col-small { @extend %col-small; }
 
+// use .col-small class instead of .col
 .col13 { width: 6.69230%; }
 .col14 { width: 6.14285%; }
 .col15 { width: 5.66666%; }
@@ -166,7 +167,7 @@ Details: It defines the grid system and basic containers as listed below:
 			width: 23%;
 		}
 
-		& >.col:nth-child( 4 ) {
+		& >.col:nth-child( 5 ) {
 			clear: both;
 		}
 	}
@@ -200,7 +201,7 @@ Details: It defines the grid system and basic containers as listed below:
 	}
 }
 
-// Column multipliers
+// Column multipliers - use .col-small class instead of .col
 
 .col3x2 { width: 64.666666%; }
 
@@ -227,7 +228,7 @@ Details: It defines the grid system and basic containers as listed below:
 .col12x10 { width: 81.33333%; }
 .col12x11 { width: 89.66663%; }
 
-// extended columns
+// extended columns - use .col-small class instead of .col
 
 .col15x2 { width:12.33332%; }
 .col15x3 { width:18.99998%; }
@@ -331,11 +332,58 @@ Details: It defines the grid system and basic containers as listed below:
 .colc11 { width: 7.27273%; @extend %colc-f-l; }
 .colc12 { width: 6.5%; @extend %colc-f-l; }
 
+.colc5x2 { width: 39.2%; @extend %colc-f-l; }
+.colc5x3 { width: 58.8%; @extend %colc-f-l; }
+.colc5x4 { width: 78.4%; @extend %colc-f-l; }
+
+.colc6x2 { width: 32.66666%; @extend %colc-f-l; }
+.colc6x3 { width: 49%; @extend %colc-f-l; }
+.colc6x4 { width: 65.33333%; @extend %colc-f-l; }
+.colc6x5 { width: 81.66666%; @extend %colc-f-l; }
+
+.colc12x2 { width: 16.33333%; @extend %colc-f-l; }
+.colc12x3 { width: 24.5%; @extend %colc-f-l; }
+.colc12x4 { width: 32.66666%; @extend %colc-f-l; }
+.colc12x5 { width: 40.83333%; @extend %colc-f-l; }
+.colc12x6 { width: 49%; @extend %colc-f-l; }
+.colc12x7 { width: 57.16666%; @extend %colc-f-l; }
+.colc12x8 { width: 65.33333%; @extend %colc-f-l; }
+.colc12x9 { width: 73.5%; @extend %colc-f-l; }
+.colc12x10 { width: 81.66666%; @extend %colc-f-l; }
+.colc12x11 { width: 89.83333%; @extend %colc-f-l; }
+
 @include responsive-max( screen-tablet-large ) {
+
+	.max-cols-25, .max-cols-25s {
+
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 23%;
+		}
+
+		& >.col:nth-child(  5 ) {
+			clear: both;
+		}
+	}
 
 	.max-cols-50, .max-cols-50s {
 
+		.colc {
+			&:first-child {
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+
+			&:last-child {
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+		}
+
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 48%;
+		}
+
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {		
 			width: 48%;
 		}
 
@@ -346,8 +394,24 @@ Details: It defines the grid system and basic containers as listed below:
 
 	.max-cols-100 {
 
+		.colc {
+			&:first-child {
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+
+			&:last-child {
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+		}
+
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 98%;
+		}
+		
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
+			width: 98%;			
 		}
 	}
 }
@@ -357,6 +421,10 @@ Details: It defines the grid system and basic containers as listed below:
 	.max-cols-50, .max-cols-100 {
 
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 98%;
+		}
+		
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 { 
 			width: 98%;
 		}
 	}
@@ -443,7 +511,7 @@ Details: It defines the grid system and basic containers as listed below:
 			width: 25%;
 		}
 
-		& >.colf:nth-child( 4 ) {
+		& >.colf:nth-child( 5 ) {
 			clear: both;
 		}
 	}
@@ -618,6 +686,78 @@ Details: It defines the grid system and basic containers as listed below:
 	}
 }
 
+// == Column Spacing ================
+
+.col-pad {
+
+	&.col-pad-small {
+		padding: 0.5em;
+
+		.col, .colf {
+			padding: 1em;
+		}
+	}
+
+	&.col-pad-medium {
+		padding: 1em;
+
+		.col, .colf {
+			padding: 2em;
+		}
+	}
+
+	&.col-pad-large {
+		padding: 1.5em;
+
+		.col, .colf {
+			padding: 3em;
+		}
+	}
+
+	&.col-pad-xlarge {
+		padding: 2em;
+
+		.col, .colf {
+			padding: 4em;
+		}
+	}
+}
+
+.col-pad-h {
+ 
+	&.col-pad-small {
+		padding: 0 0.5em;
+
+		.col, .colf {
+			padding: 0 1em;
+		}
+	}
+
+	&.col-pad-medium {
+		padding: 0 1em;
+
+		.col, .colf {
+			padding: 0 2em;
+		}
+	}
+
+	&.col-pad-large {
+		padding: 0 1.5em;
+
+		.col, .colf {
+			padding: 0 3em;
+		}
+	}
+
+	&.col-pad-xlarge {
+		padding: 0 2em;
+
+		.col, .colf {
+			padding: 0 4em;
+		}
+	}
+}
+
 // == Container =====================
 
 // Container and Content can be used to wrap several components together forming a single unit.
@@ -727,6 +867,13 @@ Details: It defines the grid system and basic containers as listed below:
 
 	.max-content-25 {
 
+		&.content-90, &.content-80, &.content-75, &.content-50, &.content-25 {
+			width: 25% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin: 0 auto;
+		}
+
 		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
 			width: 25% !important;
 			padding-left: 0 !important;
@@ -737,6 +884,13 @@ Details: It defines the grid system and basic containers as listed below:
 
 	.max-content-50 {
 
+		&.content-90, &.content-80, &.content-75, &.content-50, &.content-25 {
+			width: 50% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin: 0 auto;
+		}
+
 		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
 			width: 50% !important;
 			padding-left: 0 !important;
@@ -746,6 +900,12 @@ Details: It defines the grid system and basic containers as listed below:
 	}
 
 	.max-content-100 {
+
+		&.content-90, &.content-80, &.content-75, &.content-50, &.content-25 {
+			width: 100% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
 
 		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
 			width: 100% !important;

@@ -16,7 +16,7 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 	.data-zigzag-row {
 		margin-bottom: 2em;
 
-		img {
+		.data-zigzag-banner {
 			width: 100%;
 			height: auto;
 		}
@@ -25,7 +25,7 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 			width: 100%;
 			display: inline-block;
 
-			img {
+			.data-zigzag-banner {
 				display: block;
 			}
 		}
@@ -34,7 +34,7 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 			width: 100%;
 			display: inline-block;
 
-			img {
+			.data-zigzag-banner {
 				display: none;
 			}
 		}
@@ -47,15 +47,15 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 			.data-zigzag-part-1 {
 				width: 50%;
 
-				img {
+				.data-zigzag-banner {
 					display: none;
 				}
 			}
 
 			.data-zigzag-part-2 {
 				width: 50%;
-				
-				img {
+
+				.data-zigzag-banner {
 					display: block;
 				}
 			}

@@ -39,6 +39,16 @@ Details: It defines the styles of card components as listed below:
 		.card-header {
 			position: relative;
 
+			// Background cover
+			.card-bkg {
+				z-index: 1;
+			}
+
+			// Texture on top of card background but under content
+			> .texture {
+				z-index: 10;
+			}
+
 			.card-header-icon {
 				// Header Icon or Avatar
 			}
@@ -114,17 +124,17 @@ Details: It defines the styles of card components as listed below:
 			}
 		}
 	}
-	
+
 	&.card-primary {
 		background-color: $color-primary;
 		color: $color-primary-text;
 	}
-	
+
 	&.card-secondary {
 		background-color: $color-secondary;
 		color: $color-secondary-text;
 	}
-	
+
 	&.card-tertiary {
 		background-color: $color-tertiary;
 		color: $color-tertiary-text;
@@ -139,7 +149,7 @@ Details: It defines the styles of card components as listed below:
 	.card-content-wrap {
 
 		.card-header {
-			padding: 1rem 0;
+			padding: 1rem;
 
 			.card-header-title {
 				font-size: $font-size-4;
@@ -149,7 +159,7 @@ Details: It defines the styles of card components as listed below:
 			.card-header-info {
 				font-size: $font-size-6;
 			}
-			
+
 			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
 				margin-top: 0.5rem;
 			}
@@ -164,11 +174,11 @@ Details: It defines the styles of card components as listed below:
 		}
 
 		.card-data {
-			padding: 1rem 0;
+			padding: 1rem;
 		}
 
 		.card-content {
-			padding: 1rem 0;
+			padding: 1rem;
 
 			.card-content-title {
 				font-size: $font-size-4;
@@ -179,11 +189,15 @@ Details: It defines the styles of card components as listed below:
 				font-size: $font-size-6;
 			}
 
-			.card-content-title + .card-content-info, .card-content-title + .card-content-data {
+			.card-content-title + .card-content-info, .card-content-title + .card-content-summary, .card-content-title + .card-content-data {
 				margin-top: 0.5rem;
 			}
 
-			.card-content-info + .card-content-data {
+			.card-content-info + .card-content-summary, .card-content-info + .card-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.card-content-summary + .card-content-data {
 				margin-top: 0.5rem;
 			}
 
@@ -193,7 +207,7 @@ Details: It defines the styles of card components as listed below:
 		}
 
 		.card-footer {
-			padding: 1rem 0;
+			padding: 1rem;
 
 			.card-footer-title {
 				font-size: $font-size-5;
@@ -204,7 +218,7 @@ Details: It defines the styles of card components as listed below:
 				font-size: $font-size-6;
 			}
 			
-			.card-footer-icon + .card-header-title, .card-footer-icon + .card-header-info, .card-footer-icon + .card-header-content {
+			.card-footer-icon + .card-footer-title, .card-footer-icon + .card-footer-info, .card-footer-icon + .card-footer-content {
 				margin-top: 0.5rem;
 			}
 

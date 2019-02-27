@@ -1,0 +1,9 @@
+.mce-tinymce {
+	border: 1px solid $color-border;
+	@include shadow( 0, 0, 0, white );
+
+	.mce-container {
+		border: none;
+		@include shadow( 0, 0, 0, white );
+	}
+}

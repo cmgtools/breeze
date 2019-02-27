@@ -37,10 +37,20 @@ Details: It defines the styles of box components as listed below:
 
 		.box-header-wrap {
 			position: relative;
-			
+
 			.box-header {
 				position: relative;
 				z-index: 20;
+
+				// background cover
+				.box-bkg {
+					z-index: 1;
+				}
+
+				// Texture on top of box background but under content
+				> .texture {
+					z-index: 10;
+				}
 
 				.box-header-icon {
 					// Header Icon or Avatar
@@ -54,12 +64,12 @@ Details: It defines the styles of box components as listed below:
 					// Header Info
 				}
 
-				.box-header-actions {
-					// Header Actions
-				}
-				
 				.box-header-content {
 					// Header Content
+				}
+
+				.box-header-actions {
+					// Header Actions
 				}
 			}
 		}
@@ -107,7 +117,7 @@ Details: It defines the styles of box components as listed below:
 			// Box Cards
 			position: relative;
 
-			.box-card {
+			.card {
 				// Card layout - derived from card component
 			}
 		}
@@ -132,12 +142,12 @@ Details: It defines the styles of box components as listed below:
 					// Footer Info
 				}
 
-				.box-footer-actions {
-					// Footer Actions
-				}
-
 				.box-footer-content {
 					// Footer Content
+				}
+				
+				.box-footer-actions {
+					// Footer Actions
 				}
 			}
 		}
@@ -179,7 +189,7 @@ Details: It defines the styles of box components as listed below:
 				.box-header-info {
 					font-size: $font-size-5;
 				}
-				
+
 				.box-header-content {
 					font-size: $font-size-6;
 				}
@@ -217,11 +227,15 @@ Details: It defines the styles of box components as listed below:
 				font-size: $font-size-6;
 			}
 
-			.box-content-title + .box-content-info, .box-content-title + .box-content-data {
+			.box-content-title + .box-content-info, .box-content-title + .box-content-summary, .box-content-title + .box-content-data {
 				margin-top: 0.5rem;
 			}
 
-			.box-content-info + .box-content-data {
+			.box-content-info + .box-content-summary, .box-content-info + .box-content-data {
+				margin-top: 0.5rem;
+			}
+
+			.box-content-summary + .box-content-data {
 				margin-top: 0.5rem;
 			}
 

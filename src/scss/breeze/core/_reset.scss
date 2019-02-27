@@ -133,8 +133,9 @@ input, select {
 
 // Selection text shadow
 
-::selection {
-	background: $color-secondary;
+::-moz-selection, ::selection {
+	background: $color-blue;
+	color: $color-white;
 	text-shadow: none;
 }
 
@@ -165,9 +166,9 @@ textarea {
 
 pre {
 	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 2.1 and 3 */
-	word-wrap: break-word; /* IE */
+//	white-space: pre-wrap; /* CSS 2.1 */
+//	white-space: pre-line; /* CSS 2.1 and 3 */
+//	word-wrap: break-word; /* IE */
 }
 
 td img {
@@ -290,6 +291,7 @@ input[type="checkbox"], input[type="radio"] {
 	padding: 0;
 }
 
+/*
 input[type="radio"] {
 	vertical-align: text-bottom;
 }
@@ -297,6 +299,7 @@ input[type="radio"] {
 input[type="checkbox"] {
 	vertical-align: bottom;
 }
+*/
 
 // == WYSIWYG Editors ===============
 

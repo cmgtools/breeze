@@ -72,8 +72,14 @@ Details: It defines the custom element styles as listed below:
 				.auto-fill-item {
 					background-color: $color-primary-d;
 					color: $color-primary-text-d;
+					border: 1px solid $color-border;
 					padding: 0.5em;
 					cursor: pointer;
+
+					&:hover {
+						background-color: $color-primary;
+						color: $color-primary-text;
+					}
 				}
 
 				.auto-fill-message {

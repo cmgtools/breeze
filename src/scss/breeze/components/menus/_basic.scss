@@ -32,7 +32,7 @@ Details: It defines the menu components as listed below:
 	li {
 		display: inline-block;
 
-		a {
+		a, .link {
 			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 			display: inline-block;
 			width: 100%;
@@ -49,11 +49,31 @@ Details: It defines the menu components as listed below:
 		display: inline-block;
 		width: 100%;
 
-		a {
+		a, .link {
 			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 			display: inline-block;
 			width: 100%;
 			text-align: center;
+		}
+	}
+
+	&.vnav-left {
+
+		li {
+
+			a, .link {
+				text-align: left;
+			}
+		}
+	}
+	
+	&.vnav-right {
+
+		li {
+
+			a, .link {
+				text-align: right;
+			}
 		}
 	}
 }
@@ -70,7 +90,7 @@ Details: It defines the menu components as listed below:
 		display: table-cell;
 		text-align: center;
 
-		a {
+		a, .link {
 			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 			display: inline-block;
 			width: 100%;

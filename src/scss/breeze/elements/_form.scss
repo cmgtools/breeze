@@ -63,31 +63,31 @@ form {
 %element-size {
 	width: 100%; // By default all elements will occupy 100% width
 
-	&.element-25 {
+	&.frm-element-25 {
 		width: 25% !important;
 	}
 
-	&.element-50 {
+	&.frm-element-50 {
 		width: 50% !important;
 	}
 
-	&.element-75 {
+	&.frm-element-75 {
 		width: 75% !important;
 	}
 
-	&.element-small {
+	&.frm-element-small {
 		width: 80px !important;
 	}
 
-	&.element-medium {
+	&.frm-element-medium {
 		width: 120px !important;
 	}
 
-	&.element-large {
+	&.frm-element-large {
 		width: 180px !important;
 	}
 
-	&.element-xlarge {
+	&.frm-element-xlarge {
 		width: 250px !important;
 	}
 }
@@ -112,8 +112,8 @@ form {
 	}
 
 	&:disabled {
-		background-color: $color-field-d;
-		color: $color-field-text-d;
+		background-color: $color-field-d !important;
+		color: $color-field-text-d !important;
 		@include shadow-inset( 0, 0, 0, $color-shadow-inset-d, 1px );
 	}
 }
@@ -132,7 +132,7 @@ form {
 	}
 
 	&:disabled {
-		color: $color-field-text-d;
+		color: $color-field-text-d !important;
 	}
 }
 
@@ -154,8 +154,8 @@ form {
 	}
 
 	&:disabled {
-		background-color: $color-btn-d;
-		color: $color-btn-text-d;
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
 		cursor: default;
 	}
 }
@@ -188,8 +188,8 @@ input[type="submit"], input[type="button"], button {
 	color: $color-red;
 }
 
-// Element
-.element {
+// Form Element
+.frm-element {
 	@extend %element-size;
 	display: inline-block;
 }
@@ -231,36 +231,36 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	display: inline-block;
 	width: 100%;
 
-	&.element-25 {
+	&.frm-element-25 {
 		width: 25% !important;
 	}
 
-	&.element-50 {
+	&.frm-element-50 {
 		width: 50% !important;
 	}
 
-	&.element-75 {
+	&.frm-element-75 {
 		width: 75% !important;
 	}
 
-	&.element-small {
+	&.frm-element-small {
 		width: 80px !important;
 	}
 
-	&.element-medium {
+	&.frm-element-medium {
 		width: 120px !important;
 	}
 
-	&.element-large {
+	&.frm-element-large {
 		width: 180px !important;
 	}
 
-	&.element-xlarge {
+	&.frm-element-xlarge {
 		width: 250px !important;
 	}
 
-	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-	.btn {
+	input[type="text"], input[type="email"], input[type="password"], textarea, select, 
+	input[type="submit"], input[type="button"], button, .btn {
 		padding-left: 2.1em;
 		width: 100% !important;
 	}
@@ -280,8 +280,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	// Show icon on right side
 	&.icon-right {
 
-		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-		.btn {
+		input[type="text"], input[type="email"], input[type="password"], textarea, select, 
+		input[type="submit"], input[type="button"], button, .btn {
 			padding-left: 0.30em;
 			padding-right: 2.1em;
 		}
@@ -416,7 +416,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 	.ignore-40-60 {
 
-		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
+		label, .frm-element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .frm-element-60 {
 			width: 100%;
 		}
 	}
@@ -428,13 +428,13 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	}
 }
 
-.frm-split-40-60 label, .element-40 {
+.frm-split-40-60 label, .frm-element-40 {
 	clear: both;
 	width: 40%;
 	float: left;
 }
 
-.element-40 label {
+.frm-element-40 label {
 	width: 100%;
 }
 
@@ -442,14 +442,14 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 	&.ignore-clear {
 
-		label, .element-40 {
+		label, .frm-element-40 {
 			clear: none;
 		}
 	}
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
 	width: 60%;
 	float: left;
@@ -465,9 +465,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	float: left;
 }
 
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.frm-element-60 input[type="text"], .frm-element-60 input[type="email"], .frm-element-60 input[type="password"],
+.frm-element-60 textarea, .frm-element-60 select,
+.frm-element-60 .cmt-select-wrap, .frm-element-60 .icon-picker {
 	width: 100%;
 }
 
@@ -495,7 +495,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 @include responsive-max ( screen-mobile-large ) {
 
 	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
 		width: 100%;
 	}
 

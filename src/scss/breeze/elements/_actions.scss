@@ -1,0 +1,81 @@
+// == Structure - Actions List ======
+
+.actions-list {
+
+	.actions-list-title {
+		cursor: pointer;
+		@include transit-bkg-color( $transit-eio, $transit-time-medium );
+	}
+}
+
+.actions-list-data {
+	position: absolute;
+	display: none;
+	z-index: 10000;
+
+	.action {
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
+
+		a, .link, .action-title {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}
+
+// == Settings Actions List =========
+
+.actions-list-settings {
+
+	.actions-list-title {
+		background-color: $color-primary;
+		color: $color-primary-text;
+		width: 64px;
+		height: 35px;
+		padding: 5px 8px;
+		border: 1px solid $color-border;
+		cursor: pointer;
+		@include transit-bkg-color( $transit-eio, $transit-time-medium );
+
+		.icon {
+			line-height: 25px;
+		}
+
+		.icon-setting {
+			float: left;
+		}
+
+		.icon-caret {
+			float: right;
+		}
+
+		&:hover {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+		}
+	}
+}
+
+.actions-list-data-settings {
+	width: 120px;
+	border: 1px solid $color-border;
+
+	.action {
+
+		a, .link, .action-title {
+			background-color: $color-primary;
+			color: $color-primary-text;
+			padding: 0.5em;
+		}
+
+		&:hover {
+
+			a, .link, .action-title {
+				background-color: $color-tertiary;
+				color: $color-tertiary-text;
+			}
+		}
+	}
+}

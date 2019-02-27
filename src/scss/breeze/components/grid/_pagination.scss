@@ -1,15 +1,15 @@
 /**********************************************************************
-Description: It defines the styles of the pagination components having links to navigate pages.
+Description: It defines the styles of the pagination having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for pagination components as listed below:
+Details: It defines the styles of pagination components as listed below:
 
-* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
-*
-* Basic       - The basic pagination. It uses button colors to decorate pagination states.
-*
-* Full        - Full pagination having both info and pagination links.
+Pagination - The barebone pagination class with minimum styles common for all the data grids.
+
+Basic - The basic pagination. It uses button colors to decorate pagination states.
+
+Full - Full pagination having both info and pagination links.
 ***********************************************************************/
 
 // == Structure - Pagination ========
@@ -24,6 +24,7 @@ Details: It defines the styles for pagination components as listed below:
 
 		span, a {
 			// Links, Prev and Next - Normal state
+			display: inline-block;
 			text-decoration: none;
 
 			&:hover {
@@ -37,7 +38,7 @@ Details: It defines the styles for pagination components as listed below:
 
 		&.first, &.prev, &.next, &.last {
 
-			&.disabled {
+			&.link-disabled {
 
 				span {
 					// Prev - Next in disabled state
@@ -105,7 +106,7 @@ Details: It defines the styles for pagination components as listed below:
 
 		&.first, &.prev, &.next, &.last {
 
-			&.disabled {
+			&.link-disabled {
 
 				span {
 					background-color: $color-btn-d;
@@ -140,6 +141,7 @@ Details: It defines the styles for pagination components as listed below:
 // == Full Pagination ===============
 
 .pagination-full {
+	display: block;
 
 	.page-info {
 		display: inline-block;
@@ -168,21 +170,24 @@ Details: It defines the styles for pagination components as listed below:
 					color: $color-secondary-text;
 					padding: 0.5em 0.75em;
 					text-decoration: none;
+					
+					&:hover {
+						background-color: $color-primary;
+						color: $color-primary-text;
+					}
 				}
 
-				.active a {
+				&.first, &.prev, &.next, &.last {
+					
+					&.link-disabled span {
+						background-color: $color-gray;
+						color: $color-white;
+					}
+				}
+
+				&.active a {
 					background-color: $color-tertiary-d;
 					color: $color-tertiary-text-d;
-				}
-
-				a:hover {
-					background-color: $color-primary;
-					color: $color-primary-text;
-				}
-
-				.disabled span {
-					background-color: $color-gray;
-					color: $color-white;
 				}
 			}
 		}

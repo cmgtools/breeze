@@ -189,20 +189,20 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-basic .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
 Notes:
 1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
-2. bkg-element - It use the img tag to cover background of parent element.
+2. bkg-element - It use the img tag to cover background of parent element. The parent must use hidden overflow
 */
 .texture, .pattern {
   position: absolute;
@@ -1399,6 +1399,11 @@ Notes:
   -moz-background-size: cover;
   background-size: cover; }
 
+.bkg-element-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
 .bkg-element {
   display: block;
   position: relative;
@@ -1420,10 +1425,10 @@ Notes:
 .bkg-element-medium {
   display: block;
   position: relative;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
   overflow: hidden; }
   .bkg-element-medium img {
     position: absolute;
@@ -1432,18 +1437,18 @@ Notes:
     right: 0;
     bottom: 0;
     margin: auto;
-    min-width: 70%;
-    min-height: 70%;
+    min-width: 80%;
+    min-height: 80%;
     max-width: 100%;
     max-height: 100%; }
 
 .bkg-element-small {
   display: block;
   position: relative;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   overflow: hidden; }
   .bkg-element-small img {
     position: absolute;
@@ -1452,8 +1457,8 @@ Notes:
     right: 0;
     bottom: 0;
     margin: auto;
-    min-width: 80%;
-    min-height: 80%;
+    min-width: 90%;
+    min-height: 90%;
     max-width: 100%;
     max-height: 100%; }
 
@@ -1543,11 +1548,11 @@ Notes:
   -ms-filter: blur(1px);
   filter: blur(1px); }
   .blur.blur-small {
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px); }
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px); }
   .blur.blur-medium {
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
@@ -1561,11 +1566,11 @@ Notes:
     -ms-filter: blur(8px);
     filter: blur(8px); }
   .blur.blur-xlarge {
-    -webkit-filter: blur(13px);
-    -moz-filter: blur(13px);
-    -o-filter: blur(13px);
-    -ms-filter: blur(13px);
-    filter: blur(13px); }
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px); }
 
 .pattern.pattern-default {
   background-image: url("../images/pattern-default.png"); }
@@ -2047,8 +2052,9 @@ hr {
 input, select {
   vertical-align: middle; }
 
-::selection {
-  background: #3C4655;
+::-moz-selection, ::selection {
+  background: #0074D9;
+  color: #FFFFFF;
   text-shadow: none; }
 
 audio, canvas, iframe, img, svg, video {
@@ -2069,13 +2075,7 @@ textarea {
 
 pre {
   white-space: pre;
-  /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 2.1 and 3 */
-  word-wrap: break-word;
-  /* IE */ }
+  /* CSS2 */ }
 
 td img {
   vertical-align: top; }
@@ -2156,12 +2156,15 @@ input[type="search"]::-webkit-search-decoration {
 input[type="checkbox"], input[type="radio"] {
   padding: 0; }
 
+/*
 input[type="radio"] {
-  vertical-align: text-bottom; }
+	vertical-align: text-bottom;
+}
 
 input[type="checkbox"] {
-  vertical-align: bottom; }
-
+	vertical-align: bottom;
+}
+*/
 .wysiwyg {
   color: #363636; }
   .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
@@ -2343,32 +2346,88 @@ html, body {
 .width {
   width: 100%; }
   .width.width-auto {
-    width: auto; }
+    width: auto !important; }
   .width.width-1 {
-    width: 1%; }
+    width: 1% !important; }
   .width.width-5 {
-    width: 5%; }
+    width: 5% !important; }
   .width.width-10 {
-    width: 10%; }
+    width: 10% !important; }
   .width.width-25 {
-    width: 25%; }
+    width: 25% !important; }
   .width.width-50 {
-    width: 50%; }
+    width: 50% !important; }
   .width.width-75 {
-    width: 75%; }
+    width: 75% !important; }
   .width.width-80 {
-    width: 80%; }
+    width: 80% !important; }
+  .width.width-100 {
+    width: 100% !important; }
+  .width.width-default {
+    width: 64px !important; }
+  .width.width-small {
+    width: 128px !important; }
+  .width.width-medium {
+    width: 256px !important; }
+  .width.width-large {
+    width: 512px !important; }
 
 .height {
   height: 100%; }
   .height.height-auto {
-    height: auto; }
+    height: auto !important; }
   .height.height-25 {
-    height: 25%; }
+    height: 25% !important; }
   .height.height-50 {
-    height: 50%; }
+    height: 50% !important; }
   .height.height-75 {
-    height: 75%; }
+    height: 75% !important; }
+  .height.height-100 {
+    height: 100% !important; }
+  .height.height-default {
+    height: 64px !important; }
+  .height.height-small {
+    height: 128px !important; }
+  .height.height-medium {
+    height: 256px !important; }
+  .height.height-large {
+    height: 512px !important; }
+
+/**
+ * Avatar and Icon width
+ */
+.avatar {
+  display: inline-block;
+  width: 32px; }
+  .avatar img {
+    width: 32px; }
+  .avatar.avatar-center {
+    margin: 0 auto; }
+  .avatar.avatar-small {
+    width: 48px; }
+    .avatar.avatar-small img {
+      width: 48px; }
+  .avatar.avatar-medium {
+    width: 64px; }
+    .avatar.avatar-medium img {
+      width: 64px; }
+  .avatar.avatar-large {
+    width: 100px; }
+    .avatar.avatar-large img {
+      width: 100px; }
+
+.icon {
+  display: inline-block; }
+  .icon.icon-center {
+    margin: 0 auto; }
+  .icon.icon-default {
+    width: 32px; }
+  .icon.icon-small {
+    width: 48px; }
+  .icon.icon-medium {
+    width: 64px; }
+  .icon.icon-large {
+    width: 100px; }
 
 /**
  * Alignments for centered box and text.
@@ -2466,6 +2525,16 @@ html, body {
     z-index: 40; }
   .layer.layer-5 {
     z-index: 50; }
+  .layer.layer-6 {
+    z-index: 60; }
+  .layer.layer-7 {
+    z-index: 70; }
+  .layer.layer-8 {
+    z-index: 80; }
+  .layer.layer-9 {
+    z-index: 90; }
+  .layer.layer-10 {
+    z-index: 100; }
 
 .block {
   display: block !important; }
@@ -2491,8 +2560,14 @@ html, body {
 .hidden-space {
   visibility: hidden !important; }
 
-.pointer {
+.pointer, .cmt-click {
   cursor: pointer; }
+
+.pointer-none {
+  pointer-events: none; }
+
+.pointer-auto {
+  pointer-events: auto; }
 
 .crosshair {
   cursor: crosshair; }
@@ -2525,6 +2600,10 @@ html, body {
 .fluid {
   max-width: 100%;
   height: auto; }
+
+.fluid-both {
+  max-width: 100%;
+  max-height: 100%; }
 
 .warning, .error, .success, .info, .help-block {
   font-size: 0.8em;
@@ -2591,38 +2670,113 @@ Details: It defines the text and background colors as listed below:
  * 18. tertiary text dark: #c1db9e
  */ }
   .color.color-primary {
-    background-color: #F2F2F2;
-    color: #363636; }
+    background-color: #F2F2F2 !important;
+    color: #363636 !important; }
   .color.color-primary-l {
-    background-color: white;
-    color: #171717; }
+    background-color: white !important;
+    color: #171717 !important; }
   .color.color-primary-d {
-    background-color: lightgray;
-    color: #555555; }
+    background-color: lightgray !important;
+    color: #555555 !important; }
   .color.color-secondary {
-    background-color: #3C4655;
-    color: #96B0D6; }
+    background-color: #3C4655 !important;
+    color: #96B0D6 !important; }
   .color.color-secondary-l {
-    background-color: #556479;
-    color: #6a8fc5; }
+    background-color: #556479 !important;
+    color: #6a8fc5 !important; }
   .color.color-secondary-d {
-    background-color: #232831;
-    color: #c2d1e7; }
+    background-color: #232831 !important;
+    color: #c2d1e7 !important; }
   .color.color-tertiary {
-    background-color: #87BA45;
-    color: #E6E6E6; }
+    background-color: #87BA45 !important;
+    color: #E6E6E6 !important; }
   .color.color-tertiary-l {
-    background-color: #a4cb72;
-    color: #678d34; }
+    background-color: #a4cb72 !important;
+    color: #678d34 !important; }
   .color.color-tertiary-d {
-    background-color: #678d34;
-    color: #c1db9e; }
+    background-color: #678d34 !important;
+    color: #c1db9e !important; }
   .color.color-white {
-    background-color: #FFFFFF;
-    color: #000000; }
+    background-color: #FFFFFF !important;
+    color: #000000 !important; }
   .color.color-black {
-    background-color: #000000;
-    color: #FFFFFF; }
+    background-color: #000000 !important;
+    color: #FFFFFF !important; }
+  .color.color-blue {
+    background-color: #0074D9 !important;
+    color: #FFFFFF !important; }
+  .color.color-blue-l {
+    background-color: #1E96FF !important;
+    color: #FFFFFF !important; }
+  .color.color-purple {
+    background-color: #8946C4 !important;
+    color: #FFFFFF !important; }
+  .color.color-purple-l {
+    background-color: #AA7AD4 !important;
+    color: #FFFFFF !important; }
+  .color.color-orange {
+    background-color: #FF851B !important;
+    color: #FFFFFF !important; }
+  .color.color-orange-l {
+    background-color: #FFA95F !important;
+    color: #FFFFFF !important; }
+  .color.color-yellow {
+    background-color: #FFDC00 !important;
+    color: #FFFFFF !important; }
+  .color.color-yellow-l {
+    background-color: #FFE544 !important;
+    color: #FFFFFF !important; }
+  .color.color-red {
+    background-color: #FF4136 !important;
+    color: #FFFFFF !important; }
+  .color.color-red-l {
+    background-color: #FF6158 !important;
+    color: #FFFFFF !important; }
+  .color.color-pink {
+    background-color: #E4287C !important;
+    color: #FFFFFF !important; }
+  .color.color-pink-l {
+    background-color: #EC64A1 !important;
+    color: #FFFFFF !important; }
+  .color.color-magenta {
+    background-color: #B200B2 !important;
+    color: #FFFFFF !important; }
+  .color.color-magenta-l {
+    background-color: #F600F6 !important;
+    color: #FFFFFF !important; }
+  .color.color-green {
+    background-color: #7CAA2D !important;
+    color: #FFFFFF !important; }
+  .color.color-green-l {
+    background-color: #9FCF4B !important;
+    color: #FFFFFF !important; }
+  .color.color-brown {
+    background-color: #8B4513 !important;
+    color: #FFFFFF !important; }
+  .color.color-brown-l {
+    background-color: #C7631B !important;
+    color: #FFFFFF !important; }
+  .color.color-aqua {
+    background-color: #8AE2E3 !important;
+    color: #FFFFFF !important; }
+  .color.color-golden {
+    background-color: #E9C011 !important;
+    color: #FFFFFF !important; }
+  .color.color-silver {
+    background-color: #E7E8E7 !important;
+    color: #FFFFFF !important; }
+  .color.color-maroon {
+    background-color: #542628 !important;
+    color: #FFFFFF !important; }
+  .color.color-olive {
+    background-color: #A3A54C !important;
+    color: #FFFFFF !important; }
+  .color.color-lime {
+    background-color: #D3F235 !important;
+    color: #FFFFFF !important; }
+  .color.color-navy {
+    background-color: #003653 !important;
+    color: #FFFFFF !important; }
 
 .bkg.bkg-primary {
   background-color: #F2F2F2 !important; }
@@ -3334,6 +3488,9 @@ html, body {
 .text.text-micro {
   font-size: 0.5em; }
 
+.text.text-bottom {
+  vertical-align: text-bottom; }
+
 .line-height {
   line-height: 1em; }
   .line-height.line-height-small {
@@ -3380,13 +3537,13 @@ p, span, em, div, a {
   line-height: 1.5; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
     padding: 0.5em 0; }
-  .reader .reader-left {
+  .reader.reader-left {
     text-align: left !important; }
-  .reader .reader-center {
+  .reader.reader-center {
     text-align: center !important; }
-  .reader .reader-right {
+  .reader.reader-right {
     text-align: right !important; }
-  .reader .reader-justify {
+  .reader.reader-justify {
     text-align: justify !important; }
   .reader ol li {
     list-style-position: inside;
@@ -3400,14 +3557,24 @@ p, span, em, div, a {
     line-height: 2.5; }
   .reader ul ul, .reader ul ol {
     margin-left: 2em; }
+  .reader p {
+    min-height: 1em; }
+  .reader .wrap-editor-image {
+    margin: 1em 0;
+    text-align: center; }
+    .reader .wrap-editor-image .image-caption {
+      text-align: center;
+      margin-top: 0.5em; }
 
 .cmti, .fa {
   vertical-align: middle; }
 
-pre {
+code, pre {
   font-family: "Courier New", Courier, monospace;
-  color: #595959;
-  background-color: #A5A5A5; }
+  background-color: #363636;
+  color: #FFFFFF;
+  overflow-x: auto;
+  padding: 1em; }
 
 .normal {
   font-weight: normal; }
@@ -3651,7 +3818,7 @@ Details: It defines the grid system and basic containers as listed below:
     width: 100%; }
   .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%; }
-  .max-cols-25 > .col:nth-child(4), .max-cols-25s > .col:nth-child(4) {
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
     clear: both; }
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-50s > .col1, .max-cols-50s > .col2, .max-cols-50s > .col3, .max-cols-50s > .col4, .max-cols-50s > .col5, .max-cols-50s > .col6, .max-cols-50s > .col7, .max-cols-50s > .col8, .max-cols-50s > .col9, .max-cols-50s > .col10, .max-cols-50s > .col11, .max-cols-50s > .col12, .max-cols-50s > .col13, .max-cols-50s > .col14, .max-cols-50s > .col15 {
     width: 48%; }
@@ -3799,12 +3966,12 @@ Details: It defines the grid system and basic containers as listed below:
   word-wrap: break-word;
   min-height: 1px; }
 
-.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12 {
+.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12, .colc5x2, .colc5x3, .colc5x4, .colc6x2, .colc6x3, .colc6x4, .colc6x5, .colc12x2, .colc12x3, .colc12x4, .colc12x5, .colc12x6, .colc12x7, .colc12x8, .colc12x9, .colc12x10, .colc12x11 {
   margin: 0 1%; }
-  .colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child {
+  .colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child, .colc5x2:first-child, .colc5x3:first-child, .colc5x4:first-child, .colc6x2:first-child, .colc6x3:first-child, .colc6x4:first-child, .colc6x5:first-child, .colc12x2:first-child, .colc12x3:first-child, .colc12x4:first-child, .colc12x5:first-child, .colc12x6:first-child, .colc12x7:first-child, .colc12x8:first-child, .colc12x9:first-child, .colc12x10:first-child, .colc12x11:first-child {
     margin-left: 0;
     margin-right: 1%; }
-  .colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child {
+  .colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child, .colc5x2:last-child, .colc5x3:last-child, .colc5x4:last-child, .colc6x2:last-child, .colc6x3:last-child, .colc6x4:last-child, .colc6x5:last-child, .colc12x2:last-child, .colc12x3:last-child, .colc12x4:last-child, .colc12x5:last-child, .colc12x6:last-child, .colc12x7:last-child, .colc12x8:last-child, .colc12x9:last-child, .colc12x10:last-child, .colc12x11:last-child {
     margin-left: 1%;
     margin-right: 0; }
 
@@ -3844,16 +4011,89 @@ Details: It defines the grid system and basic containers as listed below:
 .colc12 {
   width: 6.5%; }
 
+.colc5x2 {
+  width: 39.2%; }
+
+.colc5x3 {
+  width: 58.8%; }
+
+.colc5x4 {
+  width: 78.4%; }
+
+.colc6x2 {
+  width: 32.66666%; }
+
+.colc6x3 {
+  width: 49%; }
+
+.colc6x4 {
+  width: 65.33333%; }
+
+.colc6x5 {
+  width: 81.66666%; }
+
+.colc12x2 {
+  width: 16.33333%; }
+
+.colc12x3 {
+  width: 24.5%; }
+
+.colc12x4 {
+  width: 32.66666%; }
+
+.colc12x5 {
+  width: 40.83333%; }
+
+.colc12x6 {
+  width: 49%; }
+
+.colc12x7 {
+  width: 57.16666%; }
+
+.colc12x8 {
+  width: 65.33333%; }
+
+.colc12x9 {
+  width: 73.5%; }
+
+.colc12x10 {
+  width: 81.66666%; }
+
+.colc12x11 {
+  width: 89.83333%; }
+
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .colc1, .max-cols-25 > .colc2, .max-cols-25 > .colc3, .max-cols-25 > .colc4, .max-cols-25 > .colc5, .max-cols-25 > .colc6, .max-cols-25 > .colc7, .max-cols-25 > .colc8, .max-cols-25 > .colc9, .max-cols-25 > .colc10, .max-cols-25 > .colc11, .max-cols-25 > .colc12, .max-cols-25s > .colc1, .max-cols-25s > .colc2, .max-cols-25s > .colc3, .max-cols-25s > .colc4, .max-cols-25s > .colc5, .max-cols-25s > .colc6, .max-cols-25s > .colc7, .max-cols-25s > .colc8, .max-cols-25s > .colc9, .max-cols-25s > .colc10, .max-cols-25s > .colc11, .max-cols-25s > .colc12 {
+    width: 23%; }
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
+    clear: both; }
+  .max-cols-50 .colc:first-child, .max-cols-50s .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%; }
+  .max-cols-50 .colc:last-child, .max-cols-50s .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%; }
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-50s > .colc1, .max-cols-50s > .colc2, .max-cols-50s > .colc3, .max-cols-50s > .colc4, .max-cols-50s > .colc5, .max-cols-50s > .colc6, .max-cols-50s > .colc7, .max-cols-50s > .colc8, .max-cols-50s > .colc9, .max-cols-50s > .colc10, .max-cols-50s > .colc11, .max-cols-50s > .colc12 {
+    width: 48%; }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-50s > .colc5x2, .max-cols-50s > .colc5x3, .max-cols-50s > .colc5x4, .max-cols-50s > .colc6x2, .max-cols-50s > .colc6x3, .max-cols-50s > .colc6x4, .max-cols-50s > .colc6x5 {
     width: 48%; }
   .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both; }
+  .max-cols-100 .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%; }
+  .max-cols-100 .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%; }
   .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%; }
+  .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%; }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%; } }
 
 .colc3x2 {
@@ -3935,7 +4175,7 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-25s > .colf1, .max-cols-25s > .colf2, .max-cols-25s > .colf3, .max-cols-25s > .colf4, .max-cols-25s > .colf5, .max-cols-25s > .colf6, .max-cols-25s > .colf7, .max-cols-25s > .colf8, .max-cols-25s > .colf9, .max-cols-25s > .colf10, .max-cols-25s > .colf11, .max-cols-25s > .colf12, .max-cols-25s > .colf13, .max-cols-25s > .colf14, .max-cols-25s > .colf15 {
     width: 25%; }
-  .max-cols-25 > .colf:nth-child(4), .max-cols-25s > .colf:nth-child(4) {
+  .max-cols-25 > .colf:nth-child(5), .max-cols-25s > .colf:nth-child(5) {
     clear: both; }
   .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-50s > .colf1, .max-cols-50s > .colf2, .max-cols-50s > .colf3, .max-cols-50s > .colf4, .max-cols-50s > .colf5, .max-cols-50s > .colf6, .max-cols-50s > .colf7, .max-cols-50s > .colf8, .max-cols-50s > .colf9, .max-cols-50s > .colf10, .max-cols-50s > .colf11, .max-cols-50s > .colf12, .max-cols-50s > .colf13, .max-cols-50s > .colf14, .max-cols-50s > .colf15 {
     width: 50%; }
@@ -4109,6 +4349,46 @@ Details: It defines the grid system and basic containers as listed below:
     .col-filler-wrap .col-filler.col-filler-right {
       right: 0; }
 
+.col-pad.col-pad-small {
+  padding: 0.5em; }
+  .col-pad.col-pad-small .col, .col-pad.col-pad-small .colf {
+    padding: 1em; }
+
+.col-pad.col-pad-medium {
+  padding: 1em; }
+  .col-pad.col-pad-medium .col, .col-pad.col-pad-medium .colf {
+    padding: 2em; }
+
+.col-pad.col-pad-large {
+  padding: 1.5em; }
+  .col-pad.col-pad-large .col, .col-pad.col-pad-large .colf {
+    padding: 3em; }
+
+.col-pad.col-pad-xlarge {
+  padding: 2em; }
+  .col-pad.col-pad-xlarge .col, .col-pad.col-pad-xlarge .colf {
+    padding: 4em; }
+
+.col-pad-h.col-pad-small {
+  padding: 0 0.5em; }
+  .col-pad-h.col-pad-small .col, .col-pad-h.col-pad-small .colf {
+    padding: 0 1em; }
+
+.col-pad-h.col-pad-medium {
+  padding: 0 1em; }
+  .col-pad-h.col-pad-medium .col, .col-pad-h.col-pad-medium .colf {
+    padding: 0 2em; }
+
+.col-pad-h.col-pad-large {
+  padding: 0 1.5em; }
+  .col-pad-h.col-pad-large .col, .col-pad-h.col-pad-large .colf {
+    padding: 0 3em; }
+
+.col-pad-h.col-pad-xlarge {
+  padding: 0 2em; }
+  .col-pad-h.col-pad-xlarge .col, .col-pad-h.col-pad-xlarge .colf {
+    padding: 0 4em; }
+
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
  * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
@@ -4156,8 +4436,18 @@ Details: It defines the grid system and basic containers as listed below:
   width: 100% !important; }
 
 @media only screen and (max-width: 1024px) {
+  .max-content-25.content-90, .max-content-25.content-80, .max-content-25.content-75, .max-content-25.content-50, .max-content-25.content-25 {
+    width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
   .max-content-25 > .content-90, .max-content-25 > .content-80, .max-content-25 > .content-75, .max-content-25 > .content-50, .max-content-25 > .content-25 {
     width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
+  .max-content-50.content-90, .max-content-50.content-80, .max-content-50.content-75, .max-content-50.content-50, .max-content-50.content-25 {
+    width: 50% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin: 0 auto; }
@@ -4166,6 +4456,10 @@ Details: It defines the grid system and basic containers as listed below:
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin: 0 auto; }
+  .max-content-100.content-90, .max-content-100.content-80, .max-content-100.content-75, .max-content-100.content-50, .max-content-100.content-25 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
   .max-content-100 > .content-90, .max-content-100 > .content-80, .max-content-100 > .content-75, .max-content-100 > .content-50, .max-content-100 > .content-25 {
     width: 100% !important;
     padding-left: 0 !important;
@@ -4211,6 +4505,230 @@ Details: It defines the grid system and basic containers as listed below:
   bottom: 0;
   position: absolute;
   width: 100%; }
+
+.shape.shape-square.shape-square-small {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 50px;
+  height: 50px; }
+
+.shape.shape-square.shape-square-medium {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 100px;
+  height: 100px; }
+
+.shape.shape-square.shape-square-large {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 250px;
+  height: 250px; }
+
+.shape.shape-square.shape-square-xlarge {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 500px;
+  height: 500px; }
+
+.shape.shape-rectangle.shape-rectangle-small {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 75px;
+  height: 50px; }
+
+.shape.shape-rectangle.shape-rectangle-medium {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 150px;
+  height: 100px; }
+
+.shape.shape-rectangle.shape-rectangle-large {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 325px;
+  height: 250px; }
+
+.shape.shape-rectangle.shape-rectangle-xlarge {
+  background: #87BA45;
+  color: #E6E6E6;
+  width: 750px;
+  height: 500px; }
+
+.shape.shape-circle {
+  border-radius: 50%; }
+  .shape.shape-circle.shape-circle-small {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 50px;
+    height: 50px; }
+  .shape.shape-circle.shape-circle-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 100px;
+    height: 100px; }
+  .shape.shape-circle.shape-circle-large {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 250px;
+    height: 250px; }
+  .shape.shape-circle.shape-circle-xlarge {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 500px;
+    height: 500px; }
+
+.shape.shape-oval {
+  border-radius: 100%/50%; }
+  .shape.shape-oval.shape-oval-small {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 50px;
+    height: 50px; }
+  .shape.shape-oval.shape-oval-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 100px;
+    height: 100px; }
+  .shape.shape-oval.shape-oval-large {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 250px;
+    height: 250px; }
+  .shape.shape-oval.shape-oval-xlarge {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 500px;
+    height: 500px; }
+
+.shape.shape-triangle {
+  width: 0;
+  height: 0; }
+  .shape.shape-triangle.shape-triangle-small {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 25px;
+    height: 50px; }
+  .shape.shape-triangle.shape-triangle-medium {
+    background: #87BA45;
+    color: #E6E6E6;
+    width: 50px;
+    height: 100px; }
+
+.shape.shape-hexagon {
+  width: 50px;
+  height: 29px;
+  background: white;
+  position: relative;
+  top: -12px; }
+
+.shape.shape-hexagon:before {
+  content: "";
+  position: absolute;
+  top: -11.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 12.5px solid white;
+  border-left: 25px solid rgba(0, 0, 0, 0);
+  border-right: 25px solid rgba(0, 0, 0, 0); }
+
+.shape.shape-hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 13.5px solid white; }
+
+.filter-blur {
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px); }
+  .filter-blur.filter-blur-small {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px); }
+  .filter-blur.filter-blur-medium {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); }
+  .filter-blur.filter-blur-large {
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px); }
+  .filter-blur.filter-blur-xlarge {
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px); }
+
+.filter-grayscale.filter-grayscale-25 {
+  -webkit-filter: grayscale(0.25);
+  -moz-filter: grayscale(0.25);
+  -o-filter: grayscale(0.25);
+  -ms-filter: grayscale(0.25);
+  filter: grayscale(0.25); }
+
+.filter-grayscale.filter-grayscale-50 {
+  -webkit-filter: grayscale(0.5);
+  -moz-filter: grayscale(0.5);
+  -o-filter: grayscale(0.5);
+  -ms-filter: grayscale(0.5);
+  filter: grayscale(0.5); }
+
+.filter-grayscale.filter-grayscale-75 {
+  -webkit-filter: grayscale(0.75);
+  -moz-filter: grayscale(0.75);
+  -o-filter: grayscale(0.75);
+  -ms-filter: grayscale(0.75);
+  filter: grayscale(0.75); }
+
+.filter-grayscale.filter-grayscale-100 {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1); }
+
+.filter-sepia.filter-sepia-25 {
+  -webkit-filter: sepia(0.25);
+  -moz-filter: sepia(0.25);
+  -o-filter: sepia(0.25);
+  -ms-filter: sepia(0.25);
+  filter: sepia(0.25); }
+
+.filter-sepia.filter-sepia-50 {
+  -webkit-filter: sepia(0.5);
+  -moz-filter: sepia(0.5);
+  -o-filter: sepia(0.5);
+  -ms-filter: sepia(0.5);
+  filter: sepia(0.5); }
+
+.filter-sepia.filter-sepia-75 {
+  -webkit-filter: sepia(0.75);
+  -moz-filter: sepia(0.75);
+  -o-filter: sepia(0.75);
+  -ms-filter: sepia(0.75);
+  filter: sepia(0.75); }
+
+.filter-sepia.filter-sepia-100 {
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  -o-filter: sepia(1);
+  -ms-filter: sepia(1);
+  filter: sepia(1); }
 
 .hover-color-primary {
   -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -4601,6 +5119,46 @@ Details: It defines the grid system and basic containers as listed below:
     -ms-transform: scale(1, -1);
     transform: scale(1, -1); }
 
+.hover-zoom-in.hover-zoom-in-small {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-small:hover {
+    transform: scale(1.05); }
+
+.hover-zoom-in.hover-zoom-in-medium {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-medium:hover {
+    transform: scale(1.1); }
+
+.hover-zoom-in.hover-zoom-in-large {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-large:hover {
+    transform: scale(1.25); }
+
+.hover-zoom-in.hover-zoom-in-xlarge {
+  transition: transform 420ms; }
+  .hover-zoom-in.hover-zoom-in-xlarge:hover {
+    transform: scale(1.5); }
+
+.hover-zoom-out.hover-zoom-out-small {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-small:hover {
+    transform: scale(0.95); }
+
+.hover-zoom-out.hover-zoom-out-medium {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-medium:hover {
+    transform: scale(0.9); }
+
+.hover-zoom-out.hover-zoom-out-large {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-large:hover {
+    transform: scale(0.75); }
+
+.hover-zoom-out.hover-zoom-out-xlarge {
+  transition: transform 420ms; }
+  .hover-zoom-out.hover-zoom-out-xlarge:hover {
+    transform: scale(0.5); }
+
 .hover-spin:hover {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear; }
@@ -4934,7 +5492,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
-      z-index: 100000;
+      z-index: 99999;
       width: 100%;
       padding: 0.30em;
       background-color: #F2F2F2;
@@ -5029,7 +5587,8 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 
 .cmt-select-native {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
   .cmt-select-native select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -5243,134 +5802,330 @@ Details: It defines the custom element styles as listed below:
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
 ***********************************************************************/
-.btn.btn-auto {
-  width: auto; }
+.btn {
+  -webkit-transition: all 420ms ease-in-out 0s;
+  -moz-transition: all 420ms ease-in-out 0s;
+  -ms-transition: all 420ms ease-in-out 0s;
+  -o-transition: all 420ms ease-in-out 0s;
+  transition: all 420ms ease-in-out 0s;
+  background-color: #E74343;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #FF3636;
+    color: #FFFFFF; }
+  .btn:active {
+    background-color: #b51717;
+    color: #FFFFFF; }
+  .btn:disabled {
+    background-color: gray !important;
+    color: #363636 !important;
+    cursor: default; }
+  .btn.btn-auto {
+    width: auto; }
+  .btn.btn-25 {
+    width: 25% !important; }
+  .btn.btn-50 {
+    width: 50% !important; }
+  .btn.btn-75 {
+    width: 75% !important; }
+  .btn.btn-small {
+    width: 80px !important; }
+  .btn.btn-medium {
+    width: 120px !important; }
+  .btn.btn-large {
+    width: 180px !important; }
+  .btn.btn-xlarge {
+    width: 250px !important; }
+  .btn.btn-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+    .btn.btn-primary:hover {
+      background-color: lightgray;
+      color: #555555; }
+  .btn.btn-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+    .btn.btn-secondary:hover {
+      background-color: #232831;
+      color: #c2d1e7; }
+  .btn.btn-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+    .btn.btn-tertiary:hover {
+      background-color: #678d34;
+      color: #c1db9e; }
+  .btn.btn-link {
+    background-color: #298ccf;
+    color: #FFFFFF; }
+    .btn.btn-link:hover {
+      background-color: #E74343;
+      color: #FFFFFF; }
+  .btn.btn-white {
+    background-color: #FFFFFF;
+    color: #000000; }
+    .btn.btn-white:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-black {
+    background-color: #000000;
+    color: #FFFFFF; }
+    .btn.btn-black:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-gray {
+    background-color: #7F7F7F;
+    color: #FFFFFF; }
+    .btn.btn-gray:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-blue {
+    background-color: #0074D9; }
+    .btn.btn-blue:hover {
+      background-color: #0059A6; }
+  .btn.btn-purple {
+    background-color: #8946C4; }
+    .btn.btn-purple:hover {
+      background-color: #663096; }
+  .btn.btn-orange {
+    background-color: #FF851B; }
+    .btn.btn-orange:hover {
+      background-color: #E76B00; }
+  .btn.btn-yellow {
+    background-color: #FFDC00; }
+    .btn.btn-yellow:hover {
+      background-color: #DDBF00; }
+  .btn.btn-red {
+    background-color: #FF4136; }
+    .btn.btn-red:hover {
+      background-color: #F10D00; }
+  .btn.btn-pink {
+    background-color: #E4287C; }
+    .btn.btn-pink:hover {
+      background-color: #B2165C; }
+  .btn.btn-magenta {
+    background-color: #B200B2; }
+    .btn.btn-magenta:hover {
+      background-color: #6E006E; }
+  .btn.btn-green {
+    background-color: #7CAA2D; }
+    .btn.btn-green:hover {
+      background-color: #55741F; }
+  .btn.btn-brown {
+    background-color: #8B4513; }
+    .btn.btn-brown:hover {
+      background-color: #4F270B; }
+  .btn.btn-aqua {
+    background-color: #8AE2E3; }
+    .btn.btn-aqua:hover {
+      background-color: #4cd3d4; }
+  .btn.btn-golden {
+    background-color: #E9C011; }
+    .btn.btn-golden:hover {
+      background-color: #a2850c; }
+  .btn.btn-silver {
+    background-color: #E7E8E7; }
+    .btn.btn-silver:hover {
+      background-color: #c0c3c0; }
+  .btn.btn-maroon {
+    background-color: #542628; }
+    .btn.btn-maroon:hover {
+      background-color: #1f0e0f; }
+  .btn.btn-olive {
+    background-color: #A3A54C; }
+    .btn.btn-olive:hover {
+      background-color: #6f7134; }
+  .btn.btn-lime {
+    background-color: #D3F235; }
+    .btn.btn-lime:hover {
+      background-color: #aecd0d; }
+  .btn.btn-navy {
+    background-color: #003653; }
+    .btn.btn-navy:hover {
+      background-color: #000407; }
+  .btn.btn-reverse:hover {
+    background-color: #E74343 !important;
+    color: #FFFFFF !important; }
 
-.btn.btn-25 {
-  width: 25% !important; }
-
-.btn.btn-50 {
-  width: 50% !important; }
-
-.btn.btn-75 {
-  width: 75% !important; }
-
-.btn.btn-small {
-  width: 80px !important; }
-
-.btn.btn-medium {
-  width: 120px !important; }
-
-.btn.btn-large {
-  width: 180px !important; }
-
-.btn.btn-xlarge {
-  width: 250px !important; }
-
-.btn.btn-white {
-  background-color: #FFFFFF;
-  color: #000000; }
-  .btn.btn-white:hover {
-    background-color: #595959;
-    color: #A5A5A5; }
-
-.btn.btn-black {
-  background-color: #000000;
-  color: #FFFFFF; }
-  .btn.btn-black:hover {
-    background-color: #595959;
-    color: #A5A5A5; }
-
-.btn.btn-gray {
-  background-color: #7F7F7F;
-  color: #FFFFFF; }
-  .btn.btn-gray:hover {
-    background-color: #595959;
-    color: #A5A5A5; }
-
-.btn.btn-blue {
-  background-color: #0074D9; }
-  .btn.btn-blue:hover {
-    background-color: #0059A6; }
-
-.btn.btn-purple {
-  background-color: #8946C4; }
-  .btn.btn-purple:hover {
-    background-color: #663096; }
-
-.btn.btn-orange {
-  background-color: #FF851B; }
-  .btn.btn-orange:hover {
-    background-color: #E76B00; }
-
-.btn.btn-yellow {
-  background-color: #FFDC00; }
-  .btn.btn-yellow:hover {
-    background-color: #DDBF00; }
-
-.btn.btn-red {
-  background-color: #FF4136; }
-  .btn.btn-red:hover {
-    background-color: #F10D00; }
-
-.btn.btn-pink {
-  background-color: #E4287C; }
-  .btn.btn-pink:hover {
-    background-color: #B2165C; }
-
-.btn.btn-magenta {
-  background-color: #B200B2; }
-  .btn.btn-magenta:hover {
-    background-color: #6E006E; }
-
-.btn.btn-green {
-  background-color: #7CAA2D; }
-  .btn.btn-green:hover {
-    background-color: #55741F; }
-
-.btn.btn-brown {
-  background-color: #8B4513; }
-  .btn.btn-brown:hover {
-    background-color: #4F270B; }
-
-.btn.btn-aqua {
-  background-color: #8AE2E3; }
-  .btn.btn-aqua:hover {
-    background-color: #4cd3d4; }
-
-.btn.btn-golden {
-  background-color: #E9C011; }
-  .btn.btn-golden:hover {
-    background-color: #a2850c; }
-
-.btn.btn-silver {
-  background-color: #E7E8E7; }
-  .btn.btn-silver:hover {
-    background-color: #c0c3c0; }
-
-.btn.btn-maroon {
-  background-color: #542628; }
-  .btn.btn-maroon:hover {
-    background-color: #1f0e0f; }
-
-.btn.btn-olive {
-  background-color: #A3A54C; }
-  .btn.btn-olive:hover {
-    background-color: #6f7134; }
-
-.btn.btn-lime {
-  background-color: #D3F235; }
-  .btn.btn-lime:hover {
-    background-color: #aecd0d; }
-
-.btn.btn-navy {
-  background-color: #003653; }
-  .btn.btn-navy:hover {
-    background-color: #000407; }
-
-.btn.btn-reverse:hover {
-  background-color: #E74343 !important;
-  color: #FFFFFF !important; }
+.btn-border {
+  background: transparent !important; }
+  .btn-border.btn-border-primary {
+    color: #3C4655 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+    -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+    box-shadow: inset 0 0 0 1px #F2F2F2; }
+    .btn-border.btn-border-primary:hover {
+      color: #363636 !important;
+      background-color: #F2F2F2 !important; }
+  .btn-border.btn-border-secondary {
+    color: #3C4655 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #3C4655;
+    -moz-box-shadow: inset 0 0 0 1px #3C4655;
+    box-shadow: inset 0 0 0 1px #3C4655; }
+    .btn-border.btn-border-secondary:hover {
+      color: #96B0D6 !important;
+      background-color: #3C4655 !important; }
+  .btn-border.btn-border-tertiary {
+    color: #87BA45 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #87BA45;
+    -moz-box-shadow: inset 0 0 0 1px #87BA45;
+    box-shadow: inset 0 0 0 1px #87BA45; }
+    .btn-border.btn-border-tertiary:hover {
+      color: #E6E6E6 !important;
+      background-color: #87BA45 !important; }
+  .btn-border.btn-border-link {
+    color: #298ccf !important;
+    -webkit-box-shadow: inset 0 0 0 1px #298ccf;
+    -moz-box-shadow: inset 0 0 0 1px #298ccf;
+    box-shadow: inset 0 0 0 1px #298ccf; }
+    .btn-border.btn-border-link:hover {
+      color: #FFFFFF !important;
+      background-color: #298ccf !important; }
+  .btn-border.btn-border-white {
+    color: #000000 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #000000;
+    -moz-box-shadow: inset 0 0 0 1px #000000;
+    box-shadow: inset 0 0 0 1px #000000; }
+    .btn-border.btn-border-white:hover {
+      color: #FFFFFF !important;
+      background-color: #000000 !important; }
+  .btn-border.btn-border-black {
+    color: #FFFFFF !important;
+    -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
+    -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
+    box-shadow: inset 0 0 0 1px #FFFFFF; }
+    .btn-border.btn-border-black:hover {
+      color: #FFFFFF !important;
+      background-color: #FFFFFF !important; }
+  .btn-border.btn-border-blue {
+    color: #0074D9 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #0074D9;
+    -moz-box-shadow: inset 0 0 0 1px #0074D9;
+    box-shadow: inset 0 0 0 1px #0074D9; }
+    .btn-border.btn-border-blue:hover {
+      color: #FFFFFF !important;
+      background-color: #0074D9 !important; }
+  .btn-border.btn-border-purple {
+    color: #8946C4 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #8946C4;
+    -moz-box-shadow: inset 0 0 0 1px #8946C4;
+    box-shadow: inset 0 0 0 1px #8946C4; }
+    .btn-border.btn-border-purple:hover {
+      color: #FFFFFF !important;
+      background-color: #8946C4 !important; }
+  .btn-border.btn-border-orange {
+    color: #FF851B !important;
+    -webkit-box-shadow: inset 0 0 0 1px #FF851B;
+    -moz-box-shadow: inset 0 0 0 1px #FF851B;
+    box-shadow: inset 0 0 0 1px #FF851B; }
+    .btn-border.btn-border-orange:hover {
+      color: #FFFFFF !important;
+      background-color: #FF851B !important; }
+  .btn-border.btn-border-yellow {
+    color: #FFDC00 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #FFDC00;
+    -moz-box-shadow: inset 0 0 0 1px #FFDC00;
+    box-shadow: inset 0 0 0 1px #FFDC00; }
+    .btn-border.btn-border-yellow:hover {
+      color: #FFFFFF !important;
+      background-color: #FFDC00 !important; }
+  .btn-border.btn-border-red {
+    color: #FF4136 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #FF4136;
+    -moz-box-shadow: inset 0 0 0 1px #FF4136;
+    box-shadow: inset 0 0 0 1px #FF4136; }
+    .btn-border.btn-border-red:hover {
+      color: #FFFFFF !important;
+      background-color: #FF4136 !important; }
+  .btn-border.btn-border-pink {
+    color: #E4287C !important;
+    -webkit-box-shadow: inset 0 0 0 1px #E4287C;
+    -moz-box-shadow: inset 0 0 0 1px #E4287C;
+    box-shadow: inset 0 0 0 1px #E4287C; }
+    .btn-border.btn-border-pink:hover {
+      color: #FFFFFF !important;
+      background-color: #E4287C !important; }
+  .btn-border.btn-border-magenta {
+    color: #B200B2 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #B200B2;
+    -moz-box-shadow: inset 0 0 0 1px #B200B2;
+    box-shadow: inset 0 0 0 1px #B200B2; }
+    .btn-border.btn-border-magenta:hover {
+      color: #FFFFFF !important;
+      background-color: #B200B2 !important; }
+  .btn-border.btn-border-aqua {
+    color: #8AE2E3 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #8AE2E3;
+    -moz-box-shadow: inset 0 0 0 1px #8AE2E3;
+    box-shadow: inset 0 0 0 1px #8AE2E3; }
+    .btn-border.btn-border-aqua:hover {
+      color: #FFFFFF !important;
+      background-color: #8AE2E3 !important; }
+  .btn-border.btn-border-green {
+    color: #7CAA2D !important;
+    -webkit-box-shadow: inset 0 0 0 1px #7CAA2D;
+    -moz-box-shadow: inset 0 0 0 1px #7CAA2D;
+    box-shadow: inset 0 0 0 1px #7CAA2D; }
+    .btn-border.btn-border-green:hover {
+      color: #FFFFFF !important;
+      background-color: #7CAA2D !important; }
+  .btn-border.btn-border-brown {
+    color: #8B4513 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #8B4513;
+    -moz-box-shadow: inset 0 0 0 1px #8B4513;
+    box-shadow: inset 0 0 0 1px #8B4513; }
+    .btn-border.btn-border-brown:hover {
+      color: #FFFFFF !important;
+      background-color: #8B4513 !important; }
+  .btn-border.btn-border-golden {
+    color: #E9C011 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #E9C011;
+    -moz-box-shadow: inset 0 0 0 1px #E9C011;
+    box-shadow: inset 0 0 0 1px #E9C011; }
+    .btn-border.btn-border-golden:hover {
+      color: #FFFFFF !important;
+      background-color: #E9C011 !important; }
+  .btn-border.btn-border-silver {
+    color: #E7E8E7 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #E7E8E7;
+    -moz-box-shadow: inset 0 0 0 1px #E7E8E7;
+    box-shadow: inset 0 0 0 1px #E7E8E7; }
+    .btn-border.btn-border-silver:hover {
+      color: #FFFFFF !important;
+      background-color: #E7E8E7 !important; }
+  .btn-border.btn-border-maroon {
+    color: #542628 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #542628;
+    -moz-box-shadow: inset 0 0 0 1px #542628;
+    box-shadow: inset 0 0 0 1px #542628; }
+    .btn-border.btn-border-maroon:hover {
+      color: #FFFFFF !important;
+      background-color: #542628 !important; }
+  .btn-border.btn-border-olive {
+    color: #A3A54C !important;
+    -webkit-box-shadow: inset 0 0 0 1px #A3A54C;
+    -moz-box-shadow: inset 0 0 0 1px #A3A54C;
+    box-shadow: inset 0 0 0 1px #A3A54C; }
+    .btn-border.btn-border-olive:hover {
+      color: #FFFFFF !important;
+      background-color: #A3A54C !important; }
+  .btn-border.btn-border-lime {
+    color: #D3F235 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #D3F235;
+    -moz-box-shadow: inset 0 0 0 1px #D3F235;
+    box-shadow: inset 0 0 0 1px #D3F235; }
+    .btn-border.btn-border-lime:hover {
+      color: #FFFFFF !important;
+      background-color: #D3F235 !important; }
+  .btn-border.btn-border-navy {
+    color: #003653 !important;
+    -webkit-box-shadow: inset 0 0 0 1px #003653;
+    -moz-box-shadow: inset 0 0 0 1px #003653;
+    box-shadow: inset 0 0 0 1px #003653; }
+    .btn-border.btn-border-navy:hover {
+      color: #FFFFFF !important;
+      background-color: #003653 !important; }
 
 a.btn, .link.btn {
   color: #FFFFFF; }
@@ -5460,9 +6215,9 @@ a:hover, .link:hover {
   .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
     color: #FF3636; }
 
-.cmt-click {
+.click {
   cursor: pointer; }
-  .cmt-click.disabled {
+  .click.disabled {
     cursor: default; }
 
 /**********************************************************************
@@ -5515,21 +6270,21 @@ form {
   margin: 0;
   display: inline-block; }
 
-.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
+.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .frm-element, .cmt-select-wrap {
   width: 100%; }
-  .element-25.btn, label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
+  .frm-element-25.btn, label.frm-element-25, input.frm-element-25[type="text"], input.frm-element-25[type="email"], input.frm-element-25[type="password"], textarea.frm-element-25, select.frm-element-25, input.frm-element-25[type="submit"], input.frm-element-25[type="button"], button.frm-element-25, .frm-element-25.frm-element, .frm-element-25.cmt-select-wrap {
     width: 25% !important; }
-  .element-50.btn, label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
+  .frm-element-50.btn, label.frm-element-50, input.frm-element-50[type="text"], input.frm-element-50[type="email"], input.frm-element-50[type="password"], textarea.frm-element-50, select.frm-element-50, input.frm-element-50[type="submit"], input.frm-element-50[type="button"], button.frm-element-50, .frm-element-50.frm-element, .frm-element-50.cmt-select-wrap {
     width: 50% !important; }
-  .element-75.btn, label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
+  .frm-element-75.btn, label.frm-element-75, input.frm-element-75[type="text"], input.frm-element-75[type="email"], input.frm-element-75[type="password"], textarea.frm-element-75, select.frm-element-75, input.frm-element-75[type="submit"], input.frm-element-75[type="button"], button.frm-element-75, .frm-element-75.frm-element, .frm-element-75.cmt-select-wrap {
     width: 75% !important; }
-  .element-small.btn, label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
+  .frm-element-small.btn, label.frm-element-small, input.frm-element-small[type="text"], input.frm-element-small[type="email"], input.frm-element-small[type="password"], textarea.frm-element-small, select.frm-element-small, input.frm-element-small[type="submit"], input.frm-element-small[type="button"], button.frm-element-small, .frm-element-small.frm-element, .frm-element-small.cmt-select-wrap {
     width: 80px !important; }
-  .element-medium.btn, label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
+  .frm-element-medium.btn, label.frm-element-medium, input.frm-element-medium[type="text"], input.frm-element-medium[type="email"], input.frm-element-medium[type="password"], textarea.frm-element-medium, select.frm-element-medium, input.frm-element-medium[type="submit"], input.frm-element-medium[type="button"], button.frm-element-medium, .frm-element-medium.frm-element, .frm-element-medium.cmt-select-wrap {
     width: 120px !important; }
-  .element-large.btn, label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
+  .frm-element-large.btn, label.frm-element-large, input.frm-element-large[type="text"], input.frm-element-large[type="email"], input.frm-element-large[type="password"], textarea.frm-element-large, select.frm-element-large, input.frm-element-large[type="submit"], input.frm-element-large[type="button"], button.frm-element-large, .frm-element-large.frm-element, .frm-element-large.cmt-select-wrap {
     width: 180px !important; }
-  .element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
+  .frm-element-xlarge.btn, label.frm-element-xlarge, input.frm-element-xlarge[type="text"], input.frm-element-xlarge[type="email"], input.frm-element-xlarge[type="password"], textarea.frm-element-xlarge, select.frm-element-xlarge, input.frm-element-xlarge[type="submit"], input.frm-element-xlarge[type="button"], button.frm-element-xlarge, .frm-element-xlarge.frm-element, .frm-element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .cmt-select-wrap .cmt-selected {
@@ -5557,8 +6312,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
   input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
-    background-color: #CCCCCC;
-    color: #909090;
+    background-color: #CCCCCC !important;
+    color: #909090 !important;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
@@ -5576,9 +6331,9 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   .form .cmt-checkbox:focus, .form .cmt-switch:focus {
     color: #4F688E; }
   .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
-    color: #909090; }
+    color: #909090 !important; }
 
-.btn, .btn-icon, input[type="submit"], input[type="button"], button {
+.btn-icon, input[type="submit"], input[type="button"], button {
   -webkit-transition: all 420ms ease-in-out 0s;
   -moz-transition: all 420ms ease-in-out 0s;
   -ms-transition: all 420ms ease-in-out 0s;
@@ -5588,15 +6343,15 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   color: #FFFFFF;
   text-align: center;
   cursor: pointer; }
-  .btn:hover, .btn-icon:hover, input:hover[type="submit"], input:hover[type="button"], button:hover {
+  .btn-icon:hover, input:hover[type="submit"], input:hover[type="button"], button:hover {
     background-color: #FF3636;
     color: #FFFFFF; }
-  .btn:active, .btn-icon:active, input:active[type="submit"], input:active[type="button"], button:active {
+  .btn-icon:active, input:active[type="submit"], input:active[type="button"], button:active {
     background-color: #b51717;
     color: #FFFFFF; }
-  .btn:disabled, .btn-icon:disabled, input:disabled[type="submit"], input:disabled[type="button"], button:disabled {
-    background-color: gray;
-    color: #363636;
+  .btn-icon:disabled, input:disabled[type="submit"], input:disabled[type="button"], button:disabled {
+    background-color: gray !important;
+    color: #363636 !important;
     cursor: default; }
 
 label {
@@ -5607,7 +6362,7 @@ label {
   content: " *";
   color: #FF4136; }
 
-.element {
+.frm-element {
   display: inline-block; }
 
 .disabled {
@@ -5632,22 +6387,22 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   position: relative;
   display: inline-block;
   width: 100%; }
-  .frm-icon-element.element-25 {
+  .frm-icon-element.frm-element-25 {
     width: 25% !important; }
-  .frm-icon-element.element-50 {
+  .frm-icon-element.frm-element-50 {
     width: 50% !important; }
-  .frm-icon-element.element-75 {
+  .frm-icon-element.frm-element-75 {
     width: 75% !important; }
-  .frm-icon-element.element-small {
+  .frm-icon-element.frm-element-small {
     width: 80px !important; }
-  .frm-icon-element.element-medium {
+  .frm-icon-element.frm-element-medium {
     width: 120px !important; }
-  .frm-icon-element.element-large {
+  .frm-icon-element.frm-element-large {
     width: 180px !important; }
-  .frm-icon-element.element-xlarge {
+  .frm-icon-element.frm-element-xlarge {
     width: 250px !important; }
-  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
-  .frm-icon-element .btn {
+  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select,
+  .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
     padding-left: 2.1em;
     width: 100% !important; }
   .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
@@ -5659,8 +6414,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding: 0.30em 0.40em;
     margin: 0;
     line-height: 1.4; }
-  .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button,
-  .frm-icon-element.icon-right .btn {
+  .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select,
+  .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button, .frm-icon-element.icon-right .btn {
     padding-left: 0.30em;
     padding-right: 2.1em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
@@ -5784,26 +6539,26 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   float: none;
   width: auto; }
 
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
   width: 100%; }
 
 .frm-split-40-60 .auto-fill-items-wrap {
   width: 60%;
   margin-left: 40%; }
 
-.frm-split-40-60 label, .element-40 {
+.frm-split-40-60 label, .frm-element-40 {
   clear: both;
   width: 40%;
   float: left; }
 
-.element-40 label {
+.frm-element-40 label {
   width: 100%; }
 
-.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .element-40 {
+.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .frm-element-40 {
   clear: none; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
   width: 60%;
   float: left; }
@@ -5816,9 +6571,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   width: 60%;
   float: left; }
 
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.frm-element-60 input[type="text"], .frm-element-60 input[type="email"], .frm-element-60 input[type="password"],
+.frm-element-60 textarea, .frm-element-60 select,
+.frm-element-60 .cmt-select-wrap, .frm-element-60 .icon-picker {
   width: 100%; }
 
 .frm-split-40-60 .frm-icon-element {
@@ -5833,7 +6588,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 @media only screen and (max-width: 480px) {
   .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
     width: 100%; }
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
@@ -5999,7 +6754,13 @@ Basic - It define the styles of basic tab with borders. The bordered tabs are co
 used for bordered boxes and panels.
 
 Underline - The underlined tabs use underline to hightlight the tabs and active tab.
+
+Table - Tabs arranged using table display. Preferred for evenly spaced tabs with tab count 1, 2, 4 or 10.
 ***********************************************************************/
+.tabs .tab-links-wrap .tab-link a, .tabs .tab-links-wrap .tab-link .link {
+  display: inline-block;
+  width: 100%; }
+
 .tabs-basic .tab-links-wrap {
   border-bottom: 1px solid #595959; }
   .tabs-basic .tab-links-wrap .tab-link {
@@ -6029,6 +6790,35 @@ Underline - The underlined tabs use underline to hightlight the tabs and active 
 
 .tabs-underline .tab-content-wrap .tab-content {
   display: none; }
+
+.tabs-table .tab-links-wrap {
+  text-align: center;
+  border-bottom: 0px;
+  display: table;
+  width: 100%; }
+  .tabs-table .tab-links-wrap .tab-link {
+    background-color: #3C4655;
+    color: #96B0D6;
+    border-bottom: 1px solid #7F7F7F;
+    border-right: 1px solid #7F7F7F;
+    display: table-cell;
+    padding: 0.5em 1em;
+    -moz-transition: background-color 250ms ease-in-out 0s;
+    -ms-transition: background-color 250ms ease-in-out 0s;
+    -o-transition: background-color 250ms ease-in-out 0s;
+    -webkit-transition: background-color 250ms ease-in-out 0s;
+    transition: background-color 250ms ease-in-out 0s; }
+    .tabs-table .tab-links-wrap .tab-link.active, .tabs-table .tab-links-wrap .tab-link:hover {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #FFFFFF; }
+    .tabs-table .tab-links-wrap .tab-link.tab-link-100 {
+      width: 50%; }
+    .tabs-table .tab-links-wrap .tab-link.tab-link-50 {
+      width: 50%; }
+    .tabs-table .tab-links-wrap .tab-link.tab-link-25 {
+      width: 25%; }
+    .tabs-table .tab-links-wrap .tab-link.tab-link-10 {
+      width: 10%; }
 
 /**********************************************************************
 Description: It defines the styles of accordial element. The accordian is a multi 
@@ -6090,6 +6880,60 @@ Border Accordian - It's extension of Basic Accordian with default borders.
   .accordian-border .accordian-tab .accordian-view.active {
     border-left: 2px solid #87BA45; }
 
+.actions-list .actions-list-title {
+  cursor: pointer;
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
+
+.actions-list-data {
+  position: absolute;
+  display: none;
+  z-index: 10000; }
+  .actions-list-data .action {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer; }
+    .actions-list-data .action a, .actions-list-data .action .link, .actions-list-data .action .action-title {
+      display: inline-block;
+      width: 100%; }
+
+.actions-list-settings .actions-list-title {
+  background-color: #F2F2F2;
+  color: #363636;
+  width: 64px;
+  height: 35px;
+  padding: 5px 8px;
+  border: 1px solid #7F7F7F;
+  cursor: pointer;
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
+  .actions-list-settings .actions-list-title .icon {
+    line-height: 25px; }
+  .actions-list-settings .actions-list-title .icon-setting {
+    float: left; }
+  .actions-list-settings .actions-list-title .icon-caret {
+    float: right; }
+  .actions-list-settings .actions-list-title:hover {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.actions-list-data-settings {
+  width: 120px;
+  border: 1px solid #7F7F7F; }
+  .actions-list-data-settings .action a, .actions-list-data-settings .action .link, .actions-list-data-settings .action .action-title {
+    background-color: #F2F2F2;
+    color: #363636;
+    padding: 0.5em; }
+  .actions-list-data-settings .action:hover a, .actions-list-data-settings .action:hover .link, .actions-list-data-settings .action:hover .action-title {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
 /**********************************************************************
 Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
 
@@ -6137,8 +6981,12 @@ Details: It defines the custom element styles as listed below:
   .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
     background-color: lightgray;
     color: #555555;
+    border: 1px solid #7F7F7F;
     padding: 0.5em;
     cursor: pointer; }
+    .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item:hover {
+      background-color: #F2F2F2;
+      color: #363636; }
   .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
     background-color: lightgray;
     color: #555555; }
@@ -6165,15 +7013,120 @@ Details: It defines the custom element styles as listed below:
         background-color: #3C4655;
         color: #96B0D6; }
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 27 Jan, 2018, 2:02:01 PM
-    Author     : bhagwatchouhan
-*/
+/**********************************************************************
+Description: It defines the styles of file uploader elements.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of file uploader elements as listed below:
+
+Uploader - The barebone uploader class with minimum styles common for all the uploaders. 
+The base class define the structure of uploader having tab with trigger and view.
+
+Basic Uploader - It decorate the uploader element with minimum styles keeping same dimensions 
+of dragger, chooser and file.
+***********************************************************************/
+.uploader {
+  position: relative; }
+  .uploader .file-dragger {
+    position: relative; }
+  .uploader .file-chooser {
+    position: relative; }
+    .uploader .file-chooser input[type="file"] {
+      opacity: 0;
+      cursor: pointer !important;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+
+.uploader-basic {
+  background-color: #3C4655;
+  color: #96B0D6;
+  position: relative;
+  width: 120px;
+  height: 122px; }
+  .uploader-basic .file-dragger, .uploader-basic .file-data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px; }
+  .uploader-basic .file-chooser {
+    z-index: 50;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: auto;
+    display: none;
+    -webkit-transition: all 420ms ease-in-out 0s;
+    -moz-transition: all 420ms ease-in-out 0s;
+    -ms-transition: all 420ms ease-in-out 0s;
+    -o-transition: all 420ms ease-in-out 0s;
+    transition: all 420ms ease-in-out 0s; }
+    .uploader-basic .file-chooser.show-chooser {
+      display: block; }
+  .uploader-basic .file-dragger {
+    z-index: 25; }
+    .uploader-basic .file-dragger .drag-wrap {
+      width: 120px;
+      height: 120px;
+      pointer-events: auto; }
+      .uploader-basic .file-dragger .drag-wrap.dragger-hover {
+        background-color: #232831; }
+  .uploader-basic .file-data {
+    z-index: 5;
+    overflow: hidden; }
+    .uploader-basic .file-data img {
+      width: 120px; }
+    .uploader-basic .file-data .bkg-image {
+      width: 100%;
+      height: 100%; }
+  .uploader-basic .file-preloader {
+    position: absolute;
+    top: 120px;
+    width: 120px; }
+    .uploader-basic .file-preloader .file-preloader-bar {
+      background-color: blue;
+      width: 0;
+      height: 2px; }
+  .uploader-basic:hover .file-chooser {
+    display: block; }
+  .uploader-basic.uploader-small {
+    width: 150px;
+    height: 152px; }
+    .uploader-basic.uploader-small .file-dragger, .uploader-basic.uploader-small .file-data {
+      width: 150px;
+      height: 150px; }
+    .uploader-basic.uploader-small .file-chooser {
+      width: 150px; }
+    .uploader-basic.uploader-small .file-dragger .drag-wrap {
+      width: 150px;
+      height: 150px; }
+    .uploader-basic.uploader-small .file-data img {
+      width: 150px; }
+    .uploader-basic.uploader-small .file-preloader {
+      top: 150px;
+      width: 150px; }
+  .uploader-basic.uploader-medium {
+    width: 200px;
+    height: 202px; }
+    .uploader-basic.uploader-medium .file-dragger, .uploader-basic.uploader-medium .file-data {
+      width: 200px;
+      height: 200px; }
+    .uploader-basic.uploader-medium .file-chooser {
+      width: 200px; }
+    .uploader-basic.uploader-medium .file-dragger .drag-wrap {
+      width: 200px;
+      height: 200px; }
+    .uploader-basic.uploader-medium .file-data img {
+      width: 200px; }
+    .uploader-basic.uploader-medium .file-preloader {
+      top: 200px;
+      width: 200px; }
+
 /**********************************************************************
 Description: It defines the styles for flipper components available in CMT-UI css framework.
 
@@ -6213,6 +7166,166 @@ Details: It defines the styles for flipper components as listed below:
       height: 100%; }
 
 /**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
+***********************************************************************/
+.mapper {
+  position: relative; }
+  .mapper .mapper-items .mapper-item {
+    position: relative; }
+
+.mapper-list {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-list .mapper-items {
+    height: 250px;
+    background-color: #F2F2F2; }
+    .mapper-list .mapper-items .mapper-item {
+      display: inline-block;
+      width: 100%;
+      margin: 10px;
+      background-color: #FFFFFF; }
+      .mapper-list .mapper-items .mapper-item.depth-1 {
+        padding-left: 15px; }
+      .mapper-list .mapper-items .mapper-item.depth-2 {
+        padding-left: 30px; }
+      .mapper-list .mapper-items .mapper-item.depth-3 {
+        padding-left: 45px; }
+
+.mapper-auto .mapper-items .mapper-item {
+  background-color: #3C4655;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mapper-auto-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-auto-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-submit {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-submit .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.mapper-submit-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-submit-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-action {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-action .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+/**********************************************************************
+Description: It defines the styles of core data components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of data components as listed below:
+
+* Data		-	The barebone card class with minimum styles.
+***********************************************************************/
+.data.data-primary {
+  background-color: #F2F2F2;
+  color: #363636; }
+
+.data.data-secondary {
+  background-color: #3C4655;
+  color: #96B0D6; }
+
+.data.data-tertiary {
+  background-color: #87BA45;
+  color: #E6E6E6; }
+
+/**********************************************************************
+Description: It defines the styles of CRUD components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of CRUD components as listed below:
+
+CRUD - The barebone class with minimum styles having main and sidebar container
+to show forms and widgets.
+***********************************************************************/
+.data-crud-wrap {
+  position: relative; }
+  .data-crud-wrap .data-crud {
+    position: relative; }
+    .data-crud-wrap .data-crud .data-crud-title {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-form {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-content {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-message {
+      position: relative; }
+    .data-crud-wrap .data-crud .data-crud-actions {
+      position: relative; }
+
+.data-crud-wrap-basic {
+  background-color: white;
+  color: #171717;
+  padding: 1em; }
+  .data-crud-wrap-basic .data-crud {
+    margin-bottom: 2em; }
+    .data-crud-wrap-basic .data-crud .data-crud-title {
+      background-color: #87BA45;
+      color: #E6E6E6;
+      padding: 1rem 0;
+      margin-bottom: 1em;
+      font-size: 1.58em; }
+    .data-crud-wrap-basic .data-crud .data-crud-form {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-content {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-message {
+      padding: 1rem; }
+    .data-crud-wrap-basic .data-crud .data-crud-actions {
+      padding: 1rem; }
+
+/**********************************************************************
 Description: It defines the styles of data zigzag components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -6224,28 +7337,28 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 ***********************************************************************/
 .data-zigzag .data-zigzag-row {
   margin-bottom: 2em; }
-  .data-zigzag .data-zigzag-row img {
+  .data-zigzag .data-zigzag-row .data-zigzag-banner {
     width: 100%;
     height: auto; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: none; }
 
 @media only screen and (min-width: 1025px) {
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: none; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-1 {
     float: left;
@@ -6260,16 +7373,6 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
     float: left;
     padding-right: 1em; } }
 
-/**********************************************************************
-Description: It defines the styles of CRUD components available in Breeze Framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles of CRUD components as listed below:
-
-CRUD - The barebone class with minimum styles having main and sidebar container
-to show forms and widgets.
-***********************************************************************/
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
 
@@ -6299,7 +7402,7 @@ Details: It defines the menu components as listed below:
   display: block; }
   .nav li {
     display: inline-block; }
-    .nav li a {
+    .nav li a, .nav li .link {
       -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -6313,7 +7416,7 @@ Details: It defines the menu components as listed below:
   .vnav li {
     display: inline-block;
     width: 100%; }
-    .vnav li a {
+    .vnav li a, .vnav li .link {
       -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -6322,6 +7425,10 @@ Details: It defines the menu components as listed below:
       display: inline-block;
       width: 100%;
       text-align: center; }
+  .vnav.vnav-left li a, .vnav.vnav-left li .link {
+    text-align: left; }
+  .vnav.vnav-right li a, .vnav.vnav-right li .link {
+    text-align: right; }
 
 .nav-table {
   display: table;
@@ -6329,7 +7436,7 @@ Details: It defines the menu components as listed below:
   .nav-table li {
     display: table-cell;
     text-align: center; }
-    .nav-table li a {
+    .nav-table li a, .nav-table li .link {
       -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
       -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
@@ -6951,124 +8058,81 @@ Details: It defines the styles for sidebar components as listed below:
 ***********************************************************************/
 .sidebar {
   position: relative; }
-  .sidebar .sidebar-header {
-    position: relative; }
+  .sidebar .sidebar-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .sidebar > .texture {
+    z-index: 10; }
   .sidebar .sidebar-content-wrap {
-    position: relative; }
+    position: relative;
+    z-index: 15; }
+    .sidebar .sidebar-content-wrap .sidebar-header {
+      position: relative; }
+    .sidebar .sidebar-content-wrap .sidebar-content {
+      position: relative; }
+      .sidebar .sidebar-content-wrap .sidebar-content .sidebar-content-data {
+        position: relative; }
 
-.sidebar-basic {
-  position: relative; }
-  .sidebar-basic .sidebar-header {
-    display: none; }
-    .sidebar-basic .sidebar-header .sidebar-title {
-      background-color: #87BA45;
-      line-height: 1.33em;
-      padding: 0.5rem;
-      font-size: 1.17em; }
-    .sidebar-basic .sidebar-header .sidebar-control {
-      float: right;
-      display: inline-block;
-      cursor: pointer; }
-  .sidebar-basic .sidebar-content-wrap {
+.sidebar-basic .sidebar-content-wrap .sidebar-header .sidebar-header-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-header .sidebar-header-icon + .sidebar-header-title {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title {
+  font-size: 2em;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info {
+  font-size: 1.33em; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-summary {
+  font-size: 1.08em; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-info, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-summary, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-title + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-summary, .sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-info + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-summary + .sidebar-content-data {
+  margin-top: 0.5rem; }
+
+.sidebar-basic .sidebar-content-wrap .sidebar-content .sidebar-content-data {
+  padding: 1rem 0; }
+
+.sidebar-control .sidebar-content-wrap .sidebar-header {
+  display: none; }
+  .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+    background-color: #87BA45;
+    line-height: 1.33em;
+    padding: 0.5rem;
+    font-size: 1.17em; }
+  .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-control {
+    float: right;
+    display: inline-block;
+    cursor: pointer; }
+
+.sidebar-control .sidebar-content-wrap .sidebar-content {
+  display: block; }
+
+@media only screen and (max-width: 1024px) {
+  .sidebar-control .sidebar-content-wrap .sidebar-header {
     display: block; }
-  @media only screen and (max-width: 1024px) {
-    .sidebar-basic .sidebar-header {
-      display: block; }
-      .sidebar-basic .sidebar-header .sidebar-content-wrap {
-        display: none; } }
-
-/**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for mapper components as listed below:
-
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
-***********************************************************************/
-.mapper {
-  position: relative; }
-  .mapper .mapper-items .mapper-item {
-    position: relative; }
-
-.mapper-list {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-list .mapper-items {
-    height: 250px;
-    background-color: #F2F2F2; }
-    .mapper-list .mapper-items .mapper-item {
-      display: inline-block;
-      width: 100%;
-      margin: 10px;
-      background-color: #FFFFFF; }
-      .mapper-list .mapper-items .mapper-item.depth-1 {
-        padding-left: 15px; }
-      .mapper-list .mapper-items .mapper-item.depth-2 {
-        padding-left: 30px; }
-      .mapper-list .mapper-items .mapper-item.depth-3 {
-        padding-left: 45px; }
-
-.mapper-auto .mapper-items .mapper-item {
-  background-color: #3C4655;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem; }
-
-.mapper-auto-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em; }
-
-.mapper-auto-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: lightgray;
-  color: #555555;
-  padding: 0.25em; }
-
-.mapper-submit {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-submit .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
-
-.mapper-submit-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em; }
-
-.mapper-submit-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: lightgray;
-  color: #555555;
-  padding: 0.25em; }
-
-.mapper-action {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-action .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
+  .sidebar-control .sidebar-content-wrap .sidebar-content {
+    display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for popup components available in CMT-UI css framework.
@@ -7137,12 +8201,18 @@ Details: It defines the styles for popup components as listed below:
     .popup .popup-data.popup-data-small {
       height: 200px;
       width: 400px; }
+      .popup .popup-data.popup-data-small .popup-content-wrap .popup-content {
+        height: 120px; }
     .popup .popup-data.popup-data-medium {
       height: 300px;
       width: 600px; }
+      .popup .popup-data.popup-data-medium .popup-content-wrap .popup-content {
+        height: 220px; }
     .popup .popup-data.popup-data-large {
       height: 400px;
       width: 800px; }
+      .popup .popup-data.popup-data-large .popup-content-wrap .popup-content {
+        height: 320px; }
   @media only screen and (max-width: 768px) {
     .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
       width: 90% !important; } }
@@ -7171,11 +8241,18 @@ Details: It defines the styles for popup components as listed below:
 
 .popup-modal {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 999999999; }
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
+  overflow-y: auto; }
+  .popup-modal .popup-screen, .popup-modal .popup-screen-listener {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
 
 /**********************************************************************
 Description: It defines the styles for popout components available in CMT-UI css framework.
@@ -7216,119 +8293,124 @@ Details: It defines the styles of cmt slider as listed below:
 				around the slides.
 
 ***********************************************************************/
-.cmt-slider {
+.slider {
   position: relative; }
-  .cmt-slider .cmt-slider-slides-wrap {
+  .slider .slider-slides-wrap {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden; }
-    .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides {
+    .slider .slider-slides-wrap .slider-slides {
       position: absolute;
       top: 0px;
       width: 100%;
       height: 100%; }
-      .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+      .slider .slider-slides-wrap .slider-slides .slider-slide {
         position: absolute;
         top: 0px;
         left: 0px;
         overflow: hidden; }
-  .cmt-slider .cmt-slider-control {
+      .slider .slider-slides-wrap .slider-slides .wrap-slide-content {
+        position: relative;
+        width: 100%;
+        height: 100%; }
+  .slider .slider-control {
     cursor: pointer;
     position: absolute; }
-    .cmt-slider .cmt-slider-control.cmt-slider-control-left {
+    .slider .slider-control.slider-control-left {
       top: 0;
       left: 0; }
-    .cmt-slider .cmt-slider-control.cmt-slider-control-right {
+    .slider .slider-control.slider-control-right {
       top: 0;
       right: 0; }
 
-.cmt-slider-basic {
+.slider-basic {
   margin: 0px auto;
   width: 450px; }
-  .cmt-slider-basic .cmt-slider-slides-wrap {
+  .slider-basic .slider-slides-wrap {
     height: 150px; }
-    .cmt-slider-basic .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+    .slider-basic .slider-slides-wrap .slider-slides .slider-slide {
       width: 150px;
       height: 150px;
       background-color: #3C4655;
       color: #96B0D6;
       text-align: center; }
-  .cmt-slider-basic .cmt-slider-control {
+  .slider-basic .slider-control {
     background-color: #87BA45;
     color: #E6E6E6;
     top: 35px;
     width: 64px;
     height: 80px; }
-    .cmt-slider-basic .cmt-slider-control:hover {
-      background-color: #a4cb72; }
-    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg {
+    .slider-basic .slider-control:hover {
+      background-color: #a4cb72;
+      color: #678d34; }
+    .slider-basic .slider-control.slider-control-bkg {
       background-image: url("../images/slider-arrow.png");
       background-repeat: none;
       background-position: 0px 0px; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left {
+      .slider-basic .slider-control.slider-control-bkg.slider-control-left {
         left: 20px;
         background-position: 0px 80px; }
-        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left:hover {
+        .slider-basic .slider-control.slider-control-bkg.slider-control-left:hover {
           background-position: 0px 0px; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right {
+      .slider-basic .slider-control.slider-control-bkg.slider-control-right {
         right: 20px;
         background-position: -48px 80px; }
-        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right:hover {
+        .slider-basic .slider-control.slider-control-bkg.slider-control-right:hover {
           background-position: -48px 0px; }
 
-.cmt-slider-basic-fixed {
+.slider-basic-fixed {
   width: 1628px; }
-  .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+  .slider-basic-fixed .slider-slides-wrap {
     width: 1500px;
     margin: 0 64px; }
   @media only screen and (max-width: 1600px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 1328px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 1200px; } }
   @media only screen and (max-width: 1360px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 1028px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 900px; } }
   @media only screen and (max-width: 1024px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 690px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 600px;
         height: 100px;
         margin: 0 45px; }
-        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+        .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
           width: 100px;
           height: 100px; }
-      .cmt-slider-basic-fixed .cmt-slider-control {
+      .slider-basic-fixed .slider-control {
         width: 45px;
         height: 100px; } }
   @media only screen and (max-width: 768px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 440px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 360px;
         height: 90px; }
-        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+        .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
           width: 90px;
           height: 90px; }
-      .cmt-slider-basic-fixed .cmt-slider-control {
+      .slider-basic-fixed .slider-control {
         width: 40px;
         height: 90px; } }
   @media only screen and (max-width: 480px) {
-    .cmt-slider-basic-fixed {
+    .slider-basic-fixed {
       width: 260px; }
-      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
+      .slider-basic-fixed .slider-slides-wrap {
         width: 180px; } }
 
-.cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
+.slider-lightbox .slider-slides-wrap .slider-slides .slider-slide {
   cursor: pointer;
   -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
   -moz-box-shadow: inset 1px 1px 100px 0px #000000;
   box-shadow: inset 1px 1px 100px 0px #000000; }
-  .cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide:hover {
+  .slider-lightbox .slider-slides-wrap .slider-slides .slider-slide:hover {
     -webkit-transition: all 250ms ease-in-out 0s;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
@@ -7337,6 +8419,182 @@ Details: It defines the styles of cmt slider as listed below:
     -webkit-box-shadow: inset 0px 0px 0px 0px #000000;
     -moz-box-shadow: inset 0px 0px 0px 0px #000000;
     box-shadow: inset 0px 0px 0px 0px #000000; }
+
+.slider-collage-5 .crl-wrap .cr.cr-w-h {
+  width: 50%; }
+
+.slider-collage-5 .crl-wrap .cr.cr-w-f {
+  width: 100%; }
+
+.slider-collage-5 .crl-wrap .cr.cr-h-m {
+  height: 120px; }
+
+.slider-collage-5 .crl-wrap .cr.cr-h-l {
+  height: 180px; }
+
+.slider-collage-5 .crl-wrap .cr.cr-h-xl {
+  height: 240px; }
+
+.slider-collage-5 .crl-wrap .cl {
+  display: inline-block; }
+  .slider-collage-5 .crl-wrap .cl.cl-w-ot {
+    width: 33.3333%; }
+  .slider-collage-5 .crl-wrap .cl.cl-w-h {
+    width: 50%; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 120px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 180px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 240px; }
+
+.slider-collage-5 .crl-wrap .cb {
+  display: inline-block; }
+  .slider-collage-5 .crl-wrap .cb.cb-w-0 {
+    width: 0%; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 120px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 180px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 240px; }
+
+.slider-collage-5 .crl-wrap .cl-wrap {
+  width: 100%;
+  height: 100%; }
+
+.slider-collage-5 .crl-wrap .cr-wrap {
+  width: 100%;
+  height: 100%; }
+
+.slider-collage-5 .crl-wrap .wrap-slide-content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 5px solid white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s; }
+  .slider-collage-5 .crl-wrap .wrap-slide-content:hover {
+    -webkit-box-shadow: inset 1px 1px 50px 0px #000000;
+    -moz-box-shadow: inset 1px 1px 50px 0px #000000;
+    box-shadow: inset 1px 1px 50px 0px #000000; }
+
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 120px; }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 160px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 120px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 160px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 120px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 160px; } }
+
+@media only screen and (max-width: 480px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 50px; }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 100px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 50px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 100px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 50px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 80px; }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 100px; } }
+
+.slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+  height: 240px; }
+
+.slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+  height: 360px; }
+
+.slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+  height: 480px; }
+
+.slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+  height: 240px; }
+
+.slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+  height: 360px; }
+
+.slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+  height: 480px; }
+
+.slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+  height: 240px; }
+
+.slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+  height: 360px; }
+
+.slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+  height: 480px; }
+
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 160px; }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 240px; }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 320px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 160px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 240px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 320px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 160px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 240px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 320px; } }
+
+@media only screen and (max-width: 480px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 60px; }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 100px; }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 120px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 60px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 100px; }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 120px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 60px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 100px; }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 120px; } }
 
 /**********************************************************************
 Description: It defines the styles for gallery components available in CMT-UI css framework.
@@ -7640,6 +8898,10 @@ Details: It defines the styles of card components as listed below:
     z-index: 15; }
     .card .card-content-wrap .card-header {
       position: relative; }
+      .card .card-content-wrap .card-header .card-bkg {
+        z-index: 1; }
+      .card .card-content-wrap .card-header > .texture {
+        z-index: 10; }
     .card .card-content-wrap .card-data {
       position: relative; }
     .card .card-content-wrap .card-content {
@@ -7661,7 +8923,7 @@ Details: It defines the styles of card components as listed below:
     color: #E6E6E6; }
 
 .card-basic .card-content-wrap .card-header {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-header .card-header-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -7675,30 +8937,32 @@ Details: It defines the styles of card components as listed below:
     margin-top: 0.5rem; }
 
 .card-basic .card-content-wrap .card-data {
-  padding: 1rem 0; }
+  padding: 1rem; }
 
 .card-basic .card-content-wrap .card-content {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-content .card-content-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-content .card-content-info {
     font-size: 1.08em; }
-  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
+  .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
     margin-top: 0.5rem; }
-  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+  .card-basic .card-content-wrap .card-content .card-content-info + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+    margin-top: 0.5rem; }
+  .card-basic .card-content-wrap .card-content .card-content-summary + .card-content-data {
     margin-top: 0.5rem; }
   .card-basic .card-content-wrap .card-content .card-content-data {
     padding: 1rem 0; }
 
 .card-basic .card-content-wrap .card-footer {
-  padding: 1rem 0; }
+  padding: 1rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title {
     font-size: 1.17em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-footer .card-footer-info {
     font-size: 1.08em; }
-  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
+  .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-content {
     margin-top: 0.5rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
     margin-top: 0.5rem; }
@@ -7776,6 +9040,10 @@ Details: It defines the styles of box components as listed below:
       .box .box-content-wrap .box-header-wrap .box-header {
         position: relative;
         z-index: 20; }
+        .box .box-content-wrap .box-header-wrap .box-header .box-bkg {
+          z-index: 1; }
+        .box .box-content-wrap .box-header-wrap .box-header > .texture {
+          z-index: 10; }
     .box .box-content-wrap .box-data {
       position: relative; }
     .box .box-content-wrap .box-content {
@@ -7830,10 +9098,13 @@ Details: It defines the styles of box components as listed below:
 .box-basic .box-content-wrap .box-content .box-content-summary {
   font-size: 1.08em; }
 
-.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
   margin-top: 0.5rem; }
 
-.box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-info + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+  margin-top: 0.5rem; }
+
+.box-basic .box-content-wrap .box-content .box-content-summary + .box-content-data {
   margin-top: 0.5rem; }
 
 .box-basic .box-content-wrap .box-content .box-content-data {
@@ -7892,14 +9163,14 @@ Details: It defines the styles of box components as listed below:
 .box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
   padding-left: 1.5rem; }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse {
+.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-trigger-collapse:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -7948,7 +9219,7 @@ Details: It defines the styles of form box components as listed below:
 ***********************************************************************/
 .box-form {
   position: relative; }
-  .box-form .box-trigger-form {
+  .box-form .box-form-trigger {
     cursor: pointer; }
   .box-form .box-form-info-wrap {
     display: block; }
@@ -7958,7 +9229,7 @@ Details: It defines the styles of form box components as listed below:
 .box-form-basic {
   background-color: #F2F2F2;
   color: #363636; }
-  .box-form-basic .box-trigger-form {
+  .box-form-basic .box-form-trigger {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
@@ -7966,17 +9237,19 @@ Details: It defines the styles of form box components as listed below:
     color: #298ccf;
     cursor: pointer;
     z-index: 20; }
-    .box-form-basic .box-trigger-form:hover {
+    .box-form-basic .box-form-trigger:hover {
       color: #E74343; }
 
 .box-form-collapsible .box-form-collapsible-trigger {
   cursor: pointer; }
 
-.box-file-uploader .btn-chooser {
+.box-file-uploader .uploader-actions {
   position: absolute;
   right: 0;
   cursor: pointer;
   z-index: 10; }
+  .box-file-uploader .uploader-actions .uploader-action {
+    display: inline-block; }
 
 .box-file-uploader .box-content .box-content-data .file-wrap {
   position: relative;
@@ -8066,9 +9339,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of widget components as listed below:
 
-* Widget	-	The barebone widget with minimum styles.
-*
-* Basic		-	The basic widget defines the styles of widget having text and background colors.
+Widget - The barebone widget with minimum styles.
+
+Basic - The basic widget defines the styles of widget having text and background colors.
 
 ***********************************************************************/
 .widget {
@@ -8100,21 +9373,50 @@ Details: It defines the styles of widget components as listed below:
         position: relative; }
       .widget .widget-content-wrap .widget-content .widget-content-buffer {
         position: relative; }
+  .widget.widget-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .widget.widget-secondary {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .widget.widget-tertiary {
+    background-color: #87BA45;
+    color: #E6E6E6; }
 
 .widget-basic .widget-content-wrap .widget-header {
-  background-color: #87BA45;
-  color: #E6E6E6;
-  padding: 0.5rem; }
+  padding: 1rem 0; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-title {
+    font-size: 1.33em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-info {
+    font-size: 1.08em; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-header .widget-header-info + .widget-header-content {
+    margin-top: 0.5rem; }
 
-.widget-basic .widget-content-wrap .widget-content-wrap {
-  background-color: #F2F2F2;
-  color: #363636;
-  padding: 0.5rem; }
+.widget-basic .widget-content-wrap .widget-content {
+  padding: 1rem 0; }
+  .widget-basic .widget-content-wrap .widget-content .widget-content-data {
+    padding: 1rem 0; }
+  .widget-basic .widget-content-wrap .widget-content .widget-content-data + .widget-content-buffer {
+    margin-top: 0.5rem; }
 
 .widget-basic .widget-content-wrap .widget-footer {
-  background-color: #3C4655;
-  color: #96B0D6;
-  padding: 0.5rem; }
+  padding: 1rem 0; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-title {
+    font-size: 1.17em;
+    font-family: Verdana, Geneva, sans-serif; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
+    font-size: 1.08em; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-content {
+    margin-top: 0.5rem; }
+  .widget-basic .widget-content-wrap .widget-footer .widget-footer-info + .widget-footer-content {
+    margin-top: 0.5rem; }
 
 /**********************************************************************
 Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
@@ -8203,6 +9505,16 @@ Details: It defines the styles for header components as listed below:
       .block .block-content-wrap .block-header-wrap .block-header {
         position: relative;
         z-index: 20; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-fixed {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-scroll {
+          z-index: 1; }
+        .block .block-content-wrap .block-header-wrap .block-header .block-bkg-parallax {
+          z-index: 5; }
+        .block .block-content-wrap .block-header-wrap .block-header > .texture {
+          z-index: 10; }
     .block .block-content-wrap .block-content {
       position: relative; }
       .block .block-content-wrap .block-content .block-content-data {
@@ -8266,10 +9578,13 @@ Details: It defines the styles for header components as listed below:
 .block-basic .block-content-wrap .block-content .block-content-summary {
   font-size: 1.08em; }
 
-.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
   margin-top: 0.5rem; }
 
-.block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 0.5rem; }
+
+.block-basic .block-content-wrap .block-content .block-content-summary + .block-content-data {
   margin-top: 0.5rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-data {
@@ -8284,7 +9599,7 @@ Details: It defines the styles for header components as listed below:
     font-size: 1.17em; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
     font-size: 1.08em; }
-  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
+  .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-content {
     margin-top: 0.5rem; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
     margin-top: 0.5rem; }
@@ -8292,17 +9607,17 @@ Details: It defines the styles for header components as listed below:
     margin-top: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of the pagination components having links to navigate pages.
+Description: It defines the styles of the pagination having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for pagination components as listed below:
+Details: It defines the styles of pagination components as listed below:
 
-* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
-*
-* Basic       - The basic pagination. It uses button colors to decorate pagination states.
-*
-* Full        - Full pagination having both info and pagination links.
+Pagination - The barebone pagination class with minimum styles common for all the data grids.
+
+Basic - The basic pagination. It uses button colors to decorate pagination states.
+
+Full - Full pagination having both info and pagination links.
 ***********************************************************************/
 .pagination {
   display: inline-block; }
@@ -8310,6 +9625,7 @@ Details: It defines the styles for pagination components as listed below:
     display: inline-block;
     list-style: none; }
     .pagination li span, .pagination li a, .pagination .page-link span, .pagination .page-link a {
+      display: inline-block;
       text-decoration: none; }
 
 .pagination-basic li span, .pagination-basic li a, .pagination-basic .page-link span, .pagination-basic .page-link a {
@@ -8322,66 +9638,66 @@ Details: It defines the styles for pagination components as listed below:
   .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
     margin-top: -0.2em; }
 
-.pagination-basic li.first.disabled span, .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span, .pagination-basic li.last.disabled span, .pagination-basic .page-link.first.disabled span, .pagination-basic .page-link.prev.disabled span, .pagination-basic .page-link.next.disabled span, .pagination-basic .page-link.last.disabled span {
+.pagination-basic li.first.link-disabled span, .pagination-basic li.prev.link-disabled span, .pagination-basic li.next.link-disabled span, .pagination-basic li.last.link-disabled span, .pagination-basic .page-link.first.link-disabled span, .pagination-basic .page-link.prev.link-disabled span, .pagination-basic .page-link.next.link-disabled span, .pagination-basic .page-link.last.link-disabled span {
   background-color: gray;
   color: #363636; }
-  .pagination-basic li.first.disabled span:hover, .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover, .pagination-basic li.last.disabled span:hover, .pagination-basic .page-link.first.disabled span:hover, .pagination-basic .page-link.prev.disabled span:hover, .pagination-basic .page-link.next.disabled span:hover, .pagination-basic .page-link.last.disabled span:hover {
+  .pagination-basic li.first.link-disabled span:hover, .pagination-basic li.prev.link-disabled span:hover, .pagination-basic li.next.link-disabled span:hover, .pagination-basic li.last.link-disabled span:hover, .pagination-basic .page-link.first.link-disabled span:hover, .pagination-basic .page-link.prev.link-disabled span:hover, .pagination-basic .page-link.next.link-disabled span:hover, .pagination-basic .page-link.last.link-disabled span:hover {
     background-color: gray;
     color: #363636; }
-  .pagination-basic li.first.disabled span .icon, .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon, .pagination-basic li.last.disabled span .icon, .pagination-basic .page-link.first.disabled span .icon, .pagination-basic .page-link.prev.disabled span .icon, .pagination-basic .page-link.next.disabled span .icon, .pagination-basic .page-link.last.disabled span .icon {
+  .pagination-basic li.first.link-disabled span .icon, .pagination-basic li.prev.link-disabled span .icon, .pagination-basic li.next.link-disabled span .icon, .pagination-basic li.last.link-disabled span .icon, .pagination-basic .page-link.first.link-disabled span .icon, .pagination-basic .page-link.prev.link-disabled span .icon, .pagination-basic .page-link.next.link-disabled span .icon, .pagination-basic .page-link.last.link-disabled span .icon {
     color: #363636; }
-    .pagination-basic li.first.disabled span .icon:hover, .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover, .pagination-basic li.last.disabled span .icon:hover, .pagination-basic .page-link.first.disabled span .icon:hover, .pagination-basic .page-link.prev.disabled span .icon:hover, .pagination-basic .page-link.next.disabled span .icon:hover, .pagination-basic .page-link.last.disabled span .icon:hover {
+    .pagination-basic li.first.link-disabled span .icon:hover, .pagination-basic li.prev.link-disabled span .icon:hover, .pagination-basic li.next.link-disabled span .icon:hover, .pagination-basic li.last.link-disabled span .icon:hover, .pagination-basic .page-link.first.link-disabled span .icon:hover, .pagination-basic .page-link.prev.link-disabled span .icon:hover, .pagination-basic .page-link.next.link-disabled span .icon:hover, .pagination-basic .page-link.last.link-disabled span .icon:hover {
       color: #363636; }
 
 .pagination-basic li.active a, .pagination-basic .page-link.active a {
   background-color: #b51717;
   color: #FFFFFF; }
 
-.pagination-full .page-info {
-  display: inline-block;
-  width: 40%;
-  text-align: left;
-  font-weight: normal; }
-
-.pagination-full .page-links {
-  display: inline-block;
-  width: 59%;
-  text-align: right; }
-  .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
+.pagination-full {
+  display: block; }
+  .pagination-full .page-info {
     display: inline-block;
-    list-style: none;
-    margin: 0;
-    margin-left: 3px;
-    height: 2.1em;
-    line-height: 2.1em; }
-    .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
-      background-color: #87BA45;
-      color: #96B0D6;
-      padding: 0.5em 0.75em;
-      text-decoration: none; }
-    .pagination-full .page-links .pagination li .active a, .pagination-full .page-links .pagination .page-link .active a {
-      background-color: #678d34;
-      color: #c1db9e; }
-    .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link a:hover {
-      background-color: #F2F2F2;
-      color: #363636; }
-    .pagination-full .page-links .pagination li .disabled span, .pagination-full .page-links .pagination .page-link .disabled span {
-      background-color: #7F7F7F;
-      color: #FFFFFF; }
-
-@media only screen and (max-width: 1024px) {
-  .pagination-full .page-info, .pagination-full .page-links {
-    width: 100%;
-    text-align: center; } }
+    width: 40%;
+    text-align: left;
+    font-weight: normal; }
+  .pagination-full .page-links {
+    display: inline-block;
+    width: 59%;
+    text-align: right; }
+    .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      margin-left: 3px;
+      height: 2.1em;
+      line-height: 2.1em; }
+      .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
+        background-color: #87BA45;
+        color: #96B0D6;
+        padding: 0.5em 0.75em;
+        text-decoration: none; }
+        .pagination-full .page-links .pagination li span:hover, .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link span:hover, .pagination-full .page-links .pagination .page-link a:hover {
+          background-color: #F2F2F2;
+          color: #363636; }
+      .pagination-full .page-links .pagination li.first.link-disabled span, .pagination-full .page-links .pagination li.prev.link-disabled span, .pagination-full .page-links .pagination li.next.link-disabled span, .pagination-full .page-links .pagination li.last.link-disabled span, .pagination-full .page-links .pagination .page-link.first.link-disabled span, .pagination-full .page-links .pagination .page-link.prev.link-disabled span, .pagination-full .page-links .pagination .page-link.next.link-disabled span, .pagination-full .page-links .pagination .page-link.last.link-disabled span {
+        background-color: #7F7F7F;
+        color: #FFFFFF; }
+      .pagination-full .page-links .pagination li.active a, .pagination-full .page-links .pagination .page-link.active a {
+        background-color: #678d34;
+        color: #c1db9e; }
+  @media only screen and (max-width: 1024px) {
+    .pagination-full .page-info, .pagination-full .page-links {
+      width: 100%;
+      text-align: center; } }
 
 /**********************************************************************
-Description: It defines the styles of the sorting components available in CMT-UI css framework.
+Description: It defines the styles of the grid sort.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles of sorting components as listed below:
+Details: It defines the styles of grid sort as listed below:
 
-* Sort        - The barebone sort class with minimum styles common for all the sorting.
+Grid Sort - The barebone sort class with minimum styles common for all the sorting.
 ***********************************************************************/
 .grid-sort .sort {
   cursor: pointer; }
@@ -8393,15 +9709,24 @@ Details: It defines the styles of sorting components as listed below:
     color: #E74343 !important; }
 
 /**********************************************************************
+Description: It defines the styles of grid filters.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of grid filters as listed below:
+
+Grid Filter - The barebone grid filter class with minimum styles common for all the filters.
+***********************************************************************/
+/**********************************************************************
 Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for data grid components as listed below:
 
-* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
-*
-* Basic       - The basic data grid having default coloring.
+Data Grid - The barebone grid class with minimum styles common for all the data grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
   display: none; }
@@ -8409,6 +9734,7 @@ Details: It defines the styles for data grid components as listed below:
     display: block; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: none;
+    font-size: 1.08em;
     font-weight: bold; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
     background-color: #3C4655; }
@@ -8443,7 +9769,7 @@ Details: It defines the styles for data grid components as listed below:
       .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
         display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
-    display: block; } }
+    display: flex; } }
 
 .grid-data-basic {
   background-color: lightgray;
@@ -8474,15 +9800,15 @@ Details: It defines the styles for data grid components as listed below:
       width: 48px; }
 
 /**********************************************************************
-Description: It defines the styles of the table grid components forming the grid using html tables.
+Description: It defines the styles of the grid table forming the grid using html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for data table components as listed below:
+Details: It defines the styles of grid table as listed below:
 
-* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
-*
-* Basic       - The basic data grid having default coloring.
+Table Grid - The barebone grid class with minimum styles common for all the table grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-table .grid-table-header {
   display: none; }
@@ -8610,6 +9936,14 @@ page background and even content wrapper background in the form of image or text
     top: -50%;
     left: 0;
     z-index: 5; }
+  .page .page-bkg-fluid {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+    .page .page-bkg-fluid img {
+      width: 100%; }
   .page > .texture {
     z-index: 10; }
   .page .page-content-wrap {
@@ -8668,10 +10002,19 @@ page background and even content wrapper background in the form of image or text
   padding: 1rem 0;
   font-size: 1.08em; }
 
-.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
   margin-top: 0.5rem; }
 
-.page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-info + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+  margin-top: 0.5rem; }
+
+.page-basic .page-content-wrap .page-content .page-content-summary + .page-content-data {
   margin-top: 0.5rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-data {

@@ -20,40 +20,46 @@ Details: It defines the styles of cmt slider as listed below:
 
 // == Structure - Slider ============
 
-.cmt-slider {
+.slider {
 	position: relative;
 
-	.cmt-slider-slides-wrap {
+	.slider-slides-wrap {
 		position: relative;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 
-		.cmt-slider-slides {
+		.slider-slides {
 			position: absolute;
 			top: 0px;
 			width: 100%;
 			height: 100%;
 
-			.cmt-slider-slide {
+			.slider-slide {
 				position: absolute;
 				top: 0px;
 				left: 0px;
 				overflow: hidden;
 			}
+
+			.wrap-slide-content {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
-	.cmt-slider-control {
+	.slider-control {
 		cursor: pointer;
 		position: absolute;
 
-		&.cmt-slider-control-left {
+		&.slider-control-left {
 			top: 0;
 			left: 0;
 		}
 
-		&.cmt-slider-control-right {
+		&.slider-control-right {
 			top: 0;
 			right: 0;
 		}
@@ -63,16 +69,16 @@ Details: It defines the styles of cmt slider as listed below:
 // == Basic =========================
 
 // Basic slider having fixed width slides
-.cmt-slider-basic {
+.slider-basic {
 	margin: 0px auto;
 	width: 450px;
 
-	.cmt-slider-slides-wrap {
+	.slider-slides-wrap {
 		height: 150px;
 
-		.cmt-slider-slides {
+		.slider-slides {
 
-			.cmt-slider-slide {
+			.slider-slide {
 				width: 150px;
 				height: 150px;
 				background-color: $color-secondary;
@@ -82,7 +88,7 @@ Details: It defines the styles of cmt slider as listed below:
 		}
 	}
 
-	.cmt-slider-control {
+	.slider-control {
 		background-color: $color-tertiary;
 		color: $color-tertiary-text;
 		top: 35px;
@@ -91,14 +97,15 @@ Details: It defines the styles of cmt slider as listed below:
 
 		&:hover {
 			background-color: $color-tertiary-l;
+			color: $color-tertiary-text-l;
 		}
 
-		&.cmt-slider-control-bkg {
+		&.slider-control-bkg {
 			background-image: url( "../images/slider-arrow.png" );
 			background-repeat: none;
 			background-position: 0px 0px;
 
-			&.cmt-slider-control-left {
+			&.slider-control-left {
 				left: 20px;
 				background-position: 0px 80px;
 
@@ -107,7 +114,7 @@ Details: It defines the styles of cmt slider as listed below:
 				}
 			}
 
-			&.cmt-slider-control-right {
+			&.slider-control-right {
 				right: 20px;
 				background-position: -48px 80px;
 
@@ -123,10 +130,10 @@ Details: It defines the styles of cmt slider as listed below:
 
 // == Basic - Fixed =================
 
-.cmt-slider-basic-fixed {
+.slider-basic-fixed {
 	width: 1628px;
 
-	.cmt-slider-slides-wrap {
+	.slider-slides-wrap {
 		width: 1500px;
 		margin: 0 64px;
 	}
@@ -134,7 +141,7 @@ Details: It defines the styles of cmt slider as listed below:
 	@include responsive-max( screen-desktop-large ) {
 		width: 1328px;
 
-		.cmt-slider-slides-wrap {
+		.slider-slides-wrap {
 			width: 1200px;
 		}
 	}
@@ -142,7 +149,7 @@ Details: It defines the styles of cmt slider as listed below:
 	@include responsive-max( screen-desktop-medium ) {
 		width: 1028px;
 
-		.cmt-slider-slides-wrap {
+		.slider-slides-wrap {
 			width: 900px;
 		}
 	}
@@ -150,21 +157,21 @@ Details: It defines the styles of cmt slider as listed below:
 	@include responsive-max( screen-tablet-large ) {
 		width: 690px;
 
-		.cmt-slider-slides-wrap {
+		.slider-slides-wrap {
 			width: 600px;
 			height: 100px;
 			margin: 0 45px;
 
-			.cmt-slider-slides {
+			.slider-slides {
 
-				.cmt-slider-slide {
+				.slider-slide {
 					width: 100px;
 					height: 100px;
 				}
 			}
 		}
 
-		.cmt-slider-control {
+		.slider-control {
 			width: 45px;
 			height: 100px;
 		}
@@ -173,20 +180,20 @@ Details: It defines the styles of cmt slider as listed below:
 	@include responsive-max( screen-tablet-small ) {
 		width: 440px;
 
-		.cmt-slider-slides-wrap {
+		.slider-slides-wrap {
 			width: 360px;
 			height: 90px;
 
-			.cmt-slider-slides {
+			.slider-slides {
 
-				.cmt-slider-slide {
+				.slider-slide {
 					width: 90px;
 					height: 90px;
 				}
 			}
 		}
 
-		.cmt-slider-control {
+		.slider-control {
 			width: 40px;
 			height: 90px;
 		}
@@ -195,7 +202,7 @@ Details: It defines the styles of cmt slider as listed below:
 	@include responsive-max( screen-mobile-large ) {
 		width: 260px;
 
-		.cmt-slider-slides-wrap {
+		.slider-slides-wrap {
 			width: 180px;
 		}
 	}
@@ -205,18 +212,18 @@ Details: It defines the styles of cmt slider as listed below:
 
 // TODO : Add lightbox popup styles
 
-.cmt-slider-lightbox {
+.slider-lightbox {
 
-	.cmt-slider-image {
+	.slider-image {
 		// Wrapper to show larger image
 	}
 
 	// Slider will form thumbnail filmstrip.
-	.cmt-slider-slides-wrap {
+	.slider-slides-wrap {
 
-		.cmt-slider-slides {
+		.slider-slides {
 
-			.cmt-slider-slide {
+			.slider-slide {
 				cursor: pointer; // Trigger Lightbox
 				@include shadow-inset( 1px, 1px, 100px, $color-black, $spread: 0px );
 

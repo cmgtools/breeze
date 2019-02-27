@@ -11,6 +11,8 @@ Basic - It define the styles of basic tab with borders. The bordered tabs are co
 used for bordered boxes and panels.
 
 Underline - The underlined tabs use underline to hightlight the tabs and active tab.
+
+Table - Tabs arranged using table display. Preferred for evenly spaced tabs with tab count 1, 2, 4 or 10.
 ***********************************************************************/
 
 // == Structure - Tabs ==============
@@ -25,6 +27,11 @@ Underline - The underlined tabs use underline to hightlight the tabs and active 
 
 			&.active {
 				// Link active state
+			}
+
+			a, .link {
+				display: inline-block;
+				width: 100%;
 			}
 		}
 	}
@@ -94,6 +101,49 @@ Underline - The underlined tabs use underline to hightlight the tabs and active 
 
 		.tab-content {
 			display: none;
+		}
+	}
+}
+
+// == Table Tabs ====================
+
+.tabs-table {
+
+	.tab-links-wrap {        
+		text-align: center;
+		border-bottom: 0px;
+		display: table;
+		width: 100%;
+
+		.tab-link {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			border-bottom: 1px solid $color-border;
+			border-right: 1px solid $color-border;
+			display: table-cell;
+			padding: 0.5em 1em;
+			@include transit-bkg-color( $transit-eio, $transit-time-small );
+
+			&.active, &:hover {
+				background-color: $color-white;
+				border-bottom: 1px solid $color-white;
+			}
+
+			&.tab-link-100 {
+				width: 50%;
+			}
+
+			&.tab-link-50 {
+				width: 50%;
+			}
+			
+			&.tab-link-25 {
+				width: 25%;
+			}
+			
+			&.tab-link-10 {
+				width: 10%;
+			}
 		}
 	}
 }
