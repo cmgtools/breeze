@@ -2961,6 +2961,33 @@ Details: It defines the text and background colors as listed below:
 .text.text-tertiary-d {
   color: #c1db9e !important; }
 
+.text.text-primary-b {
+  color: #F2F2F2 !important; }
+
+.text.text-primary-b-l {
+  color: white !important; }
+
+.text.text-primary-b-d {
+  color: lightgray !important; }
+
+.text.text-secondary-b {
+  color: #3C4655 !important; }
+
+.text.text-secondary-b-l {
+  color: #556479 !important; }
+
+.text.text-secondary-b-d {
+  color: #232831 !important; }
+
+.text.text-tertiary-b {
+  color: #87BA45 !important; }
+
+.text.text-tertiary-b-l {
+  color: #a4cb72 !important; }
+
+.text.text-tertiary-b-d {
+  color: #678d34 !important; }
+
 .text.text-link {
   color: #298ccf !important; }
 
