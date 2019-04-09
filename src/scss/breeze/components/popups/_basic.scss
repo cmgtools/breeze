@@ -138,11 +138,13 @@ Details: It defines the styles for popup components as listed below:
 				}
 			}
 		}
-		
+
 		&.popup-data-max {
 			height: 96%;
 			width: 96%;
-			
+			top: 2%;
+			left: 2%;
+
 			.popup-content-wrap {
 				height: 100%;
 
