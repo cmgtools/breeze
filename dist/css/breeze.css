@@ -8240,6 +8240,13 @@ Details: It defines the styles for popup components as listed below:
       width: 800px; }
       .popup .popup-data.popup-data-large .popup-content-wrap .popup-content {
         height: 320px; }
+    .popup .popup-data.popup-data-max {
+      height: 96%;
+      width: 96%; }
+      .popup .popup-data.popup-data-max .popup-content-wrap {
+        height: 100%; }
+        .popup .popup-data.popup-data-max .popup-content-wrap .popup-content {
+          height: 100%; }
   @media only screen and (max-width: 768px) {
     .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
       width: 90% !important; } }
