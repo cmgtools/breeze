@@ -6414,6 +6414,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   position: relative;
   display: inline-block;
   width: 100%; }
+  .frm-icon-element.frm-element-auto {
+    width: auto !important; }
   .frm-icon-element.frm-element-25 {
     width: 25% !important; }
   .frm-icon-element.frm-element-50 {
@@ -8226,20 +8228,11 @@ Details: It defines the styles for popup components as listed below:
       display: inline-block;
       cursor: pointer; }
     .popup .popup-data.popup-data-small {
-      height: 200px;
       width: 400px; }
-      .popup .popup-data.popup-data-small .popup-content-wrap .popup-content {
-        height: 120px; }
     .popup .popup-data.popup-data-medium {
-      height: 300px;
       width: 600px; }
-      .popup .popup-data.popup-data-medium .popup-content-wrap .popup-content {
-        height: 220px; }
     .popup .popup-data.popup-data-large {
-      height: 400px;
       width: 800px; }
-      .popup .popup-data.popup-data-large .popup-content-wrap .popup-content {
-        height: 320px; }
     .popup .popup-data.popup-data-max {
       height: 96%;
       width: 96%;

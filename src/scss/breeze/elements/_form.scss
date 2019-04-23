@@ -231,6 +231,10 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	display: inline-block;
 	width: 100%;
 
+	&.frm-element-auto {
+		width: auto !important;
+	}
+
 	&.frm-element-25 {
 		width: 25% !important;
 	}
