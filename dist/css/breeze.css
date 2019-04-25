@@ -2361,6 +2361,8 @@ html, body {
     width: 75% !important; }
   .width.width-80 {
     width: 80% !important; }
+  .width.width-90 {
+    width: 90% !important; }
   .width.width-100 {
     width: 100% !important; }
   .width.width-default {
@@ -2382,6 +2384,10 @@ html, body {
     height: 50% !important; }
   .height.height-75 {
     height: 75% !important; }
+  .height.height-80 {
+    height: 80% !important; }
+  .height.height-90 {
+    height: 90% !important; }
   .height.height-100 {
     height: 100% !important; }
   .height.height-default {
