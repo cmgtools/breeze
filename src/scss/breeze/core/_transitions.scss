@@ -1,31 +1,39 @@
 /**********************************************************************
-Description	:	This file define the transition effects available in CMT-UI css framework. These allow changes 
-				in allowed css properties smoothly over a defined time interval. We can define the animation/transition 
-				effects and duration to change the property.
+Description	: This file define the transition effects available in the Breeze CSS Framework. These
+allow changes in allowed css properties smoothly over a defined time interval. We can define the
+animation/transition effects and duration to change the property.
 
-Dependency	:	None
+Dependency	: None
 
-Details		:	It defines the transition mixins and default implementation as listed below:
+Details		: It defines the transition mixins and default implementation as listed below.
 
-Catch All				-	The all transition apply to changes in all the applicable properties of an element.
+Standard Transitions - Define the variables having standard transition effect.
 
-Opacity & Visibility	-	The visibility & opacity transitions apply to change in opacity, visibility or both.
+Bezier Transitions - Define the variables having bezier transition effect.
 
-Background				-	The background transitions apply to position, color or both.
+Transition Duration - This section defines the variables having transition duration.
 
-Color					-	The color transition apply to change in text color.
+Catch All - The all transition apply to changes in all the applicable properties of an element.
 
-Color & Background		-	The color & background transitions apply to change in text color, background color or both.
+Opacity & Visibility - The visibility & opacity transitions apply to change in opacity, visibility or both.
 
-Border					-	The border transitions apply to color, width or both.
+Background - The background transitions apply to position, color or both.
 
-Positions				-	The positioning transitions apply to top, bottom, left and right.
+Color - The color transition apply to change in text color.
 
-Font					-	The font transitions apply to size, weight or both.
+Color & Background - The color & background transitions apply to change in text color, background color or both.
 
-Margin & Padding		-	The margin & padding transitions apply to change in either margin or padding or both.
+Border - The border transitions apply to color, width or both.
 
-Width & Height			-	The width & height transitions apply to change in either width or height or both.
+Positions - The positioning transitions apply to top, bottom, left and right.
+
+Font - The font transitions apply to size, weight or both.
+
+Margin & Padding - The margin & padding transitions apply to change in either margin or padding or both.
+
+Width & Height - The width & height transitions apply to change in either width or height or both.
+
+Transform - Works well with transformations to have small animation effects.
 
 The default implementations use ease-in and ease-out transition using medium time.
 ***********************************************************************/
@@ -80,6 +88,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Opacity & Visibility
+
 @mixin transit-opacity( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: opacity $duration $transit $delay;
 	   -moz-transition: opacity $duration $transit $delay;
@@ -110,6 +119,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Background
+
 @mixin transit-bkg( $transit, $duration, $delay: 0s ) {
 	-moz-transition: background $duration $transit $delay;
 	-ms-transition: background $duration $transit $delay;
@@ -153,6 +163,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Border
+
 @mixin transit-border( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: border $duration $transit $delay;
 	   -moz-transition: border $duration $transit $delay;
@@ -178,6 +189,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Positions
+
 @mixin transit-top( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: top $duration $transit $delay;
 	   -moz-transition: top $duration $transit $delay;
@@ -211,6 +223,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Font
+
 @mixin transit-font( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: font $duration $transit $delay;
 	   -moz-transition: font $duration $transit $delay;
@@ -236,6 +249,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Margin & Padding
+
 @mixin transit-margin( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: margin $duration $transit-eo $delay;
 	   -moz-transition: margin $duration $transit-eo $delay;
@@ -261,6 +275,7 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Width & Height
+
 @mixin transit-width( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: width $duration $transit-eo $delay;
 	   -moz-transition: width $duration $transit-eo $delay;
@@ -314,9 +329,17 @@ $transit-time-large: 640ms;
 	@include transit-opacity-visibility( $transit-eio, $transit-time-medium );
 }
 
-// Background transition
+// Transitions - Background
 .transit-bkg {
 	@include transit-bkg( $transit-eio, $transit-time-medium );
+}
+
+.transit-bkg-position {
+	@include transit-bkg-position( $transit-eio, $transit-time-medium );
+}
+
+.transit-bkg-color {
+	@include transit-bkg-color( $transit-eio, $transit-time-medium );
 }
 
 // Text Color transition
@@ -324,22 +347,73 @@ $transit-time-large: 640ms;
 	@include transit-color( $transit-eio, $transit-time-medium );
 }
 
-// Background Color transition
-.transit-bkg-color {
-	@include transit-bkg-color( $transit-eio, $transit-time-medium );
-}
-
 // Text and Background Color transitions
 .transit-color-bkg-color {
 	@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 }
 
-// Padding transition
+// Transitions - Border
+
+.transit-border {
+	@include transit-border( $transit-eio, $transit-time-medium );
+}
+
+.transit-border-color {
+	@include transit-border-color( $transit-eio, $transit-time-medium );
+}
+
+.transit-border-width {
+	@include transit-border-width( $transit-eio, $transit-time-medium );
+}
+
+// Transitions - Position
+
+.transit-top {
+	@include transit-top( $transit-eio, $transit-time-medium );
+}
+
+.transit-right {
+	@include transit-right( $transit-eio, $transit-time-medium );
+}
+
+.transit-bottom {
+	@include transit-bottom( $transit-eio, $transit-time-medium );
+}
+
+.transit-left {
+	@include transit-left( $transit-eio, $transit-time-medium );
+}
+
+// Transitions - Font
+
+.transit-font {
+	@include transit-font( $transit-eio, $transit-time-medium );
+}
+
+.transit-font-size {
+	@include transit-font-size( $transit-eio, $transit-time-medium );
+}
+
+.transit-font-weight {
+	@include transit-font-weight( $transit-eio, $transit-time-medium );
+}
+
+// Transitions - Margin & Padding
+
+.transit-margin {
+	@include transit-margin( $transit-eio, $transit-time-medium );
+}
+
 .transit-padding {
 	@include transit-padding( $transit-eio, $transit-time-medium );
 }
 
+.transit-margin-padding {
+	@include transit-margin-padding( $transit-eio, $transit-time-medium );
+}
+
 // Width and Height transitions
+
 .transit-width {
 	@include transit-width( $transit-eio, $transit-time-medium );
 }
@@ -350,4 +424,9 @@ $transit-time-large: 640ms;
 
 .transit-width-height {
 	@include transit-width-height( $transit-eio, $transit-time-medium );
+}
+
+// Transition with Transformation
+.transit-transform {
+	@include transit-transform( $transit-eio, $transit-time-medium );
 }

@@ -1,72 +1,72 @@
 /**********************************************************************
-Description	:	This file define the mixins available in CMT-UI css framework. It also define the 
-				default classes for all the mixins.
+Description	: This file define the default mixins available in the Breeze CSS Framework. It also
+define the default classes for all the mixins.
 
-Dependency	:	variables
+Dependency	: variables, variables-ext
 
-Details		:	It define the mixins and their default implementation as listed below:
+Details		: It define the mixins and their default implementation as listed below.
 
-Clearfix			-	It allows parent element to fix zero height issue in case it consist of floating 
-						children by forcing itself to self-clear floating children.
+Clearfix - It allows parent element to fix zero height issue in case it consist of floating children
+by forcing itself to self-clear floating children.
 
-Opacity				-	The opacity mixin is cross-browser solution to make elements opaque. The passed value 
-						must be between 0 to 1. Higher value means higher opacity and less transparency and 
-						vice versa.
+Opacity - The opacity mixin is cross-browser solution to make elements opaque. The passed value must
+be between 0 to 1. Higher value means higher opacity and less transparency and vice versa.
 
-Transparency		-	The transparency mixin is cross-browser solution to make elements transparent. The passed 
-						value must be between 0 to 1. Higher value means higher transparency and less opacity 
-						and vice versa.
+Transparency - The transparency mixin is cross-browser solution to make elements transparent. The passed
+value must be between 0 to 1. Higher value means higher transparency and less opacity and vice versa.
 
-Background			-	Transparent background mixin allows to add transparency effect to background color.
+Transparent Background - Transparent background mixin allows to add transparency effect to background color.
 
-Round corners		-	These mixins provide different ways to achieve round corner effects including all, top, 
-						right, bottom, left, top left, top right, bottom left and bottom right.
+Round corners -	These mixins provide different ways to achieve round corner effects including all, top,
+right, bottom, left, top left, top right, bottom left and bottom right.
 
-Shadow				-	The shadow mixins add shadow effects to elements including outer and inner.
+Shadow - The shadow mixins add shadow effects to elements including outer and inner shadow.
 
-Text shadow			-	The text shadow mixins add shadow effects to text including outer and inner.
+Text shadow - The text shadow mixins add shadow effects to text including outer and inner shadow.
 
-Border				-	The border mixins provide options to add border including all, top, right, bottom and left.
+Border - The border mixins provide options to add border including all, top, right, bottom and left.
 
-Gradients			-	These mixins provide options to apply gradient effects. These include linear, linear with 
-						angle and radial.
+Gradients -	These mixins provide options to apply gradient effects. These include linear, linear with angle
+and radial.
 
-Circle effect 1		-	It make the parent round cornered and child aligned at center. The parent must be either square
-						or rectangular in order to work with this effect.
+Circle effect 1 - It make the parent round cornered and child aligned at center. The parent must be either
+square or rectangular in order to work with this effect.
 
-Circle effect 2		-	It make the element circular having fixed width and height. It does not consider child alignment.
+Circle effect 2 - It make the element circular having fixed width and height. It does not consider
+child alignment.
 
-Circle effect 3		-	It make the element circular by applying padding at bottom. It does not consider child alignment.
+Circle effect 3 - It make the element circular by applying padding at bottom. It does not consider
+child alignment.
 
-Text Shape			-	It make shape behind text having elliptical or circular effect.
+Text Shape - It make shape behind text having elliptical or circular effect.
 
-Vertical Center		-	It provide mixin to vertically align a child at center of parent.
+Vertical Center - It provide mixin to vertically align a child at center of parent.
 
-Child Center		-	It provide mixin to align child at center both horizontally and vertically.
+Child Center - It provide mixin to align child at center both horizontally and vertically.
 
-Max area			-	These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
+Max area - These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
 
-Max area cover		-	It adds option to have text aligned at center to max area mixins. Initially these elements will be
-						hidden and displayed when required.
+Max area cover - It adds option to have text aligned at center to max area mixins. Initially these elements
+will be hidden and displayed when required.
 
-Background			-	The background mixins provide options to have below listed backgrounds:
-						Tiled              - The background will repeat image both horizontally and vertically.
-						Background Image   - The background will be filled with image aligned at center. The image will 
-											 adjust it's position to fully cover the element.
-						Background Fill    - The background will be filled at center with image having specified width and height.
-						Background Auto    - The background will be filled with image covering 100% width and auto height.
-						Background Scroll  - The background will scroll at low speed as compared to user scroll giving parallax effect.
-						Background Fixed   - The background will be filled 100% with fixed image and allows user to scroll content.
-						Background Element - The element will adjust itself to allow img tag to fill it completely. The element
-											 must be child of parent having fixed height.
+Background - The background mixins provide options to have below listed backgrounds.
+Tiled : The background will repeat image both horizontally and vertically.
+Background Image: The background will be filled with image aligned at center. The image will adjust it's
+position to fully cover the element.
+Background Fill : The background will be filled at center with image having specified width and height.
+Background Auto : The background will be filled with image covering 100% width and auto height.
+Background Scroll : The background will scroll at low speed as compared to user scroll giving parallax effect.
+Background Fixed : The background will be filled 100% with fixed image and allows user to scroll content.
+Background Element : The element will adjust itself to allow img tag to fill it completely. The element
+must be child of parent having fixed height.
 
-Textures			-	Textures are special tiles having a pattern occupying few pixels. These will give special effects 
-						to underlying content and images.
+Textures - Textures are special tiles having a pattern occupying few pixels. These will give special effects
+to underlying content and images.
 
-Blur				-	Blus is another mixin adding lens effect to blur underlying content and images.
+Blur - Blus is another mixin adding lens effect to blur underlying content and images.
 
-Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
-						section includes mixins for in-between, desktop first and mobile first approaches.
+Media Queries - These mixins are pre-defined media queries using the screen sizes declared in variables file.
+This section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
 
 // Clearfix
@@ -209,7 +209,7 @@ Media Queries		-	These mixins are pre-defined media queries using the screen siz
 			box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
 }
 
-// Box Shadow with x and y distance having blur ratio and color of shadow
+// Text Shadow with x and y distance having blur ratio and color of shadow
 
 @mixin text-shadow( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-text-shadow: $x $y $blur $spread $color;
@@ -393,33 +393,33 @@ Media Queries		-	These mixins are pre-defined media queries using the screen siz
 // Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
 // Initially it's set to hidden and can be made visible when required. most useful example is
 // having a full cover pre-loader with spinner on top of all other elements.
-@mixin max-area-cover( $display: none ) {
+@mixin max-area-cover( $display: none, $color: $color-primary-text ) {
 	@include max-area;
 	z-index: 1000000;
 	display: $display;
 	// Text alignment and color
 	text-align: center;
-	color: $color-primary-text;
+	color: $color;
 }
 
-@mixin max-area-cover-color( $color: $color-black, $display: none ) {
-	@include max-area-cover( $display );
-	background-color: $color;
+@mixin max-area-cover-color( $bkg-color: $color-black, $display: none, $color: $color-primary-text ) {
+	@include max-area-cover( $display, $color );
+	background-color: $bkg-color;
 }
 
-@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none ) {
-	@include max-area-cover( $display );
+@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none, $color: $color-primary-text ) {
+	@include max-area-cover( $display, $color );
 	background-color: rgba( $r, $g, $b, 0 );
 }
 
-@mixin max-area-cover-transparent( $color: $color-black, $alpha: $color-transparent-medium, $display: none ) {
-	@include max-area-cover( $display );
-	background-color: rgba( $color, $alpha );
+@mixin max-area-cover-transparent( $bkg-color: $color-black, $alpha: $color-transparent-medium, $display: none, $color: $color-primary-text ) {
+	@include max-area-cover( $display, $color );
+	background-color: rgba( $bkg-color, $alpha );
 }
 
-@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none ) {
-	@include max-area-cover( $display );
-	ackground-color: rgba( $r, $g, $b, $alpha );
+@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none, $color: $color-primary-text ) {
+	@include max-area-cover( $display, $color );
+	background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Backgrounds
@@ -489,7 +489,7 @@ Notes:
 }
 
 // background filled with img - use it inside a block having fixed height
-// Make sure that the parent wrapping bkg-element has fixed width and height with overflow hidden. 
+// Make sure that the parent wrapping bkg-element has fixed width and height with overflow hidden.
 @mixin bkg-element {
 	display: block;
 	position: relative;
@@ -755,7 +755,7 @@ Notes:
 
 	&.transparent-bkg-aqua {
 		@include transparent-bkg( $color-transparent-aqua );
-	}	
+	}
 
 	&.transparent-bkg-golden {
 		@include transparent-bkg( $color-transparent-golden );
@@ -768,15 +768,15 @@ Notes:
 	&.transparent-bkg-maroon {
 		@include transparent-bkg( $color-transparent-maroon );
 	}
-	
+
 	&.transparent-bkg-olive {
 		@include transparent-bkg( $color-transparent-olive );
 	}
-	
+
 	&.transparent-bkg-lime {
 		@include transparent-bkg( $color-transparent-lime );
 	}
-	
+
 	&.transparent-bkg-navy {
 		@include transparent-bkg( $color-transparent-navy );
 	}
@@ -785,6 +785,7 @@ Notes:
 // Round Corners
 
 .rounded {
+	// No defaults
 
 	&.rounded-none {
 		@include rounded( 0 !important );
@@ -1042,12 +1043,12 @@ Notes:
 	&.shadow-brown {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-brown, $color-transparent-medium ) );
 	}
-	
+
 	// Special Shadows
 
 	&.shadow-aqua {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
-	}	
+	}
 
 	&.shadow-golden {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
@@ -1060,15 +1061,15 @@ Notes:
 	&.shadow-maroon {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-olive {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-lime {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-navy {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
@@ -1146,7 +1147,7 @@ Notes:
 
 	&.shadow-aqua {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
-	}	
+	}
 
 	&.shadow-golden {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
@@ -1159,15 +1160,15 @@ Notes:
 	&.shadow-maroon {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-olive {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-lime {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-navy {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
@@ -1245,7 +1246,7 @@ Notes:
 
 	&.shadow-aqua {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
-	}	
+	}
 
 	&.shadow-golden {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
@@ -1258,15 +1259,15 @@ Notes:
 	&.shadow-maroon {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-olive {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-lime {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-navy {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
@@ -1335,12 +1336,12 @@ Notes:
 	&.text-shadow-inset-green-d {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
 	}
-	
+
 	// Special Inset Text Shadows
 
 	&.shadow-aqua {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
-	}	
+	}
 
 	&.shadow-golden {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
@@ -1353,15 +1354,15 @@ Notes:
 	&.shadow-maroon {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-olive {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-lime {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
-	
+
 	&.shadow-navy {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
@@ -1370,6 +1371,7 @@ Notes:
 // Borders
 
 .border {
+	// No defaults
 
 	&.border-ignore {
 		border: none !important;
@@ -1810,39 +1812,39 @@ Notes:
 	&.texture-purple {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HQ7kgYQYAAE6QH6X645SgAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-red {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+O9o5gsQYAAFfQHETi5yBwAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-yellow {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+H+HwQEgwAAG1QIc8QQ4ogAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-blue {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYCi5mQYQYAADeQG02sTEiAAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-brown {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HYV9gUIMAADcwEx4AygWgAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-gray {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqK+vbwAIMAAE/AH+bxqbQAAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-green {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqFml6wsQYAAEmgGhkKzKGgAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-magenta {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi2MSwyRcgwAAEfgGye9u+TgAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-orange {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+N8q7QsQYAAGEwHtbBCh8wAAAABJRU5ErkJggg==');
 	}
-	
+
 	&.texture-pink {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpieKJR4wsQYAAFUgHWLezVJwAAAABJRU5ErkJggg==');
 	}
@@ -1872,7 +1874,7 @@ Notes:
 // Add default image
 .pattern {
 	@extend %textures;
-	
+
 	&.pattern-default {
 		background-image: url( $images-path + "pattern-default.png" );
 	}

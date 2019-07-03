@@ -1,17 +1,21 @@
 /**********************************************************************
-Description	:	This file define the extended variables used by CMT-UI css framework. These are derived 
-				using primary variables.
+Description	: This file define the extended variables used by the Breeze CSS Framework. These are
+derived using the primary variables.
 
-Dependency	:	variables
+Dependency	: variables
 
-Details		:	It defines the extended variables derived from primary variables as listed below:
+Details		: It defines the extended variables derived from primary variables as listed below.
 
-Border & Gradient	-	This section define the colors for border, hr and gradient.
+Header Rule - It defines the default color of header rule.
 
-Transparency		-	This section define the variables for transparency.
-						3-Color Scheme    - Medium transparency applied to primary theme colors.
-						Gray shades       - Transparency effect applied to shades of gray.
-						Standard colors   - High, medium and low transparency applied to theme colors.
+Gradient - This section define the default first and second gradient colors.
+
+Shadow - This section defines the default shadow colors.
+
+Transparency - This section define the color variables for transparency.
+3-Color Scheme : Medium transparency applied to primary theme colors.
+Standard Colors : High, medium and low transparency applied to the standard colors.
+Special Colors : High, medium and low transparency applied to the special colors.
 ***********************************************************************/
 
 // Header Rule
@@ -28,7 +32,8 @@ $color-shadow-d: rgba( $color-border-d, $color-transparent-low );
 
 // Transparent Colors - Color, Low and High
 
-// Standard Colors
+// 3 Color Scheme
+
 $color-transparent-primary-l: rgba( $color-primary, $color-transparent-low );
 $color-transparent-primary: rgba( $color-primary, $color-transparent-medium );
 $color-transparent-primary-h: rgba( $color-primary, $color-transparent-high );
@@ -40,6 +45,8 @@ $color-transparent-secondary-h: rgba( $color-secondary, $color-transparent-high 
 $color-transparent-tertiary-l: rgba( $color-tertiary, $color-transparent-low );
 $color-transparent-tertiary: rgba( $color-tertiary, $color-transparent-medium );
 $color-transparent-tertiary-h: rgba( $color-tertiary, $color-transparent-high );
+
+// Standard Colors
 
 $color-transparent-white-l: rgba( $color-white, $color-transparent-low );
 $color-transparent-white: rgba( $color-white, $color-transparent-medium );
@@ -90,6 +97,7 @@ $color-transparent-brown: rgba( $color-brown, $color-transparent-medium );
 $color-transparent-brown-h: rgba( $color-brown, $color-transparent-high );
 
 // Special Colors
+
 $color-transparent-aqua-l: rgba( $color-aqua, $color-transparent-low );
 $color-transparent-aqua: rgba( $color-aqua, $color-transparent-medium );
 $color-transparent-aqua-h: rgba( $color-aqua, $color-transparent-high );

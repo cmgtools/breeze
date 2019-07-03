@@ -62,10 +62,6 @@ Details: It defines the social network menu components as listed below:
 			border-color: $color-google;
 		}
 
-		&.icon-google-plus, &.cmti-social-google-plus {
-			border-color: $color-google-plus;
-		}
-
 		&.icon-linkedin, &.cmti-social-linkedin {
 			border-color: $color-linkedin;
 		}
@@ -94,10 +90,6 @@ Details: It defines the social network menu components as listed below:
 
 			&.icon-google, &.cmti-social-google {
 				background-color: $color-google;
-			}
-
-			&.icon-google-plus, &.cmti-social-google-plus {
-				background-color: $color-google-plus;
 			}
 
 			&.icon-linkedin, &.cmti-social-linkedin {
@@ -133,10 +125,6 @@ Details: It defines the social network menu components as listed below:
 			background-color: $color-google;
 		}
 
-		&.icon-google-plus, &.cmti-social-google-plus {
-			background-color: $color-google-plus;
-		}
-
 		&.icon-linkedin, &.cmti-social-linkedin {
 			background-color: $color-linkedin;
 		}
@@ -165,10 +153,6 @@ Details: It defines the social network menu components as listed below:
 
 			&.icon-google, &.cmti-social-google {
 				background-color: darken( $color-google, 10% );
-			}
-
-			&.icon-google-plus, &.cmti-social-google-plus {
-				background-color: darken( $color-google-plus, 10% );
 			}
 
 			&.icon-linkedin, &.cmti-social-linkedin {
@@ -202,10 +186,6 @@ Details: It defines the social network menu components as listed below:
 
 		&.icon-google, &.cmti-social-google {
 			color: $color-google;
-		}
-
-		&.icon-google-plus, &.cmti-social-google-plus {
-			color: $color-google-plus;
 		}
 
 		&.icon-linkedin, &.cmti-social-linkedin {
@@ -245,10 +225,6 @@ Details: It defines the social network menu components as listed below:
 			background-color: $color-google;
 		}
 
-		&.google-plus {
-			background-color: $color-google-plus;
-		}
-
 		&.linkedin {
 			background-color: $color-linkedin;
 		}
@@ -277,10 +253,6 @@ Details: It defines the social network menu components as listed below:
 
 			&.google {
 				background-color: darken( $color-google, 10% );
-			}
-
-			&.google-plus {
-				background-color: darken( $color-google-plus, 10% );
 			}
 
 			&.linkedin {
