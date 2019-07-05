@@ -1,24 +1,38 @@
 /**********************************************************************
-Description: This file define the basic and common styling used by CMT-UI css framework.
+Description: This file define the basic and common styling used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the basic styles as listed below:
-* Box border        - It's applied to html and all elements in order to calculate width including border and padding.
-* Screen            - The default classes having screen sizes using variables defined in variable file.
-* Floats            - The floating classes either clear the float, no float or add left/right float.
-* Width & Height    - This section define width and height classes having predefined values in percentage.
-* Alignments        - The alignment classes allows to align either the element itself or it's children.
-* Height Filler     - These classes can be used to add vertical spacing.
-* Tab Filler        - These classes can be used to add horizontal spacing between inline boxes.
-* Positioning       - This section define the positioning classes.
-* Display           - The display classes control the display property i.e. inline, block or inline block.
-* Visibility        - These classes control the display property i.e. block or none. The visibility property specific
-*                     classes can be used to show or hide an element keeping it's space on screen.
-* Cursor            - The cursor classes.
-* Disabled          - It disable an element by changing color to gray and cursor to default.
-* Fluid             - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
-* Message           - These classes can be used to show message according to failure, warning or success.
+Details: It defines the basic styles as listed below.
+
+Box border - It's applied to html and all elements in order to calculate width including border and padding.
+
+Screen - The default classes having screen sizes using variables defined in variable file.
+
+Floats - The floating classes either clear the float, no float or add left/right float.
+
+Width & Height - This section define width and height classes having predefined values in percentage.
+
+Avatar - The image or icons used as avatar.
+
+Alignments - The alignment classes allows to align either the element itself or it's children.
+
+Positioning - This section define the positioning classes.
+
+Layers - Layered blocks having z-index. The greater the layer number, the more is z-index.
+
+Display - The display classes control the display property i.e. inline, block or inline block.
+
+Visibility - These classes control the display property i.e. block or none. The visibility property specific
+classes can be used to show or hide an element keeping it's space on screen.
+
+Cursor - The cursor classes.
+
+Disabled - It disable an element by changing color to gray and cursor to default.
+
+Fluid - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
+
+Message - These classes can be used to show message according to failure, warning or success.
 ***********************************************************************/
 
 /**
@@ -83,6 +97,14 @@ html, body {
 	&.screen-desktop-xlarge {
 		width: $screen-desktop-xlarge;
 	}
+
+	&.screen-desktop-xxlarge {
+		width: $screen-desktop-xxlarge;
+	}
+
+	&.screen-desktop-xxxlarge {
+		width: $screen-desktop-xxxlarge;
+	}
 }
 
 /**
@@ -139,6 +161,10 @@ html, body {
 		width: 10% !important;
 	}
 
+	&.width-20 {
+		width: 20% !important;
+	}
+
 	&.width-25 {
 		width: 25% !important;
 	}
@@ -189,6 +215,18 @@ html, body {
 		height: auto !important;
 	}
 
+	&.height-1 {
+		height: 1% !important;
+	}
+
+	&.height-10 {
+		height: 10% !important;
+	}
+
+	&.height-20 {
+		height: 20% !important;
+	}
+
 	&.height-25 {
 		height: 25% !important;
 	}
@@ -200,7 +238,7 @@ html, body {
 	&.height-75 {
 		height: 75% !important;
 	}
-	
+
 	&.height-80 {
 		height: 80% !important;
 	}
@@ -208,7 +246,7 @@ html, body {
 	&.height-90 {
 		height: 90% !important;
 	}
-	
+
 	&.height-100 {
 		height: 100% !important;
 	}
@@ -261,7 +299,7 @@ html, body {
 			width: 64px;
 		}
 	}
-	
+
 	&.avatar-large {
 		width: 100px;
 
@@ -314,55 +352,6 @@ html, body {
 
 	&.align-right {
 		text-align: right !important;
-	}
-}
-
-/**
- * Height fillers to seperate boxes.
- */
-
-.filler-height {
-	height: 1rem;
-
-	&.filler-height-small {
-		height: 1.5rem;
-	}
-
-	&.filler-height-medium {
-		height: 2rem;
-	}
-
-	&.filler-height-large {
-		height: 2.5rem;
-	}
-
-	&.filler-height-xlarge {
-		height: 3rem;
-	}
-}
-
-/**
- * Tab fillers to seperate elements.
- */
-.filler-tab {
-	width: 1em;
-	height: 1px;
-	display: inline-block;
-
-	&.filler-tab-small {
-		width: 2em;
-	}
-
-	&.filler-tab-medium {
-		width: 4em;
-	}
-
-	&.filler-tab-large {
-		width: 8em;
-	}
-
-	&.filler-tab-xlarge {
-		width: 10em;
 	}
 }
 
@@ -439,41 +428,81 @@ html, body {
 	&.layer-1 {
 		z-index: 10;
 	}
-	
+
 	&.layer-2 {
 		z-index: 20;
 	}
-	
+
 	&.layer-3 {
 		z-index: 30;
 	}
-	
+
 	&.layer-4 {
 		z-index: 40;
 	}
-	
+
 	&.layer-5 {
 		z-index: 50;
 	}
-	
+
 	&.layer-6 {
 		z-index: 60;
 	}
-	
+
 	&.layer-7 {
 		z-index: 70;
 	}
-	
+
 	&.layer-8 {
 		z-index: 80;
 	}
-	
+
 	&.layer-9 {
 		z-index: 90;
 	}
-	
+
 	&.layer-10 {
 		z-index: 100;
+	}
+
+	&.layer-11 {
+		z-index: 110;
+	}
+
+	&.layer-12 {
+		z-index: 120;
+	}
+
+	&.layer-13 {
+		z-index: 130;
+	}
+
+	&.layer-14 {
+		z-index: 140;
+	}
+
+	&.layer-15 {
+		z-index: 150;
+	}
+
+	&.layer-16 {
+		z-index: 160;
+	}
+
+	&.layer-17 {
+		z-index: 170;
+	}
+
+	&.layer-18 {
+		z-index: 180;
+	}
+
+	&.layer-19 {
+		z-index: 190;
+	}
+
+	&.layer-20 {
+		z-index: 200;
 	}
 }
 
@@ -566,12 +595,12 @@ html, body {
 
 // Disabled
 .disabled {
-	background-color: $color-gray !important;
+	background-color: $color-gray-l !important;
 	color: $color-white !important;
 	cursor: default !important;
 
 	&:hover {
-		background-color: $color-gray !important;
+		background-color: $color-gray-l !important;
 		color: $color-white !important;
 	}
 }

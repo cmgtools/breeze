@@ -1,15 +1,21 @@
 /**********************************************************************
-Description: This file define the styles for margin and padding used by CMT-UI css framework.
+Description: This file define the styles for margin and padding used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the margin and padding styles as listed below:
-* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
-*                     margin and padding.
+Details: It defines the margin and padding styles as listed below.
+
+Margin & Padding - These classes remove margin or padding or both. There are also classes
+to have pre-defined margin and padding.
+
+Height Filler - These classes can be used to add vertical spacing.
+
+Tab Filler - These classes can be used to add horizontal spacing between inline boxes.
 ***********************************************************************/
 
 // without margin and padding
 .mp {
+	// No defaults
 
 	&.mp-none {
 		margin: 0 !important;
@@ -40,6 +46,7 @@ Details: It defines the margin and padding styles as listed below:
 // Padding
 
 .padding {
+	// No defaults
 
 	&.padding-none {
 		padding: 0 !important;
@@ -225,6 +232,7 @@ Details: It defines the margin and padding styles as listed below:
 // Margin
 
 .margin {
+	// No defaults
 
 	&.margin-none {
 		margin: 0 !important;
@@ -404,5 +412,54 @@ Details: It defines the margin and padding styles as listed below:
 
 	&.margin-right-xlarge {
 		margin-right: $size-xlarge-rem;
+	}
+}
+
+/**
+ * Height fillers to seperate boxes.
+ */
+
+.filler-height {
+	height: 1rem;
+
+	&.filler-height-small {
+		height: 1.5rem;
+	}
+
+	&.filler-height-medium {
+		height: 2rem;
+	}
+
+	&.filler-height-large {
+		height: 2.5rem;
+	}
+
+	&.filler-height-xlarge {
+		height: 3rem;
+	}
+}
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+	width: 1em;
+	height: 1px;
+	display: inline-block;
+
+	&.filler-tab-small {
+		width: 2em;
+	}
+
+	&.filler-tab-medium {
+		width: 4em;
+	}
+
+	&.filler-tab-large {
+		width: 8em;
+	}
+
+	&.filler-tab-xlarge {
+		width: 10em;
 	}
 }

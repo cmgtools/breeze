@@ -1,15 +1,15 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. 
-Most of these elements are also dependent on CMT-JS library. Though the JS implementation 
+Description: It defines the styles of custom elements available in Breeze Framework.
+Most of these elements are also dependent on CMT-JS library. Though the JS implementation
 can also be done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-1. Choice - The choice allows user to select single or multiple options from available 
-options. It include radio and checkbox html components and change their default behaviour 
-by showing good looking icons instead of browser dependentent graphics. These are indepedent 
+1. Choice - The choice allows user to select single or multiple options from available
+options. It include radio and checkbox html components and change their default behaviour
+by showing good looking icons instead of browser dependentent graphics. These are indepedent
 of JS and purely css solutions.
 ***********************************************************************/
 
@@ -20,7 +20,7 @@ of JS and purely css solutions.
 .cmt-choice {
 
 	span, a {
-		vertical-align: middle;
+		vertical-align: baseline;
 	}
 
 	input[type=checkbox],

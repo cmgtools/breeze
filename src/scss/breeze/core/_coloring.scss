@@ -1,19 +1,23 @@
 /**********************************************************************
-Description: This file define the text and background colors used by CMT-UI css framework.
+Description: This file define the text and background colors used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the text and background colors as listed below:
-* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
-* Colors            - This section define the classes having appropriate background and text color following 3 Color
-*                     Scheme and the standard colors.
+Details: It defines the text and background colors as listed below.
+
+Default Color - The default background and text color is set to primary from the 3 Color Scheme.
+
+Colors - This section define the classes having appropriate background and text color following
+3 Color Scheme and the standard colors.
 ***********************************************************************/
 
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
- * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */
+Coloring - It is one of the most important factor while designing website following a theme approach.
+CMGTools have taken extra care in this area and tried to manage colors by dividing them into 3 major
+variations forming a standard color palette. The primary color is dominating for the entire design and
+secondary is contrary to primary to be used for components. The tertiary color can also be used apart
+from secondary for highlighting purpose.
+*/
 
 .color {
 
@@ -93,7 +97,7 @@ Details: It defines the text and background colors as listed below:
 		background-color: $color-black !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-blue {
 		background-color: $color-blue !important;
 		color: $color-white !important;
@@ -430,7 +434,7 @@ Details: It defines the text and background colors as listed below:
 	&.bkg-transparent-black-l {
 		background-color: $color-transparent-black-l !important;
 	}
-    
+
 	&.bkg-transparent-black-h {
 		background-color: $color-transparent-black-h !important;
 	}

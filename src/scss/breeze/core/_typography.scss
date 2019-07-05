@@ -1,38 +1,38 @@
 /**********************************************************************
-Description: This file define the styles specific to typography available in CMT-UI css framework.
+Description: This file define the styles specific to typography available in Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the typography specific styles as listed below:
+Details: It defines the typography specific styles as listed below.
 
-* Default Font      - The default font and line height is set at document level.
-*
-* Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
-*
-* Font              - The font classes can be used to change element font.
-*
-* Font size         - These classes use the font size variables defined in variables file.
-*
-* Line height       - These classes define the line height to allow line spacing for better readability.
-*
-* Headers           - The header classes define the line height, font and font size for headers.
-*
-* Text              - It define the line height, font and font size for text elements.
-*
-* Code              - Pre element with default text and background color.
-*
-* Font weight       - The font weight classes can be used to change font weight of selected elements.
-*
-* Font style        - These classes can be used to change the font styles including italic, underline,
-*                     uppercase, lowercose, text striking.
-*
-* Text alignment    - The alignment classes to align text.
-*
-* Word spacing      - This section includes classes to add space between words.
-*
-* Link              - The link element using link colors in default, active and hover states.
-*
-* Text with line    - This class can be used to decorate text having background line at center.
+Default Font - The default font and line height is set at document level.
+
+Responsive font - The fonts are made responsive by changing the size for most common screen sizes.
+
+Font - The font classes can be used to change element font.
+
+Font size - These classes use the font size variables defined in variables file.
+
+Line height - These classes define the line height to allow line spacing for better readability.
+
+Headers - The header classes define the line height, font and font size for headers.
+
+Text - It define the line height, font and font size for text elements.
+
+Code - Pre element with default text and background color.
+
+Font weight - The font weight classes can be used to change font weight of selected elements.
+
+Font style - These classes can be used to change the font styles including italic, underline,
+uppercase, lowercose, text striking.
+
+Text alignment - The alignment classes to align text.
+
+Word spacing - This section includes classes to add space between words.
+
+Link - The link element using link colors in default, active and hover states.
+
+Text with line - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 
 // TODO: Add support for viewport width.
@@ -216,7 +216,7 @@ p, span, em, div, a {
 	&.reader-left {
 		text-align: left !important;
 	}
-	
+
 	&.reader-center {
 		text-align: center !important;
 	}
@@ -224,7 +224,7 @@ p, span, em, div, a {
 	&.reader-right {
 		text-align: right !important;
 	}
-	
+
 	&.reader-justify {
 		text-align: justify !important;
 	}
@@ -443,6 +443,30 @@ a, .link {
 		background-color: $color-primary;
 		margin-top: -0.5em;
 		vertical-align: top;
+
+		&.text-content-h1 {
+			margin-top: -( $font-size-1 / 2 );
+		}
+
+		&.text-content-h2 {
+			margin-top: -( $font-size-2 / 2 );
+		}
+
+		&.text-content-h3 {
+			margin-top: -( $font-size-3 / 2 );
+		}
+
+		&.text-content-h4 {
+			margin-top: -( $font-size-4 / 2 );
+		}
+
+		&.text-content-h5 {
+			margin-top: -( $font-size-5 / 2 );
+		}
+
+		&.text-content-h6 {
+			margin-top: -( $font-size-6 / 2 );
+		}
 	}
 }
 
@@ -453,15 +477,15 @@ a, .link {
 	.note-info {
 		color: $color-info;
 	}
-	
+
 	.note-success {
 		color: $color-success;
 	}
-	
+
 	.note-warning {
 		color: $color-warning;
 	}
-	
+
 	.note-error {
 		color: $color-error;
 	}

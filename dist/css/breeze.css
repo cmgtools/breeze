@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /**********************************************************************
-Description	: This file define the variables used by the Breeze CSS Framework.
+Description: This file define the variables used by the Breeze CSS Framework.
 
-Dependency	: None
+Dependency: None
 
-Details		: It defines the commonly used variables as listed below.
+Details: It defines the commonly used variables as listed below.
 
 Version - Current version of the Breeze CSS Framework.
 
@@ -110,12 +110,12 @@ Avant		- <min>
 Baidu		- <min>
 */
 /**********************************************************************
-Description	: This file define the extended variables used by the Breeze CSS Framework. These are
+Description: This file define the extended variables used by the Breeze CSS Framework. These are
 derived using the primary variables.
 
-Dependency	: variables
+Dependency: variables
 
-Details		: It defines the extended variables derived from primary variables as listed below.
+Details: It defines the extended variables derived from primary variables as listed below.
 
 Header Rule - It defines the default color of header rule.
 
@@ -129,12 +129,12 @@ Standard Colors : High, medium and low transparency applied to the standard colo
 Special Colors : High, medium and low transparency applied to the special colors.
 ***********************************************************************/
 /**********************************************************************
-Description	: This file define the default mixins available in the Breeze CSS Framework. It also
+Description: This file define the default mixins available in the Breeze CSS Framework. It also
 define the default classes for all the mixins.
 
-Dependency	: variables, variables-ext
+Dependency: variables, variables-ext
 
-Details		: It define the mixins and their default implementation as listed below.
+Details: It define the mixins and their default implementation as listed below.
 
 Clearfix - It allows parent element to fix zero height issue in case it consist of floating children
 by forcing itself to self-clear floating children.
@@ -1585,13 +1585,13 @@ Notes:
   background-image: url("../images/pattern-default.png"); }
 
 /**********************************************************************
-Description	: This file define the transition effects available in the Breeze CSS Framework. These
+Description: This file define the transition effects available in the Breeze CSS Framework. These
 allow changes in allowed css properties smoothly over a defined time interval. We can define the
 animation/transition effects and duration to change the property.
 
-Dependency	: None
+Dependency: None
 
-Details		: It defines the transition mixins and default implementation as listed below.
+Details: It defines the transition mixins and default implementation as listed below.
 
 Standard Transitions - Define the variables having standard transition effect.
 
@@ -1806,13 +1806,13 @@ The default implementations use ease-in and ease-out transition using medium tim
   transition: transform 420ms ease-in-out 0s; }
 
 /**********************************************************************
-Description	: This file define the 2d transformation effects available in the Breeze CSS
+Description: This file define the 2d transformation effects available in the Breeze CSS
 Framework. These effects change the physical look of an element i.e. position, orientation
 and scale on 2d plane.
 
-Dependency	: variables
+Dependency: variables
 
-Details		: It defines the transformation mixins and default implementation as listed below.
+Details: It defines the transformation mixins and default implementation as listed below.
 
 Translate - The translate effect moves an element on x and y axis.
 
@@ -2079,28 +2079,32 @@ Zoom - The zoom animation use the scale property to zoom in and zoom out an elem
 /**********************************************************************
 Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com),
 HTML5 Doctor(http://html5doctor.com) and HTML5 Boilerplate aims to make a
-custom reset css for CMT-UI.
+custom reset css for Breeze CSS Framework.
+
 Dependencies: variables
 ***********************************************************************/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, acronym,
-address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a,
+blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: top;
+  vertical-align: baseline;
   background: transparent; }
 
 main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
 html {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
 
 body {
   line-height: 1; }
@@ -2122,6 +2126,12 @@ blockquote, q {
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
+
+thead, tbody, tfoot {
+  vertical-align: top; }
+
+td, th, tr {
+  vertical-align: inherit; }
 
 table {
   border-collapse: collapse;
@@ -2203,12 +2213,12 @@ sub, sup {
   vertical-align: middle; }
 
 sup {
-  top: -0.5em; }
+  vertical-align: super; }
 
 sub {
-  bottom: -0.25em; }
+  vertical-align: sub; }
 
-a {
+a, .link {
   text-decoration: none;
   cursor: pointer; }
 
@@ -2221,7 +2231,8 @@ a:active, a:hover {
 audio, canvas, video {
   display: inline-block;
   *display: inline;
-  *zoom: 1; }
+  *zoom: 1;
+  max-width: 100%; }
 
 audio:not([controls]) {
   display: none;
@@ -2260,14 +2271,18 @@ input::-moz-focus-inner {
   padding: 0; }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 input[type="checkbox"], input[type="radio"] {
   padding: 0; }
@@ -2367,26 +2382,40 @@ input[type="checkbox"] {
     margin-left: 40px; }
 
 /**********************************************************************
-Description: This file define the basic and common styling used by CMT-UI css framework.
+Description: This file define the basic and common styling used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the basic styles as listed below:
-* Box border        - It's applied to html and all elements in order to calculate width including border and padding.
-* Screen            - The default classes having screen sizes using variables defined in variable file.
-* Floats            - The floating classes either clear the float, no float or add left/right float.
-* Width & Height    - This section define width and height classes having predefined values in percentage.
-* Alignments        - The alignment classes allows to align either the element itself or it's children.
-* Height Filler     - These classes can be used to add vertical spacing.
-* Tab Filler        - These classes can be used to add horizontal spacing between inline boxes.
-* Positioning       - This section define the positioning classes.
-* Display           - The display classes control the display property i.e. inline, block or inline block.
-* Visibility        - These classes control the display property i.e. block or none. The visibility property specific
-*                     classes can be used to show or hide an element keeping it's space on screen.
-* Cursor            - The cursor classes.
-* Disabled          - It disable an element by changing color to gray and cursor to default.
-* Fluid             - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
-* Message           - These classes can be used to show message according to failure, warning or success.
+Details: It defines the basic styles as listed below.
+
+Box border - It's applied to html and all elements in order to calculate width including border and padding.
+
+Screen - The default classes having screen sizes using variables defined in variable file.
+
+Floats - The floating classes either clear the float, no float or add left/right float.
+
+Width & Height - This section define width and height classes having predefined values in percentage.
+
+Avatar - The image or icons used as avatar.
+
+Alignments - The alignment classes allows to align either the element itself or it's children.
+
+Positioning - This section define the positioning classes.
+
+Layers - Layered blocks having z-index. The greater the layer number, the more is z-index.
+
+Display - The display classes control the display property i.e. inline, block or inline block.
+
+Visibility - These classes control the display property i.e. block or none. The visibility property specific
+classes can be used to show or hide an element keeping it's space on screen.
+
+Cursor - The cursor classes.
+
+Disabled - It disable an element by changing color to gray and cursor to default.
+
+Fluid - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
+
+Message - These classes can be used to show message according to failure, warning or success.
 ***********************************************************************/
 /**
  * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including
@@ -2434,6 +2463,12 @@ html, body {
 .screen.screen-desktop-xlarge {
   width: 1920px; }
 
+.screen.screen-desktop-xxlarge {
+  width: 3840px; }
+
+.screen.screen-desktop-xxxlarge {
+  width: 4096px; }
+
 /**
  * Floating Blocks - These classes can be used to clear or float the elements.
  */
@@ -2469,6 +2504,8 @@ html, body {
     width: 5% !important; }
   .width.width-10 {
     width: 10% !important; }
+  .width.width-20 {
+    width: 20% !important; }
   .width.width-25 {
     width: 25% !important; }
   .width.width-50 {
@@ -2494,6 +2531,12 @@ html, body {
   height: 100%; }
   .height.height-auto {
     height: auto !important; }
+  .height.height-1 {
+    height: 1% !important; }
+  .height.height-10 {
+    height: 10% !important; }
+  .height.height-20 {
+    height: 20% !important; }
   .height.height-25 {
     height: 25% !important; }
   .height.height-50 {
@@ -2564,36 +2607,6 @@ html, body {
   .align.align-right {
     text-align: right !important; }
 
-/**
- * Height fillers to seperate boxes.
- */
-.filler-height {
-  height: 1rem; }
-  .filler-height.filler-height-small {
-    height: 1.5rem; }
-  .filler-height.filler-height-medium {
-    height: 2rem; }
-  .filler-height.filler-height-large {
-    height: 2.5rem; }
-  .filler-height.filler-height-xlarge {
-    height: 3rem; }
-
-/**
- * Tab fillers to seperate elements.
- */
-.filler-tab {
-  width: 1em;
-  height: 1px;
-  display: inline-block; }
-  .filler-tab.filler-tab-small {
-    width: 2em; }
-  .filler-tab.filler-tab-medium {
-    width: 4em; }
-  .filler-tab.filler-tab-large {
-    width: 8em; }
-  .filler-tab.filler-tab-xlarge {
-    width: 10em; }
-
 .absolute {
   position: absolute !important; }
   .absolute.absolute-center {
@@ -2657,6 +2670,26 @@ html, body {
     z-index: 90; }
   .layer.layer-10 {
     z-index: 100; }
+  .layer.layer-11 {
+    z-index: 110; }
+  .layer.layer-12 {
+    z-index: 120; }
+  .layer.layer-13 {
+    z-index: 130; }
+  .layer.layer-14 {
+    z-index: 140; }
+  .layer.layer-15 {
+    z-index: 150; }
+  .layer.layer-16 {
+    z-index: 160; }
+  .layer.layer-17 {
+    z-index: 170; }
+  .layer.layer-18 {
+    z-index: 180; }
+  .layer.layer-19 {
+    z-index: 190; }
+  .layer.layer-20 {
+    z-index: 200; }
 
 .block {
   display: block !important; }
@@ -2712,11 +2745,11 @@ html, body {
     cursor: wait; }
 
 .disabled {
-  background-color: #7F7F7F !important;
+  background-color: #A5A5A5 !important;
   color: #FFFFFF !important;
   cursor: default !important; }
   .disabled:hover {
-    background-color: #7F7F7F !important;
+    background-color: #A5A5A5 !important;
     color: #FFFFFF !important; }
 
 .fluid {
@@ -2755,20 +2788,24 @@ html, body {
   box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25); }
 
 /**********************************************************************
-Description: This file define the text and background colors used by CMT-UI css framework.
+Description: This file define the text and background colors used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the text and background colors as listed below:
-* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
-* Colors            - This section define the classes having appropriate background and text color following 3 Color
-*                     Scheme and the standard colors.
+Details: It defines the text and background colors as listed below.
+
+Default Color - The default background and text color is set to primary from the 3 Color Scheme.
+
+Colors - This section define the classes having appropriate background and text color following
+3 Color Scheme and the standard colors.
 ***********************************************************************/
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
- * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */
+Coloring - It is one of the most important factor while designing website following a theme approach.
+CMGTools have taken extra care in this area and tried to manage colors by dividing them into 3 major
+variations forming a standard color palette. The primary color is dominating for the entire design and
+secondary is contrary to primary to be used for components. The tertiary color can also be used apart
+from secondary for highlighting purpose.
+*/
 .color {
   /**
  * Color Palatte:
@@ -3231,13 +3268,18 @@ Details: It defines the text and background colors as listed below:
   color: #003653 !important; }
 
 /**********************************************************************
-Description: This file define the styles for margin and padding used by CMT-UI css framework.
+Description: This file define the styles for margin and padding used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the margin and padding styles as listed below:
-* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
-*                     margin and padding.
+Details: It defines the margin and padding styles as listed below.
+
+Margin & Padding - These classes remove margin or padding or both. There are also classes
+to have pre-defined margin and padding.
+
+Height Filler - These classes can be used to add vertical spacing.
+
+Tab Filler - These classes can be used to add horizontal spacing between inline boxes.
 ***********************************************************************/
 .mp.mp-none {
   margin: 0 !important;
@@ -3535,41 +3577,71 @@ Details: It defines the margin and padding styles as listed below:
 .margin.margin-right-xlarge {
   margin-right: 5rem; }
 
+/**
+ * Height fillers to seperate boxes.
+ */
+.filler-height {
+  height: 1rem; }
+  .filler-height.filler-height-small {
+    height: 1.5rem; }
+  .filler-height.filler-height-medium {
+    height: 2rem; }
+  .filler-height.filler-height-large {
+    height: 2.5rem; }
+  .filler-height.filler-height-xlarge {
+    height: 3rem; }
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+  width: 1em;
+  height: 1px;
+  display: inline-block; }
+  .filler-tab.filler-tab-small {
+    width: 2em; }
+  .filler-tab.filler-tab-medium {
+    width: 4em; }
+  .filler-tab.filler-tab-large {
+    width: 8em; }
+  .filler-tab.filler-tab-xlarge {
+    width: 10em; }
+
 /**********************************************************************
-Description: This file define the styles specific to typography available in CMT-UI css framework.
+Description: This file define the styles specific to typography available in Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the typography specific styles as listed below:
+Details: It defines the typography specific styles as listed below.
 
-* Default Font      - The default font and line height is set at document level.
-*
-* Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
-*
-* Font              - The font classes can be used to change element font.
-*
-* Font size         - These classes use the font size variables defined in variables file.
-*
-* Line height       - These classes define the line height to allow line spacing for better readability.
-*
-* Headers           - The header classes define the line height, font and font size for headers.
-*
-* Text              - It define the line height, font and font size for text elements.
-*
-* Code              - Pre element with default text and background color.
-*
-* Font weight       - The font weight classes can be used to change font weight of selected elements.
-*
-* Font style        - These classes can be used to change the font styles including italic, underline,
-*                     uppercase, lowercose, text striking.
-*
-* Text alignment    - The alignment classes to align text.
-*
-* Word spacing      - This section includes classes to add space between words.
-*
-* Link              - The link element using link colors in default, active and hover states.
-*
-* Text with line    - This class can be used to decorate text having background line at center.
+Default Font - The default font and line height is set at document level.
+
+Responsive font - The fonts are made responsive by changing the size for most common screen sizes.
+
+Font - The font classes can be used to change element font.
+
+Font size - These classes use the font size variables defined in variables file.
+
+Line height - These classes define the line height to allow line spacing for better readability.
+
+Headers - The header classes define the line height, font and font size for headers.
+
+Text - It define the line height, font and font size for text elements.
+
+Code - Pre element with default text and background color.
+
+Font weight - The font weight classes can be used to change font weight of selected elements.
+
+Font style - These classes can be used to change the font styles including italic, underline,
+uppercase, lowercose, text striking.
+
+Text alignment - The alignment classes to align text.
+
+Word spacing - This section includes classes to add space between words.
+
+Link - The link element using link colors in default, active and hover states.
+
+Text with line - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 html, body {
   font-family: Arial, Helvetica, sans-serif; }
@@ -3831,6 +3903,18 @@ a, .link {
     background-color: #F2F2F2;
     margin-top: -0.5em;
     vertical-align: top; }
+    .text-with-line .text-content.text-content-h1 {
+      margin-top: -1.335em; }
+    .text-with-line .text-content.text-content-h2 {
+      margin-top: -1em; }
+    .text-with-line .text-content.text-content-h3 {
+      margin-top: -0.79em; }
+    .text-with-line .text-content.text-content-h4 {
+      margin-top: -0.665em; }
+    .text-with-line .text-content.text-content-h5 {
+      margin-top: -0.585em; }
+    .text-with-line .text-content.text-content-h6 {
+      margin-top: -0.54em; }
 
 .note {
   padding: 0.5em;
@@ -5764,21 +5848,21 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     margin: 0; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. 
-Most of these elements are also dependent on CMT-JS library. Though the JS implementation 
+Description: It defines the styles of custom elements available in Breeze Framework.
+Most of these elements are also dependent on CMT-JS library. Though the JS implementation
 can also be done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-1. Choice - The choice allows user to select single or multiple options from available 
-options. It include radio and checkbox html components and change their default behaviour 
-by showing good looking icons instead of browser dependentent graphics. These are indepedent 
+1. Choice - The choice allows user to select single or multiple options from available
+options. It include radio and checkbox html components and change their default behaviour
+by showing good looking icons instead of browser dependentent graphics. These are indepedent
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: middle; }
+  vertical-align: baseline; }
 
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
