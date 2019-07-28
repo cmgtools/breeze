@@ -206,7 +206,7 @@ This section includes mixins for in-between, desktop first and mobile first appr
 @mixin shadow-inset-top-bottom( $x1, $y1, $blur1, $color1, $x2, $y2, $blur2, $color2, $spread1: 0, $spread2: 0 ) {
 	-webkit-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
 	   -moz-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
-			box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+			box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
 }
 
 // Text Shadow with x and y distance having blur ratio and color of shadow

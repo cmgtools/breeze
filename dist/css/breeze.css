@@ -2607,6 +2607,27 @@ html, body {
   .align.align-right {
     text-align: right !important; }
 
+.valign {
+  vertical-align: baseline; }
+  .valign.valign-initial {
+    vertical-align: initial; }
+  .valign.valign-inherit {
+    vertical-align: inherit; }
+  .valign.valign-top {
+    vertical-align: top; }
+  .valign.valign-middle {
+    vertical-align: middle; }
+  .valign.valign-bottom {
+    vertical-align: bottom; }
+  .valign.valign-text-top {
+    vertical-align: text-top; }
+  .valign.valign-text-bottom {
+    vertical-align: text-bottom; }
+  .valign.valign-sub {
+    vertical-align: sub; }
+  .valign.valign-super {
+    vertical-align: super; }
+
 .absolute {
   position: absolute !important; }
   .absolute.absolute-center {
@@ -3671,46 +3692,46 @@ html, body {
   font-family: "Courier New", Courier, monospace !important; }
 
 .text.text-xxlarge {
-  font-size: 7.2em; }
+  font-size: 7.2em !important; }
 
 .text.text-xlarge {
-  font-size: 4.5em; }
+  font-size: 4.5em !important; }
 
 .text.text-large {
-  font-size: 3.5em; }
+  font-size: 3.5em !important; }
 
 .text.text-large-1 {
-  font-size: 2.67em; }
+  font-size: 2.67em !important; }
 
 .text.text-large-2 {
-  font-size: 2em; }
+  font-size: 2em !important; }
 
 .text.text-large-3 {
-  font-size: 1.58em; }
+  font-size: 1.58em !important; }
 
 .text.text-large-4 {
-  font-size: 1.33em; }
+  font-size: 1.33em !important; }
 
 .text.text-large-5 {
-  font-size: 1.17em; }
+  font-size: 1.17em !important; }
 
 .text.text-large-6 {
-  font-size: 1.08em; }
+  font-size: 1.08em !important; }
 
 .text.text-regular {
-  font-size: 1em; }
+  font-size: 1em !important; }
 
 .text.text-small {
-  font-size: 0.8em; }
+  font-size: 0.8em !important; }
 
 .text.text-tiny {
-  font-size: 0.7em; }
+  font-size: 0.7em !important; }
 
 .text.text-micro {
-  font-size: 0.5em; }
+  font-size: 0.5em !important; }
 
 .text.text-bottom {
-  vertical-align: text-bottom; }
+  vertical-align: text-bottom !important; }
 
 .line-height {
   line-height: 1em; }

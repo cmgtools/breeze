@@ -355,6 +355,46 @@ html, body {
 	}
 }
 
+.valign {
+	vertical-align: baseline;
+
+	&.valign-initial {
+		vertical-align: initial;
+	}
+
+	&.valign-inherit {
+		vertical-align: inherit;
+	}
+
+	&.valign-top {
+		vertical-align: top;
+	}
+
+	&.valign-middle {
+		vertical-align: middle;
+	}
+
+	&.valign-bottom {
+		vertical-align: bottom;
+	}
+
+	&.valign-text-top {
+		vertical-align: text-top;
+	}
+
+	&.valign-text-bottom {
+		vertical-align: text-bottom;
+	}
+
+	&.valign-sub {
+		vertical-align: sub;
+	}
+
+	&.valign-super {
+		vertical-align: super;
+	}
+}
+
 // Positioning
 
 .absolute {
