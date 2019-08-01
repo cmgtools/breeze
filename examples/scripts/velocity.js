@@ -3077,8 +3077,8 @@ cmt.components.jquery = cmt.components.jquery || {};
 		// == Init == //
 
 		// Configure Plugin
-		var settings 		= cmtjq.extend( {}, cmtjq.fn.cmtCheckbox.defaults, options );
-		var checkboxes		= this;
+		var settings 	= cmtjq.extend( {}, cmtjq.fn.cmtCheckbox.defaults, options );
+		var checkboxes	= this;
 
 		// Iterate and initialise all the fox sliders
 		checkboxes.each( function() {

@@ -198,14 +198,14 @@ Blur - Blus is another mixin adding lens effect to blur underlying content and i
 Media Queries - These mixins are pre-defined media queries using the screen sizes declared in variables file.
 This section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .cmt-choice, .cmt-switch-wrap, .frm-split-40-60 .form-group, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .cmt-choice:before, .cmt-switch-wrap:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .cmt-choice:after, .cmt-switch-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .cmt-choice:after, .cmt-switch-wrap:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -5948,9 +5948,30 @@ of JS and purely css solutions.
 .cmt-choice input[type=checkbox]:checked + .label::before {
   content: "\3a"; }
 
-.cmt-choice-inline label {
+.cmt-choice.cmt-choice-inline label {
   display: inline-block;
+  margin-right: 1em;
+  width: auto; }
+
+.cmt-choice.cmt-choice-row-2 label {
+  float: left;
+  width: 50%; }
+
+.cmt-choice.cmt-choice-row-4 label {
+  float: left;
   width: 25%; }
+
+@media only screen and (max-width: 1024px) {
+  .cmt-choice.cmt-choice-row-4 label {
+    width: 50%; } }
+
+.cmt-choice.cmt-choice-row-5 label {
+  float: left;
+  width: 20%; }
+
+@media only screen and (max-width: 1024px) {
+  .cmt-choice.cmt-choice-row-5 label {
+    width: 50%; } }
 
 /**********************************************************************
 Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
@@ -6001,6 +6022,10 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 .cmt-switch {
   position: relative;
   display: inline-block; }
+  .cmt-switch label, .cmt-switch .label {
+    vertical-align: middle; }
+  .cmt-switch label {
+    margin-right: 1em; }
   .cmt-switch .cmt-toggle {
     position: absolute;
     margin-left: -9999px;
@@ -6049,12 +6074,33 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
 
-.cmt-switch-wrap .cmt-switch, .cmt-switch-wrap .cmt-switch-label {
-  display: inline-block;
-  vertical-align: middle; }
+.cmt-switch-wrap .cmt-switch {
+  margin-bottom: 1em; }
 
-.cmt-switch-wrap .cmt-switch-label {
-  margin-left: 0.5em; }
+.cmt-switch-wrap.cmt-switch-inline .cmt-switch {
+  display: inline-block;
+  margin-right: 1em;
+  width: auto; }
+
+.cmt-switch-wrap.cmt-switch-row-2 .cmt-switch {
+  float: left;
+  width: 50%; }
+
+.cmt-switch-wrap.cmt-switch-row-4 .cmt-switch {
+  float: left;
+  width: 25%; }
+
+@media only screen and (max-width: 1024px) {
+  .cmt-switch-wrap.cmt-switch-row-4 .cmt-switch {
+    width: 50%; } }
+
+.cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+  float: left;
+  width: 20%; }
+
+@media only screen and (max-width: 1024px) {
+  .cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+    width: 50%; } }
 
 /**********************************************************************
 Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these

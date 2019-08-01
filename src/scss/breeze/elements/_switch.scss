@@ -16,6 +16,14 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 	position: relative;
 	display: inline-block;
 
+	label, .label {
+		vertical-align: middle;
+	}
+
+	label {
+		margin-right: 1em;
+	}
+
 	.cmt-toggle {
 		position: absolute;
 		margin-left: -9999px;
@@ -72,14 +80,59 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 	}
 }
 
-.cmt-switch-wrap {
+// == Switches - arrangements =======
 
-	.cmt-switch, .cmt-switch-label {
-		display: inline-block;
-		vertical-align: middle;
+.cmt-switch-wrap {
+	@extend %clearfix;
+
+	.cmt-switch {
+		margin-bottom: 1em;
 	}
 
-	.cmt-switch-label {
-		margin-left: 0.5em;
+	&.cmt-switch-inline {
+
+		.cmt-switch {
+			display: inline-block;
+			margin-right: 1em;
+			width: auto;
+		}
+	}
+
+	&.cmt-switch-row-2 {
+
+		.cmt-switch {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&.cmt-switch-row-4 {
+
+		.cmt-switch {
+			float: left;
+			width: 25%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			.cmt-switch {
+				width: 50%;
+			}
+		}
+	}
+
+	&.cmt-switch-row-5 {
+
+		.cmt-switch {
+			float: left;
+			width: 20%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			.cmt-switch {
+				width: 50%;
+			}
+		}
 	}
 }

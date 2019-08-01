@@ -110,12 +110,55 @@ of JS and purely css solutions.
 	}
 }
 
-// == Choices - 4 in a row ==========
+// == Choices - arrangements ========
 
-.cmt-choice-inline {
+.cmt-choice {
+	@extend %clearfix;
 
-	label {
-		display: inline-block;
-		width: 25%;
+	&.cmt-choice-inline {
+
+		label {
+			display: inline-block;
+			margin-right: 1em;
+			width: auto;
+		}
+	}
+
+	&.cmt-choice-row-2 {
+
+		label {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&.cmt-choice-row-4 {
+
+		label {
+			float: left;
+			width: 25%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			label {
+				width: 50%;
+			}
+		}
+	}
+
+	&.cmt-choice-row-5 {
+
+		label {
+			float: left;
+			width: 20%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			label {
+				width: 50%;
+			}
+		}
 	}
 }
