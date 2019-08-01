@@ -5721,22 +5721,22 @@ Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* List		  - 
+* List		  -
 ***********************************************************************/
 .list-radio label {
   width: auto;
   clear: none; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. Most of 
-these elements are also dependent on Velocity. Though the JS implementation can also be 
+Description: It defines the styles of custom elements available in Breeze Framework. Most of
+these elements are also dependent on Velocity. Though the JS implementation can also be
 done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-1. Select - The custom select allows user to select an item. It override the default select ui 
+1. Select - The custom select allows user to select an item. It override the default select ui
 dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
 ***********************************************************************/
 .cmt-select-wrap {
@@ -7092,17 +7092,17 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
       width: 10%; }
 
 /**********************************************************************
-Description: It defines the styles of accordial element. The accordian is a multi 
+Description: It defines the styles of accordial element. The accordian is a multi
 section arrangement keeping only one section visible at a time.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of accordian elements as listed below:
 
-Accordian - The barebone accordian class with minimum styles common for all the accordians. 
+Accordian - The barebone accordian class with minimum styles common for all the accordians.
 The base class define the structure of accordian having tab with trigger and view.
 
-Basic Accordian - It arrange the accordian sections vertically and provide options to select 
+Basic Accordian - It arrange the accordian sections vertically and provide options to select
 multiple themes using the color scheme.
 
 Border Accordian - It's extension of Basic Accordian with default borders.
@@ -7291,10 +7291,10 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of file uploader elements as listed below:
 
-Uploader - The barebone uploader class with minimum styles common for all the uploaders. 
+Uploader - The barebone uploader class with minimum styles common for all the uploaders.
 The base class define the structure of uploader having tab with trigger and view.
 
-Basic Uploader - It decorate the uploader element with minimum styles keeping same dimensions 
+Basic Uploader - It decorate the uploader element with minimum styles keeping same dimensions
 of dragger, chooser and file.
 ***********************************************************************/
 .uploader {
@@ -7603,7 +7603,7 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of zigzag components as listed below:
 
-ZigZag - The barebone zigzag class with minimum styles with each section having either 
+ZigZag - The barebone zigzag class with minimum styles with each section having either
 100% width or sub-divided into two parts having 50% width.
 ***********************************************************************/
 .data-zigzag .data-zigzag-row {
@@ -9259,7 +9259,7 @@ Details: It defines the styles of card panels as listed below:
     padding-left: 1.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form
 			 components displayed on search pages, panels having content, form etc.
 
 Dependencies: variables, variables-ext, mixins
@@ -9387,7 +9387,7 @@ Details: It defines the styles of box components as listed below:
 
 * Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
-*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				The Banner and Video can be placed at any position within the Box. The possible postions
 *				are outside content wrapper as background, within header, within content and within footer.
 *
 * Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
@@ -9454,14 +9454,14 @@ Details: It defines the styles for login components as listed below:
     position: relative; }
 
 /**********************************************************************
-Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info 
+Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info
 			 for display purpose and the real form can be displayed when user click the swap trigger.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
 Details: It defines the styles of form box components as listed below:
 
-* Form        - The barebone form box class having trigger and wrappers for info and content. The info and 
+* Form        - The barebone form box class having trigger and wrappers for info and content. The info and
 *				content can be swapped using trigger keeping content as hidden by default.
 *
 * Basic       - The basic form define styles to position the edit icon.
@@ -9673,8 +9673,8 @@ Basic - The basic widget defines the styles of widget having text and background
     margin-top: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
-			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks.
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps
 			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
@@ -10117,8 +10117,8 @@ Basic - The basic data grid having default coloring.
     text-align: left; }
 
 /**********************************************************************
-Description: It defines the styles of the page component. We can devide the entire page 
-in multiple sections. Each page can have background image with or without parallax effect, 
+Description: It defines the styles of the page component. We can devide the entire page
+in multiple sections. Each page can have background image with or without parallax effect,
 a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
 and widgets.
 
@@ -10126,10 +10126,10 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for page components as listed below:
 
-1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+1. Page - The barebone page class with minimum styles common for all the pages. The base class
 can have below listed options:
 1.1. It can have background image with or without parallax effects.
-1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set
 page background and even content wrapper background in the form of image or texture.
 ***********************************************************************/
 .page {
@@ -10289,5 +10289,3 @@ page background and even content wrapper background in the form of image or text
     margin-top: 0.5rem; }
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info + .page-footer-content {
     margin-top: 0.5rem; }
-
-/*# sourceMappingURL=breeze.css.map */

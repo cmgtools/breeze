@@ -976,6 +976,12 @@ Notes:
 .shadow {
 	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
+	&.shadow-none {
+		-webkit-box-shadow: none !important;
+		   -moz-box-shadow: none !important;
+				box-shadow: none !important;
+	}
+
 	&.shadow-ignore {
 		@include shadow( 0, 0, 0, white );
 	}

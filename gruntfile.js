@@ -30,7 +30,8 @@ module.exports = function( grunt ) {
 		copy: {
 			main: {
 				files: [
-					{ expand: true, cwd: 'src/scss/cmt/', src: ['**'], dest: 'dist/scss/', filter: 'isFile' }
+					{ expand: true, cwd: 'src/scss/cmt/', src: ['**'], dest: 'dist/scss/', filter: 'isFile' },
+					{ expand: true, cwd: 'dist/css/', src: ['*.css'], dest: 'examples/styles/', filter: 'isFile' }
 				]
 			}
 		}

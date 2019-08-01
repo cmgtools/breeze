@@ -109,3 +109,13 @@ of JS and purely css solutions.
 		content: "\3a";
 	}
 }
+
+// == Choices - 4 in a row ==========
+
+.cmt-choice-inline {
+
+	label {
+		display: inline-block;
+		width: 25%;
+	}
+}

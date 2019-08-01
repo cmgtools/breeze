@@ -7,12 +7,11 @@ Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+Switch - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
 ***********************************************************************/
 
 // == Switch ========================
 
-// Reference: http://callmenick.com/post/css-toggle-switch-examples
 .cmt-switch {
 	position: relative;
 	display: inline-block;
@@ -70,5 +69,17 @@ Details: It defines the custom element styles as listed below:
 
 	.cmt-toggle-round:checked + label:after {
 		margin-left: 3.5em;
+	}
+}
+
+.cmt-switch-wrap {
+
+	.cmt-switch, .cmt-switch-label {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.cmt-switch-label {
+		margin-left: 0.5em;
 	}
 }
