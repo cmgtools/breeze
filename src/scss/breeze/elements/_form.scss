@@ -207,11 +207,15 @@ input[type="submit"], input[type="button"], button {
 
 // Line Height Fix
 
-input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
+input[type="submit"], input[type="button"], button, .btn {
 	line-height: 1.4em;
 }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+label, input[type="text"], input[type="email"], input[type="password"], textarea {
+	line-height: 1.4em;
+}
+
+select, .cmt-select-wrap .cmt-selected {
 	line-height: 1.4em;
 }
 
@@ -263,7 +267,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		width: 250px !important;
 	}
 
-	input[type="text"], input[type="email"], input[type="password"], textarea, select, 
+	input[type="text"], input[type="email"], input[type="password"], textarea, select,
 	input[type="submit"], input[type="button"], button, .btn {
 		padding-left: 2.1em;
 		width: 100% !important;
@@ -284,7 +288,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	// Show icon on right side
 	&.icon-right {
 
-		input[type="text"], input[type="email"], input[type="password"], textarea, select, 
+		input[type="text"], input[type="email"], input[type="password"], textarea, select,
 		input[type="submit"], input[type="button"], button, .btn {
 			padding-left: 0.30em;
 			padding-right: 2.1em;
@@ -522,7 +526,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		@extend %element-style-flag;
 	}
 
-	input[type="text"], input[type="email"], input[type="password"], textarea, select, .icon-picker-wrap {
+	input[type="text"], input[type="email"], input[type="password"], textarea, select, .icon-picker-wrap, .btn, .btn-icon {
 		margin-bottom: 0.5rem;
 	}
 

@@ -5728,15 +5728,15 @@ Details: It defines the custom element styles as listed below:
   clear: none; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. Most of 
-these elements are also dependent on Velocity. Though the JS implementation can also be 
+Description: It defines the styles of custom elements available in Breeze Framework. Most of
+these elements are also dependent on Velocity. Though the JS implementation can also be
 done for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-1. Select - The custom select allows user to select an item. It override the default select ui 
+1. Select - The custom select allows user to select an item. It override the default select ui
 dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
 ***********************************************************************/
 .cmt-select-wrap {
@@ -5763,7 +5763,8 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
         overflow: hidden;
         white-space: nowrap;
         text-align: left;
-        color: #363636; }
+        color: #363636;
+        vertical-align: middle; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
         position: absolute;
         top: 0;
@@ -5851,7 +5852,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0.5em;
+    padding: 0.3em;
     cursor: pointer;
     padding-right: 1.8em;
     text-shadow: 0 0 0 #000; }
@@ -5867,7 +5868,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    padding-top: 0.70em;
+    padding-top: 0.60em;
     padding-left: 0.20em;
     padding-right: 0.60em;
     margin: 0; }
@@ -6687,10 +6688,13 @@ label {
     background-color: gray !important;
     color: #363636 !important; }
 
-input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
+input[type="submit"], input[type="button"], button, .btn {
   line-height: 1.4em; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+label, input[type="text"], input[type="email"], input[type="password"], textarea {
+  line-height: 1.4em; }
+
+select, .cmt-select-wrap .cmt-selected {
   line-height: 1.4em; }
 
 .btn-icon {
@@ -6910,7 +6914,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
 
-.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap {
+.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap, .form .btn, .form .btn-icon {
   margin-bottom: 0.5rem; }
 
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
