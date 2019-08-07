@@ -6917,6 +6917,9 @@ select, .cmt-select-wrap .cmt-selected {
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap, .form .btn, .form .btn-icon {
   margin-bottom: 0.5rem; }
 
+.form .frm-element-25, .form .frm-element-50, .form .frm-element-75, .form .frm-element-small, .form .frm-element-medium, .form .frm-element-large, .form .frm-element-xlarge {
+  margin-bottom: 0.5rem; }
+
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
   margin-bottom: 0.5rem; }
 
