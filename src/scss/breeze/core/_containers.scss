@@ -383,7 +383,7 @@ Details: It defines the grid system and basic containers as listed below:
 			width: 48%;
 		}
 
-		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {		
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
 			width: 48%;
 		}
 
@@ -409,9 +409,9 @@ Details: It defines the grid system and basic containers as listed below:
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 98%;
 		}
-		
+
 		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
-			width: 98%;			
+			width: 98%;
 		}
 	}
 }
@@ -423,8 +423,8 @@ Details: It defines the grid system and basic containers as listed below:
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 98%;
 		}
-		
-		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 { 
+
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
 			width: 98%;
 		}
 	}
@@ -675,6 +675,20 @@ Details: It defines the grid system and basic containers as listed below:
 		top: 0px;
 		bottom: 0px;
 		float: none;
+	}
+
+	.col.col-filler {
+
+		&.col-filler-left {
+			left: 1%;
+		}
+
+		&.col-filler-right {
+			right: 1%;
+		}
+	}
+
+	.colf.col-filler {
 
 		&.col-filler-left {
 			left: 0;
@@ -724,7 +738,7 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 .col-pad-h {
- 
+
 	&.col-pad-small {
 		padding: 0 0.5em;
 

@@ -49,7 +49,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 
 .tabs-basic {
 
-	.tab-links-wrap {
+	> .tab-links-wrap {
 		border-bottom: 1px solid $color-border-d;
 
 		.tab-link {
@@ -66,7 +66,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 		}
 	}
 
-	.tab-content-wrap {
+	> .tab-content-wrap {
 
 		.tab-content {
 			display: none;
@@ -78,7 +78,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 
 .tabs-underline {
 
-	.tab-links-wrap {
+	> .tab-links-wrap {
 		border-bottom: 1px solid $color-border;
 
 		.tab-link {
@@ -97,7 +97,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 		}
 	}
 
-	.tab-content-wrap {
+	> .tab-content-wrap {
 
 		.tab-content {
 			display: none;

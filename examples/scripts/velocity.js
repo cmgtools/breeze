@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2019-08-01
+ * Velocity - v1.0.0-alpha1 - 2019-08-25
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -1029,6 +1029,32 @@ cmt.utils.ui = {
 		// Actions
 		element.cmtActions();
 		element.find( '.cmt-auto-hide' ).cmtAutoHide();
+	}
+};
+
+
+/**
+ * Validators utility provides methods to validate given value.
+ */
+
+// == Validators ==========================
+
+cmt.utils.validation = {
+
+	errors: {
+		'email' : 'Please provide a valid email address.'
+	},
+
+	isEmail: function( email ) {
+
+		var validator = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		return validator.test( email );
+	},
+
+	getEmailError: function() {
+
+		return this.errors[ 'email' ];
 	}
 };
 

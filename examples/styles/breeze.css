@@ -4602,10 +4602,14 @@ Details: It defines the grid system and basic containers as listed below:
     top: 0px;
     bottom: 0px;
     float: none; }
-    .col-filler-wrap .col-filler.col-filler-left {
-      left: 0; }
-    .col-filler-wrap .col-filler.col-filler-right {
-      right: 0; }
+  .col-filler-wrap .col.col-filler.col-filler-left {
+    left: 1%; }
+  .col-filler-wrap .col.col-filler.col-filler-right {
+    right: 1%; }
+  .col-filler-wrap .colf.col-filler.col-filler-left {
+    left: 0; }
+  .col-filler-wrap .colf.col-filler.col-filler-right {
+    right: 0; }
 
 .col-pad.col-pad-small {
   padding: 0.5em; }
@@ -7085,34 +7089,34 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
   display: inline-block;
   width: 100%; }
 
-.tabs-basic .tab-links-wrap {
+.tabs-basic > .tab-links-wrap {
   border-bottom: 1px solid #595959; }
-  .tabs-basic .tab-links-wrap .tab-link {
+  .tabs-basic > .tab-links-wrap .tab-link {
     display: inline-block;
     padding: 0.5em 1em;
     margin-left: -4px;
     cursor: pointer; }
-    .tabs-basic .tab-links-wrap .tab-link.active {
+    .tabs-basic > .tab-links-wrap .tab-link.active {
       border: 1px solid #595959;
       border-bottom: 1px solid white;
       margin-bottom: -1px; }
 
-.tabs-basic .tab-content-wrap .tab-content {
+.tabs-basic > .tab-content-wrap .tab-content {
   display: none; }
 
-.tabs-underline .tab-links-wrap {
+.tabs-underline > .tab-links-wrap {
   border-bottom: 1px solid #7F7F7F; }
-  .tabs-underline .tab-links-wrap .tab-link {
+  .tabs-underline > .tab-links-wrap .tab-link {
     display: inline-block;
     padding: 0.75em 1.25em;
     cursor: pointer; }
-    .tabs-underline .tab-links-wrap .tab-link.active {
+    .tabs-underline > .tab-links-wrap .tab-link.active {
       color: #678d34;
       border-bottom: 2px solid #678d34; }
-    .tabs-underline .tab-links-wrap .tab-link:hover {
+    .tabs-underline > .tab-links-wrap .tab-link:hover {
       color: #678d34; }
 
-.tabs-underline .tab-content-wrap .tab-content {
+.tabs-underline > .tab-content-wrap .tab-content {
   display: none; }
 
 .tabs-table > .tab-links-wrap {
