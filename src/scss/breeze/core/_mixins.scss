@@ -1587,7 +1587,7 @@ Notes:
 
 // Circled
 .circled {
-	// No Defaults
+	position: relative;
 
 	&.circled-tiny {
 		width: 80px;

@@ -142,6 +142,15 @@ Baidu		- <min>
 // project - custom
 
 // ---------------------------------------//
+// Widgets Division - Optional
+// Re-usable widgets
+// ---------------------------------------//
+
+@import "breeze/widgets/circled";
+@import "breeze/widgets/clock";
+@import "breeze/widgets/countdown";
+
+// ---------------------------------------//
 // Components Division - Optional
 // Re-usable components having barebone structure and default implementations.
 // ---------------------------------------//

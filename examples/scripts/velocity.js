@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2019-08-25
+ * Velocity - v1.0.0-alpha1 - 2019-08-30
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -134,6 +134,9 @@ cmt.utils.browser = {
 // == Data Utility ========================
 
 cmt.utils.data = {
+
+	// The week days
+	weekDays: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
 
 	/**
 	 * It reads elementId and convert the input fields present within the element to parameters url.
@@ -6214,8 +6217,8 @@ function hideMessagePopup() {
 		// == Init == //
 
 		// Configure Plugin
-		var settings 		= cmtjq.extend( {}, cmtjq.fn.cmtTabs.defaults, options );
-		var tabPanels		= this;
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtTabs.defaults, options );
+		var tabPanels	= this;
 
 		// Iterate and initialise all the tabs
 		tabPanels.each( function() {
@@ -6234,7 +6237,7 @@ function hideMessagePopup() {
 
 			var links	= tabPanel.find( '.tab-links-wrap' ).first().find( '.tab-link' );
 			var tabs	= tabPanel.find( '.tab-content-wrap' ).first();
-			var nested	= tabs.find('.tab-content-wrap .tab-content' );
+			var nested	= tabs.find( '.tab-content-wrap .tab-content' );
 
 			tabs = tabs.find( '.tab-content' ).not( nested );
 
@@ -6476,6 +6479,235 @@ function hideMessagePopup() {
 		classes: 'cmt-timepicker-basic', // additional classes
 		width: 220,
 		height: 220
+	};
+
+})( jQuery );
+
+
+/**
+ * Circled plugin can be used to show circular percentage.
+ */
+
+( function( cmtjq ) {
+
+	cmtjq.fn.cmtCircledp = function( options ) {
+
+		// == Init == //
+
+		// Configure Modules
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtCircledp.defaults, options );
+		var circles		= this;
+
+		// Iterate and initialise all the circles
+		circles.each( function() {
+
+			var circle = cmtjq( this );
+
+			init( circle );
+		});
+
+		// return control
+		return;
+
+		// == Private Functions == //
+
+		// Initialise Header
+		function init( circle ) {
+
+			var value	= cmt.utils.data.hasAttribute( circle, 'data-value' ) ? circle.attr( 'data-value' ) : 0;
+			var percent	= circle.find( '.percent' );
+			var degree	= ( value / 100 ) * 360;
+			var rPie	= circle.find( '.circledp-pie-right' );
+			var lPie	= circle.find( '.circledp-pie-left' );
+
+			// Update display value
+			percent.html( value );
+
+			// Update Pie
+			if( degree <= 180 ) {
+
+				rPie.find( '.circledp-pie-val' ).css( { 'transform': 'translate(0, 100%) rotate(' + degree + 'deg)' } );
+			}
+			else {
+
+				rPie.find( '.circledp-pie-val' ).css( { 'transform': 'translate(0, 100%) rotate(180deg)' } );
+				lPie.find( '.circledp-pie-val' ).css( { 'transform': 'translate(0, 100%) rotate(' + (degree - 180) + 'deg)' } );
+			}
+		}
+	};
+
+	// Default Settings
+	cmtjq.fn.cmtCircledp.defaults = {
+
+	};
+
+})( jQuery );
+
+
+/**
+ * Clock plugin can be used to show digital clock.
+ */
+
+( function( cmtjq ) {
+
+	cmtjq.fn.cmtClock = function( options ) {
+
+		// == Init == //
+
+		// Configure Modules
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtClock.defaults, options );
+		var clocks		= this;
+
+		// Iterate and initialise all the clocks
+		clocks.each( function() {
+
+			var clock = cmtjq( this );
+
+			init( clock );
+		});
+
+		// return control
+		return;
+
+		// == Private Functions == //
+
+		// Initialise Header
+		function init( clock ) {
+
+			clockTicker( clock );
+		}
+
+		function clockTicker( clock ) {
+
+			var time = clock.find( '.current-time' ).html();
+
+			var dt	= new Date( time );
+			var day	= dt.getDay();
+			var hr	= dt.getHours();
+			var min	= dt.getMinutes();
+			var sec	= dt.getSeconds();
+
+			hr	= hr < 10 ? "0" + hr : hr;
+			min = min < 10 ? "0" + min : min;
+			sec = sec < 10 ? "0" + sec : sec;
+
+			clock.find( '.day' ).html( cmt.utils.data.weekDays[ day ] );
+			clock.find( '.hours' ).html( hr );
+			clock.find( '.minutes' ).html( min );
+			clock.find( '.seconds' ).html( sec );
+
+			if( hr > 12 ) {
+
+				clock.find( '.period' ).html( 'PM' );
+			}
+			else {
+
+				clock.find( '.period' ).html( 'AM' );
+			}
+
+			dt.setSeconds( dt.getSeconds() + 1 );
+
+			clock.find( '.current-time' ).html( dt.toLocaleString() );
+
+			// TODO: Use requestAnimationFrame instead of setTimeout
+			// Refresh the clock every 1 second
+			setTimeout( function() { clockTicker( clock ); }, 1000 );
+		}
+	};
+
+	// Default Settings
+	cmtjq.fn.cmtClock.defaults = {
+		digital: true
+	};
+
+})( jQuery );
+
+
+/**
+ * Countdown Timer plugin can be used to show timer countdown.
+ */
+
+( function( cmtjq ) {
+
+	cmtjq.fn.cmtCountdownTimer = function( options ) {
+
+		// == Init == //
+
+		// Configure Modules
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtCountdownTimer.defaults, options );
+		var timers		= this;
+
+		// Iterate and initialise all the timers
+		timers.each( function() {
+
+			var timer = cmtjq( this );
+
+			init( timer );
+		});
+
+		// return control
+		return;
+
+		// == Private Functions == //
+
+		// Initialise Header
+		function init( timer ) {
+
+			timeTicker( timer );
+		}
+
+		function timeTicker( timer ) {
+
+			var days	= parseInt( timer.find( '.days' ).html() );
+			var hours	= parseInt( timer.find( '.hours' ).html() );
+			var minutes = parseInt( timer.find( '.minutes' ).html() );
+			var seconds = parseInt( timer.find( '.seconds' ).html() );
+
+			if( seconds > 0 ) {
+
+				seconds--;
+			}
+			else if( seconds === 0 && ( days > 0 || hours > 0 || minutes > 0 ) ) {
+
+				seconds = 59;
+
+				if( minutes > 0 ) {
+
+					minutes--;
+				}
+				else if( minutes === 0 && ( days > 0 || hours > 0 ) ) {
+
+					minutes = 59;
+
+					if( hours > 0 ) {
+
+						hours--;
+					}
+					else if( hours === 0 && ( days > 0 ) ) {
+
+						hours = 23;
+
+						if( days > 0 ) {
+
+							days--;
+						}
+					}
+				}
+			}
+
+			timer.find( '.days' ).html( days );
+			timer.find( '.hours' ).html( hours );
+			timer.find( '.minutes' ).html( minutes );
+			timer.find( '.seconds' ).html( seconds );
+
+			// Refresh the clock every 1 second
+			setTimeout( function() { timeTicker( timer ); }, 1000 );
+		}
+	};
+
+	// Default Settings
+	cmtjq.fn.cmtCountdownTimer.defaults = {
+
 	};
 
 })( jQuery );

@@ -1179,53 +1179,48 @@ Notes:
 .gradient.gradient-radial {
   background-image: radial-gradient(circle at center top, #F2F2F2, #3C4655); }
 
-.circled.circled-tiny {
-  width: 80px;
-  height: 80px; }
-
-.circled.circled-small {
-  width: 120px;
-  height: 120px; }
-
-.circled.circled-medium {
-  width: 150px;
-  height: 150px; }
-
-.circled.circled-large {
-  width: 180px;
-  height: 180px; }
-
-.circled.circled-xlarge {
-  width: 220px;
-  height: 220px; }
-
-.circled.circled1 {
-  overflow: hidden;
-  text-align: center;
-  vertical-align: middle;
-  background-color: #3C4655;
-  color: #96B0D6;
-  -webkit-border-radius: 100%;
-  -khtml-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%; }
-
-.circled.circled2 {
-  width: 250px;
-  height: 250px;
-  background: #3C4655;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%; }
-
-.circled.circled3 {
-  width: 50%;
-  height: 0;
-  background-color: #3C4655;
-  padding-bottom: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%; }
+.circled {
+  position: relative; }
+  .circled.circled-tiny {
+    width: 80px;
+    height: 80px; }
+  .circled.circled-small {
+    width: 120px;
+    height: 120px; }
+  .circled.circled-medium {
+    width: 150px;
+    height: 150px; }
+  .circled.circled-large {
+    width: 180px;
+    height: 180px; }
+  .circled.circled-xlarge {
+    width: 220px;
+    height: 220px; }
+  .circled.circled1 {
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #3C4655;
+    color: #96B0D6;
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%; }
+  .circled.circled2 {
+    width: 250px;
+    height: 250px;
+    background: #3C4655;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .circled.circled3 {
+    width: 50%;
+    height: 0;
+    background-color: #3C4655;
+    padding-bottom: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
 
 .shape-text {
   width: 50%; }
@@ -7585,6 +7580,106 @@ Details: It defines the styles for mapper components as listed below:
     display: inline-block;
     padding: 0.5rem;
     margin-right: 0.5rem; }
+
+/* Extension to circled */
+.circledp {
+  overflow: hidden;
+  vertical-align: middle;
+  background-color: #A5A5A5;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%; }
+  .circledp .circledp-val-wrap {
+    background-color: #FFFFFF;
+    color: #87BA45;
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    z-index: 1;
+    text-align: center;
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%; }
+    .circledp .circledp-val-wrap .circledp-val {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+  .circledp .circledp-pie-left, .circledp .circledp-pie-right {
+    background-color: #A5A5A5;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .circledp .circledp-pie-val {
+    background-color: #87BA45;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%) rotate(0deg);
+    transform-origin: 50% 0; }
+  .circledp .circledp-pie-right {
+    transform: translate(0, -50%) rotate(90deg) rotate(0deg);
+    transform-origin: 50% 100%; }
+  .circledp .circledp-pie-left {
+    transform: translate(0, -50%) rotate(-90deg) rotate(0deg);
+    transform-origin: 50% 100%; }
+
+.digital-clock {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  display: inline-block;
+  width: auto;
+  padding: 0.25em 1em;
+  border-radius: 5px; }
+  .digital-clock p {
+    margin: 5px; }
+  .digital-clock .time-unit, .digital-clock .separator {
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em; }
+  .digital-clock .time-unit .large {
+    display: block;
+    font-size: 2em; }
+  .digital-clock .time-unit .small {
+    display: block;
+    font-size: 0.5em; }
+  .digital-clock .separator {
+    font-size: 2em;
+    vertical-align: top;
+    margin-top: -0.1em; }
+
+.countdown-timer {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  display: inline-block;
+  width: auto;
+  padding: 0.25em 1em;
+  border-radius: 5px; }
+  .countdown-timer p {
+    margin: 5px; }
+  .countdown-timer .time-unit, .countdown-timer .separator {
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em; }
+  .countdown-timer .time-unit .large {
+    display: block;
+    font-size: 2em; }
+  .countdown-timer .time-unit .small {
+    display: block;
+    font-size: 0.5em; }
+  .countdown-timer .separator {
+    font-size: 2em;
+    vertical-align: top;
+    margin-top: -0.1em; }
 
 /**********************************************************************
 Description: It defines the styles of core data components available in Breeze Framework.
