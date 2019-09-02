@@ -7755,33 +7755,49 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of zigzag components as listed below:
 
-ZigZag - The barebone zigzag class with minimum styles with each section having either 
+ZigZag - The barebone zigzag class with minimum styles with each section having either
 100% width or sub-divided into two parts having 50% width.
 ***********************************************************************/
 .data-zigzag .data-zigzag-row {
   margin-bottom: 2em; }
+  .data-zigzag .data-zigzag-row .data-zigzag-icon {
+    width: auto;
+    height: auto;
+    max-width: 100%; }
   .data-zigzag .data-zigzag-row .data-zigzag-banner {
     width: 100%;
     height: auto; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-title {
+      margin-bottom: 1em; }
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-icon, .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 100%;
     display: inline-block; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-icon, .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: none; }
+
+@media only screen and (max-width: 1024px) {
+  .data-zigzag .data-zigzag-row .data-zigzag-icon {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-title {
+    text-align: center; }
+  .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-icon, .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
+    text-align: center; } }
 
 @media only screen and (min-width: 1025px) {
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-icon, .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
       display: none; }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 50%; }
-    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
+    .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-icon, .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
       display: block; }
   .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-1 {
     float: left;
