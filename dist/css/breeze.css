@@ -5561,6 +5561,18 @@ Details: It defines the grid system and basic containers as listed below:
   from {
     height: 0; } }
 
+@-moz-keyframes shine {
+  0% {
+    background-position: -200% center; }
+  100% {
+    background-position: 200% center; } }
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: -200% center; }
+  100% {
+    background-position: 200% center; } }
+
 .animate {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

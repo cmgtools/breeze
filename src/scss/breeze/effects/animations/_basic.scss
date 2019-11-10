@@ -84,6 +84,30 @@
 		   animation-name: height;
 }
 
+// Shine ---------------------------
+
+@-moz-keyframes shine {
+
+	0% {
+		background-position: -200% center;
+	}
+
+	100% {
+		background-position: 200% center;
+	}
+}
+
+@-webkit-keyframes shine {
+
+	0% {
+		background-position: -200% center;
+	}
+
+	100% {
+		background-position: 200% center;
+	}
+}
+
 // Mixins Default implementation ***********************
 
 .animate {
@@ -100,7 +124,7 @@
 	&.animate-small {
 		@include animate( 2s );
 	}
-	
+
 	&.animate-medium {
 		@include animate( 3s );
 	}
