@@ -803,7 +803,7 @@ Details: It defines the grid system and basic containers as listed below:
  */
 .container-main {
 	position: relative;
-	z-index: 1;
+	z-index: 99999; // Header can have higher index and footer can have lower index
 
 	& >.container-header {
 		// Header within container.

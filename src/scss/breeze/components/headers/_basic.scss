@@ -30,6 +30,12 @@ Details: It defines the styles for header components as listed below:
 	}
 }
 
+// == Main Header ===================
+
+.header-main {
+	z-index: 100000;
+}
+
 // == Basic Header ==================
 
 /* Basic Header having fixed height logo, main menu and mobile menu.
@@ -91,9 +97,9 @@ Details: It defines the styles for header components as listed below:
 						color: $color-link;
 					}
 				}
-				
+
 				&:active {
-					
+
 					a, .link {
 						background-color: $color-tertiary;
 						color: $color-tertiary-text;
@@ -158,7 +164,7 @@ Details: It defines the styles for header components as listed below:
 		#mobile-actions, #menu-mobile-wrap {
 			display: none;
 		}
-		
+
 		// Header height reduced on scroll
 		&.header-small {
 			height: 50px;

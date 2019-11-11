@@ -4778,7 +4778,7 @@ Details: It defines the grid system and basic containers as listed below:
  */
 .container-main {
   position: relative;
-  z-index: 1; }
+  z-index: 99999; }
   .container-main .content-main-wrap {
     position: relative;
     z-index: 1; }
@@ -8461,6 +8461,9 @@ Details: It defines the styles for header components as listed below:
     width: 100%;
     z-index: 10001; }
 
+.header-main {
+  z-index: 100000; }
+
 /* Basic Header having fixed height logo, main menu and mobile menu.
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
@@ -8585,6 +8588,9 @@ Details: It defines the styles for footer components as listed below:
   @media only screen and (max-width: 1024px) {
     .footer {
       padding: 1rem; } }
+
+.footer-main {
+  z-index: 99998; }
 
 .footer-basic {
   background-color: #363636;
