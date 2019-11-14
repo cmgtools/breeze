@@ -19,14 +19,14 @@ Details: It defines the styles for header components as listed below:
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10001; // modal popups must override this index
+		z-index: 100000; // modal popups must override this index
 	}
 
 	&.header-absolute {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 10001; // modal popups must override this index
+		z-index: 100000; // modal popups must override this index
 	}
 }
 
@@ -47,7 +47,7 @@ Details: It defines the styles for header components as listed below:
 	background-color: $color-header;
 	color: $color-header-text;
 	position: relative;
-	z-index: 10001;
+	z-index: 100000;
 	@extend %clearfix;
 
 	// Absolute positioned on left side wrapping the logo

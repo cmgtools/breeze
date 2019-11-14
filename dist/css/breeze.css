@@ -4778,7 +4778,7 @@ Details: It defines the grid system and basic containers as listed below:
  */
 .container-main {
   position: relative;
-  z-index: 99999; }
+  z-index: 90000; }
   .container-main .content-main-wrap {
     position: relative;
     z-index: 1; }
@@ -8454,12 +8454,12 @@ Details: It defines the styles for header components as listed below:
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10001; }
+    z-index: 100000; }
   .header.header-absolute {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 10001; }
+    z-index: 100000; }
 
 .header-main {
   z-index: 100000; }
@@ -8473,7 +8473,7 @@ Details: It defines the styles for header components as listed below:
   background-color: #363636;
   color: #ffffff;
   position: relative;
-  z-index: 10001; }
+  z-index: 100000; }
   .header-basic .header-logo {
     cursor: pointer;
     display: block;
@@ -8590,7 +8590,7 @@ Details: It defines the styles for footer components as listed below:
       padding: 1rem; } }
 
 .footer-main {
-  z-index: 99998; }
+  z-index: 80000; }
 
 .footer-basic {
   background-color: #363636;
