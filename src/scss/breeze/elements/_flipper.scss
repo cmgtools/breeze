@@ -35,15 +35,15 @@ Details: It defines the styles for flipper components as listed below:
 			transform: rotateY(180deg);
 			box-sizing: border-box;
 			padding: 10px;
-			color: white;
 			text-align: center;
 			background-color: $color-secondary;
+			color: $color-secondary-text;
 		}
 
 		.flipper-back {
-			position:absolute;
-			top:0;
-			height:100%;
+			position: absolute !important;
+			top: 0;
+			height: 100%;
 		}
 	}
 }
