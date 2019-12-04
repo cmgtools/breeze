@@ -8597,8 +8597,7 @@ Details: It defines the styles for footer components as listed below:
   color: #ffffff;
   width: 100%;
   min-height: 50px;
-  position: relative;
-  z-index: 10000; }
+  position: relative; }
 
 /**********************************************************************
 Description: It defines the styles for sidebar components available in CMT-UI CSS framework.
