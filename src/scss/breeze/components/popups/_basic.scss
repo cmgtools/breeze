@@ -104,37 +104,37 @@ Details: It defines the styles for popup components as listed below:
 		}
 
 		&.popup-data-small {
-			//height: 200px;
 			width: 400px;
-			
+
 			.popup-content-wrap {
+				min-height: 200px;
 
 				.popup-content {
-					//height: 120px;
+					// Content
 				}
 			}
 		}
 
 		&.popup-data-medium {
-			//height: 300px;
 			width: 600px;
-			
+
 			.popup-content-wrap {
+				min-height: 240px;
 
 				.popup-content {
-					//height: 220px;
+					// Content
 				}
 			}
 		}
 
 		&.popup-data-large {
-			//height: 400px;
 			width: 800px;
-			
+
 			.popup-content-wrap {
+				min-height: 280px;
 
 				.popup-content {
-					//height: 320px;
+					// Content
 				}
 			}
 		}

@@ -8756,10 +8756,16 @@ Details: It defines the styles for popup components as listed below:
       cursor: pointer; }
     .popup .popup-data.popup-data-small {
       width: 400px; }
+      .popup .popup-data.popup-data-small .popup-content-wrap {
+        min-height: 200px; }
     .popup .popup-data.popup-data-medium {
       width: 600px; }
+      .popup .popup-data.popup-data-medium .popup-content-wrap {
+        min-height: 240px; }
     .popup .popup-data.popup-data-large {
       width: 800px; }
+      .popup .popup-data.popup-data-large .popup-content-wrap {
+        min-height: 280px; }
     .popup .popup-data.popup-data-max {
       height: 96%;
       width: 96%;
