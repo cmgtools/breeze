@@ -300,7 +300,7 @@ This section includes mixins for in-between, desktop first and mobile first appr
 // Circled - Style having border radius 50% and responsive without child consideration
 @mixin circled3( $bkg-color, $pad: 50% ) {
 	width: 50%;
-	height:0;
+	height: 0;
 	background-color: $bkg-color;
 	padding-bottom: $pad;
 	-webkit-border-radius: 50%;
@@ -390,9 +390,10 @@ This section includes mixins for in-between, desktop first and mobile first appr
 	background-color: rgba( $r, $g, $b, $alpha );
 }
 
-// Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
-// Initially it's set to hidden and can be made visible when required. most useful example is
-// having a full cover pre-loader with spinner on top of all other elements.
+// Max Area Cover - The element overlays(cover) all other child elements of it's parent unless
+// the other child got greater z-index. Initially it's set to hidden and can be made visible
+// when required. most useful example is having a full cover pre-loader with spinner on top of
+// all other elements.
 @mixin max-area-cover( $display: none, $color: $color-primary-text ) {
 	@include max-area;
 	z-index: 1000000;
@@ -445,6 +446,7 @@ Notes:
 }
 
 // Cover the background and fill with specified width and height
+// It might squeez the image
 @mixin bkg-image-fill( $width: 100%, $height: 100% ) {
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -455,7 +457,7 @@ Notes:
 			background-size: $width $height;
 }
 
-// background center align with auto height
+// Position the background at center with auto height
 @mixin bkg-auto {
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -508,6 +510,8 @@ Notes:
 		margin: auto;
 		min-width: 50%;
 		min-height: 50%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 }
 
@@ -1151,31 +1155,31 @@ Notes:
 
 	// Special Inset Shadows
 
-	&.shadow-aqua {
+	&.shadow-inset-aqua {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
 	}
 
-	&.shadow-golden {
+	&.shadow-inset-golden {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
 	}
 
-	&.shadow-silver {
+	&.shadow-inset-silver {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
 	}
 
-	&.shadow-maroon {
+	&.shadow-inset-maroon {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
 
-	&.shadow-olive {
+	&.shadow-inset-olive {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
 
-	&.shadow-lime {
+	&.shadow-inset-lime {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
 
-	&.shadow-navy {
+	&.shadow-inset-navy {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
@@ -1250,31 +1254,31 @@ Notes:
 
 	// Special Inset Shadows
 
-	&.shadow-aqua {
+	&.text-shadow-aqua {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
 	}
 
-	&.shadow-golden {
+	&.text-shadow-golden {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
 	}
 
-	&.shadow-silver {
+	&.text-shadow-silver {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
 	}
 
-	&.shadow-maroon {
+	&.text-shadow-maroon {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
 
-	&.shadow-olive {
+	&.text-shadow-olive {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
 
-	&.shadow-lime {
+	&.text-shadow-lime {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
 
-	&.shadow-navy {
+	&.text-shadow-navy {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
@@ -1345,31 +1349,31 @@ Notes:
 
 	// Special Inset Text Shadows
 
-	&.shadow-aqua {
+	&.text-shadow-inset-aqua {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
 	}
 
-	&.shadow-golden {
+	&.text-shadow-inset-golden {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
 	}
 
-	&.shadow-silver {
+	&.text-shadow-inset-silver {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
 	}
 
-	&.shadow-maroon {
+	&.text-shadow-inset-maroon {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
 	}
 
-	&.shadow-olive {
+	&.text-shadow-inset-olive {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
 	}
 
-	&.shadow-lime {
+	&.text-shadow-inset-lime {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
 	}
 
-	&.shadow-navy {
+	&.text-shadow-inset-navy {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }

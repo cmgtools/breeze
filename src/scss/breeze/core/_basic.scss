@@ -426,6 +426,22 @@ html, body {
 		margin-right: auto;
 	}
 
+	&.absolute-top {
+		top: 0px;
+	}
+
+	&.absolute-left {
+		left: 0px;
+	}
+
+	&.absolute-bottom {
+		bottom: 0px;
+	}
+
+	&.absolute-right {
+		right: 0px;
+	}
+
 	&.absolute-top-left {
 		top: 0px;
 		left: 0px;
@@ -560,12 +576,16 @@ html, body {
 	display: block !important;
 }
 
+.inline {
+	display: inline !important;
+}
+
 .inline-block {
 	display: inline-block !important;
 }
 
-.inline {
-	display: inline !important;
+.inline-table {
+	display: inline-table !important;
 }
 
 // Visibility - Without own space

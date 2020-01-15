@@ -133,6 +133,10 @@ html, body {
 		font-size: $font-size-micro !important;
 	}
 
+	&.text-top {
+		vertical-align: text-top !important;
+	}
+
 	&.text-bottom {
 		vertical-align: text-bottom !important;
 	}
@@ -265,7 +269,7 @@ p, span, em, div, a {
 
 		.image-caption {
 			text-align: center;
-			margin-top: 0.5em;
+			margin: 0.5em 0;
 		}
 	}
 }

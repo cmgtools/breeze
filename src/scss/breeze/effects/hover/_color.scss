@@ -1,6 +1,6 @@
 @mixin hover-color( $bkg, $text, $transit, $duration, $delay: 0s ) {
 	@include transit-color-bkg-color( $transit, $duration, $delay );
-    
+
     &:hover {
         background-color: $bkg;
         color: $text;
@@ -9,7 +9,7 @@
 
 @mixin hover-bkg( $bkg, $transit, $duration, $delay: 0s ) {
 	@include transit-bkg-color( $transit, $duration, $delay );
-    
+
     &:hover {
         background-color: $bkg;
     }
@@ -17,7 +17,7 @@
 
 @mixin hover-text( $text, $transit, $duration, $delay: 0s ) {
 	@include transit-color( $transit, $duration, $delay );
-    
+
     &:hover {
         color: $text;
     }

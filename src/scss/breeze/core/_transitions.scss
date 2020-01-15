@@ -97,7 +97,7 @@ $transit-time-large: 640ms;
 			transition: opacity $duration $transit $delay;
 }
 
-// Notes: Transitions does not work well for visibility alone since visibility works like a switch.
+// Notes: Transitions does not work well for visibility alone since visibility works like a switch(either 0 or 1).
 @mixin transit-visibility( $transit, $duration, $delay: 0s ) {
 	-moz-transition: visibility $duration $transit $delay;
 	-ms-transition: visibility $duration $transit $delay;
@@ -301,6 +301,8 @@ $transit-time-large: 640ms;
 }
 
 // Transitions - Transform - Work together with transformations for small animations
+// Transformation can be - rotation, reflection, translation, re-sizing
+// The mixin will animate the transformations
 @mixin transit-transform( $transit, $duration, $delay: 0s ) {
 	-webkit-transition: transform $duration $transit $delay;
 	   -moz-transition: transform $duration $transit $delay;

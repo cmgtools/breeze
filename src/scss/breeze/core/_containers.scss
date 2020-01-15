@@ -806,11 +806,11 @@ Details: It defines the grid system and basic containers as listed below:
 	z-index: 90000; // Header can have higher index and footer can have lower index
 
 	& >.container-header {
-		// Header within container.
+		// Header within container
 	}
 
 	& >.container-sidebar {
-		// Sidebar within container.
+		// Sidebar within container
 	}
 
 	.content-main-wrap {
@@ -818,11 +818,11 @@ Details: It defines the grid system and basic containers as listed below:
 		z-index: 1;
 
 		& >.container-header {
-			// Header within content wrapper.
+			// Header within content wrapper
 		}
 
 		& >.container-sidebar {
-			// Sidebar within content wrapper.
+			// Sidebar within content wrapper
 		}
 
 		& >.content-main {
@@ -830,12 +830,12 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 
 		& >.container-footer {
-			// Footer within content wrapper.
+			// Footer within content wrapper
 		}
 	}
 
 	& >.container-footer {
-		// Footer within container.
+		// Footer within container
 	}
 }
 

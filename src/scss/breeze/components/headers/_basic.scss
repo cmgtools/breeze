@@ -47,7 +47,6 @@ Details: It defines the styles for header components as listed below:
 	background-color: $color-header;
 	color: $color-header-text;
 	position: relative;
-	z-index: 100000;
 	@extend %clearfix;
 
 	// Absolute positioned on left side wrapping the logo
