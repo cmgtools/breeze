@@ -317,6 +317,11 @@ from secondary for highlighting purpose.
 		background-color: $color-dropbox !important;
 		color: $color-white !important;
 	}
+	
+	&.color-evernote {
+		background-color: $color-evernote !important;
+		color: $color-white !important;
+	}
 
 	&.color-facebook {
 		background-color: $color-facebook !important;
@@ -357,6 +362,21 @@ from secondary for highlighting purpose.
 		background-color: $color-quora !important;
 		color: $color-white !important;
 	}
+	
+	&.color-reddit {
+		background-color: $color-reddit !important;
+		color: $color-white !important;
+	}
+	
+	&.color-rss {
+		background-color: $color-rss !important;
+		color: $color-white !important;
+	}
+	
+	&.color-skype {
+		background-color: $color-skype !important;
+		color: $color-white !important;
+	}
 
 	&.color-snapchat {
 		background-color: $color-snapchat !important;
@@ -383,6 +403,11 @@ from secondary for highlighting purpose.
 		color: $color-white !important;
 	}
 
+	&.color-vk {
+		background-color: $color-vk !important;
+		color: $color-white !important;
+	}
+
 	&.color-whatsapp {
 		background-color: $color-whatsapp !important;
 		color: $color-white !important;
@@ -390,11 +415,6 @@ from secondary for highlighting purpose.
 
 	&.color-youtube {
 		background-color: $color-youtube !important;
-		color: $color-white !important;
-	}
-
-	&.color-vk {
-		background-color: $color-vk !important;
 		color: $color-white !important;
 	}
 
