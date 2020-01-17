@@ -94,19 +94,23 @@ of JS and purely css solutions.
 	// Display Content - Icon
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		content: "\e0a2";
+		//content: "\e0a2";
+		content: "\e91d";
 	}
 
 	input[type=radio]:checked + .label::before {
-		content: "\e0a3";
+		//content: "\e0a3";
+		content: "\e91e";
 	}
 
 	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
-		content: "\3b";
+		//content: "\3b";
+		content: "\e847";
 	}
 
 	input[type=checkbox]:checked + .label::before {
-		content: "\3a";
+		//content: "\3a";
+		content: "\e849";
 	}
 }
 

@@ -6321,16 +6321,16 @@ of JS and purely css solutions.
   color: #BBB; }
 
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
-  content: "\e0a2"; }
+  content: "\e91d"; }
 
 .cmt-choice input[type=radio]:checked + .label::before {
-  content: "\e0a3"; }
+  content: "\e91e"; }
 
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
-  content: "\3b"; }
+  content: "\e847"; }
 
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "\3a"; }
+  content: "\e849"; }
 
 .cmt-choice.cmt-choice-inline label {
   display: inline-block;
