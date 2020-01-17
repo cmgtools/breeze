@@ -2786,6 +2786,17 @@ html, body {
     background-color: #A5A5A5 !important;
     color: #FFFFFF !important; }
 
+/*
+.disabled {
+	background-color: $color-btn-d !important;
+	color: $color-btn-text-d !important;
+
+	&:hover {
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
+	}
+}
+*/
 .fluid {
   max-width: 100%;
   height: auto; }
@@ -2811,9 +2822,6 @@ html, body {
 
 .info {
   color: #3F62A0; }
-
-.form-group .help-block {
-  color: #E74343; }
 
 .error-field {
   border: 1px solid #E74343;
@@ -4095,26 +4103,30 @@ a, .link {
     color: #E74343; }
 
 /**********************************************************************
-Description: This file define the grid system and basic containers of CMT-UI css framework.
+Description: This file define the grid system and basic containers of Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the grid system and basic containers as listed below:
-* Row               - The row is the primary class of grid system. It can cover either 100% width
-*                     or specified width keeping itself at center of parent element. A row can also be declared
-*                     to have all columns inline irrespective of their float.
-* Column            - The column system can form either 12 column or 15 column grid with or without margin
-*                     seperating each column. The columns without margin can be implemented using full column
-*                     classes.
-* Column Filler     - The filler column can be used to make a column with full height in case it's background
-*                     color is different from other columns in same grid. The filler column will act as placeholder
-*                     and fill the background of smaller column in order to have all the columns appear as full
-*                     columns with same height and with different background color.
-* Container         - The container is placeholder for content. The content can also be wrapped within content wrapper.
-*                     This section also explain the possible arrangements for page header, footer, sidebar and content
-*                     within main container.
-* Content           - The content classes can be used to align content by occupying full or partial width. The classes
-*                     also include classes to arrange content within container or parent element.
+
+Row - The row is the primary class of grid system. It can cover either 100% width or specified
+width keeping itself at center of parent element. A row can also be declared to have all columns
+inline irrespective of their float.
+
+Column - The column system can form either 12 column or 15 column grid with or without margin
+seperating each column. The columns without margin can be implemented using full column classes.
+
+Column Filler - The filler column can be used to make a column with full height in case it's background
+color is different from other columns in same grid. The filler column will act as placeholder and fill
+the background of smaller column in order to have all the columns appear as full columns with same height
+and with different background color.
+
+Container - The container is placeholder for content. The content can also be wrapped within content
+wrapper. This section also explain the possible arrangements for page header, footer, sidebar and content
+within main container.
+
+Content - The content classes can be used to align content by occupying full or partial width. The classes
+also include classes to arrange content within container or parent element.
 ***********************************************************************/
 .row {
   position: relative;
@@ -5887,15 +5899,15 @@ Details: It defines the grid system and basic containers as listed below:
   animation-name: height; }
 
 /**********************************************************************
-Description: It defines the styles for html elements except form and table for CMT-UI css framework.
+Description: It defines the styles for html elements except form and table.
 
 Dependencies: none
 
 Details: It defines the styles for html elements as listed below:
 
-* Fieldset    - The fieldset can be used to group elements with appropriate title using legend.
-*
-* Optgroup    - The optgroup used in select box will be bold by default.
+Fieldset - The fieldset can be used to group elements with appropriate title using legend.
+
+Optgroup - The optgroup used in select box will be bold by default.
 ***********************************************************************/
 fieldset {
   border: 1px solid #3C4655; }
@@ -5934,39 +5946,35 @@ blockquote:after {
   bottom: -0.5em;
   content: "\201D"; }
 
-.list.list-radio label {
-  width: auto; }
-
-.list.style-circle {
+.list.list-style-circle {
   list-style-type: circle; }
 
-.list.style-square {
+.list.list-style-square {
   list-style-type: square; }
 
-.list.style-decimal {
+.list.list-style-decimal {
   list-style-type: decimal; }
 
-.list.style-image-default {
+.list.list-style-image-default {
   list-style-image: url("../images/list-default.jpg"); }
 
-.list.position-inside {
+.list.list-position-inside {
   list-style-position: inside; }
 
-.list.position-outside {
+.list.list-position-outside {
   list-style-position: outside; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
-*                   plugin available in CMT-JS framework.
-*
+Icon picker - The icon picker element allows users to pick an item. It depends on
+cmtIconPicker jQuery plugin available in Velocity JS Framework.
 ***********************************************************************/
 .icon-picker-wrap {
   width: 100%; }
@@ -6019,6 +6027,18 @@ Details: It defines the custom element styles as listed below:
             font-size: 36px;
             cursor: pointer; }
 
+/**********************************************************************
+Description: It defines the styles of time picker elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Time picker - The time picker element allows users to choose time. It depends on
+cmtTimePicker jQuery plugin available in Velocity JS Framework.
+***********************************************************************/
 .cmt-timepicker {
   position: absolute;
   display: none; }
@@ -6073,31 +6093,34 @@ Details: It defines the custom element styles as listed below:
       margin-left: 0.25em; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of elements list available in Breeze CSS Framework.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* List		  - 
+Radio List - A list of radio elements.
 ***********************************************************************/
-.list-radio label {
+.list.list-radio label {
   width: auto;
   clear: none; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. Most of
-these elements are also dependent on Velocity. Though the JS implementation can also be
-done for other standard libraries.
+Description: It defines the styles of select elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Select - The custom select allows user to select an item. It override the default select ui
-dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
+CMT Select - The custom select allows user to select an item. It override the
+default select ui dependent on browsers. It depends on cmtSelect jQuery plugin
+available in Velocity JS Framework.
+
+CMT Multiselect -
+
+CMT Select Native - It works without cmtSelect plugin.
 ***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
@@ -6234,15 +6257,15 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
     margin: 0; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework.
-Most of these elements are also dependent on CMT-JS library. Though the JS implementation
-can also be done for other standard libraries.
+Description: It defines the styles of radio and checkbox elements available in
+Breeze CSS Framework. Most of these elements are also dependent on Velocity JS
+Framework. Though the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Choice - The choice allows user to select single or multiple options from available
+Choice - The choice allows user to select single or multiple options from available
 options. It include radio and checkbox html components and change their default behaviour
 by showing good looking icons instead of browser dependentent graphics. These are indepedent
 of JS and purely css solutions.
@@ -6335,16 +6358,15 @@ of JS and purely css solutions.
     width: 50%; } }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of rating elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Rating          - The rating element can be used to provide ratings.
-*
+Rating - The rating element can be used to provide ratings.
 ***********************************************************************/
 .cmt-rating {
   text-align: left; }
@@ -6370,11 +6392,11 @@ Details: It defines the custom element styles as listed below:
     content: "\e0f3"; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of switch elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
@@ -6464,19 +6486,19 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
     width: 50%; } }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of button elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Button          - This class turns an element into button and does not need any JS to work.
-*
-* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
-*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
-*                   appropriate postion.
+Button - This class turns an element into button and does not need any JS to work.
+
+Button Group - It can be used to show a group of bottons placed absolutely at the corners
+of parent element. The parent element must use positioning i.e. absolute, relative etc in
+order to place group at appropriate postion.
 ***********************************************************************/
 .btn {
   -webkit-transition: all 420ms ease-in-out 0s;
@@ -6897,41 +6919,40 @@ a:hover, .link:hover {
     cursor: default; }
 
 /**********************************************************************
-Description: It defines the styles of form elements for CMT-UI css framework.
+Description: It defines the styles of form elements for Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the styles of form elements as listed below:
 
-* Form              - The form occupy 100% width by default. This section adds classes so that we can make
-*                     fixed width responsive forms using these classes.
-*
-* Extended classes  - This section define the extended classes required to style the form elements.
-*
-* Label             - This section adds default styles for label.
-*
-* Text              - This section adds default styles for text, email, password, textarea and select elements.
-*
-* Button            - This section adds default styles for submit and button elements.
-*
-* Mandatory         - This class adds * to field lables marked as required.
-*
-* Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
-*                     default, but it can also be displayed on right side.
-*
-* Placeholder       - This section make placeholder color same for all the browsers.
-*
-* Custom Element	- This section decorates the custom elements.
-*
-* Round corner      - This section define classes to make form elements round cornered.
-*
-* Ignore 100%       - This class allows form to ignore 100% width of elements.
-*
-* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
-*                     fields on right side.
-*
-* Forms				- The form class add required spacing to render the form elements.
-*
+Form - The form occupy 100% width by default. This section adds classes so that we can
+make fixed width responsive forms using these classes.
+
+Extended classes - This section define the extended classes required to style the form elements.
+
+Label - This section adds default styles for label.
+
+Text - This section adds default styles for text, email, password, textarea and select elements.
+
+Button - This section adds default styles for submit and button elements.
+
+Mandatory - This class adds * to field lables marked as required.
+
+Icon elements - This class adds options to specify icon for an element. The icon will be added
+to left by default, but it can also be displayed on right side.
+
+Placeholder - This section make placeholder color same for all the browsers.
+
+Custom Element - This section decorates the custom elements.
+
+Round corner - This section define classes to make form elements round cornered.
+
+Ignore 100% - This class allows form to ignore 100% width of elements.
+
+Split 40-60 - This section define classes to split form into 40% for labels on left side and 60%
+for fields on right side.
+
+Forms - The form class add required spacing to render the form elements.
 ***********************************************************************/
 form {
   margin: 0 auto;
@@ -7040,13 +7061,6 @@ label {
 
 .frm-element {
   display: inline-block; }
-
-.disabled {
-  background-color: gray !important;
-  color: #363636 !important; }
-  .disabled:hover {
-    background-color: gray !important;
-    color: #363636 !important; }
 
 input[type="submit"], input[type="button"], button, .btn {
   line-height: 1.4em; }
@@ -7220,7 +7234,13 @@ select, .cmt-select-wrap .cmt-selected {
   float: none;
   width: auto; }
 
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
+/* Splitted forms having label on left consuming 40% width and field on right side
+having remaining 60% width We have two options to use the 40-60 concept i.e. either
+using frm-split-40-60 or using element-40 and element-60. For both the options, the
+left side element clears the floating and parent must use clearfix to derive it's
+height from form elements.*/
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"],
+.frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
   width: 100%; }
 
 .frm-split-40-60 .auto-fill-items-wrap {
@@ -7268,8 +7288,10 @@ select, .cmt-select-wrap .cmt-selected {
   width: 100%; }
 
 @media only screen and (max-width: 480px) {
-  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
+  .frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
+  .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch,
+  .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
     width: 100%; }
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
@@ -7289,7 +7311,8 @@ select, .cmt-select-wrap .cmt-selected {
 .form .message.warning, .form .message.error, .form .message.success, .form .message.info {
   margin-top: 0.5rem; }
 
-.form .form-group .help-block {
+.form .help-block {
+  color: #E74343 !important;
   margin: 0.25rem 0; }
 
 .form .frm-split-40-60 label {
@@ -7317,6 +7340,9 @@ select, .cmt-select-wrap .cmt-selected {
   .form.form-25, .form.form-50, .form.form-75, .form.form-small, .form.form-medium, .form.form-large {
     width: 80%;
     padding: 2rem 2%; } }
+
+.form-group .help-block {
+  color: #E74343 !important; }
 
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
@@ -7374,15 +7400,15 @@ table td {
         width: 100%; } }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of select elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+Splitter - The splitters can be used to split an element either vertically or horizontally.
 ***********************************************************************/
 .splitter {
   margin: 0 auto; }
