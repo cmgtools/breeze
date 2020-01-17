@@ -1,24 +1,28 @@
 /**********************************************************************
-Description: This file define the grid system and basic containers of CMT-UI css framework.
+Description: This file define the grid system and basic containers of Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the grid system and basic containers as listed below:
-* Row               - The row is the primary class of grid system. It can cover either 100% width
-*                     or specified width keeping itself at center of parent element. A row can also be declared
-*                     to have all columns inline irrespective of their float.
-* Column            - The column system can form either 12 column or 15 column grid with or without margin
-*                     seperating each column. The columns without margin can be implemented using full column
-*                     classes.
-* Column Filler     - The filler column can be used to make a column with full height in case it's background
-*                     color is different from other columns in same grid. The filler column will act as placeholder
-*                     and fill the background of smaller column in order to have all the columns appear as full
-*                     columns with same height and with different background color.
-* Container         - The container is placeholder for content. The content can also be wrapped within content wrapper.
-*                     This section also explain the possible arrangements for page header, footer, sidebar and content
-*                     within main container.
-* Content           - The content classes can be used to align content by occupying full or partial width. The classes
-*                     also include classes to arrange content within container or parent element.
+
+Row - The row is the primary class of grid system. It can cover either 100% width or specified
+width keeping itself at center of parent element. A row can also be declared to have all columns
+inline irrespective of their float.
+
+Column - The column system can form either 12 column or 15 column grid with or without margin
+seperating each column. The columns without margin can be implemented using full column classes.
+
+Column Filler - The filler column can be used to make a column with full height in case it's background
+color is different from other columns in same grid. The filler column will act as placeholder and fill
+the background of smaller column in order to have all the columns appear as full columns with same height
+and with different background color.
+
+Container - The container is placeholder for content. The content can also be wrapped within content
+wrapper. This section also explain the possible arrangements for page header, footer, sidebar and content
+within main container.
+
+Content - The content classes can be used to align content by occupying full or partial width. The classes
+also include classes to arrange content within container or parent element.
 ***********************************************************************/
 
 // == Grid System ===================

@@ -1,14 +1,19 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. Most of
-these elements are also dependent on Velocity. Though the JS implementation can also be
-done for other standard libraries.
+Description: It defines the styles of select elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Select - The custom select allows user to select an item. It override the default select ui
-dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
+CMT Select - The custom select allows user to select an item. It override the
+default select ui dependent on browsers. It depends on cmtSelect jQuery plugin
+available in Velocity JS Framework.
+
+CMT Multiselect -
+
+CMT Select Native - It works without cmtSelect plugin.
 ***********************************************************************/
 
 // == Select ========================

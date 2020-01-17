@@ -1,13 +1,13 @@
 /**********************************************************************
-Description: It defines the styles for html elements except form and table for CMT-UI css framework.
+Description: It defines the styles for html elements except form and table.
 
 Dependencies: none
 
 Details: It defines the styles for html elements as listed below:
 
-* Fieldset    - The fieldset can be used to group elements with appropriate title using legend.
-*
-* Optgroup    - The optgroup used in select box will be bold by default.
+Fieldset - The fieldset can be used to group elements with appropriate title using legend.
+
+Optgroup - The optgroup used in select box will be bold by default.
 ***********************************************************************/
 
 fieldset {
@@ -54,34 +54,27 @@ blockquote:after {
 // Lists
 .list {
 
-	&.list-radio {
-
-		label {
-			width: auto;
-		}
-	}
-
-	&.style-circle {
+	&.list-style-circle {
 		list-style-type: circle;
 	}
 
-	&.style-square {
+	&.list-style-square {
 		list-style-type: square;
 	}
 
-	&.style-decimal {
+	&.list-style-decimal {
 		list-style-type: decimal;
 	}
 
-	&.style-image-default {
+	&.list-style-image-default {
 		list-style-image: url( $images-path + "list-default.jpg" );
 	}
 
-	&.position-inside {
+	&.list-position-inside {
 		list-style-position: inside;
 	}
 
-	&.position-outside {
+	&.list-position-outside {
 		list-style-position: outside;
 	}
 }

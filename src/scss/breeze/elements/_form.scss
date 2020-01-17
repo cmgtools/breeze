@@ -1,39 +1,38 @@
 /**********************************************************************
-Description: It defines the styles of form elements for CMT-UI css framework.
+Description: It defines the styles of form elements for Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the styles of form elements as listed below:
 
-* Form              - The form occupy 100% width by default. This section adds classes so that we can make
-*                     fixed width responsive forms using these classes.
-*
-* Extended classes  - This section define the extended classes required to style the form elements.
-*
-* Label             - This section adds default styles for label.
-*
-* Text              - This section adds default styles for text, email, password, textarea and select elements.
-*
-* Button            - This section adds default styles for submit and button elements.
-*
-* Mandatory         - This class adds * to field lables marked as required.
-*
-* Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
-*                     default, but it can also be displayed on right side.
-*
-* Placeholder       - This section make placeholder color same for all the browsers.
-*
-* Custom Element	- This section decorates the custom elements.
-*
-* Round corner      - This section define classes to make form elements round cornered.
-*
-* Ignore 100%       - This class allows form to ignore 100% width of elements.
-*
-* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
-*                     fields on right side.
-*
-* Forms				- The form class add required spacing to render the form elements.
-*
+Form - The form occupy 100% width by default. This section adds classes so that we can
+make fixed width responsive forms using these classes.
+
+Extended classes - This section define the extended classes required to style the form elements.
+
+Label - This section adds default styles for label.
+
+Text - This section adds default styles for text, email, password, textarea and select elements.
+
+Button - This section adds default styles for submit and button elements.
+
+Mandatory - This class adds * to field lables marked as required.
+
+Icon elements - This class adds options to specify icon for an element. The icon will be added
+to left by default, but it can also be displayed on right side.
+
+Placeholder - This section make placeholder color same for all the browsers.
+
+Custom Element - This section decorates the custom elements.
+
+Round corner - This section define classes to make form elements round cornered.
+
+Ignore 100% - This class allows form to ignore 100% width of elements.
+
+Split 40-60 - This section define classes to split form into 40% for labels on left side and 60%
+for fields on right side.
+
+Forms - The form class add required spacing to render the form elements.
 ***********************************************************************/
 
 // Notes: Refer reset for basic reset done for form elements.
@@ -192,17 +191,6 @@ input[type="submit"], input[type="button"], button {
 .frm-element {
 	@extend %element-size;
 	display: inline-block;
-}
-
-// Disabled
-.disabled {
-	background-color: $color-btn-d !important;
-	color: $color-btn-text-d !important;
-
-	&:hover {
-		background-color: $color-btn-d !important;
-		color: $color-btn-text-d !important;
-	}
 }
 
 // Line Height Fix
@@ -411,9 +399,11 @@ select, .cmt-select-wrap .cmt-selected {
 
 // == Splitted Form Elements ========
 
-// Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
-// We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
-// For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
+/* Splitted forms having label on left consuming 40% width and field on right side
+having remaining 60% width We have two options to use the 40-60 concept i.e. either
+using frm-split-40-60 or using element-40 and element-60. For both the options, the
+left side element clears the floating and parent must use clearfix to derive it's
+height from form elements.*/
 
 .frm-split-40-60 {
 
@@ -424,7 +414,8 @@ select, .cmt-select-wrap .cmt-selected {
 
 	.ignore-40-60 {
 
-		label, .frm-element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .frm-element-60 {
+		label, .frm-element-40, input[type="text"], input[type="email"], input[type="password"],
+		textarea, select, .frm-element-60 {
 			width: 100%;
 		}
 	}
@@ -502,8 +493,10 @@ select, .cmt-select-wrap .cmt-selected {
 
 @include responsive-max ( screen-mobile-large ) {
 
-	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
+	.frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
+	.frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch,
+	.frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
 		width: 100%;
 	}
 
@@ -551,7 +544,8 @@ select, .cmt-select-wrap .cmt-selected {
 	}
 
 	// Required for Yii Forms
-	.form-group .help-block {
+	.help-block {
+		color: $color-error !important;
 		margin: 0.25rem 0; // To match with form elements
 	}
 
@@ -592,4 +586,9 @@ select, .cmt-select-wrap .cmt-selected {
 			padding: $size-medium-rem 2%;
 		}
 	}
+}
+
+// Required for Yii Forms
+.form-group .help-block {
+	color: $color-error !important;
 }

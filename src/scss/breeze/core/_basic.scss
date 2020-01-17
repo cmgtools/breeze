@@ -673,6 +673,19 @@ html, body {
 	}
 }
 
+// Disabled - Moved from form
+/*
+.disabled {
+	background-color: $color-btn-d !important;
+	color: $color-btn-text-d !important;
+
+	&:hover {
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
+	}
+}
+*/
+
 // Fluid Elements (blocks, images)
 
 .fluid {
@@ -710,11 +723,6 @@ html, body {
 
 .info {
 	color: $color-info;
-}
-
-// Required for Yii Forms
-.form-group .help-block {
-	color: $color-error;
 }
 
 .error-field {
