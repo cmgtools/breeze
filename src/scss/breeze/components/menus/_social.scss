@@ -308,7 +308,7 @@ Details: It defines the social network menu components as listed below:
 			bakground-color: $color-youtube;
 		}
 
-		&:hover {darken( $color-facebook, 10% );
+		&:hover {
 
 			&.icon-dropbox, &.cmti-brand-dropbox {
 				bakground-color: darken( $color-dropbox, 10% );
