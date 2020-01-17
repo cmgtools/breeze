@@ -2725,9 +2725,6 @@ html, body {
   .layer.layer-20 {
     z-index: 200; }
 
-.block {
-  display: block !important; }
-
 .inline {
   display: inline !important; }
 
@@ -3048,7 +3045,7 @@ from secondary for highlighting purpose.
   .color.color-linkedin {
     background-color: #007BB6 !important;
     color: #FFFFFF !important; }
-  .color.color-pintrest {
+  .color.color-pinterest {
     background-color: #CB2027 !important;
     color: #FFFFFF !important; }
   .color.color-quora {
@@ -3076,7 +3073,7 @@ from secondary for highlighting purpose.
     background-color: #BB0000 !important;
     color: #FFFFFF !important; }
   .color.color-vk {
-    background-color: #45668E !important;
+    background-color: #4680C2 !important;
     color: #FFFFFF !important; }
   .color.color-btn {
     background-color: #E74343 !important;
@@ -8540,7 +8537,7 @@ Details: It defines the social network menu components as listed below:
     border-color: #007BB6; }
   .menu-social .icon-border.icon-instagram, .menu-social .icon-border.cmti-social-instagram, .menu-social .cmti-border.icon-instagram, .menu-social .cmti-border.cmti-social-instagram {
     border-color: #125688; }
-  .menu-social .icon-border.icon-pintrest, .menu-social .icon-border.cmti-social-pintrest, .menu-social .cmti-border.icon-pintrest, .menu-social .cmti-border.cmti-social-pintrest {
+  .menu-social .icon-border.icon-pinterest, .menu-social .icon-border.cmti-social-pinterest, .menu-social .cmti-border.icon-pinterest, .menu-social .cmti-border.cmti-social-pinterest {
     border-color: #CB2027; }
   .menu-social .icon-border.icon-youtube, .menu-social .icon-border.cmti-social-youtube, .menu-social .cmti-border.icon-youtube, .menu-social .cmti-border.cmti-social-youtube {
     border-color: #BB0000; }
@@ -8554,7 +8551,7 @@ Details: It defines the social network menu components as listed below:
     background-color: #007BB6; }
   .menu-social .icon-border:hover.icon-instagram, .menu-social .icon-border:hover.cmti-social-instagram, .menu-social .cmti-border:hover.icon-instagram, .menu-social .cmti-border:hover.cmti-social-instagram {
     background-color: #125688; }
-  .menu-social .icon-border:hover.icon-pintrest, .menu-social .icon-border:hover.cmti-social-pintrest, .menu-social .cmti-border:hover.icon-pintrest, .menu-social .cmti-border:hover.cmti-social-pintrest {
+  .menu-social .icon-border:hover.icon-pinterest, .menu-social .icon-border:hover.cmti-social-pinterest, .menu-social .cmti-border:hover.icon-pinterest, .menu-social .cmti-border:hover.cmti-social-pinterest {
     background-color: #CB2027; }
   .menu-social .icon-border:hover.icon-youtube, .menu-social .icon-border:hover.cmti-social-youtube, .menu-social .cmti-border:hover.icon-youtube, .menu-social .cmti-border:hover.cmti-social-youtube {
     background-color: #BB0000; }
@@ -8574,7 +8571,7 @@ Details: It defines the social network menu components as listed below:
 .menu-social .icon-bkg.icon-instagram, .menu-social .icon-bkg.cmti-social-instagram, .menu-social .cmti-bkg.icon-instagram, .menu-social .cmti-bkg.cmti-social-instagram {
   background-color: #125688; }
 
-.menu-social .icon-bkg.icon-pintrest, .menu-social .icon-bkg.cmti-social-pintrest, .menu-social .cmti-bkg.icon-pintrest, .menu-social .cmti-bkg.cmti-social-pintrest {
+.menu-social .icon-bkg.icon-pinterest, .menu-social .icon-bkg.cmti-social-pinterest, .menu-social .cmti-bkg.icon-pinterest, .menu-social .cmti-bkg.cmti-social-pinterest {
   background-color: #CB2027; }
 
 .menu-social .icon-bkg.icon-youtube, .menu-social .icon-bkg.cmti-social-youtube, .menu-social .cmti-bkg.icon-youtube, .menu-social .cmti-bkg.cmti-social-youtube {
@@ -8595,7 +8592,7 @@ Details: It defines the social network menu components as listed below:
 .menu-social .icon-bkg:hover.icon-instagram, .menu-social .icon-bkg:hover.cmti-social-instagram, .menu-social .cmti-bkg:hover.icon-instagram, .menu-social .cmti-bkg:hover.cmti-social-instagram {
   background-color: #0c3a5b; }
 
-.menu-social .icon-bkg:hover.icon-pintrest, .menu-social .icon-bkg:hover.cmti-social-pintrest, .menu-social .cmti-bkg:hover.icon-pintrest, .menu-social .cmti-bkg:hover.cmti-social-pintrest {
+.menu-social .icon-bkg:hover.icon-pinterest, .menu-social .icon-bkg:hover.cmti-social-pinterest, .menu-social .cmti-bkg:hover.icon-pinterest, .menu-social .cmti-bkg:hover.cmti-social-pinterest {
   background-color: #9f191f; }
 
 .menu-social .icon-bkg:hover.icon-youtube, .menu-social .icon-bkg:hover.cmti-social-youtube, .menu-social .cmti-bkg:hover.icon-youtube, .menu-social .cmti-bkg:hover.cmti-social-youtube {
@@ -8616,7 +8613,7 @@ Details: It defines the social network menu components as listed below:
 .menu-social .icon-text.icon-instagram, .menu-social .icon-text.cmti-social-instagram, .menu-social .cmti-text.icon-instagram, .menu-social .cmti-text.cmti-social-instagram {
   color: #125688; }
 
-.menu-social .icon-text.icon-pintrest, .menu-social .icon-text.cmti-social-pintrest, .menu-social .cmti-text.icon-pintrest, .menu-social .cmti-text.cmti-social-pintrest {
+.menu-social .icon-text.icon-pinterest, .menu-social .icon-text.cmti-social-pinterest, .menu-social .cmti-text.icon-pinterest, .menu-social .cmti-text.cmti-social-pinterest {
   color: #CB2027; }
 
 .menu-social .icon-text.icon-youtube, .menu-social .icon-text.cmti-social-youtube, .menu-social .cmti-text.icon-youtube, .menu-social .cmti-text.cmti-social-youtube {
@@ -8637,7 +8634,7 @@ Details: It defines the social network menu components as listed below:
     background-color: #007BB6; }
   .menu-social .btn.instagram {
     background-color: #125688; }
-  .menu-social .btn.pintrest {
+  .menu-social .btn.pinterest {
     background-color: #CB2027; }
   .menu-social .btn.youtube {
     background-color: #BB0000; }
@@ -8651,7 +8648,7 @@ Details: It defines the social network menu components as listed below:
     background-color: #005983; }
   .menu-social .btn:hover.instagram {
     background-color: #0c3a5b; }
-  .menu-social .btn:hover.pintrest {
+  .menu-social .btn:hover.pinterest {
     background-color: #9f191f; }
   .menu-social .btn:hover.youtube {
     background-color: #880000; }
