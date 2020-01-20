@@ -3036,7 +3036,7 @@ from secondary for highlighting purpose.
     background-color: #007EE5 !important;
     color: #FFFFFF !important; }
   .color.color-evernote {
-    background-color: #00A82D !important;
+    background-color: #5BA525 !important;
     color: #FFFFFF !important; }
   .color.color-facebook {
     background-color: #3B5998 !important;
@@ -8568,7 +8568,7 @@ Details: It defines the social network menu components as listed below:
   .menu-social .icon-border.icon-dropbox, .menu-social .icon-border.cmti-brand-dropbox, .menu-social .cmti-border.icon-dropbox, .menu-social .cmti-border.cmti-brand-dropbox {
     border-color: #007EE5; }
   .menu-social .icon-border.icon-evernote, .menu-social .icon-border.cmti-brand-evernote, .menu-social .cmti-border.icon-evernote, .menu-social .cmti-border.cmti-brand-evernote {
-    border-color: #00A82D; }
+    border-color: #5BA525; }
   .menu-social .icon-border.icon-facebook, .menu-social .icon-border.cmti-brand-facebook, .menu-social .cmti-border.icon-facebook, .menu-social .cmti-border.cmti-brand-facebook {
     border-color: #3B5998; }
   .menu-social .icon-border.icon-flickr, .menu-social .icon-border.cmti-brand-flickr, .menu-social .cmti-border.icon-flickr, .menu-social .cmti-border.cmti-brand-flickr {
@@ -8610,7 +8610,7 @@ Details: It defines the social network menu components as listed below:
   .menu-social .icon-border:hover.icon-dropbox, .menu-social .icon-border:hover.cmti-brand-dropbox, .menu-social .cmti-border:hover.icon-dropbox, .menu-social .cmti-border:hover.cmti-brand-dropbox {
     background-color: #007EE5; }
   .menu-social .icon-border:hover.icon-evernote, .menu-social .icon-border:hover.cmti-brand-evernote, .menu-social .cmti-border:hover.icon-evernote, .menu-social .cmti-border:hover.cmti-brand-evernote {
-    background-color: #00A82D; }
+    background-color: #5BA525; }
   .menu-social .icon-border:hover.icon-facebook, .menu-social .icon-border:hover.cmti-brand-facebook, .menu-social .cmti-border:hover.icon-facebook, .menu-social .cmti-border:hover.cmti-brand-facebook {
     background-color: #3B5998; }
   .menu-social .icon-border:hover.icon-flickr, .menu-social .icon-border:hover.cmti-brand-flickr, .menu-social .cmti-border:hover.icon-flickr, .menu-social .cmti-border:hover.cmti-brand-flickr {
@@ -8654,7 +8654,7 @@ Details: It defines the social network menu components as listed below:
   background-color: #007EE5; }
 
 .menu-social .icon-bkg.icon-evernote, .menu-social .icon-bkg.cmti-brand-evernote, .menu-social .cmti-bkg.icon-evernote, .menu-social .cmti-bkg.cmti-brand-evernote {
-  background-color: #00A82D; }
+  background-color: #5BA525; }
 
 .menu-social .icon-bkg.icon-facebook, .menu-social .icon-bkg.cmti-brand-facebook, .menu-social .cmti-bkg.icon-facebook, .menu-social .cmti-bkg.cmti-brand-facebook {
   background-color: #3B5998; }
@@ -8717,7 +8717,7 @@ Details: It defines the social network menu components as listed below:
   background-color: #0062b2; }
 
 .menu-social .icon-bkg:hover.icon-evernote, .menu-social .icon-bkg:hover.cmti-brand-evernote, .menu-social .cmti-bkg:hover.icon-evernote, .menu-social .cmti-bkg:hover.cmti-brand-evernote {
-  background-color: #00751f; }
+  background-color: #447b1c; }
 
 .menu-social .icon-bkg:hover.icon-facebook, .menu-social .icon-bkg:hover.cmti-brand-facebook, .menu-social .cmti-bkg:hover.icon-facebook, .menu-social .cmti-bkg:hover.cmti-brand-facebook {
   background-color: #2d4373; }
@@ -8780,7 +8780,7 @@ Details: It defines the social network menu components as listed below:
   color: #007EE5; }
 
 .menu-social .icon-text.icon-evernote, .menu-social .icon-text.cmti-brand-evernote, .menu-social .cmti-text.icon-evernote, .menu-social .cmti-text.cmti-brand-evernote {
-  color: #00A82D; }
+  color: #5BA525; }
 
 .menu-social .icon-text.icon-facebook, .menu-social .icon-text.cmti-brand-facebook, .menu-social .cmti-text.icon-facebook, .menu-social .cmti-text.cmti-brand-facebook {
   color: #3B5998; }
