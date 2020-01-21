@@ -1,31 +1,4 @@
 @charset "UTF-8";
-.cmti {
-  display: inline-block;
-  font-feature-settings: normal;
-  font-kerning: auto;
-  font-language-override: normal;
-  font-size-adjust: none;
-  font-stretch: normal;
-  font-style: normal;
-  font-synthesis: weight style;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
-  font-size: 1em; }
-  .cmti.cmti-1-5x {
-    font-size: 1.5em; }
-  .cmti.cmti-2x {
-    font-size: 2em; }
-  .cmti.cmti-3x {
-    font-size: 3em; }
-  .cmti.cmti-4x {
-    font-size: 4em; }
-  .cmti.cmti-5x {
-    font-size: 5em; }
-  .cmti.cmti-action {
-    cursor: pointer; }
-
 @font-face {
   font-family: "cmti-brand";
   src: url("../fonts/breeze/cmti-brand.eot");
@@ -61,153 +34,169 @@
 .cmti-brand {
   font-family: "cmti-brand"; }
 
-.cmti-brand-flickr:before {
+.cmti-brand-amazon:before {
   content: '\e800'; }
 
 /* '' */
-.cmti-brand-foursquare:before {
+.cmti-brand-apple:before {
   content: '\e801'; }
 
 /* '' */
-.cmti-brand-gmail:before {
+.cmti-brand-cmgtools:before {
   content: '\e802'; }
 
 /* '' */
-.cmti-brand-google:before {
+.cmti-brand-cmsgears:before {
   content: '\e803'; }
 
 /* '' */
-.cmti-brand-google-plus:before {
+.cmti-brand-dropbox:before {
   content: '\e804'; }
 
 /* '' */
-.cmti-brand-helo:before {
+.cmti-brand-ebay:before {
   content: '\e805'; }
 
 /* '' */
-.cmti-brand-helo-l:before {
+.cmti-brand-evernote:before {
   content: '\e806'; }
 
 /* '' */
-.cmti-brand-instagram:before {
+.cmti-brand-facebook:before {
   content: '\e807'; }
 
 /* '' */
-.cmti-brand-linkedin:before {
+.cmti-brand-flickr:before {
   content: '\e808'; }
 
 /* '' */
-.cmti-brand-mix:before {
+.cmti-brand-foursquare:before {
   content: '\e809'; }
 
 /* '' */
-.cmti-brand-picasa:before {
+.cmti-brand-foxslider:before {
   content: '\e80a'; }
 
 /* '' */
-.cmti-brand-pinterest:before {
+.cmti-brand-gmail:before {
   content: '\e80b'; }
 
 /* '' */
-.cmti-brand-quora:before {
+.cmti-brand-google:before {
   content: '\e80c'; }
 
 /* '' */
-.cmti-brand-reddit:before {
+.cmti-brand-google-plus:before {
   content: '\e80d'; }
 
 /* '' */
-.cmti-brand-rss:before {
+.cmti-brand-helo:before {
   content: '\e80e'; }
 
 /* '' */
-.cmti-brand-skype:before {
+.cmti-brand-helo-l:before {
   content: '\e80f'; }
 
 /* '' */
-.cmti-brand-snapchat:before {
+.cmti-brand-instagram:before {
   content: '\e810'; }
 
 /* '' */
-.cmti-brand-snapchat-o:before {
+.cmti-brand-linkedin:before {
   content: '\e811'; }
 
 /* '' */
-.cmti-brand-tiktok:before {
+.cmti-brand-mix:before {
   content: '\e812'; }
 
 /* '' */
-.cmti-brand-tiktok-l:before {
+.cmti-brand-picasa:before {
   content: '\e813'; }
 
 /* '' */
-.cmti-brand-tiktok-o:before {
+.cmti-brand-pinterest:before {
   content: '\e814'; }
 
 /* '' */
-.cmti-brand-tumblr:before {
+.cmti-brand-quora:before {
   content: '\e815'; }
 
 /* '' */
-.cmti-brand-twitter:before {
+.cmti-brand-reddit:before {
   content: '\e816'; }
 
 /* '' */
-.cmti-brand-vimeo:before {
+.cmti-brand-rss:before {
   content: '\e817'; }
 
 /* '' */
-.cmti-brand-vine:before {
+.cmti-brand-skype:before {
   content: '\e818'; }
 
 /* '' */
-.cmti-brand-vk:before {
+.cmti-brand-snapchat:before {
   content: '\e819'; }
 
 /* '' */
-.cmti-brand-whatsapp:before {
+.cmti-brand-snapchat-o:before {
   content: '\e81a'; }
 
 /* '' */
-.cmti-brand-wordpress:before {
+.cmti-brand-tiktok:before {
   content: '\e81b'; }
 
 /* '' */
-.cmti-brand-yahoo:before {
+.cmti-brand-tiktok-l:before {
   content: '\e81c'; }
 
 /* '' */
-.cmti-brand-youtube:before {
+.cmti-brand-tiktok-o:before {
   content: '\e81d'; }
 
 /* '' */
-.cmti-brand-youtube-play:before {
+.cmti-brand-tumblr:before {
   content: '\e81e'; }
 
 /* '' */
-.cmti-brand-amazon:before {
+.cmti-brand-twitter:before {
   content: '\e81f'; }
 
 /* '' */
-.cmti-brand-apple:before {
+.cmti-brand-vimeo:before {
   content: '\e820'; }
 
 /* '' */
-.cmti-brand-dropbox:before {
+.cmti-brand-vine:before {
   content: '\e821'; }
 
 /* '' */
-.cmti-brand-ebay:before {
+.cmti-brand-vk:before {
   content: '\e822'; }
 
 /* '' */
-.cmti-brand-evernote:before {
+.cmti-brand-vulpinecode:before {
   content: '\e823'; }
 
 /* '' */
-.cmti-brand-facebook:before {
+.cmti-brand-whatsapp:before {
   content: '\e824'; }
 
 /* '' */
+.cmti-brand-wordpress:before {
+  content: '\e825'; }
+
+/* '' */
+.cmti-brand-yahoo:before {
+  content: '\e826'; }
+
+/* '' */
+.cmti-brand-youtube:before {
+  content: '\e827'; }
+
+/* '' */
+.cmti-brand-youtube-play:before {
+  content: '\e828'; }
+
+/* '' */
 
 /*# sourceMappingURL=breeze-icons-brand.css.map */
