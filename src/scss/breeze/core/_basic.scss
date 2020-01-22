@@ -572,35 +572,68 @@ html, body {
 
 // Display Type
 
+// Disabled ... conflicting with the block element ...
+// Use display-block instead of block to control display
 .block {
 	//display: block !important;
 }
 
+// Backward compatibility
 .inline {
 	display: inline !important;
 }
 
+// Backward compatibility
 .inline-block {
 	display: inline-block !important;
 }
 
+// Backward compatibility
 .inline-table {
 	display: inline-table !important;
 }
 
 // Visibility - Without own space
 
+// Backward compatibility
 .visible {
 	display: block !important;
 }
 
-// Strictly hidden
+// Strictly hidden - Backward compatibility
 .hidden {
 	display: none !important;
 }
 
 .hidden-easy {
 	display: none;
+}
+
+// New display controls
+
+.display-block {
+	display: block !important;
+}
+
+.display-inline {
+	display: inline !important;
+}
+
+.display-inline-block {
+	display: inline-block !important;
+}
+
+.display-inline-table {
+	display: inline-table !important;
+}
+
+.display-visible {
+	display: block !important;
+}
+
+// Strictly hidden
+.display-hidden {
+	display: none !important;
 }
 
 // Visibility - Hidden/Displayed occupying space on screen
@@ -648,6 +681,14 @@ html, body {
 		cursor: pointer;
 	}
 
+	&.cursor-pointer-none {
+		pointer-events: none;
+	}
+
+	&.cursor-pointer-auto {
+		pointer-events: auto;
+	}
+
 	&.cursor-crosshair {
 		cursor: crosshair;
 	}
@@ -673,7 +714,7 @@ html, body {
 	}
 }
 
-// Disabled - Moved from form
+// Disabled - Moved out from form
 /*
 .disabled {
 	background-color: $color-btn-d !important;
@@ -723,9 +764,4 @@ html, body {
 
 .info {
 	color: $color-info;
-}
-
-.error-field {
-	@include border( $size-default, solid, $color-error );
-	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
 }

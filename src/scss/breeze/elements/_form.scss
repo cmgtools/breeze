@@ -214,6 +214,11 @@ select, .cmt-select-wrap .cmt-selected {
 	line-height: 1.4;
 }
 
+.error-field {
+	@include border( $size-default, solid, $color-error );
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
+}
+
 // == Iconified Elements ============
 
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */

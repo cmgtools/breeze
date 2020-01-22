@@ -8,7 +8,11 @@ Details: It defines the styles for html elements as listed below:
 Fieldset - The fieldset can be used to group elements with appropriate title using legend.
 
 Optgroup - The optgroup used in select box will be bold by default.
+
+Blockquote - The default styles to display quotes.
 ***********************************************************************/
+
+// == Fieldset ======================
 
 fieldset {
 	@include border( 1px, solid, $color-secondary );
@@ -22,9 +26,13 @@ fieldset {
 	}
 }
 
+// == Optgroup ======================
+
 optgroup {
 	font-weight: bold;
 }
+
+// == Quotes ========================
 
 blockquote {
 	position: relative;
@@ -38,7 +46,7 @@ blockquote:before {
 	line-height: 1;
 	top: 0;
 	left: 0;
-	content: "\201C";
+	content: "\e90d";
 }
 
 blockquote:after {
@@ -48,33 +56,5 @@ blockquote:after {
 	line-height: 1;
 	right: 0;
 	bottom: -0.5em;
-	content: "\201D";
-}
-
-// Lists
-.list {
-
-	&.list-style-circle {
-		list-style-type: circle;
-	}
-
-	&.list-style-square {
-		list-style-type: square;
-	}
-
-	&.list-style-decimal {
-		list-style-type: decimal;
-	}
-
-	&.list-style-image-default {
-		list-style-image: url( $images-path + "list-default.jpg" );
-	}
-
-	&.list-position-inside {
-		list-style-position: inside;
-	}
-
-	&.list-position-outside {
-		list-style-position: outside;
-	}
+	content: "\e90c";
 }

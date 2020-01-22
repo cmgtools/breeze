@@ -288,7 +288,7 @@ code, pre {
 	padding: 1em;
 }
 
-// Font Weight
+// Font Weight - Backward compatible
 .normal {
 	font-weight: normal;
 }
@@ -305,7 +305,28 @@ code, pre {
 	font-weight: lighter;
 }
 
-// Text Style and Decoration
+// Font Weight - New Classes
+
+.text {
+
+	&.text-normal {
+		font-weight: normal;
+	}
+
+	.text-bold {
+		font-weight: bold;
+	}
+
+	.text-bolder {
+		font-weight: bolder;
+	}
+
+	.text-lighter {
+		font-weight: lighter;
+	}
+}
+
+// Text Style and Decoration - Backward compatible
 
 .italic {
 	font-style: italic;
@@ -341,6 +362,47 @@ code, pre {
 
 .ellipsis {
 	text-overflow: ellipsis;
+}
+
+// Text Style and Decoration - New Classes
+
+.text {
+
+	&.text-italic {
+		font-style: italic;
+	}
+
+	&.text-underline {
+		text-decoration: underline;
+	}
+
+	&.text-uppercase {
+		text-transform: uppercase;
+	}
+
+	&.text-lowercase {
+		text-transform: lowercase;
+	}
+
+	&.text-strikethrough {
+		text-decoration: line-through;
+	}
+
+	&.text-nowrap {
+		white-space: nowrap;
+	}
+
+	&.text-break-all {
+		word-break: break-all;
+	}
+
+	&.text-break-word {
+		word-wrap: break-word;
+	}
+
+	&.text-ellipsis {
+		text-overflow: ellipsis;
+	}
 }
 
 // Text Alignment

@@ -521,6 +521,7 @@ a, .link {
 
 // == Icon Button ===================
 
+// Icon button with text
 .btn-icon {
 	@extend %element-style;
 	@extend %element-style-action;
@@ -528,6 +529,7 @@ a, .link {
 
 // == Rounded Icon Button ===========
 
+// Icon button without text
 .btn-icon-o {
 	position: absolute;
 	top: 0.25em;

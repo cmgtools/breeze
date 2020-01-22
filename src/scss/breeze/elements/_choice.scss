@@ -95,22 +95,22 @@ of JS and purely css solutions.
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
 		//content: "\e0a2";
-		content: "\e91d";
+		content: "\e90e";
 	}
 
 	input[type=radio]:checked + .label::before {
 		//content: "\e0a3";
-		content: "\e91e";
+		content: "\e90f";
 	}
 
 	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
 		//content: "\3b";
-		content: "\e847";
+		content: "\e84d";
 	}
 
 	input[type=checkbox]:checked + .label::before {
 		//content: "\3a";
-		content: "\e849";
+		content: "\e84f";
 	}
 }
 

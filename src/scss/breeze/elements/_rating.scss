@@ -49,10 +49,10 @@ Rating - The rating element can be used to provide ratings.
 	}
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		content: "\e0f3";
+		content: "\e946";
 	}
 
-	input[type=radio]:checked+.label::before {
-		content: "\e0f3";
+	input[type=radio]:checked + .label::before {
+		content: "\e944";
 	}
 }

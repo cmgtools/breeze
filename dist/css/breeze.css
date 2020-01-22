@@ -2743,6 +2743,24 @@ html, body {
 .hidden-easy {
   display: none; }
 
+.display-block {
+  display: block !important; }
+
+.display-inline {
+  display: inline !important; }
+
+.display-inline-block {
+  display: inline-block !important; }
+
+.display-inline-table {
+  display: inline-table !important; }
+
+.display-visible {
+  display: block !important; }
+
+.display-hidden {
+  display: none !important; }
+
 .visible-space {
   visibility: visible !important; }
 
@@ -2771,6 +2789,10 @@ html, body {
   cursor: default; }
   .cursor.cursor-pointer {
     cursor: pointer; }
+  .cursor.cursor-pointer-none {
+    pointer-events: none; }
+  .cursor.cursor-pointer-auto {
+    pointer-events: auto; }
   .cursor.cursor-crosshair {
     cursor: crosshair; }
   .cursor.cursor-help {
@@ -2822,12 +2844,6 @@ html, body {
 
 .info {
   color: #3F62A0; }
-
-.error-field {
-  border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25); }
 
 /**********************************************************************
 Description: This file define the text and background colors used by Breeze CSS Framework.
@@ -3983,6 +3999,18 @@ code, pre {
 .lighter {
   font-weight: lighter; }
 
+.text.text-normal {
+  font-weight: normal; }
+
+.text .text-bold {
+  font-weight: bold; }
+
+.text .text-bolder {
+  font-weight: bolder; }
+
+.text .text-lighter {
+  font-weight: lighter; }
+
 .italic {
   font-style: italic; }
 
@@ -4008,6 +4036,33 @@ code, pre {
   word-wrap: break-word; }
 
 .ellipsis {
+  text-overflow: ellipsis; }
+
+.text.text-italic {
+  font-style: italic; }
+
+.text.text-underline {
+  text-decoration: underline; }
+
+.text.text-uppercase {
+  text-transform: uppercase; }
+
+.text.text-lowercase {
+  text-transform: lowercase; }
+
+.text.text-strikethrough {
+  text-decoration: line-through; }
+
+.text.text-nowrap {
+  white-space: nowrap; }
+
+.text.text-break-all {
+  word-break: break-all; }
+
+.text.text-break-word {
+  word-wrap: break-word; }
+
+.text.text-ellipsis {
   text-overflow: ellipsis; }
 
 .text-align.text-align-left {
@@ -5117,117 +5172,173 @@ also include classes to arrange content within container or parent element.
   -ms-filter: grayscale(1);
   filter: grayscale(1); }
 
-.filter-brightness.filter-brightness-25 {
+.filter-sepia.filter-sepia-25 {
   -webkit-filter: sepia(0.25);
   -moz-filter: sepia(0.25);
   -o-filter: sepia(0.25);
   -ms-filter: sepia(0.25);
   filter: sepia(0.25); }
+
+.filter-sepia.filter-sepia-50 {
+  -webkit-filter: sepia(0.5);
+  -moz-filter: sepia(0.5);
+  -o-filter: sepia(0.5);
+  -ms-filter: sepia(0.5);
+  filter: sepia(0.5); }
+
+.filter-sepia.filter-sepia-75 {
+  -webkit-filter: sepia(0.75);
+  -moz-filter: sepia(0.75);
+  -o-filter: sepia(0.75);
+  -ms-filter: sepia(0.75);
+  filter: sepia(0.75); }
+
+.filter-sepia.filter-sepia-100 {
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  -o-filter: sepia(1);
+  -ms-filter: sepia(1);
+  filter: sepia(1); }
+
+.filter-sepia.filter-sepia-125 {
+  -webkit-filter: sepia(1.25);
+  -moz-filter: sepia(1.25);
+  -o-filter: sepia(1.25);
+  -ms-filter: sepia(1.25);
+  filter: sepia(1.25); }
+
+.filter-sepia.filter-sepia-150 {
+  -webkit-filter: sepia(1.5);
+  -moz-filter: sepia(1.5);
+  -o-filter: sepia(1.5);
+  -ms-filter: sepia(1.5);
+  filter: sepia(1.5); }
+
+.filter-sepia.filter-sepia-175 {
+  -webkit-filter: sepia(1.75);
+  -moz-filter: sepia(1.75);
+  -o-filter: sepia(1.75);
+  -ms-filter: sepia(1.75);
+  filter: sepia(1.75); }
+
+.filter-sepia.filter-sepia-200 {
+  -webkit-filter: sepia(2);
+  -moz-filter: sepia(2);
+  -o-filter: sepia(2);
+  -ms-filter: sepia(2);
+  filter: sepia(2); }
+
+.filter-brightness.filter-brightness-25 {
+  -webkit-filter: brightness(0.25);
+  -moz-filter: brightness(0.25);
+  -o-filter: brightness(0.25);
+  -ms-filter: brightness(0.25);
+  filter: brightness(0.25); }
 
 .filter-brightness.filter-brightness-50 {
-  -webkit-filter: sepia(0.5);
-  -moz-filter: sepia(0.5);
-  -o-filter: sepia(0.5);
-  -ms-filter: sepia(0.5);
-  filter: sepia(0.5); }
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -o-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5); }
 
 .filter-brightness.filter-brightness-75 {
-  -webkit-filter: sepia(0.75);
-  -moz-filter: sepia(0.75);
-  -o-filter: sepia(0.75);
-  -ms-filter: sepia(0.75);
-  filter: sepia(0.75); }
+  -webkit-filter: brightness(0.75);
+  -moz-filter: brightness(0.75);
+  -o-filter: brightness(0.75);
+  -ms-filter: brightness(0.75);
+  filter: brightness(0.75); }
 
 .filter-brightness.filter-brightness-100 {
-  -webkit-filter: sepia(1);
-  -moz-filter: sepia(1);
-  -o-filter: sepia(1);
-  -ms-filter: sepia(1);
-  filter: sepia(1); }
+  -webkit-filter: brightness(1);
+  -moz-filter: brightness(1);
+  -o-filter: brightness(1);
+  -ms-filter: brightness(1);
+  filter: brightness(1); }
 
 .filter-brightness.filter-brightness-125 {
-  -webkit-filter: sepia(1.25);
-  -moz-filter: sepia(1.25);
-  -o-filter: sepia(1.25);
-  -ms-filter: sepia(1.25);
-  filter: sepia(1.25); }
+  -webkit-filter: brightness(1.25);
+  -moz-filter: brightness(1.25);
+  -o-filter: brightness(1.25);
+  -ms-filter: brightness(1.25);
+  filter: brightness(1.25); }
 
 .filter-brightness.filter-brightness-150 {
-  -webkit-filter: sepia(1.5);
-  -moz-filter: sepia(1.5);
-  -o-filter: sepia(1.5);
-  -ms-filter: sepia(1.5);
-  filter: sepia(1.5); }
+  -webkit-filter: brightness(1.5);
+  -moz-filter: brightness(1.5);
+  -o-filter: brightness(1.5);
+  -ms-filter: brightness(1.5);
+  filter: brightness(1.5); }
 
 .filter-brightness.filter-brightness-175 {
-  -webkit-filter: sepia(1.75);
-  -moz-filter: sepia(1.75);
-  -o-filter: sepia(1.75);
-  -ms-filter: sepia(1.75);
-  filter: sepia(1.75); }
+  -webkit-filter: brightness(1.75);
+  -moz-filter: brightness(1.75);
+  -o-filter: brightness(1.75);
+  -ms-filter: brightness(1.75);
+  filter: brightness(1.75); }
 
 .filter-brightness.filter-brightness-200 {
-  -webkit-filter: sepia(2);
-  -moz-filter: sepia(2);
-  -o-filter: sepia(2);
-  -ms-filter: sepia(2);
-  filter: sepia(2); }
+  -webkit-filter: brightness(2);
+  -moz-filter: brightness(2);
+  -o-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2); }
 
 .filter-contrast.filter-contrast-25 {
-  -webkit-filter: sepia(0.25);
-  -moz-filter: sepia(0.25);
-  -o-filter: sepia(0.25);
-  -ms-filter: sepia(0.25);
-  filter: sepia(0.25); }
+  -webkit-filter: contrast(0.25);
+  -moz-filter: contrast(0.25);
+  -o-filter: contrast(0.25);
+  -ms-filter: contrast(0.25);
+  filter: contrast(0.25); }
 
 .filter-contrast.filter-contrast-50 {
-  -webkit-filter: sepia(0.5);
-  -moz-filter: sepia(0.5);
-  -o-filter: sepia(0.5);
-  -ms-filter: sepia(0.5);
-  filter: sepia(0.5); }
+  -webkit-filter: contrast(0.5);
+  -moz-filter: contrast(0.5);
+  -o-filter: contrast(0.5);
+  -ms-filter: contrast(0.5);
+  filter: contrast(0.5); }
 
 .filter-contrast.filter-contrast-75 {
-  -webkit-filter: sepia(0.75);
-  -moz-filter: sepia(0.75);
-  -o-filter: sepia(0.75);
-  -ms-filter: sepia(0.75);
-  filter: sepia(0.75); }
+  -webkit-filter: contrast(0.75);
+  -moz-filter: contrast(0.75);
+  -o-filter: contrast(0.75);
+  -ms-filter: contrast(0.75);
+  filter: contrast(0.75); }
 
 .filter-contrast.filter-contrast-100 {
-  -webkit-filter: sepia(1);
-  -moz-filter: sepia(1);
-  -o-filter: sepia(1);
-  -ms-filter: sepia(1);
-  filter: sepia(1); }
+  -webkit-filter: contrast(1);
+  -moz-filter: contrast(1);
+  -o-filter: contrast(1);
+  -ms-filter: contrast(1);
+  filter: contrast(1); }
 
 .filter-contrast.filter-contrast-125 {
-  -webkit-filter: sepia(1.25);
-  -moz-filter: sepia(1.25);
-  -o-filter: sepia(1.25);
-  -ms-filter: sepia(1.25);
-  filter: sepia(1.25); }
+  -webkit-filter: contrast(1.25);
+  -moz-filter: contrast(1.25);
+  -o-filter: contrast(1.25);
+  -ms-filter: contrast(1.25);
+  filter: contrast(1.25); }
 
 .filter-contrast.filter-contrast-150 {
-  -webkit-filter: sepia(1.5);
-  -moz-filter: sepia(1.5);
-  -o-filter: sepia(1.5);
-  -ms-filter: sepia(1.5);
-  filter: sepia(1.5); }
+  -webkit-filter: contrast(1.5);
+  -moz-filter: contrast(1.5);
+  -o-filter: contrast(1.5);
+  -ms-filter: contrast(1.5);
+  filter: contrast(1.5); }
 
-.filter-contrast.filter-brightness-175 {
-  -webkit-filter: sepia(1.75);
-  -moz-filter: sepia(1.75);
-  -o-filter: sepia(1.75);
-  -ms-filter: sepia(1.75);
-  filter: sepia(1.75); }
+.filter-contrast.filter-contrast-175 {
+  -webkit-filter: contrast(1.75);
+  -moz-filter: contrast(1.75);
+  -o-filter: contrast(1.75);
+  -ms-filter: contrast(1.75);
+  filter: contrast(1.75); }
 
-.filter-contrast.filter-brightness-200 {
-  -webkit-filter: sepia(2);
-  -moz-filter: sepia(2);
-  -o-filter: sepia(2);
-  -ms-filter: sepia(2);
-  filter: sepia(2); }
+.filter-contrast.filter-contrast-200 {
+  -webkit-filter: contrast(2);
+  -moz-filter: contrast(2);
+  -o-filter: contrast(2);
+  -ms-filter: contrast(2);
+  filter: contrast(2); }
 
 .filter-invert.filter-invert-5 {
   -webkit-filter: invert(0.05);
@@ -5908,6 +6019,8 @@ Details: It defines the styles for html elements as listed below:
 Fieldset - The fieldset can be used to group elements with appropriate title using legend.
 
 Optgroup - The optgroup used in select box will be bold by default.
+
+Blockquote - The default styles to display quotes.
 ***********************************************************************/
 fieldset {
   border: 1px solid #3C4655; }
@@ -5935,7 +6048,7 @@ blockquote:before {
   line-height: 1;
   top: 0;
   left: 0;
-  content: "\201C"; }
+  content: "\e90d"; }
 
 blockquote:after {
   position: absolute;
@@ -5944,25 +6057,7 @@ blockquote:after {
   line-height: 1;
   right: 0;
   bottom: -0.5em;
-  content: "\201D"; }
-
-.list.list-style-circle {
-  list-style-type: circle; }
-
-.list.list-style-square {
-  list-style-type: square; }
-
-.list.list-style-decimal {
-  list-style-type: decimal; }
-
-.list.list-style-image-default {
-  list-style-image: url("../images/list-default.jpg"); }
-
-.list.list-position-inside {
-  list-style-position: inside; }
-
-.list.list-position-outside {
-  list-style-position: outside; }
+  content: "\e90c"; }
 
 /**********************************************************************
 Description: It defines the styles of custom elements available in Breeze CSS
@@ -6101,6 +6196,24 @@ Details: It defines the custom element styles as listed below:
 
 Radio List - A list of radio elements.
 ***********************************************************************/
+.list.list-style-circle {
+  list-style-type: circle; }
+
+.list.list-style-square {
+  list-style-type: square; }
+
+.list.list-style-decimal {
+  list-style-type: decimal; }
+
+.list.list-style-image-default {
+  list-style-image: url("../images/list-default.jpg"); }
+
+.list.list-position-inside {
+  list-style-position: inside; }
+
+.list.list-position-outside {
+  list-style-position: outside; }
+
 .list.list-radio label {
   width: auto;
   clear: none; }
@@ -6321,16 +6434,16 @@ of JS and purely css solutions.
   color: #BBB; }
 
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
-  content: "\e91d"; }
+  content: "\e90e"; }
 
 .cmt-choice input[type=radio]:checked + .label::before {
-  content: "\e91e"; }
+  content: "\e90f"; }
 
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
-  content: "\e847"; }
+  content: "\e84d"; }
 
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "\e849"; }
+  content: "\e84f"; }
 
 .cmt-choice.cmt-choice-inline label {
   display: inline-block;
@@ -6387,9 +6500,9 @@ Rating - The rating element can be used to provide ratings.
   .cmt-rating-native input[type=checkbox] + .label.label-rating::before, .cmt-rating-native input[type=radio] + .label.label-rating::before {
     margin-right: 8px; }
   .cmt-rating-native input[type=radio] + .label::before, .cmt-rating-native input[type=radio]:disabled + .label::before {
-    content: "\e0f3"; }
+    content: "\e946"; }
   .cmt-rating-native input[type=radio]:checked + .label::before {
-    content: "\e0f3"; }
+    content: "\e944"; }
 
 /**********************************************************************
 Description: It defines the styles of switch elements available in Breeze CSS Framework.
@@ -7074,6 +7187,12 @@ select, .cmt-select-wrap .cmt-selected {
 .btn-icon {
   padding: 0.30em 0.5em;
   line-height: 1.4; }
+
+.error-field {
+  border: 1px solid #E74343;
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25); }
 
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 .frm-icon-element {
