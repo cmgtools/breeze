@@ -1585,6 +1585,18 @@ Notes:
 .pattern.pattern-default {
   background-image: url("../images/pattern-default.png"); }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
 /**********************************************************************
 Description: This file define the transition effects available in the Breeze CSS Framework. These
 allow changes in allowed css properties smoothly over a defined time interval. We can define the
@@ -4002,13 +4014,13 @@ code, pre {
 .text.text-normal {
   font-weight: normal; }
 
-.text .text-bold {
+.text.text-bold {
   font-weight: bold; }
 
-.text .text-bolder {
+.text.text-bolder {
   font-weight: bolder; }
 
-.text .text-lighter {
+.text.text-lighter {
   font-weight: lighter; }
 
 .italic {

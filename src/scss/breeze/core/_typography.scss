@@ -313,15 +313,15 @@ code, pre {
 		font-weight: normal;
 	}
 
-	.text-bold {
+	&.text-bold {
 		font-weight: bold;
 	}
 
-	.text-bolder {
+	&.text-bolder {
 		font-weight: bolder;
 	}
 
-	.text-lighter {
+	&.text-lighter {
 		font-weight: lighter;
 	}
 }
