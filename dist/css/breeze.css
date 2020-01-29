@@ -7659,17 +7659,17 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
       width: 10%; }
 
 /**********************************************************************
-Description: It defines the styles of accordial element. The accordian is a multi 
+Description: It defines the styles of accordial element. The accordian is a multi
 section arrangement keeping only one section visible at a time.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of accordian elements as listed below:
 
-Accordian - The barebone accordian class with minimum styles common for all the accordians. 
+Accordian - The barebone accordian class with minimum styles common for all the accordians.
 The base class define the structure of accordian having tab with trigger and view.
 
-Basic Accordian - It arrange the accordian sections vertically and provide options to select 
+Basic Accordian - It arrange the accordian sections vertically and provide options to select
 multiple themes using the color scheme.
 
 Border Accordian - It's extension of Basic Accordian with default borders.
@@ -7789,17 +7789,17 @@ Details: It defines the styles for breadcrumbs.
     display: inline-block; }
 
 /**********************************************************************
-Description: It defines the styles of auto fill elements available in CMT-UI css framework. These
-			 elements require Javascript/JQuery to populate the suggestions.
+Description: It defines the styles of auto fill elements available in Breeze CSS Framework.
+These elements require Javascript/JQuery to populate the suggestions.
 
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Auto Fill       - The auto fill element shows suggestion.
-*
-* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
-*                   jQuery plugin available in CMT-JS framework.
+Auto Fill - The auto fill element shows suggestion.
+
+Auto Suggest - The auto suggest class turns an input field to auto-suggest field. It depends
+on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
 ***********************************************************************/
 .auto-fill {
   position: relative; }
@@ -7966,14 +7966,13 @@ of dragger, chooser and file.
       width: 200px; }
 
 /**********************************************************************
-Description: It defines the styles for flipper components available in CMT-UI css framework.
+Description: It defines the styles of flipper components available in Breeze CSS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for flipper components as listed below:
 
-* Flipper     - It flip the content on hover hiding the face and showing content.
-
+Flipper - It flip the content on hover hiding the face and showing content.
 ***********************************************************************/
 .flipper {
   position: relative;
@@ -8004,24 +8003,23 @@ Details: It defines the styles for flipper components as listed below:
       height: 100%; }
 
 /**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
+Description: It defines the styles of mapper components available in Breeze CSS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for mapper components as listed below:
+Details: It defines the styles of mapper components as listed below:
 
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
+Mapper - The barebone mapper class with minimum styles common for all the mappers.
+
+List - The list mapper allows user to map multiple resources to active resource. The mappings
+can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+
+Auto - The auto mapper will use auto fill component to auto suggest mapping. The mapping
+will be formed when user click on one of the auto suggest item.
+
+Submit - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+
+Action - The action mapper will allow users to toggle each item individually by click.
 ***********************************************************************/
 .mapper {
   position: relative; }
@@ -8203,7 +8201,7 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of data components as listed below:
 
-* Data		-	The barebone card class with minimum styles.
+Data - The barebone card class with minimum styles.
 ***********************************************************************/
 .data.data-primary {
   background-color: #F2F2F2;
