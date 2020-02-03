@@ -37,6 +37,16 @@ Rating - The rating element can be used to provide ratings.
 			}
 		}
 	}
+
+	&.read-only {
+
+		.wrap-stars {
+
+			.star {
+				cursor: default;
+			}
+		}
+	}
 }
 
 .cmt-rating-native {

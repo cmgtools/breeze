@@ -1,20 +1,22 @@
 /**********************************************************************
-Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
+Description: It defines the styles of cmt slider available in Breeze CSS Framework. It
+requires cmtSlider plugin from Velocity JS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of cmt slider as listed below:
 
-* CMT Slider  - The barebone slider with minimum styles to arrange slides and controls.
-*
-* Basic       - The basic slider defines the styles of slider having fixed with slides and slider width is also defined.
-*
-* Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive slider considering
-				slides are visible fully on each device. The controls will be placed on left and right side without
-				overlapping slides.
+CMT Slider - The barebone slider with minimum styles to arrange slides and controls.
 
-* Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image might be displayed
-				around the slides.
+Basic - The basic slider defines the styles of slider having fixed with slides and slider width is
+also defined.
+
+Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive
+slider considering slides are visible fully on each device. The controls will be placed on left and
+right side without overlapping slides.
+
+Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image
+might be displayed around the slides.
 
 ***********************************************************************/
 
@@ -28,6 +30,7 @@ Details: It defines the styles of cmt slider as listed below:
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		z-index: 1;
 
 		.slider-slides {
 			position: absolute;
@@ -53,6 +56,7 @@ Details: It defines the styles of cmt slider as listed below:
 	.slider-control {
 		cursor: pointer;
 		position: absolute;
+		z-index: 10;
 
 		&.slider-control-left {
 			top: 0;

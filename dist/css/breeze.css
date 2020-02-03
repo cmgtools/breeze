@@ -6506,6 +6506,8 @@ Rating - The rating element can be used to provide ratings.
     margin-bottom: 0.75rem; }
     .cmt-rating .wrap-messages .star-message.selected {
       display: inline-block; }
+  .cmt-rating.read-only .wrap-stars .star {
+    cursor: default; }
 
 .cmt-rating-native {
   text-align: left; }
@@ -9401,22 +9403,24 @@ Details: It defines the styles for popout components as listed below:
     display: block; }
 
 /**********************************************************************
-Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
+Description: It defines the styles of cmt slider available in Breeze CSS Framework. It
+requires cmtSlider plugin from Velocity JS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles of cmt slider as listed below:
 
-* CMT Slider  - The barebone slider with minimum styles to arrange slides and controls.
-*
-* Basic       - The basic slider defines the styles of slider having fixed with slides and slider width is also defined.
-*
-* Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive slider considering
-				slides are visible fully on each device. The controls will be placed on left and right side without
-				overlapping slides.
+CMT Slider - The barebone slider with minimum styles to arrange slides and controls.
 
-* Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image might be displayed
-				around the slides.
+Basic - The basic slider defines the styles of slider having fixed with slides and slider width is
+also defined.
+
+Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive
+slider considering slides are visible fully on each device. The controls will be placed on left and
+right side without overlapping slides.
+
+Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image
+might be displayed around the slides.
 
 ***********************************************************************/
 .slider {
@@ -9425,7 +9429,8 @@ Details: It defines the styles of cmt slider as listed below:
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 1; }
     .slider .slider-slides-wrap .slider-slides {
       position: absolute;
       top: 0px;
@@ -9442,7 +9447,8 @@ Details: It defines the styles of cmt slider as listed below:
         height: 100%; }
   .slider .slider-control {
     cursor: pointer;
-    position: absolute; }
+    position: absolute;
+    z-index: 10; }
     .slider .slider-control.slider-control-left {
       top: 0;
       left: 0; }
