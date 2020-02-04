@@ -366,40 +366,44 @@ html, body {
 .valign {
 	vertical-align: baseline;
 
+	&.valign-none {
+		vertical-align: unset !important;
+	}
+
 	&.valign-initial {
-		vertical-align: initial;
+		vertical-align: initial !important;
 	}
 
 	&.valign-inherit {
-		vertical-align: inherit;
+		vertical-align: inherit !important;
 	}
 
 	&.valign-top {
-		vertical-align: top;
+		vertical-align: top !important;
 	}
 
 	&.valign-middle {
-		vertical-align: middle;
+		vertical-align: middle !important;
 	}
 
 	&.valign-bottom {
-		vertical-align: bottom;
+		vertical-align: bottom !important;
 	}
 
 	&.valign-text-top {
-		vertical-align: text-top;
+		vertical-align: text-top !important;
 	}
 
 	&.valign-text-bottom {
-		vertical-align: text-bottom;
+		vertical-align: text-bottom !important;
 	}
 
 	&.valign-sub {
-		vertical-align: sub;
+		vertical-align: sub !important;
 	}
 
 	&.valign-super {
-		vertical-align: super;
+		vertical-align: super !important;
 	}
 }
 

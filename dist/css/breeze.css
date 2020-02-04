@@ -2626,24 +2626,26 @@ html, body {
 
 .valign {
   vertical-align: baseline; }
+  .valign.valign-none {
+    vertical-align: unset !important; }
   .valign.valign-initial {
-    vertical-align: initial; }
+    vertical-align: initial !important; }
   .valign.valign-inherit {
-    vertical-align: inherit; }
+    vertical-align: inherit !important; }
   .valign.valign-top {
-    vertical-align: top; }
+    vertical-align: top !important; }
   .valign.valign-middle {
-    vertical-align: middle; }
+    vertical-align: middle !important; }
   .valign.valign-bottom {
-    vertical-align: bottom; }
+    vertical-align: bottom !important; }
   .valign.valign-text-top {
-    vertical-align: text-top; }
+    vertical-align: text-top !important; }
   .valign.valign-text-bottom {
-    vertical-align: text-bottom; }
+    vertical-align: text-bottom !important; }
   .valign.valign-sub {
-    vertical-align: sub; }
+    vertical-align: sub !important; }
   .valign.valign-super {
-    vertical-align: super; }
+    vertical-align: super !important; }
 
 .absolute {
   position: absolute !important; }
