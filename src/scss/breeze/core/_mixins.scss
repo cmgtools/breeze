@@ -631,13 +631,17 @@ Notes:
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+	padding: 0 !important;
+	//margin: 1rem 0;
 }
 
 @mixin line-clamp-2 {	
 	display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+	overflow: hidden;
+    padding: 0 !important;
+	//margin: 1rem 0;
 }
 
 // Mixins Default implementation ***********************
@@ -1904,8 +1908,15 @@ Notes:
 	}
 }
 
-
 //Line Clamping
+
+.line-clamp-2 > *, .line-clamp-3 > * {
+	display: none;
+}
+
+.line-clamp-2 > *:first-child, .line-clamp-3 > *:first-child {
+	display: block;
+}
 
 .line-clamp-2 {
 	@include line-clamp-2;
