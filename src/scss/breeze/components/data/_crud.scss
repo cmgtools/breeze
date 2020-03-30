@@ -14,6 +14,10 @@ to show forms and widgets.
 .data-crud-wrap {
 	position: relative;
 
+	.data-crud-wrap-title {
+		// Title above main and sidebar
+	}
+
 	.data-crud-wrap-main {
 		// The main container having data and plugin forms
 		// The forms can be either wrapped by data-crud or box-panel

@@ -236,9 +236,10 @@ p, span, em, div, a {
 	ol {
 
 		li {
-			list-style-position: inside;
+			list-style-position: outside;
 			list-style-type: decimal;
 			line-height: 2.5;
+			margin-left: 1em;
 		}
 
 		ul, ol {
@@ -249,9 +250,10 @@ p, span, em, div, a {
 	ul {
 
 		li {
-			list-style-position: inside;
+			list-style-position: outside;
 			list-style-type: disc;
 			line-height: 2.5;
+			margin-left: 1em;
 		}
 
 		ul, ol {
