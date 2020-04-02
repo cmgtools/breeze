@@ -3981,15 +3981,15 @@ p, span, em, div, a {
   .reader ol li {
     list-style-position: outside;
     list-style-type: decimal;
-    line-height: 2.5;
-    margin-left: 1em; }
+    margin-left: 1em;
+    margin-bottom: 0.5em; }
   .reader ol ul, .reader ol ol {
     margin-left: 2em; }
   .reader ul li {
     list-style-position: outside;
     list-style-type: disc;
-    line-height: 2.5;
-    margin-left: 1em; }
+    margin-left: 1em;
+    margin-bottom: 0.5em; }
   .reader ul ul, .reader ul ol {
     margin-left: 2em; }
   .reader p {
@@ -9023,9 +9023,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for header components as listed below:
 
-* Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
-*
-* Basic       - The basic header define the styles for primary header having logo and menus.
+Header - The barebone header class with minimum styles. The header can be made fixed or absolute.
+
+Basic - The basic header define the styles for primary header having logo and menus.
 ***********************************************************************/
 .header {
   position: relative; }
