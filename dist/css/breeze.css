@@ -4172,13 +4172,13 @@ a, .link {
 .note {
   padding: 0.5em;
   background-color: #3C4655; }
-  .note .note-info {
+  .note.note-info {
     color: #3F62A0; }
-  .note .note-success {
+  .note.note-success {
     color: #A5D75A; }
-  .note .note-warning {
+  .note.note-warning {
     color: #EF9300; }
-  .note .note-error {
+  .note.note-error {
     color: #E74343; }
 
 /**********************************************************************

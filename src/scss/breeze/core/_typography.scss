@@ -542,19 +542,19 @@ a, .link {
     padding: 0.5em;
 	background-color: $color-secondary;
 
-	.note-info {
+	&.note-info {
 		color: $color-info;
 	}
 
-	.note-success {
+	&.note-success {
 		color: $color-success;
 	}
 
-	.note-warning {
+	&.note-warning {
 		color: $color-warning;
 	}
 
-	.note-error {
+	&.note-error {
 		color: $color-error;
 	}
 }
