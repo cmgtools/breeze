@@ -71,11 +71,12 @@ Basic - The basic header define the styles for primary header having logo and me
 			}
 		}
 
+		// Optional- Wrap within #menu-main-wrap
 		#menu-main {
 			display: none;
 		}
 
-		// Should be wrapped within #menu-mobile-wrap
+		// Optional- Wrap within #menu-mobile-wrap
 		#menu-main-mobile {
 			position: absolute;
 			display: none;
@@ -168,10 +169,27 @@ Basic - The basic header define the styles for primary header having logo and me
 		&.header-small {
 			height: 50px;
 
+			.header-logo {
+				padding: 5px 10px;
+
+				.logo {
+					display: inline-block;
+
+					img {
+						height: 40px;
+					}
+				}
+			}
+
 			#menu-main {
-				height: 50px;
-				line-height: 50px;
 				padding: 0;
+
+				li {
+
+					a {
+						line-height: 50px;
+					}
+				}
 			}
 		}
 	}
@@ -183,21 +201,21 @@ Basic - The basic header define the styles for primary header having logo and me
 	.header-logo {
 
 		.logo-small {
-			display: none;
+			display: none !important;
 		}
 	}
 
 	// Header height reduced on scroll
 	&.header-small {
 
-		.logo {
-			display: none;
-		}
-
 		.header-logo {
 
+			.logo {
+				display: none !important;
+			}
+
 			.logo-small {
-				display: inline-block;
+				display: inline-block !important;
 
 				img {
 					height: 40px;

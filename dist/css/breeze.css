@@ -9129,19 +9129,25 @@ Basic - The basic header define the styles for primary header having logo and me
         display: none; }
       .header-basic.header-small {
         height: 50px; }
+        .header-basic.header-small .header-logo {
+          padding: 5px 10px; }
+          .header-basic.header-small .header-logo .logo {
+            display: inline-block; }
+            .header-basic.header-small .header-logo .logo img {
+              height: 40px; }
         .header-basic.header-small #menu-main {
-          height: 50px;
-          line-height: 50px;
-          padding: 0; } }
+          padding: 0; }
+          .header-basic.header-small #menu-main li a {
+            line-height: 50px; } }
 
 .header-basic-duo .header-logo .logo-small {
-  display: none; }
+  display: none !important; }
 
-.header-basic-duo.header-small .logo {
-  display: none; }
+.header-basic-duo.header-small .header-logo .logo {
+  display: none !important; }
 
 .header-basic-duo.header-small .header-logo .logo-small {
-  display: inline-block; }
+  display: inline-block !important; }
   .header-basic-duo.header-small .header-logo .logo-small img {
     height: 40px; }
 
@@ -9152,9 +9158,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for footer components as listed below:
 
-* Footer      - The barebone footer class with minimum styles. The footer can be made sticky to stick at bottom.
-*
-* Basic       - The basic footer define the styles for primary footer.
+Footer - The barebone footer class with minimum styles. The footer can be made sticky to stick at bottom.
+
+Basic - The basic footer define the styles for primary footer.
 ***********************************************************************/
 .footer {
   position: relative; }

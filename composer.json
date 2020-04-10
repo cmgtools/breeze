@@ -1,0 +1,16 @@
+{
+	"name": "cmgtools/breeze",
+	"description": "Breeze is component oriented CSS Framework which provide responsive grid, commonly used mixins, themeable color scheme, re-usable components structure and ready to use components using the pre-defined component structure.",
+	"homepage": "https://www.cmgtools.org",
+	"type": "project",
+	"keywords": [
+		"css", "web", "front-end", "framework", "breeze"
+	],
+	"support": {
+		"resources": "https://www.cmgtools.org"
+	},
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{ "name": "Bhagwat Singh Chouhan", "email": "bhagwat.chouhan@gmail.com" }
+	]
+}

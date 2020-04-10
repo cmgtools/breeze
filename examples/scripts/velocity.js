@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2019-12-04
+ * Velocity - v1.0.0-alpha1 - 2020-04-10
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -920,13 +920,12 @@ cmt.utils.intltel = {
 	populateIntlField: function( field ) {
 
 		var parent	= field.closest( '.form-group' );
-		var val		= parent.find( '.intl-tel-number' ).val();
+		var val		= parent.find( '.intl-tel-number' );
 
 		if( val.length > 0 ) {
 
-			field.intlTelInput( 'setNumber', val );
+			field.intlTelInput( 'setNumber', val.val() );
 		}
-
 	}
 };
 
@@ -3319,7 +3318,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			incBtn.click( function() {
 
-				cval = field.val( cval );
+				cval = field.val();
 
 				if( cval < max ) {
 
@@ -3330,18 +3329,21 @@ cmt.components.jquery = cmt.components.jquery || {};
 					if( cval >= max ) {
 
 						incBtn.addClass( 'disabled' );
+						decBtn.removeClass( 'disabled' );
 
 					}
 					else {
 
 						incBtn.removeClass( 'disabled' );
+						decBtn.removeClass( 'disabled' );
+
 					}
 				}
 			});
 
 			decBtn.click( function() {
 
-				cval = field.val( cval );
+				cval = field.val();
 
 				if( cval > min ) {
 
@@ -3352,11 +3354,13 @@ cmt.components.jquery = cmt.components.jquery || {};
 					if( cval <= min ) {
 
 						decBtn.addClass( 'disabled' );
+						incBtn.removeClass( 'disabled' );
 
 					}
 					else {
 
 						decBtn.removeClass( 'disabled' );
+						incBtn.removeClass( 'disabled' );
 					}
 				}
 			});
@@ -6535,7 +6539,7 @@ function hideMessagePopup() {
 		var pickers		= this;
 
 		// Append singleton element at the end of body
-		jQuery( 'body' ).append( '<div id="' + settings.id + '" class="cmt-timepicker ' + settings.classes + '" style="z-index: 100;"></div>' );
+		jQuery( 'body' ).append( '<div id="' + settings.id + '" class="cmt-timepicker ' + settings.classes + '" style="z-index: 100000;"></div>' );
 
 		// Iterate and initialise all the picker elements
 		pickers.each( function() {
