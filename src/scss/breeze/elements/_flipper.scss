@@ -1,12 +1,11 @@
 /**********************************************************************
-Description: It defines the styles for flipper components available in CMT-UI css framework.
+Description: It defines the styles of flipper components available in Breeze CSS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for flipper components as listed below:
 
-* Flipper     - It flip the content on hover hiding the face and showing content.
-
+Flipper - It flip the content on hover hiding the face and showing content.
 ***********************************************************************/
 
 .flipper {
@@ -35,15 +34,15 @@ Details: It defines the styles for flipper components as listed below:
 			transform: rotateY(180deg);
 			box-sizing: border-box;
 			padding: 10px;
-			color: white;
 			text-align: center;
 			background-color: $color-secondary;
+			color: $color-secondary-text;
 		}
 
 		.flipper-back {
-			position:absolute;
-			top:0;
-			height:100%;
+			position: absolute !important;
+			top: 0;
+			height: 100%;
 		}
 	}
 }

@@ -17,6 +17,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 	display: none;
 	@include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );
 	border: 1px solid $color-border;
+	z-index: 100010;
 }
 
 .ui-datepicker-header {

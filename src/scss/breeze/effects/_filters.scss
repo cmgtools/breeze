@@ -22,6 +22,38 @@
 			filter: sepia( $value );
 }
 
+@mixin filter-brightness( $value ) {
+	-webkit-filter: brightness( $value );
+	   -moz-filter: brightness( $value );
+		 -o-filter: brightness( $value );
+		-ms-filter: brightness( $value );
+			filter: brightness( $value );
+}
+
+@mixin filter-contrast( $value ) {
+	-webkit-filter: contrast( $value );
+	   -moz-filter: contrast( $value );
+		 -o-filter: contrast( $value );
+		-ms-filter: contrast( $value );
+			filter: contrast( $value );
+}
+
+@mixin filter-invert( $value ) {
+	-webkit-filter: invert( $value );
+	   -moz-filter: invert( $value );
+		 -o-filter: invert( $value );
+		-ms-filter: invert( $value );
+			filter: invert( $value );
+}
+
+@mixin filter-hue-rotate( $value ) {
+	-webkit-filter: hue-rotate( $value );
+	   -moz-filter: hue-rotate( $value );
+		 -o-filter: hue-rotate( $value );
+		-ms-filter: hue-rotate( $value );
+			filter: hue-rotate( $value );
+}
+
 .filter-blur {
 	@include filter-blur( 1px );
 
@@ -77,5 +109,165 @@
 
 	&.filter-sepia-100 {
 		@include filter-sepia( 1 );
+	}
+
+	&.filter-sepia-125 {
+		@include filter-sepia( 1.25 );
+	}
+
+	&.filter-sepia-150 {
+		@include filter-sepia( 1.5 );
+	}
+
+	&.filter-sepia-175 {
+		@include filter-sepia( 1.75 );
+	}
+
+	&.filter-sepia-200 {
+		@include filter-sepia( 2 );
+	}
+}
+
+.filter-brightness {
+
+	&.filter-brightness-25 {
+		@include filter-brightness( 0.25 );
+	}
+
+	&.filter-brightness-50 {
+		@include filter-brightness( 0.5 );
+	}
+
+	&.filter-brightness-75 {
+		@include filter-brightness( 0.75 );
+	}
+
+	&.filter-brightness-100 {
+		@include filter-brightness( 1 );
+	}
+
+	&.filter-brightness-125 {
+		@include filter-brightness( 1.25 );
+	}
+
+	&.filter-brightness-150 {
+		@include filter-brightness( 1.5 );
+	}
+
+	&.filter-brightness-175 {
+		@include filter-brightness( 1.75 );
+	}
+
+	&.filter-brightness-200 {
+		@include filter-brightness( 2 );
+	}
+}
+
+.filter-contrast {
+
+	&.filter-contrast-25 {
+		@include filter-contrast( 0.25 );
+	}
+
+	&.filter-contrast-50 {
+		@include filter-contrast( 0.5 );
+	}
+
+	&.filter-contrast-75 {
+		@include filter-contrast( 0.75 );
+	}
+
+	&.filter-contrast-100 {
+		@include filter-contrast( 1 );
+	}
+
+	&.filter-contrast-125 {
+		@include filter-contrast( 1.25 );
+	}
+
+	&.filter-contrast-150 {
+		@include filter-contrast( 1.5 );
+	}
+
+	&.filter-contrast-175 {
+		@include filter-contrast( 1.75 );
+	}
+
+	&.filter-contrast-200 {
+		@include filter-contrast( 2 );
+	}
+}
+
+.filter-invert {
+
+	&.filter-invert-5 {
+		@include filter-invert( 0.05 );
+	}
+
+	&.filter-invert-15 {
+		@include filter-invert( 0.15 );
+	}
+
+	&.filter-invert-25 {
+		@include filter-invert( 0.25 );
+	}
+
+	&.filter-invert-50 {
+		@include filter-invert( 0.5 );
+	}
+
+	&.filter-invert-75 {
+		@include filter-invert( 0.75 );
+	}
+
+	&.filter-invert-85 {
+		@include filter-invert( 0.85 );
+	}
+
+	&.filter-invert-95 {
+		@include filter-invert( 0.95 );
+	}
+
+	&.filter-invert-100 {
+		@include filter-invert( 1 );
+	}
+}
+
+.filter-hue-rotate {
+
+	&.filter-hue-rotate-0 {
+		@include filter-invert( 0deg );
+	}
+
+	&.filter-hue-rotate-45 {
+		@include filter-invert( 45deg );
+	}
+
+	&.filter-hue-rotate-90 {
+		@include filter-invert( 90deg );
+	}
+
+	&.filter-hue-rotate-135 {
+		@include filter-invert( 135deg );
+	}
+
+	&.filter-hue-rotate-180 {
+		@include filter-invert( 180deg );
+	}
+
+	&.filter-hue-rotate-225 {
+		@include filter-invert( 225deg );
+	}
+
+	&.filter-hue-rotate-270 {
+		@include filter-invert( 270deg );
+	}
+
+	&.filter-hue-rotate-315 {
+		@include filter-invert( 315deg );
+	}
+
+	&.filter-hue-rotate-360 {
+		@include filter-invert( 360deg );
 	}
 }

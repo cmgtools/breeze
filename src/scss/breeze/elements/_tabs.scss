@@ -7,7 +7,7 @@ Details: It defines the styles of tab components as listed below:
 
 Tabs - The barebone card class with minimum styles defining tab links and content.
 
-Basic - It define the styles of basic tab with borders. The bordered tabs are commonly 
+Basic - It define the styles of basic tab with borders. The bordered tabs are commonly
 used for bordered boxes and panels.
 
 Underline - The underlined tabs use underline to hightlight the tabs and active tab.
@@ -49,7 +49,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 
 .tabs-basic {
 
-	.tab-links-wrap {
+	> .tab-links-wrap {
 		border-bottom: 1px solid $color-border-d;
 
 		.tab-link {
@@ -66,7 +66,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 		}
 	}
 
-	.tab-content-wrap {
+	> .tab-content-wrap {
 
 		.tab-content {
 			display: none;
@@ -78,7 +78,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 
 .tabs-underline {
 
-	.tab-links-wrap {
+	> .tab-links-wrap {
 		border-bottom: 1px solid $color-border;
 
 		.tab-link {
@@ -90,14 +90,14 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 				color: $color-tertiary-d;
 				border-bottom: 2px solid $color-tertiary-d;
 			}
-			
+
 			&:hover {
-				color: $color-tertiary-d;				
+				color: $color-tertiary-d;
 			}
 		}
 	}
 
-	.tab-content-wrap {
+	> .tab-content-wrap {
 
 		.tab-content {
 			display: none;
@@ -109,7 +109,7 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 
 .tabs-table {
 
-	.tab-links-wrap {        
+	> .tab-links-wrap {
 		text-align: center;
 		border-bottom: 0px;
 		display: table;
@@ -136,11 +136,11 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
 			&.tab-link-50 {
 				width: 50%;
 			}
-			
+
 			&.tab-link-25 {
 				width: 25%;
 			}
-			
+
 			&.tab-link-10 {
 				width: 10%;
 			}

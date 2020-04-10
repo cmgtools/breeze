@@ -1,15 +1,15 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. 
-Most of these elements are also dependent on CMT-JS library. Though the JS implementation 
-can also be done for other standard libraries.
+Description: It defines the styles of radio and checkbox elements available in
+Breeze CSS Framework. Most of these elements are also dependent on Velocity JS
+Framework. Though the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Choice - The choice allows user to select single or multiple options from available 
-options. It include radio and checkbox html components and change their default behaviour 
-by showing good looking icons instead of browser dependentent graphics. These are indepedent 
+Choice - The choice allows user to select single or multiple options from available
+options. It include radio and checkbox html components and change their default behaviour
+by showing good looking icons instead of browser dependentent graphics. These are indepedent
 of JS and purely css solutions.
 ***********************************************************************/
 
@@ -20,7 +20,7 @@ of JS and purely css solutions.
 .cmt-choice {
 
 	span, a {
-		vertical-align: middle;
+		vertical-align: baseline;
 	}
 
 	input[type=checkbox],
@@ -94,18 +94,75 @@ of JS and purely css solutions.
 	// Display Content - Icon
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		content: "\e0a2";
+		//content: "\e0a2";
+		content: "\e90e";
 	}
 
 	input[type=radio]:checked + .label::before {
-		content: "\e0a3";
+		//content: "\e0a3";
+		content: "\e90f";
 	}
 
 	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
-		content: "\3b";
+		//content: "\3b";
+		content: "\e84d";
 	}
 
 	input[type=checkbox]:checked + .label::before {
-		content: "\3a";
+		//content: "\3a";
+		content: "\e84f";
+	}
+}
+
+// == Choices - arrangements ========
+
+.cmt-choice {
+	@extend %clearfix;
+
+	&.cmt-choice-inline {
+
+		label {
+			display: inline-block;
+			margin-right: 1em;
+			width: auto;
+		}
+	}
+
+	&.cmt-choice-row-2 {
+
+		label {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&.cmt-choice-row-4 {
+
+		label {
+			float: left;
+			width: 25%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			label {
+				width: 50%;
+			}
+		}
+	}
+
+	&.cmt-choice-row-5 {
+
+		label {
+			float: left;
+			width: 20%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			label {
+				width: 50%;
+			}
+		}
 	}
 }

@@ -22,6 +22,10 @@ Details: It defines the styles for foxslider components as listed below:
 		.slide {
 			// Slide with/without background/texture
 			z-index: 10;
+			
+			.fxs-bkg-img {
+				// The background formed using image tag
+			}
 
 			.wrap-slide-content {
 				// Slide content with/without background/texture

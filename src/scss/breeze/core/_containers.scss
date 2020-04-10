@@ -1,24 +1,28 @@
 /**********************************************************************
-Description: This file define the grid system and basic containers of CMT-UI css framework.
+Description: This file define the grid system and basic containers of Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the grid system and basic containers as listed below:
-* Row               - The row is the primary class of grid system. It can cover either 100% width
-*                     or specified width keeping itself at center of parent element. A row can also be declared
-*                     to have all columns inline irrespective of their float.
-* Column            - The column system can form either 12 column or 15 column grid with or without margin
-*                     seperating each column. The columns without margin can be implemented using full column
-*                     classes.
-* Column Filler     - The filler column can be used to make a column with full height in case it's background
-*                     color is different from other columns in same grid. The filler column will act as placeholder
-*                     and fill the background of smaller column in order to have all the columns appear as full
-*                     columns with same height and with different background color.
-* Container         - The container is placeholder for content. The content can also be wrapped within content wrapper.
-*                     This section also explain the possible arrangements for page header, footer, sidebar and content
-*                     within main container.
-* Content           - The content classes can be used to align content by occupying full or partial width. The classes
-*                     also include classes to arrange content within container or parent element.
+
+Row - The row is the primary class of grid system. It can cover either 100% width or specified
+width keeping itself at center of parent element. A row can also be declared to have all columns
+inline irrespective of their float.
+
+Column - The column system can form either 12 column or 15 column grid with or without margin
+seperating each column. The columns without margin can be implemented using full column classes.
+
+Column Filler - The filler column can be used to make a column with full height in case it's background
+color is different from other columns in same grid. The filler column will act as placeholder and fill
+the background of smaller column in order to have all the columns appear as full columns with same height
+and with different background color.
+
+Container - The container is placeholder for content. The content can also be wrapped within content
+wrapper. This section also explain the possible arrangements for page header, footer, sidebar and content
+within main container.
+
+Content - The content classes can be used to align content by occupying full or partial width. The classes
+also include classes to arrange content within container or parent element.
 ***********************************************************************/
 
 // == Grid System ===================
@@ -383,7 +387,7 @@ Details: It defines the grid system and basic containers as listed below:
 			width: 48%;
 		}
 
-		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {		
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
 			width: 48%;
 		}
 
@@ -409,9 +413,9 @@ Details: It defines the grid system and basic containers as listed below:
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 98%;
 		}
-		
+
 		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
-			width: 98%;			
+			width: 98%;
 		}
 	}
 }
@@ -423,8 +427,8 @@ Details: It defines the grid system and basic containers as listed below:
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 98%;
 		}
-		
-		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 { 
+
+		& >.colc5x2, & >.colc5x3, & >.colc5x4, & >.colc6x2, & >.colc6x3, & >.colc6x4, & >.colc6x5 {
 			width: 98%;
 		}
 	}
@@ -675,6 +679,20 @@ Details: It defines the grid system and basic containers as listed below:
 		top: 0px;
 		bottom: 0px;
 		float: none;
+	}
+
+	.col.col-filler {
+
+		&.col-filler-left {
+			left: 1%;
+		}
+
+		&.col-filler-right {
+			right: 1%;
+		}
+	}
+
+	.colf.col-filler {
 
 		&.col-filler-left {
 			left: 0;
@@ -724,7 +742,7 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 .col-pad-h {
- 
+
 	&.col-pad-small {
 		padding: 0 0.5em;
 
@@ -789,14 +807,14 @@ Details: It defines the grid system and basic containers as listed below:
  */
 .container-main {
 	position: relative;
-	z-index: 1;
+	z-index: 90000; // Header can have higher index and footer can have lower index
 
 	& >.container-header {
-		// Header within container.
+		// Header within container
 	}
 
 	& >.container-sidebar {
-		// Sidebar within container.
+		// Sidebar within container
 	}
 
 	.content-main-wrap {
@@ -804,11 +822,11 @@ Details: It defines the grid system and basic containers as listed below:
 		z-index: 1;
 
 		& >.container-header {
-			// Header within content wrapper.
+			// Header within content wrapper
 		}
 
 		& >.container-sidebar {
-			// Sidebar within content wrapper.
+			// Sidebar within content wrapper
 		}
 
 		& >.content-main {
@@ -816,12 +834,12 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 
 		& >.container-footer {
-			// Footer within content wrapper.
+			// Footer within content wrapper
 		}
 	}
 
 	& >.container-footer {
-		// Footer within container.
+		// Footer within container
 	}
 }
 

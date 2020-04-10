@@ -1,21 +1,28 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of switch elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+Switch - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
 ***********************************************************************/
 
 // == Switch ========================
 
-// Reference: http://callmenick.com/post/css-toggle-switch-examples
 .cmt-switch {
 	position: relative;
 	display: inline-block;
+
+	label, .label {
+		vertical-align: middle;
+	}
+
+	label {
+		margin-right: 1em;
+	}
 
 	.cmt-toggle {
 		position: absolute;
@@ -70,5 +77,62 @@ Details: It defines the custom element styles as listed below:
 
 	.cmt-toggle-round:checked + label:after {
 		margin-left: 3.5em;
+	}
+}
+
+// == Switches - arrangements =======
+
+.cmt-switch-wrap {
+	@extend %clearfix;
+
+	.cmt-switch {
+		margin-bottom: 1em;
+	}
+
+	&.cmt-switch-inline {
+
+		.cmt-switch {
+			display: inline-block;
+			margin-right: 1em;
+			width: auto;
+		}
+	}
+
+	&.cmt-switch-row-2 {
+
+		.cmt-switch {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&.cmt-switch-row-4 {
+
+		.cmt-switch {
+			float: left;
+			width: 25%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			.cmt-switch {
+				width: 50%;
+			}
+		}
+	}
+
+	&.cmt-switch-row-5 {
+
+		.cmt-switch {
+			float: left;
+			width: 20%;
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			.cmt-switch {
+				width: 50%;
+			}
+		}
 	}
 }

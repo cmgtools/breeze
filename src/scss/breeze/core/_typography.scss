@@ -1,38 +1,38 @@
 /**********************************************************************
-Description: This file define the styles specific to typography available in CMT-UI css framework.
+Description: This file define the styles specific to typography available in Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the typography specific styles as listed below:
+Details: It defines the typography specific styles as listed below.
 
-* Default Font      - The default font and line height is set at document level.
-*
-* Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
-*
-* Font              - The font classes can be used to change element font.
-*
-* Font size         - These classes use the font size variables defined in variables file.
-*
-* Line height       - These classes define the line height to allow line spacing for better readability.
-*
-* Headers           - The header classes define the line height, font and font size for headers.
-*
-* Text              - It define the line height, font and font size for text elements.
-*
-* Code              - Pre element with default text and background color.
-*
-* Font weight       - The font weight classes can be used to change font weight of selected elements.
-*
-* Font style        - These classes can be used to change the font styles including italic, underline,
-*                     uppercase, lowercose, text striking.
-*
-* Text alignment    - The alignment classes to align text.
-*
-* Word spacing      - This section includes classes to add space between words.
-*
-* Link              - The link element using link colors in default, active and hover states.
-*
-* Text with line    - This class can be used to decorate text having background line at center.
+Default Font - The default font and line height is set at document level.
+
+Responsive font - The fonts are made responsive by changing the size for most common screen sizes.
+
+Font - The font classes can be used to change element font.
+
+Font size - These classes use the font size variables defined in variables file.
+
+Line height - These classes define the line height to allow line spacing for better readability.
+
+Headers - The header classes define the line height, font and font size for headers.
+
+Text - It define the line height, font and font size for text elements.
+
+Code - Pre element with default text and background color.
+
+Font weight - The font weight classes can be used to change font weight of selected elements.
+
+Font style - These classes can be used to change the font styles including italic, underline,
+uppercase, lowercose, text striking.
+
+Text alignment - The alignment classes to align text.
+
+Word spacing - This section includes classes to add space between words.
+
+Link - The link element using link colors in default, active and hover states.
+
+Text with line - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 
 // TODO: Add support for viewport width.
@@ -82,59 +82,63 @@ html, body {
 	}
 
 	&.text-xxlarge {
-		font-size: $font-size-xxlarge;
+		font-size: $font-size-xxlarge !important;
 	}
 
 	&.text-xlarge {
-		font-size: $font-size-xlarge;
+		font-size: $font-size-xlarge !important;
 	}
 
 	&.text-large {
-		font-size: $font-size-large;
+		font-size: $font-size-large !important;
 	}
 
 	&.text-large-1 {
-		font-size: $font-size-1;
+		font-size: $font-size-1 !important;
 	}
 
 	&.text-large-2 {
-		font-size: $font-size-2;
+		font-size: $font-size-2 !important;
 	}
 
 	&.text-large-3 {
-		font-size: $font-size-3;
+		font-size: $font-size-3 !important;
 	}
 
 	&.text-large-4 {
-		font-size: $font-size-4;
+		font-size: $font-size-4 !important;
 	}
 
 	&.text-large-5 {
-		font-size: $font-size-5;
+		font-size: $font-size-5 !important;
 	}
 
 	&.text-large-6 {
-		font-size: $font-size-6;
+		font-size: $font-size-6 !important;
 	}
 
 	&.text-regular {
-		font-size: $font-size-7;
+		font-size: $font-size-7 !important;
 	}
 
 	&.text-small {
-		font-size: $font-size-8;
+		font-size: $font-size-8 !important;
 	}
 
 	&.text-tiny {
-		font-size: $font-size-tiny;
+		font-size: $font-size-tiny !important;
 	}
 
 	&.text-micro {
-		font-size: $font-size-micro;
+		font-size: $font-size-micro !important;
+	}
+
+	&.text-top {
+		vertical-align: text-top !important;
 	}
 
 	&.text-bottom {
-		vertical-align: text-bottom;
+		vertical-align: text-bottom !important;
 	}
 }
 
@@ -216,7 +220,7 @@ p, span, em, div, a {
 	&.reader-left {
 		text-align: left !important;
 	}
-	
+
 	&.reader-center {
 		text-align: center !important;
 	}
@@ -224,7 +228,7 @@ p, span, em, div, a {
 	&.reader-right {
 		text-align: right !important;
 	}
-	
+
 	&.reader-justify {
 		text-align: justify !important;
 	}
@@ -232,9 +236,10 @@ p, span, em, div, a {
 	ol {
 
 		li {
-			list-style-position: inside;
+			list-style-position: outside;
 			list-style-type: decimal;
-			line-height: 2.5;
+			margin-left: 1em;
+			margin-bottom: 0.5em;
 		}
 
 		ul, ol {
@@ -245,9 +250,10 @@ p, span, em, div, a {
 	ul {
 
 		li {
-			list-style-position: inside;
+			list-style-position: outside;
 			list-style-type: disc;
-			line-height: 2.5;
+			margin-left: 1em;
+			margin-bottom: 0.5em;
 		}
 
 		ul, ol {
@@ -265,7 +271,7 @@ p, span, em, div, a {
 
 		.image-caption {
 			text-align: center;
-			margin-top: 0.5em;
+			margin: 0.5em 0;
 		}
 	}
 }
@@ -284,7 +290,7 @@ code, pre {
 	padding: 1em;
 }
 
-// Font Weight
+// Font Weight - Backward compatible
 .normal {
 	font-weight: normal;
 }
@@ -301,7 +307,28 @@ code, pre {
 	font-weight: lighter;
 }
 
-// Text Style and Decoration
+// Font Weight - New Classes
+
+.text {
+
+	&.text-normal {
+		font-weight: normal;
+	}
+
+	&.text-bold {
+		font-weight: bold;
+	}
+
+	&.text-bolder {
+		font-weight: bolder;
+	}
+
+	&.text-lighter {
+		font-weight: lighter;
+	}
+}
+
+// Text Style and Decoration - Backward compatible
 
 .italic {
 	font-style: italic;
@@ -337,6 +364,47 @@ code, pre {
 
 .ellipsis {
 	text-overflow: ellipsis;
+}
+
+// Text Style and Decoration - New Classes
+
+.text {
+
+	&.text-italic {
+		font-style: italic;
+	}
+
+	&.text-underline {
+		text-decoration: underline;
+	}
+
+	&.text-uppercase {
+		text-transform: uppercase;
+	}
+
+	&.text-lowercase {
+		text-transform: lowercase;
+	}
+
+	&.text-strikethrough {
+		text-decoration: line-through;
+	}
+
+	&.text-nowrap {
+		white-space: nowrap;
+	}
+
+	&.text-break-all {
+		word-break: break-all;
+	}
+
+	&.text-break-word {
+		word-wrap: break-word;
+	}
+
+	&.text-ellipsis {
+		text-overflow: ellipsis;
+	}
 }
 
 // Text Alignment
@@ -443,6 +511,30 @@ a, .link {
 		background-color: $color-primary;
 		margin-top: -0.5em;
 		vertical-align: top;
+
+		&.text-content-h1 {
+			margin-top: -( $font-size-1 / 2 );
+		}
+
+		&.text-content-h2 {
+			margin-top: -( $font-size-2 / 2 );
+		}
+
+		&.text-content-h3 {
+			margin-top: -( $font-size-3 / 2 );
+		}
+
+		&.text-content-h4 {
+			margin-top: -( $font-size-4 / 2 );
+		}
+
+		&.text-content-h5 {
+			margin-top: -( $font-size-5 / 2 );
+		}
+
+		&.text-content-h6 {
+			margin-top: -( $font-size-6 / 2 );
+		}
 	}
 }
 
@@ -450,19 +542,19 @@ a, .link {
     padding: 0.5em;
 	background-color: $color-secondary;
 
-	.note-info {
+	&.note-info {
 		color: $color-info;
 	}
-	
-	.note-success {
+
+	&.note-success {
 		color: $color-success;
 	}
-	
-	.note-warning {
+
+	&.note-warning {
 		color: $color-warning;
 	}
-	
-	.note-error {
+
+	&.note-error {
 		color: $color-error;
 	}
 }

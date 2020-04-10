@@ -1,19 +1,23 @@
 /**********************************************************************
-Description: This file define the text and background colors used by CMT-UI css framework.
+Description: This file define the text and background colors used by Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
-Details: It defines the text and background colors as listed below:
-* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
-* Colors            - This section define the classes having appropriate background and text color following 3 Color
-*                     Scheme and the standard colors.
+Details: It defines the text and background colors as listed below.
+
+Default Color - The default background and text color is set to primary from the 3 Color Scheme.
+
+Colors - This section define the classes having appropriate background and text color following
+3 Color Scheme and the standard colors.
 ***********************************************************************/
 
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
- * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */
+Coloring - It is one of the most important factor while designing website following a theme approach.
+CMGTools have taken extra care in this area and tried to manage colors by dividing them into 3 major
+variations forming a standard color palette. The primary color is dominating for the entire design and
+secondary is contrary to primary to be used for components. The tertiary color can also be used apart
+from secondary for highlighting purpose.
+*/
 
 .color {
 
@@ -84,16 +88,41 @@ Details: It defines the text and background colors as listed below:
 		color: $color-tertiary-text-d !important
 	}
 
+	&.color-header {
+		background-color: $color-header !important;
+		color: $color-header-text !important;
+	}
+
+	&.color-footer {
+		background-color: $color-footer !important;
+		color: $color-footer-text !important;
+	}
+
 	&.color-white {
 		background-color: $color-white !important;
 		color: $color-black !important;
+	}
+
+	&.color-gray {
+		background-color: $color-gray !important;
+		color: $color-white !important;
+	}
+
+	&.color-gray-l {
+		background-color: $color-gray-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-gray-d {
+		background-color: $color-gray-d !important;
+		color: $color-white !important;
 	}
 
 	&.color-black {
 		background-color: $color-black !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-blue {
 		background-color: $color-blue !important;
 		color: $color-white !important;
@@ -101,6 +130,11 @@ Details: It defines the text and background colors as listed below:
 
 	&.color-blue-l {
 		background-color: $color-blue-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-blue-d {
+		background-color: $color-blue-d !important;
 		color: $color-white !important;
 	}
 
@@ -114,6 +148,11 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-purple-d {
+		background-color: $color-purple-d !important;
+		color: $color-white !important;
+	}
+
 	&.color-orange {
 		background-color: $color-orange !important;
 		color: $color-white !important;
@@ -121,6 +160,11 @@ Details: It defines the text and background colors as listed below:
 
 	&.color-orange-l {
 		background-color: $color-orange-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-orange-d {
+		background-color: $color-orange-d !important;
 		color: $color-white !important;
 	}
 
@@ -134,6 +178,11 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-yellow-d {
+		background-color: $color-yellow-d !important;
+		color: $color-white !important;
+	}
+
 	&.color-red {
 		background-color: $color-red !important;
 		color: $color-white !important;
@@ -141,6 +190,11 @@ Details: It defines the text and background colors as listed below:
 
 	&.color-red-l {
 		background-color: $color-red-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-red-d {
+		background-color: $color-red-d !important;
 		color: $color-white !important;
 	}
 
@@ -154,6 +208,11 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-pink-d {
+		background-color: $color-pink-d !important;
+		color: $color-white !important;
+	}
+
 	&.color-magenta {
 		background-color: $color-magenta !important;
 		color: $color-white !important;
@@ -161,6 +220,11 @@ Details: It defines the text and background colors as listed below:
 
 	&.color-magenta-l {
 		background-color: $color-magenta-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-magenta-d {
+		background-color: $color-magenta-d !important;
 		color: $color-white !important;
 	}
 
@@ -174,6 +238,11 @@ Details: It defines the text and background colors as listed below:
 		color: $color-white !important;
 	}
 
+	&.color-green-d {
+		background-color: $color-green-d !important;
+		color: $color-white !important;
+	}
+
 	&.color-brown {
 		background-color: $color-brown !important;
 		color: $color-white !important;
@@ -181,6 +250,11 @@ Details: It defines the text and background colors as listed below:
 
 	&.color-brown-l {
 		background-color: $color-brown-l !important;
+		color: $color-white !important;
+	}
+
+	&.color-brown-d {
+		background-color: $color-brown-d !important;
 		color: $color-white !important;
 	}
 
@@ -217,6 +291,151 @@ Details: It defines the text and background colors as listed below:
 	&.color-navy {
 		background-color: $color-navy !important;
 		color: $color-white !important;
+	}
+
+	&.color-error {
+		background-color: $color-error !important;
+		color: $color-white !important;
+	}
+
+	&.color-warning {
+		background-color: $color-warning !important;
+		color: $color-white !important;
+	}
+
+	&.color-success {
+		background-color: $color-success !important;
+		color: $color-white !important;
+	}
+
+	&.color-info {
+		background-color: $color-info !important;
+		color: $color-white !important;
+	}
+
+	&.color-dropbox {
+		background-color: $color-dropbox !important;
+		color: $color-white !important;
+	}
+	
+	&.color-evernote {
+		background-color: $color-evernote !important;
+		color: $color-white !important;
+	}
+
+	&.color-facebook {
+		background-color: $color-facebook !important;
+		color: $color-white !important;
+	}
+
+	&.color-flickr {
+		background-color: $color-flickr !important;
+		color: $color-white !important;
+	}
+
+	&.color-foursquare {
+		background-color: $color-foursquare !important;
+		color: $color-white !important;
+	}
+
+	&.color-google {
+		background-color: $color-google !important;
+		color: $color-white !important;
+	}
+
+	&.color-instagram {
+		background-color: $color-instagram !important;
+		color: $color-white !important;
+	}
+
+	&.color-linkedin {
+		background-color: $color-linkedin !important;
+		color: $color-white !important;
+	}
+
+	&.color-pinterest {
+		background-color: $color-pinterest !important;
+		color: $color-white !important;
+	}
+
+	&.color-quora {
+		background-color: $color-quora !important;
+		color: $color-white !important;
+	}
+	
+	&.color-reddit {
+		background-color: $color-reddit !important;
+		color: $color-white !important;
+	}
+	
+	&.color-rss {
+		background-color: $color-rss !important;
+		color: $color-white !important;
+	}
+	
+	&.color-skype {
+		background-color: $color-skype !important;
+		color: $color-white !important;
+	}
+
+	&.color-snapchat {
+		background-color: $color-snapchat !important;
+		color: $color-white !important;
+	}
+
+	&.color-twitter {
+		background-color: $color-twitter !important;
+		color: $color-white !important;
+	}
+
+	&.color-tumblr {
+		background-color: $color-tumblr !important;
+		color: $color-white !important;
+	}
+
+	&.color-vimeo {
+		background-color: $color-vimeo !important;
+		color: $color-white !important;
+	}
+
+	&.color-vine {
+		background-color: $color-vine !important;
+		color: $color-white !important;
+	}
+
+	&.color-vk {
+		background-color: $color-vk !important;
+		color: $color-white !important;
+	}
+
+	&.color-whatsapp {
+		background-color: $color-whatsapp !important;
+		color: $color-white !important;
+	}
+
+	&.color-youtube {
+		background-color: $color-youtube !important;
+		color: $color-white !important;
+	}
+
+	&.color-btn {
+		background-color: $color-btn !important;
+		color: $color-btn-text !important;
+	}
+
+	&.color-btn-h {
+		background-color: $color-btn-h !important;
+		color: $color-btn-text-h !important;
+	}
+
+	&.color-btn-a {
+		background-color: $color-btn-a !important;
+		color: $color-btn-text-a !important;
+	}
+
+	&.color-btn-d {
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
 	}
 }
 
@@ -430,7 +649,7 @@ Details: It defines the text and background colors as listed below:
 	&.bkg-transparent-black-l {
 		background-color: $color-transparent-black-l !important;
 	}
-    
+
 	&.bkg-transparent-black-h {
 		background-color: $color-transparent-black-h !important;
 	}
@@ -474,6 +693,42 @@ Details: It defines the text and background colors as listed below:
 
 	&.text-tertiary-d {
 		color: $color-tertiary-text-d !important;
+	}
+
+	&.text-primary-b {
+		color: $color-primary !important;
+	}
+
+	&.text-primary-b-l {
+		color: $color-primary-l !important;
+	}
+
+	&.text-primary-b-d {
+		color: $color-primary-d !important;
+	}
+
+	&.text-secondary-b {
+		color: $color-secondary !important;
+	}
+
+	&.text-secondary-b-l {
+		color: $color-secondary-l !important;
+	}
+
+	&.text-secondary-b-d {
+		color: $color-secondary-d !important;
+	}
+
+	&.text-tertiary-b {
+		color: $color-tertiary !important;
+	}
+
+	&.text-tertiary-b-l {
+		color: $color-tertiary-l !important;
+	}
+
+	&.text-tertiary-b-d {
+		color: $color-tertiary-d !important;
 	}
 
 	&.text-link {
@@ -612,7 +867,7 @@ Details: It defines the text and background colors as listed below:
 		color: $color-aqua !important;
 	}
 
-	&.btextkg-golden {
+	&.text-golden {
 		color: $color-golden !important;
 	}
 

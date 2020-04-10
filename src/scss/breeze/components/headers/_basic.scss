@@ -5,9 +5,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for header components as listed below:
 
-* Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
-*
-* Basic       - The basic header define the styles for primary header having logo and menus.
+Header - The barebone header class with minimum styles. The header can be made fixed or absolute.
+
+Basic - The basic header define the styles for primary header having logo and menus.
 ***********************************************************************/
 
 // == Structure - Header ============
@@ -19,15 +19,21 @@ Details: It defines the styles for header components as listed below:
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10001; // modal popups must override this index
+		z-index: 100000; // modal popups must override this index
 	}
 
 	&.header-absolute {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 10001; // modal popups must override this index
+		z-index: 100000; // modal popups must override this index
 	}
+}
+
+// == Main Header ===================
+
+.header-main {
+	z-index: 100000;
 }
 
 // == Basic Header ==================
@@ -41,7 +47,6 @@ Details: It defines the styles for header components as listed below:
 	background-color: $color-header;
 	color: $color-header-text;
 	position: relative;
-	z-index: 10001;
 	@extend %clearfix;
 
 	// Absolute positioned on left side wrapping the logo
@@ -66,11 +71,12 @@ Details: It defines the styles for header components as listed below:
 			}
 		}
 
+		// Optional- Wrap within #menu-main-wrap
 		#menu-main {
 			display: none;
 		}
 
-		// Should be wrapped within #menu-mobile-wrap
+		// Optional- Wrap within #menu-mobile-wrap
 		#menu-main-mobile {
 			position: absolute;
 			display: none;
@@ -91,9 +97,9 @@ Details: It defines the styles for header components as listed below:
 						color: $color-link;
 					}
 				}
-				
+
 				&:active {
-					
+
 					a, .link {
 						background-color: $color-tertiary;
 						color: $color-tertiary-text;
@@ -158,15 +164,32 @@ Details: It defines the styles for header components as listed below:
 		#mobile-actions, #menu-mobile-wrap {
 			display: none;
 		}
-		
+
 		// Header height reduced on scroll
 		&.header-small {
 			height: 50px;
 
+			.header-logo {
+				padding: 5px 10px;
+
+				.logo {
+					display: inline-block;
+
+					img {
+						height: 40px;
+					}
+				}
+			}
+
 			#menu-main {
-				height: 50px;
-				line-height: 50px;
 				padding: 0;
+
+				li {
+
+					a {
+						line-height: 50px;
+					}
+				}
 			}
 		}
 	}
@@ -178,21 +201,21 @@ Details: It defines the styles for header components as listed below:
 	.header-logo {
 
 		.logo-small {
-			display: none;
+			display: none !important;
 		}
 	}
 
 	// Header height reduced on scroll
 	&.header-small {
 
-		.logo {
-			display: none;
-		}
-
 		.header-logo {
 
+			.logo {
+				display: none !important;
+			}
+
 			.logo-small {
-				display: inline-block;
+				display: inline-block !important;
 
 				img {
 					height: 40px;

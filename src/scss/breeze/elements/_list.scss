@@ -1,21 +1,51 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of elements list available in Breeze CSS Framework.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* List		  - 
+Radio List - A list of radio elements.
 ***********************************************************************/
+
+// == UL/OL List ====================
+
+.list {
+
+	&.list-style-circle {
+		list-style-type: circle;
+	}
+
+	&.list-style-square {
+		list-style-type: square;
+	}
+
+	&.list-style-decimal {
+		list-style-type: decimal;
+	}
+
+	&.list-style-image-default {
+		list-style-image: url( $images-path + "list-default.jpg" );
+	}
+
+	&.list-position-inside {
+		list-style-position: inside;
+	}
+
+	&.list-position-outside {
+		list-style-position: outside;
+	}
+}
 
 // == Radio List ====================
 
-.list-radio {
+.list {
 
-	label {
-		width: auto;
-		clear: none;
+	&.list-radio {
+
+		label {
+			width: auto;
+			clear: none;
+		}
 	}
 }

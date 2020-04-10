@@ -14,7 +14,6 @@ Details: It defines the social network menu components as listed below:
 
 	// Default
 	a {
-		color: $color-white;
 		margin: 0;
 		display: inline-block;
 	}
@@ -50,69 +49,173 @@ Details: It defines the social network menu components as listed below:
 	.icon-border, .cmti-border {
 		border: 1px solid;
 
-		&.icon-facebook, &.cmti-social-facebook {
+		&.icon-dropbox, &.cmti-brand-dropbox {
+			border-color: $color-dropbox;
+		}
+
+		&.icon-evernote, &.cmti-brand-evernote {
+			border-color: $color-evernote;
+		}
+
+		&.icon-facebook, &.cmti-brand-facebook {
 			border-color: $color-facebook;
 		}
 
-		&.icon-twitter, &.cmti-social-twitter {
-			border-color: $color-twitter;
+		&.icon-flickr, &.cmti-brand-flickr {
+			border-color: $color-flickr;
 		}
 
-		&.icon-google, &.cmti-social-google {
+		&.icon-foursquare, &.cmti-brand-foursquare {
+			border-color: $color-foursquare;
+		}
+
+		&.icon-google, &.cmti-brand-google {
 			border-color: $color-google;
 		}
 
-		&.icon-google-plus, &.cmti-social-google-plus {
-			border-color: $color-google-plus;
-		}
-
-		&.icon-linkedin, &.cmti-social-linkedin {
-			border-color: $color-linkedin;
-		}
-
-		&.icon-instagram, &.cmti-social-instagram {
+		&.icon-instagram, &.cmti-brand-instagram {
 			border-color: $color-instagram;
 		}
 
-		&.icon-pintrest, &.cmti-social-pintrest {
-			border-color: $color-pintrest;
+		&.icon-linkedin, &.cmti-brand-linkedin {
+			border-color: $color-linkedin;
 		}
 
-		&.icon-youtube, &.cmti-social-youtube {
+		&.icon-pinterest, &.cmti-brand-pinterest {
+			border-color: $color-pinterest;
+		}
+
+		&.icon-quora, &.cmti-brand-quora {
+			border-color: $color-quora;
+		}
+
+		&.icon-reddit, &.cmti-brand-reddit {
+			border-color: $color-reddit;
+		}
+
+		&.icon-rss, &.cmti-brand-rss {
+			border-color: $color-rss;
+		}
+
+		&.icon-skype, &.cmti-brand-skype {
+			border-color: $color-skype;
+		}
+
+		&.icon-snapchat, &.cmti-brand-snapchat {
+			border-color: $color-snapchat;
+		}
+
+		&.icon-tumblr, &.cmti-brand-tumblr {
+			border-color: $color-tumblr;
+		}
+
+		&.icon-twitter, &.cmti-brand-twitter {
+			border-color: $color-twitter;
+		}
+
+		&.icon-vimeo, &.cmti-brand-vimeo {
+			border-color: $color-vimeo;
+		}
+
+		&.icon-vine, &.cmti-brand-vine {
+			border-color: $color-vine;
+		}
+
+		&.icon-vk, &.cmti-brand-vk {
+			border-color: $color-vk;
+		}
+
+		&.icon-whatsapp, &.cmti-brand-whatsapp {
+			border-color: $color-whatsapp;
+		}
+
+		&.icon-youtube, &.cmti-brand-youtube {
 			border-color: $color-youtube;
 		}
 
 		&:hover {
 
-			&.icon-facebook, &.cmti-social-facebook {
+			&.icon-dropbox, &.cmti-brand-dropbox {
+				background-color: $color-dropbox;
+			}
+
+			&.icon-evernote, &.cmti-brand-evernote {
+				background-color: $color-evernote;
+			}
+
+			&.icon-facebook, &.cmti-brand-facebook {
 				background-color: $color-facebook;
 			}
 
-			&.icon-twitter, &.cmti-social-twitter {
-				background-color: $color-twitter;
+			&.icon-flickr, &.cmti-brand-flickr {
+				background-color: $color-flickr;
 			}
 
-			&.icon-google, &.cmti-social-google {
+			&.icon-foursquare, &.cmti-brand-foursquare {
+				background-color: $color-foursquare;
+			}
+
+			&.icon-google, &.cmti-brand-google {
 				background-color: $color-google;
 			}
 
-			&.icon-google-plus, &.cmti-social-google-plus {
-				background-color: $color-google-plus;
-			}
-
-			&.icon-linkedin, &.cmti-social-linkedin {
-				background-color: $color-linkedin;
-			}
-
-			&.icon-instagram, &.cmti-social-instagram {
+			&.icon-instagram, &.cmti-brand-instagram {
 				background-color: $color-instagram;
 			}
 
-			&.icon-pintrest, &.cmti-social-pintrest {
-				background-color: $color-pintrest;
+			&.icon-linkedin, &.cmti-brand-linkedin {
+				background-color: $color-linkedin;
 			}
 
-			&.icon-youtube, &.cmti-social-youtube {
+			&.icon-pinterest, &.cmti-brand-pinterest {
+				background-color: $color-pinterest;
+			}
+
+			&.icon-quora, &.cmti-brand-quora {
+				background-color: $color-quora;
+			}
+
+			&.icon-reddit, &.cmti-brand-reddit {
+				background-color: $color-reddit;
+			}
+
+			&.icon-rss, &.cmti-brand-rss {
+				background-color: $color-rss;
+			}
+
+			&.icon-skype, &.cmti-brand-skype {
+				background-color: $color-skype;
+			}
+
+			&.icon-snapchat, &.cmti-brand-snapchat {
+				background-color: $color-snapchat;
+			}
+
+			&.icon-tumblr, &.cmti-brand-tumblr {
+				background-color: $color-tumblr;
+			}
+
+			&.icon-twitter, &.cmti-brand-twitter {
+				background-color: $color-twitter;
+			}
+
+			&.icon-vimeo, &.cmti-brand-vimeo {
+				background-color: $color-vimeo;
+			}
+
+			&.icon-vine, &.cmti-brand-vine {
+				background-color: $color-vine;
+			}
+
+			&.icon-vk, &.cmti-brand-vk {
+				background-color: $color-vk;
+			}
+
+			&.icon-whatsapp, &.cmti-brand-whatsapp {
+				background-color: $color-whatsapp;
+			}
+
+			&.icon-youtube, &.cmti-brand-youtube {
 				background-color: $color-youtube;
 			}
 		}
@@ -121,69 +224,173 @@ Details: It defines the social network menu components as listed below:
 	// Social Icons with background color
 	.icon-bkg, .cmti-bkg {
 
-		&.icon-facebook, &.cmti-social-facebook {
+		&.icon-dropbox, &.cmti-brand-dropbox {
+			background-color: $color-dropbox;
+		}
+
+		&.icon-evernote, &.cmti-brand-evernote {
+			background-color: $color-evernote;
+		}
+
+		&.icon-facebook, &.cmti-brand-facebook {
 			background-color: $color-facebook;
 		}
 
-		&.icon-twitter, &.cmti-social-twitter {
-			background-color: $color-twitter;
+		&.icon-flickr, &.cmti-brand-flickr {
+			background-color: $color-flickr;
 		}
 
-		&.icon-google, &.cmti-social-google {
+		&.icon-foursquare, &.cmti-brand-foursquare {
+			background-color: $color-foursquare;
+		}
+
+		&.icon-google, &.cmti-brand-google {
 			background-color: $color-google;
 		}
 
-		&.icon-google-plus, &.cmti-social-google-plus {
-			background-color: $color-google-plus;
-		}
-
-		&.icon-linkedin, &.cmti-social-linkedin {
-			background-color: $color-linkedin;
-		}
-
-		&.icon-instagram, &.cmti-social-instagram {
+		&.icon-instagram, &.cmti-brand-instagram {
 			background-color: $color-instagram;
 		}
 
-		&.icon-pintrest, &.cmti-social-pintrest {
-			background-color: $color-pintrest;
+		&.icon-linkedin, &.cmti-brand-linkedin {
+			background-color: $color-linkedin;
 		}
 
-		&.icon-youtube, &.cmti-social-youtube {
+		&.icon-pinterest, &.cmti-brand-pinterest {
+			background-color: $color-pinterest;
+		}
+
+		&.icon-quora, &.cmti-brand-quora {
+			background-color: $color-quora;
+		}
+
+		&.icon-reddit, &.cmti-brand-reddit {
+			background-color: $color-reddit;
+		}
+
+		&.icon-rss, &.cmti-brand-rss {
+			background-color: $color-rss;
+		}
+
+		&.icon-skype, &.cmti-brand-skype {
+			background-color: $color-skype;
+		}
+
+		&.icon-snapchat, &.cmti-brand-snapchat {
+			background-color: $color-snapchat;
+		}
+
+		&.icon-tumblr, &.cmti-brand-tumblr {
+			background-color: $color-tumblr;
+		}
+
+		&.icon-twitter, &.cmti-brand-twitter {
+			background-color: $color-twitter;
+		}
+
+		&.icon-vimeo, &.cmti-brand-vimeo {
+			background-color: $color-vimeo;
+		}
+
+		&.icon-vine, &.cmti-brand-vine {
+			background-color: $color-vine;
+		}
+
+		&.icon-vk, &.cmti-brand-vk {
+			background-color: $color-vk;
+		}
+
+		&.icon-whatsapp, &.cmti-brand-whatsapp {
+			background-color: $color-whatsapp;
+		}
+
+		&.icon-youtube, &.cmti-brand-youtube {
 			background-color: $color-youtube;
 		}
 
 		&:hover {
 
-			&.icon-facebook, &.cmti-social-facebook {
+			&.icon-dropbox, &.cmti-brand-dropbox {
+				background-color: darken( $color-dropbox, 10% );
+			}
+
+			&.icon-evernote, &.cmti-brand-evernote {
+				background-color: darken( $color-evernote, 10% );
+			}
+
+			&.icon-facebook, &.cmti-brand-facebook {
 				background-color: darken( $color-facebook, 10% );
 			}
 
-			&.icon-twitter, &.cmti-social-twitter {
-				background-color: darken( $color-twitter, 10% );
+			&.icon-flickr, &.cmti-brand-flickr {
+				background-color: darken( $color-flickr, 10% );
 			}
 
-			&.icon-google, &.cmti-social-google {
+			&.icon-foursquare, &.cmti-brand-foursquare {
+				background-color: darken( $color-foursquare, 10% );
+			}
+
+			&.icon-google, &.cmti-brand-google {
 				background-color: darken( $color-google, 10% );
 			}
 
-			&.icon-google-plus, &.cmti-social-google-plus {
-				background-color: darken( $color-google-plus, 10% );
-			}
-
-			&.icon-linkedin, &.cmti-social-linkedin {
-				background-color: darken( $color-linkedin, 10% );
-			}
-
-			&.icon-instagram, &.cmti-social-instagram {
+			&.icon-instagram, &.cmti-brand-instagram {
 				background-color: darken( $color-instagram, 10% );
 			}
 
-			&.icon-pintrest, &.cmti-social-pintrest {
-				background-color: darken( $color-pintrest, 10% );
+			&.icon-linkedin, &.cmti-brand-linkedin {
+				background-color: darken( $color-linkedin, 10% );
 			}
 
-			&.icon-youtube, &.cmti-social-youtube {
+			&.icon-pinterest, &.cmti-brand-pinterest {
+				background-color: darken( $color-pinterest, 10% );
+			}
+
+			&.icon-quora, &.cmti-brand-quora {
+				background-color: darken( $color-quora, 10% );
+			}
+
+			&.icon-reddit, &.cmti-brand-reddit {
+				background-color: darken( $color-reddit, 10% );
+			}
+
+			&.icon-rss, &.cmti-brand-rss {
+				background-color: darken( $color-rss, 10% );
+			}
+
+			&.icon-skype, &.cmti-brand-skype {
+				background-color: darken( $color-skype, 10% );
+			}
+
+			&.icon-snapchat, &.cmti-brand-snapchat {
+				background-color: darken( $color-snapchat, 10% );
+			}
+
+			&.icon-tumblr, &.cmti-brand-tumblr {
+				background-color: darken( $color-tumblr, 10% );
+			}
+
+			&.icon-twitter, &.cmti-brand-twitter {
+				background-color: darken( $color-twitter, 10% );
+			}
+
+			&.icon-vimeo, &.cmti-brand-vimeo {
+				background-color: darken( $color-vimeo, 10% );
+			}
+
+			&.icon-vine, &.cmti-brand-vine {
+				background-color: darken( $color-vine, 10% );
+			}
+
+			&.icon-vk, &.cmti-brand-vk {
+				background-color: darken( $color-vk, 10% );
+			}
+
+			&.icon-whatsapp, &.cmti-brand-whatsapp {
+				background-color: darken( $color-whatsapp, 10% );
+			}
+
+			&.icon-youtube, &.cmti-brand-youtube {
 				background-color: darken( $color-youtube, 10% );
 			}
 		}
@@ -192,35 +399,87 @@ Details: It defines the social network menu components as listed below:
 	// Social Icons with text color
 	.icon-text, .cmti-text {
 
-		&.icon-facebook, &.cmti-social-facebook {
+		&.icon-dropbox, &.cmti-brand-dropbox {
+			color: $color-dropbox;
+		}
+
+		&.icon-evernote, &.cmti-brand-evernote {
+			color: $color-evernote;
+		}
+
+		&.icon-facebook, &.cmti-brand-facebook {
 			color: $color-facebook;
 		}
 
-		&.icon-twitter, &.cmti-social-twitter {
-			color: $color-twitter;
+		&.icon-flickr, &.cmti-brand-flickr {
+			color: $color-flickr;
 		}
 
-		&.icon-google, &.cmti-social-google {
+		&.icon-foursquare, &.cmti-brand-foursquare {
+			color: $color-foursquare;
+		}
+
+		&.icon-google, &.cmti-brand-google {
 			color: $color-google;
 		}
 
-		&.icon-google-plus, &.cmti-social-google-plus {
-			color: $color-google-plus;
-		}
-
-		&.icon-linkedin, &.cmti-social-linkedin {
-			color: $color-linkedin;
-		}
-
-		&.icon-instagram, &.cmti-social-instagram {
+		&.icon-instagram, &.cmti-brand-instagram {
 			color: $color-instagram;
 		}
 
-		&.icon-pintrest, &.cmti-social-pintrest {
-			color: $color-pintrest;
+		&.icon-linkedin, &.cmti-brand-linkedin {
+			color: $color-linkedin;
 		}
 
-		&.icon-youtube, &.cmti-social-youtube {
+		&.icon-pinterest, &.cmti-brand-pinterest {
+			color: $color-pinterest;
+		}
+
+		&.icon-quora, &.cmti-brand-quora {
+			color: $color-quora;
+		}
+
+		&.icon-reddit, &.cmti-brand-reddit {
+			color: $color-reddit;
+		}
+
+		&.icon-rss, &.cmti-brand-rss {
+			color: $color-rss;
+		}
+
+		&.icon-skype, &.cmti-brand-skype {
+			color: $color-skype;
+		}
+
+		&.icon-snapchat, &.cmti-brand-snapchat {
+			color: $color-snapchat;
+		}
+
+		&.icon-tumblr, &.cmti-brand-tumblr {
+			color: $color-tumblr;
+		}
+
+		&.icon-twitter, &.cmti-brand-twitter {
+			color: $color-twitter;
+		}
+
+		&.icon-vimeo, &.cmti-brand-vimeo {
+			color: $color-vimeo;
+		}
+
+		&.icon-vine, &.cmti-brand-vine {
+			color: $color-vine;
+		}
+
+		&.icon-vk, &.cmti-brand-vk {
+			color: $color-vk;
+		}
+
+		&.icon-whatsapp, &.cmti-brand-whatsapp {
+			color: $color-whatsapp;
+		}
+
+		&.icon-youtube, &.cmti-brand-youtube {
 			color: $color-youtube;
 		}
 
@@ -245,10 +504,6 @@ Details: It defines the social network menu components as listed below:
 			background-color: $color-google;
 		}
 
-		&.google-plus {
-			background-color: $color-google-plus;
-		}
-
 		&.linkedin {
 			background-color: $color-linkedin;
 		}
@@ -257,8 +512,8 @@ Details: It defines the social network menu components as listed below:
 			background-color: $color-instagram;
 		}
 
-		&.pintrest {
-			background-color: $color-pintrest;
+		&.pinterest {
+			background-color: $color-pinterest;
 		}
 
 		&.youtube {
@@ -279,10 +534,6 @@ Details: It defines the social network menu components as listed below:
 				background-color: darken( $color-google, 10% );
 			}
 
-			&.google-plus {
-				background-color: darken( $color-google-plus, 10% );
-			}
-
 			&.linkedin {
 				background-color: darken( $color-linkedin, 10% );
 			}
@@ -291,8 +542,8 @@ Details: It defines the social network menu components as listed below:
 				background-color: darken( $color-instagram, 10% );
 			}
 
-			&.pintrest {
-				background-color: darken( $color-pintrest, 10% );
+			&.pinterest {
+				background-color: darken( $color-pinterest, 10% );
 			}
 
 			&.youtube {

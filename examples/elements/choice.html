@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Breeze - Choice</title>
+		<link rel="stylesheet" href="../styles/breeze-icons-core.css" />
+		<link rel="stylesheet" href="../styles/breeze-icons-currency.css" />
+		<link rel="stylesheet" href="../styles/breeze.css" />
+		<link rel="stylesheet" href="../styles/main.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="../scripts/velocity.js"></script>
+		<script src="../scripts/main.js"></script>
+	</head>
+	<body>
+
+<!-- Choice - Checkbox -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice1" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice1" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice1" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice">
+	<label>
+		<input type="checkbox" name="choice1" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice1" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice1" value="green" />
+		<span class="label"> Green</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Boolean -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - Boolean</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-checkbox"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" /&gt;
+		&lt;span class="label"&gt; Boolean 1&lt;/span&gt;
+		&lt;input type="hidden" name="cb1" value="0" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="cmt-choice cmt-checkbox"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" checked /&gt;
+		&lt;span class="label"&gt; Boolean 2&lt;/span&gt;
+		&lt;input type="hidden" name="cb2" value="1" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" />
+		<span class="label"> Boolean 1</span>
+		<input type="hidden" name="cb1" value="0" />
+	</label>
+</div>
+<div class="margin margin-small-v">Or</div>
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" checked />
+		<span class="label"> Boolean 2</span>
+		<input type="hidden" name="cb2" value="1" />
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Inline -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - Inline</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-inline"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice2" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice2" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice2" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-inline">
+	<label>
+		<input type="checkbox" name="choice2" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice2" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice2" value="green" />
+		<span class="label"> Green</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Row -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - 2 In a Row</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-row-2"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice3" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice3" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice3" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice3" value="yellow" /&gt;
+		&lt;span class="label"&gt; Yellow&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-row-2">
+	<label>
+		<input type="checkbox" name="choice3" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice3" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice3" value="green" />
+		<span class="label"> Green</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice3" value="yellow" />
+		<span class="label"> Yellow</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Row -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - 4 In a Row</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-row-4"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice4" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice4" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice4" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice4" value="yellow" /&gt;
+		&lt;span class="label"&gt; Yellow&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-row-4">
+	<label>
+		<input type="checkbox" name="choice4" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice4" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice4" value="green" />
+		<span class="label"> Green</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice4" value="yellow" />
+		<span class="label"> Yellow</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Row -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - 5 In a Row</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-row-5"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice5" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice5" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice5" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice5" value="yellow" /&gt;
+		&lt;span class="label"&gt; Yellow&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice5" value="black" /&gt;
+		&lt;span class="label"&gt; Black&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-row-5">
+	<label>
+		<input type="checkbox" name="choice5" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice5" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice5" value="green" />
+		<span class="label"> Green</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice5" value="yellow" />
+		<span class="label"> Yellow</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice5" value="black" />
+		<span class="label"> Black</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Velocity -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - Velocity</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice" cmt-app="app" cmt-controller="controller" cmt-action="action" action="request-url" cmt-keep&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" name="choice6" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice6" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice6" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;div class="row align align-right"&gt;
+		&lt;span class="btn btn-medium cmt-click">Update&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice">
+	<label>
+		<input type="checkbox" name="choice6" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice6" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="checkbox" name="choice6" value="green" />
+		<span class="label"> Green</span>
+	</label>
+	<div class="row align align-right">
+		<span class="btn btn-medium">Update</span>
+	</div>
+</div>
+			<div class="reader margin margin-top-small">
+				<p><b>Notes</b>: Provide the valid values of the attributes including <b>cmt-app</b>, <b>cmt-controller</b>, <b>cmt-action</b>, and <b>action</b> to trigger the Velocity Application Request.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Boolean - Velocity -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - Boolean - Velocity</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-checkbox" cmt-app="app" cmt-controller="controller" cmt-action="action" action="request-url" cmt-keep&gt;
+	&lt;label&gt;
+		&lt;input class="cmt-change" type="checkbox" /&gt;
+		&lt;span class="label"&gt; Boolean 1&lt;/span&gt;
+		&lt;input type="hidden" name="cb3" value="0" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="cmt-choice cmt-checkbox" cmt-app="app" cmt-controller="controller" cmt-action="action" action="request-url" cmt-keep&gt;
+	&lt;label&gt;
+		&lt;input class="cmt-change" type="checkbox" checked /&gt;
+		&lt;span class="label"&gt; Boolean 2&lt;/span&gt;
+		&lt;input type="hidden" name="cb4" value="1" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" />
+		<span class="label"> Boolean 1</span>
+		<input type="hidden" name="cb3" value="0" />
+	</label>
+</div>
+<div class="margin margin-small-v">Or</div>
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" checked />
+		<span class="label"> Boolean 2</span>
+		<input type="hidden" name="cb4" value="1" />
+	</label>
+</div>
+			<div class="reader margin margin-top-small">
+				<p><b>Notes</b>: Provide the valid values of the attributes including <b>cmt-app</b>, <b>cmt-controller</b>, <b>cmt-action</b>, and <b>action</b> to trigger the Velocity Application Request.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Checkbox - Boolean - Velocity - Direct - Set/Unset -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Checkbox - Boolean - Velocity - Direct</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-checkbox"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" /&gt;
+		&lt;span class="label"&gt; Boolean 1&lt;/span&gt;
+		&lt;input class="cmt-data-direct" type="hidden" name="cb5" value="0" data-base="base-url" data-id="model-id" data-key="key" data-type="type" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="cmt-choice cmt-checkbox"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" checked /&gt;
+		&lt;span class="label"&gt; Boolean 2&lt;/span&gt;
+		&lt;input class="cmt-data-direct" type="hidden" name="cb6" value="1" data-base="base-url" data-id="model-id" data-key="key" data-type="type" /&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" />
+		<span class="label"> Boolean 1</span>
+		<input type="hidden" name="cb5" value="0" />
+	</label>
+</div>
+<div class="margin margin-small-v">Or</div>
+<div class="cmt-choice cmt-checkbox">
+	<label>
+		<input type="checkbox" name="cb6" checked />
+		<span class="label"> Boolean 2</span>
+		<input type="hidden" name="cb6" value="0" />
+	</label>
+</div>
+			<div class="reader margin margin-top-small">
+				<p><b>Notes</b>: Provide the valid values of the attributes including <b>data-base</b>, <b>data-id</b>, <b>data-key</b>, and <b>data-type</b> to trigger the Direct Velocity Request.</p>
+				<p></p>
+				<p>The type can be data, attribute, config, or setting.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Radio Group -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Radio Group</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice1" value="1" /&gt;
+		&lt;span class="label"&gt; Yes&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice1" value="0" /&gt;
+		&lt;span class="label"&gt; No&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice">
+	<label>
+		<input type="radio" name="choice1" value="1" />
+		<span class="label"> Yes</span>
+	</label>
+	<label>
+		<input type="radio" name="choice1" value="0" />
+		<span class="label"> No</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Radio Group - Default Value -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Radio Group - Default</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice2" value="1" checked /&gt;
+		&lt;span class="label"&gt; Yes&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice2" value="0" /&gt;
+		&lt;span class="label"&gt; No&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice">
+	<label>
+		<input type="radio" name="choice2" value="1" checked />
+		<span class="label"> Yes</span>
+	</label>
+	<label>
+		<input type="radio" name="choice2" value="0" />
+		<span class="label"> No</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice Inline - Radio Group -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Radio Group - Inline</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-inline"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice3" value="1" /&gt;
+		&lt;span class="label"&gt; Yes&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice3" value="0" /&gt;
+		&lt;span class="label"&gt; No&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-inline">
+	<label>
+		<input type="radio" name="choice3" value="1" />
+		<span class="label"> Yes</span>
+	</label>
+	<label>
+		<input type="radio" name="choice3" value="0" />
+		<span class="label"> No</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Radio Group - Row -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Radio Group - 4 In a Row</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice cmt-choice-inline"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice4" value="red" /&gt;
+		&lt;span class="label"&gt; Red&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice4" value="blue" /&gt;
+		&lt;span class="label"&gt; Blue&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice4" value="green" /&gt;
+		&lt;span class="label"&gt; Green&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="choice4" value="yellow" /&gt;
+		&lt;span class="label"&gt; Yellow&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice cmt-choice-inline">
+	<label>
+		<input type="radio" name="choice4" value="red" />
+		<span class="label"> Red</span>
+	</label>
+	<label>
+		<input type="radio" name="choice4" value="blue" />
+		<span class="label"> Blue</span>
+	</label>
+	<label>
+		<input type="radio" name="choice4" value="green" />
+		<span class="label"> Green</span>
+	</label>
+	<label>
+		<input type="radio" name="choice4" value="yellow" />
+		<span class="label"> Yellow</span>
+	</label>
+</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choice - Radio Group - Velocity -->
+<div class="data-crud">
+	<div class="data-crud-title">Choice - Radio Group - Velocity</div>
+	<div class="data-crud-content row">
+		<div class="col col3x2">
+<pre>
+&lt;div class="cmt-choice" cmt-app="app" cmt-controller="controller" cmt-action="action" action="request-url" cmt-keep&gt;
+	&lt;label&gt;
+		&lt;input class="cmt-change" type="radio" name="choice5" value="1" /&gt;
+		&lt;span class="label"&gt; Yes&lt;/span&gt;
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input class="cmt-change" type="radio" name="choice5" value="0" /&gt;
+		&lt;span class="label"&gt; No&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+		<div class="col col3">
+<div class="cmt-choice">
+	<label>
+		<input type="radio" name="choice5" value="1" />
+		<span class="label"> Yes</span>
+	</label>
+	<label>
+		<input type="radio" name="choice5" value="0" />
+		<span class="label"> No</span>
+	</label>
+</div>
+			<div class="reader margin margin-top-small">
+				<p><b>Notes</b>: Provide the valid values of the attributes including <b>cmt-app</b>, <b>cmt-controller</b>, <b>cmt-action</b>, and <b>action</b> to trigger the Velocity Application Request.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</body>
+</html>

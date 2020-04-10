@@ -1,0 +1,70 @@
+// References: https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e, https://codepen.io/michalburda/pen/KNWqRZ
+
+/* Extension to circled */
+@mixin circledp( $bkg-color, $val-color, $bwidth ) { // Add with circled
+	overflow: hidden;
+	vertical-align: middle;
+	background-color: $bkg-color;
+	-webkit-border-radius: 100%;
+	 -khtml-border-radius: 100%;
+	   -moz-border-radius: 100%;
+			border-radius: 100%;
+
+	.circledp-val-wrap {
+		background-color: $color-white;
+		color: $val-color;
+		position: absolute;
+		display: block;
+		width: 80%;
+		height: 80%;
+		margin: 10%;
+		z-index: 1;
+		text-align: center;
+		-webkit-border-radius: 100%;
+		 -khtml-border-radius: 100%;
+		   -moz-border-radius: 100%;
+				border-radius: 100%;
+
+		.circledp-val {
+			display: inline-block;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY( -50% );
+				-ms-transform: translateY( -50% );
+					transform: translateY( -50% );
+		}
+	}
+
+	.circledp-pie-left, .circledp-pie-right {
+		background-color: $bkg-color;
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.circledp-pie-val {
+		background-color: $val-color;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		transform: translate(0, 100%) rotate(0deg);
+		transform-origin: 50% 0;
+	}
+
+	.circledp-pie-right {
+		transform: translate(0, -50%) rotate(90deg) rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+
+	.circledp-pie-left {
+		transform: translate(0, -50%) rotate(-90deg) rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+}
+
+.circledp {
+	@include circledp( $color-gray-l, $color-tertiary, 2 );
+}

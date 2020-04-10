@@ -1,14 +1,14 @@
 /**********************************************************************
-Description: This file define the basic animation effects available in CMT-UI css framework. These 
-			 animations give smooth and nice visual effects to an element. The animations within effects 
-			 section can be used for more advanced animations.
+Description: This file define the basic animation effects available in in the Breeze CSS
+Framework. These animations give smooth and nice visual effects to an element. The animations
+within effects section can be used for more advanced animations.
 
-Dependencies: none
+Dependencies: transitions
 
 Details: It defines the animation mixins and default implementation as listed below:
 
-* Spin      - The spin animation spins an element infinitely.
-* Zoom		- The zoom animation use the scale property to zoom in and zoom out an element.
+Spin - The spin animation spins an element infinitely.
+Zoom - The zoom animation use the scale property to zoom in and zoom out an element.
 ***********************************************************************/
 
 // Spin ----------------------------
@@ -73,7 +73,7 @@ Details: It defines the animation mixins and default implementation as listed be
 }
 
 @-webkit-keyframes zoom-in {
-	
+
 	from {
 		opacity: 0;
 		-webkit-transform: scale( 0.25, 0.25 );
@@ -119,7 +119,7 @@ Details: It defines the animation mixins and default implementation as listed be
 }
 
 @-webkit-keyframes zoom-out {
-	
+
 	25% {
 		opacity: 1;
 	}

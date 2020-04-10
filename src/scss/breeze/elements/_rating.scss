@@ -1,14 +1,13 @@
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of rating elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Rating          - The rating element can be used to provide ratings.
-*
+Rating - The rating element can be used to provide ratings.
 ***********************************************************************/
 
 // == Rating ========================
@@ -38,6 +37,16 @@ Details: It defines the custom element styles as listed below:
 			}
 		}
 	}
+
+	&.read-only {
+
+		.wrap-stars {
+
+			.star {
+				cursor: default;
+			}
+		}
+	}
 }
 
 .cmt-rating-native {
@@ -50,10 +59,10 @@ Details: It defines the custom element styles as listed below:
 	}
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		content: "\e0f3";
+		content: "\e946";
 	}
 
-	input[type=radio]:checked+.label::before {
-		content: "\e0f3";
+	input[type=radio]:checked + .label::before {
+		content: "\e944";
 	}
 }

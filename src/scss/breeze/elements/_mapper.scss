@@ -1,22 +1,21 @@
 /**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
+Description: It defines the styles of mapper components available in Breeze CSS Framework.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for mapper components as listed below:
+Details: It defines the styles of mapper components as listed below:
 
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
+Mapper - The barebone mapper class with minimum styles common for all the mappers.
+
+List - The list mapper allows user to map multiple resources to active resource. The mappings
+can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+
+Auto - The auto mapper will use auto fill component to auto suggest mapping. The mapping
+will be formed when user click on one of the auto suggest item.
+
+Submit - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+
+Action - The action mapper will allow users to toggle each item individually by click.
 ***********************************************************************/
 
 // == Structure - Mapper ============
