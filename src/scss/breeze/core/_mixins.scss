@@ -626,7 +626,7 @@ Notes:
 			filter: blur($value);
 }
 
-@mixin line-clamp-3 {	
+@mixin line-clamp-3 {
 	display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -635,7 +635,7 @@ Notes:
 	//margin: 1rem 0;
 }
 
-@mixin line-clamp-2 {	
+@mixin line-clamp-2 {
 	display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -831,6 +831,10 @@ Notes:
 
 	&.rounded-xlarge {
 		@include rounded( $size-xlarge );
+	}
+
+	&.rounded-50 {
+		@include rounded( 50% );
 	}
 
 	&.rounded-top {

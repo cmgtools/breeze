@@ -1,6 +1,6 @@
 /**********************************************************************
-Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
-			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks.
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps
 			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
@@ -125,6 +125,10 @@ Details: It defines the styles for header components as listed below:
 				.block-header-content {
 					// Header content
 				}
+
+				.block-header-actions {
+					// Header actions
+				}
 			}
 		}
 
@@ -135,7 +139,7 @@ Details: It defines the styles for header components as listed below:
 			.block-content-title {
 				// Content title
 			}
-			
+
 			.block-content-info {
 				// Content info
 			}
@@ -226,6 +230,10 @@ Details: It defines the styles for header components as listed below:
 
 				.block-footer-content {
 					// Footer Content
+				}
+
+				.block-footer-actions {
+					// Footer Actions
 				}
 			}
 		}
@@ -321,11 +329,11 @@ Details: It defines the styles for header components as listed below:
 			.block-content-info {
 				font-size: $font-size-4;
 			}
-			
+
 			.block-content-summary {
 				font-size: $font-size-6;
 			}
-			
+
 			.block-content-title + .block-content-info, .block-content-title + .block-content-summary, .block-content-title + .block-content-data {
 				margin-top: 0.5rem;
 			}

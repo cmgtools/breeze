@@ -1,6 +1,6 @@
 /**********************************************************************
-Description: It defines the styles of the page component. We can devide the entire page 
-in multiple sections. Each page can have background image with or without parallax effect, 
+Description: It defines the styles of the page component. We can devide the entire page
+in multiple sections. Each page can have background image with or without parallax effect,
 a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
 and widgets.
 
@@ -8,10 +8,10 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for page components as listed below:
 
-1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+1. Page - The barebone page class with minimum styles common for all the pages. The base class
 can have below listed options:
 1.1. It can have background image with or without parallax effects.
-1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set
 page background and even content wrapper background in the form of image or texture.
 ***********************************************************************/
 
@@ -98,6 +98,10 @@ page background and even content wrapper background in the form of image or text
 				// Wraps fluid header
 			}
 
+			> .texture {
+				z-index: 10;
+			}
+
 			.page-header {
 				position: relative;
 				z-index: 20;
@@ -147,7 +151,7 @@ page background and even content wrapper background in the form of image or text
 			.page-content-title {
 				// Content title
 			}
-			
+
 			.page-content-info {
 				// Content info
 			}

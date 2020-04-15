@@ -402,6 +402,12 @@ Notes:
   -moz-border-radius: 13px;
   border-radius: 13px; }
 
+.rounded.rounded-50 {
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
 .rounded.rounded-top {
   border-radius: 1px 1px 0 0;
   -webkit-border-radius-top-left: 1px;
@@ -10569,8 +10575,8 @@ Basic - The basic widget defines the styles of widget having text and background
     margin-top: 0.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
-			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks.
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps
 			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
@@ -11013,8 +11019,8 @@ Basic - The basic data grid having default coloring.
     text-align: left; }
 
 /**********************************************************************
-Description: It defines the styles of the page component. We can devide the entire page 
-in multiple sections. Each page can have background image with or without parallax effect, 
+Description: It defines the styles of the page component. We can devide the entire page
+in multiple sections. Each page can have background image with or without parallax effect,
 a content wrapper which wraps page header, content, footer, cards, boxes, blocks, sidebars
 and widgets.
 
@@ -11022,10 +11028,10 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for page components as listed below:
 
-1. Page - The barebone page class with minimum styles common for all the pages. The base class 
+1. Page - The barebone page class with minimum styles common for all the pages. The base class
 can have below listed options:
 1.1. It can have background image with or without parallax effects.
-1.2. The content wrapper wraps header, content and footer. This gives opportunity to set 
+1.2. The content wrapper wraps header, content and footer. This gives opportunity to set
 page background and even content wrapper background in the form of image or texture.
 ***********************************************************************/
 .page {
@@ -11101,6 +11107,8 @@ page background and even content wrapper background in the form of image or text
     z-index: 15; }
     .page .page-content-wrap .page-header-wrap {
       position: relative; }
+      .page .page-content-wrap .page-header-wrap > .texture {
+        z-index: 10; }
       .page .page-content-wrap .page-header-wrap .page-header {
         position: relative;
         z-index: 20; }
