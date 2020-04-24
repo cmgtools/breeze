@@ -7,7 +7,7 @@ Details: It defines the styles of box components as listed below:
 
 * Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
-*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				The Banner and Video can be placed at any position within the Box. The possible postions
 *				are outside content wrapper as background, within header, within content and within footer.
 *
 * Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
@@ -22,19 +22,21 @@ Details: It defines the styles of box components as listed below:
 	.box-content-wrap {
 
 		.box-header-wrap {
+			position: relative;
 			background-color: $color-tertiary;
 			color: $color-tertiary-text;
 			padding: 0.5rem;
-		 }
+		}
 
-		 .box-data {
+		.box-data {
+			position: relative;
 			background-color: $color-primary;
 			color: $color-primary-text;
 			padding: 0.5rem;
-		 }
+		}
 
 		.box-footer-wrap {
-			// Footer having box info
+			position: relative;
 			background-color: $color-secondary;
 			color: $color-secondary-text;
 			padding: 0.5rem;
@@ -69,26 +71,23 @@ Details: It defines the styles of box components as listed below:
 
 // == Collapsible Box ===============
 
-// Collapsible panels with trigger on header
+// Collapsible panels with trigger on header, works fine with box-panel
 .box-collapsible {
 
 	.box-content-wrap {
 
 		.box-header-wrap {
 
-			.box-header {
+			.box-collapsible-trigger {
+				position: absolute;
+				display: inline-block;
+				top: 0.5em;
+				right: 0.5em;
+				color: $color-secondary-text;
+				cursor: pointer;
 
-				.box-collapsible-trigger {
-					position: absolute;
-					display: inline-block;
-					top: 0.5em;
-					right: 0.5em;
-					color: $color-secondary-text;
-					cursor: pointer;
-
-					&:hover {
-						color: $color-link-h;
-					}
+				&:hover {
+					color: $color-link-h;
 				}
 			}
 		}
