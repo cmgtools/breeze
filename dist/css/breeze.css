@@ -1071,10 +1071,10 @@ Notes:
   border: 1px solid #7F7F7F; }
 
 .border.border-default-l {
-  border: 1px solid #595959; }
+  border: 1px solid #A5A5A5; }
 
 .border.border-default-d {
-  border: 1px solid #A5A5A5; }
+  border: 1px solid #595959; }
 
 .border.border-small {
   border: 3px solid #7F7F7F; }
@@ -10289,23 +10289,26 @@ Details: It defines the styles of box components as listed below:
 
 * Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
-*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				The Banner and Video can be placed at any position within the Box. The possible postions
 *				are outside content wrapper as background, within header, within content and within footer.
 *
 * Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
 ***********************************************************************/
 .box-panel .box-content-wrap .box-header-wrap {
+  position: relative;
   background-color: #87BA45;
   color: #E6E6E6;
   padding: 0.5rem; }
 
 .box-panel .box-content-wrap .box-data {
+  position: relative;
   background-color: #F2F2F2;
   color: #363636;
   padding: 0.5rem; }
 
 .box-panel .box-content-wrap .box-footer-wrap {
+  position: relative;
   background-color: #3C4655;
   color: #96B0D6;
   padding: 0.5rem; }
@@ -10319,14 +10322,14 @@ Details: It defines the styles of box components as listed below:
 .box-panel-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
   padding-left: 1.5rem; }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger {
+.box-collapsible .box-content-wrap .box-header-wrap .box-collapsible-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-collapsible-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************

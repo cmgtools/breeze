@@ -1430,11 +1430,11 @@ Notes:
 	}
 
 	&.border-default-l {
-		@include border( $size-default, solid, $color-border-d );
+		@include border( $size-default, solid, $color-border-l );
 	}
 
 	&.border-default-d {
-		@include border( $size-default, solid, $color-border-l );
+		@include border( $size-default, solid, $color-border-d );
 	}
 
 	&.border-small {
