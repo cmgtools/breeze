@@ -10661,6 +10661,14 @@ Details: It defines the styles for header components as listed below:
     z-index: 15; }
     .block .block-content-wrap .block-header-wrap {
       position: relative; }
+      .block .block-content-wrap .block-header-wrap .block-bkg {
+        z-index: 1; }
+      .block .block-content-wrap .block-header-wrap .block-bkg-fixed {
+        z-index: 1; }
+      .block .block-content-wrap .block-header-wrap .block-bkg-scroll {
+        z-index: 1; }
+      .block .block-content-wrap .block-header-wrap .block-bkg-parallax {
+        z-index: 5; }
       .block .block-content-wrap .block-header-wrap .block-header {
         position: relative;
         z-index: 20; }
