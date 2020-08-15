@@ -2593,12 +2593,13 @@ html, body {
  * Avatar and Icon width
  */
 .avatar {
-  display: inline-block;
-  width: 32px; }
-  .avatar img {
-    width: 32px; }
+  display: inline-block; }
   .avatar.avatar-center {
     margin: 0 auto; }
+  .avatar.avatar-default {
+    width: 32px; }
+    .avatar.avatar-default img {
+      width: 32px; }
   .avatar.avatar-small {
     width: 48px; }
     .avatar.avatar-small img {
@@ -2836,17 +2837,6 @@ html, body {
     background-color: #A5A5A5 !important;
     color: #FFFFFF !important; }
 
-/*
-.disabled {
-	background-color: $color-btn-d !important;
-	color: $color-btn-text-d !important;
-
-	&:hover {
-		background-color: $color-btn-d !important;
-		color: $color-btn-text-d !important;
-	}
-}
-*/
 .fluid {
   max-width: 100%;
   height: auto; }
@@ -4809,6 +4799,20 @@ also include classes to arrange content within container or parent element.
   .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
   .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11,
   .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
+    width: 100%; } }
+
+@media only screen and (max-width: 480px) {
+  .max-cols-100m > .col1, .max-cols-100m > .col2, .max-cols-100m > .col3, .max-cols-100m > .col4, .max-cols-100m > .col5, .max-cols-100m > .col6, .max-cols-100m > .col7, .max-cols-100m > .col8, .max-cols-100m > .col9, .max-cols-100m > .col10, .max-cols-100m > .col11, .max-cols-100m > .col12, .max-cols-100m > .col13, .max-cols-100m > .col14, .max-cols-100m > .col15 {
+    width: 98%; }
+  .max-cols-100m > .col3x2, .max-cols-100m > .col4x2, .max-cols-100m > .col4x3, .max-cols-100m > .col5x2, .max-cols-100m > .col5x3, .max-cols-100m > .col5x4, .max-cols-100m > .col6x2, .max-cols-100m > .col6x3, .max-cols-100m > .col6x4, .max-cols-100m > .col6x5,
+  .max-cols-100m > .col12x2, .max-cols-100m > .col12x3, .max-cols-100m > .col12x4, .max-cols-100m > .col12x5, .max-cols-100m > .col12x6, .max-cols-100m > .col12x7, .max-cols-100m > .col12x8, .max-cols-100m > .col12x9, .max-cols-100m > .col12x10, .max-cols-100m > .col12x11,
+  .max-cols-100m > .col15x2, .max-cols-100m > .col15x3, .max-cols-100m > .col15x4, .max-cols-100m > .col15x5, .max-cols-100m > .col15x6, .max-cols-100m > .col15x7, .max-cols-100m > .col15x8, .max-cols-100m > .col15x9, .max-cols-100m > .col15x10, .max-cols-100m > .col15x11, .max-cols-100m > .col15x12, .max-cols-100m > .col15x13, .max-cols-100m > .col15x14 {
+    width: 98%; }
+  .max-cols-100m > .colf1, .max-cols-100m > .colf2, .max-cols-100m > .colf3, .max-cols-100m > .colf4, .max-cols-100m > .colf5, .max-cols-100m > .colf6, .max-cols-100m > .colf7, .max-cols-100m > .colf8, .max-cols-100m > .colf9, .max-cols-100m > .colf10, .max-cols-100m > .colf11, .max-cols-100m > .colf12, .max-cols-100m > .colf13, .max-cols-100m > .colf14, .max-cols-100m > .colf15 {
+    width: 100%; }
+  .max-cols-100m > .colf3x2, .max-cols-100m > .colf4x2, .max-cols-100m > .colf4x3, .max-cols-100m > .colf5x2, .max-cols-100m > .colf5x3, .max-cols-100m > .colf5x4, .max-cols-100m > .colf6x2, .max-cols-100m > .colf6x3, .max-cols-100m > .colf6x4, .max-cols-100m > .colf6x5,
+  .max-cols-100m > .colf12x2, .max-cols-100m > .colf12x3, .max-cols-100m > .colf12x4, .max-cols-100m > .colf12x5, .max-cols-100m > .colf12x6, .max-cols-100m > .colf12x7, .max-cols-100m > .colf12x8, .max-cols-100m > .colf12x9, .max-cols-100m > .colf12x10, .max-cols-100m > .colf12x11,
+  .max-cols-100m > .colf15x2, .max-cols-100m > .colf15x3, .max-cols-100m > .colf15x4, .max-cols-100m > .colf15x5, .max-cols-100m > .colf15x6, .max-cols-100m > .colf15x7, .max-cols-100m > .colf15x8, .max-cols-100m > .colf15x9, .max-cols-100m > .colf15x10, .max-cols-100m > .colf15x11, .max-cols-100m > .colf15x12, .max-cols-100m > .colf15x13, .max-cols-100m .colf15x14 {
     width: 100%; } }
 
 .col-fixed {
@@ -9057,7 +9061,12 @@ Basic - The basic header define the styles for primary header having logo and me
 .header-basic {
   background-color: #363636;
   color: #ffffff;
-  position: relative; }
+  position: relative;
+  -webkit-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -moz-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -ms-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -o-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s; }
   .header-basic .header-logo {
     cursor: pointer;
     display: block;
@@ -9146,8 +9155,15 @@ Basic - The basic header define the styles for primary header having logo and me
           .header-basic.header-small #menu-main li a {
             line-height: 50px; } }
 
+.header-basic-duo .header-logo .logo img {
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s; }
+
 .header-basic-duo .header-logo .logo-small {
-  display: none !important; }
+  display: none; }
 
 .header-basic-duo.header-small .header-logo .logo {
   display: none !important; }
@@ -9175,12 +9191,12 @@ Basic - The basic footer define the styles for primary footer.
     width: 100%;
     left: 0px;
     bottom: 0px; }
-  @media only screen and (max-width: 1024px) {
-    .footer {
-      padding: 1rem; } }
 
 .footer-main {
   z-index: 80000; }
+  @media only screen and (max-width: 1024px) {
+    .footer-main {
+      padding: 1rem; } }
 
 .footer-basic {
   background-color: #363636;
