@@ -282,14 +282,17 @@ html, body {
 
 .avatar {
 	display: inline-block;
-	width: 32px;
-
-	img {
-		width: 32px;
-	}
 
 	&.avatar-center {
 		margin: 0 auto;
+	}
+
+	&.avatar-default {
+		width: 32px;
+
+		img {
+			width: 32px;
+		}
 	}
 
 	&.avatar-small {
@@ -717,19 +720,6 @@ html, body {
 		color: $color-white !important;
 	}
 }
-
-// Disabled - Moved out to form
-/*
-.disabled {
-	background-color: $color-btn-d !important;
-	color: $color-btn-text-d !important;
-
-	&:hover {
-		background-color: $color-btn-d !important;
-		color: $color-btn-text-d !important;
-	}
-}
-*/
 
 // Fluid Elements (blocks, images)
 

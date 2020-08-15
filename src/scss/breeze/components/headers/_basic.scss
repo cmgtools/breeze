@@ -48,6 +48,7 @@ Basic - The basic header define the styles for primary header having logo and me
 	color: $color-header-text;
 	position: relative;
 	@extend %clearfix;
+	@include transit-width-height( $transit-eio, $transit-time-small );
 
 	// Absolute positioned on left side wrapping the logo
 	.header-logo {
@@ -199,6 +200,13 @@ Basic - The basic header define the styles for primary header having logo and me
 .header-basic-duo {
 
 	.header-logo {
+
+		.logo {
+
+			img {
+				@include transit-all( $transit-eio, $transit-time-small );
+			}
+		}
 
 		.logo-small {
 			display: none;

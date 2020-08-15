@@ -21,16 +21,16 @@ Basic - The basic footer define the styles for primary footer.
 		left: 0px;
 		bottom: 0px;
 	}
-
-	@include responsive-max( screen-tablet-large ) {
-		padding: 1rem;
-	}
 }
 
 // == Main Footer ===================
 
 .footer-main {
 	z-index: 80000;
+
+	@include responsive-max( screen-tablet-large ) {
+		padding: 1rem;
+	}
 }
 
 // == Basic Footer ==================

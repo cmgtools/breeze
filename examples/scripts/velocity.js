@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2020-04-24
+ * Velocity - v1.0.0-alpha1 - 2020-07-14
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -1865,6 +1865,8 @@ cmt.components.base.SliderComponent = function() {
 cmt.components.base.SliderComponent.inherits( cmt.components.base.BaseComponent );
 
 cmt.components.base.SliderComponent.prototype.defaults = {
+	// Normaliser
+	normalise: true,
 	// Controls
 	controls: true,
 	lControlContent: null,
@@ -1989,13 +1991,16 @@ cmt.components.base.Slider = function( component, element ) {
 
 cmt.components.base.Slider.prototype.init = function() {
 
-	var settings	= this.options;
+	var settings = this.options;
 
 	// Slider View
 	this.initView();
 
 	// Init Slides based on configuration params
-	this.normalise();
+	if( settings.normalise ) {
+
+		this.normalise();
+	}
 
 	// Indexify the Slides
 	this.indexSlides();
@@ -2066,6 +2071,8 @@ cmt.components.base.Slider.prototype.initView = function() {
 	this.element.html( view );
 
 	this.element.find( '.slider-slides' ).append( slides );
+
+	this.slides = this.element.find( '.slider-slide' );
 };
 
 // Make filmstrip of all slides
@@ -2838,8 +2845,8 @@ cmt.components.jquery = cmt.components.jquery || {};
 		// == Init == //
 
 		// Configure Plugin
-		var settings 		= cmtjq.extend( {}, cmtjq.fn.cmtAutoFill.defaults, options );
-		var fillers			= this;
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtAutoFill.defaults, options );
+		var fillers		= this;
 
 		// Iterate and initialise all the fillers
 		fillers.each( function() {
@@ -2861,12 +2868,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 			// Auto Fill
 			filler.find( '.auto-fill-text' ).blur( function() {
 
-				var wrapFill	= jQuery( this ).closest( '.wrap-fill' );
+				//var wrapFill = jQuery( this ).closest( '.wrap-fill' );
 
-				wrapFill.find( '.wrap-auto-list' ).slideUp();
+				//wrapFill.find( '.wrap-auto-list' ).slideUp();
 
 				// Clear fields
-				wrapFill.find( '.fill-clear' ).val( '' );
+				//wrapFill.find( '.fill-clear' ).val( '' );
+
+				filler.find( '.auto-fill-items' ).slideUp();
 			});
 		}
 	};
@@ -4406,6 +4415,22 @@ cmt.components.jquery = cmt.components.jquery || {};
 			grid.find( '.trigger-report-toggle' ).click( function() {
 
 				grid.find( '.grid-report-wrap' ).fadeToggle( 'slow' );
+
+				jQuery( this ).toggleClass( 'active' );
+			});
+
+			// Import
+			grid.find( '.trigger-import-toggle' ).click( function() {
+
+				grid.find( '.grid-import-wrap' ).fadeToggle( 'slow' );
+
+				jQuery( this ).toggleClass( 'active' );
+			});
+
+			// Export
+			grid.find( '.trigger-export-toggle' ).click( function() {
+
+				grid.find( '.grid-export-wrap' ).fadeToggle( 'slow' );
 
 				jQuery( this ).toggleClass( 'active' );
 			});

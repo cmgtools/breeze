@@ -22,7 +22,7 @@ Details: It defines the styles for foxslider components as listed below:
 		.slide {
 			// Slide with/without background/texture
 			z-index: 10;
-			
+
 			.fxs-bkg-img {
 				// The background formed using image tag
 			}
@@ -46,6 +46,22 @@ Details: It defines the styles for foxslider components as listed below:
 
 					.fxs-content {
 						// Actual content
+
+						.slide-title {
+							// Slide title within content
+						}
+
+						.slide-desc {
+							// Slide description within content
+						}
+
+						.image-desc {
+							// Image description within content
+						}
+
+						.slide-text {
+							// Slide details within content
+						}
 					}
 
 					.fxs-footer {
@@ -139,12 +155,12 @@ Details: It defines the styles for foxslider components as listed below:
 		font-weight: bold;
 		height: 80px;
 		width: 48px;
-		position:relative;
+		position: relative;
 		top: 45%;
 		background-image: url( $images-path + "/icons/arrows.png" );
 		background-repeat: none;
 		background-position: 0px 0px;
-		
+
 		&.control-left {
 			float: left;
 			left: 20px;
@@ -160,7 +176,7 @@ Details: It defines the styles for foxslider components as listed below:
 			right: 20px;
 			background-position: -48px 80px;
 			text-align: right;
-			
+
 			&:hover {
 				background-position: -48px 0px;
 			}
@@ -216,7 +232,7 @@ Details: It defines the styles for foxslider components as listed below:
 		height: 100%;
 	}
 
-	.slide { 
+	.slide {
 		position: absolute;
 		top: 0px;
 		left: 0px;
@@ -240,7 +256,7 @@ Details: It defines the styles for foxslider components as listed below:
 				width: 100%;
 				height: 100%;
 				overflow: hidden;
-				
+
 				// Slide header
 				.fxs-header {
 					position: absolute;
@@ -283,7 +299,7 @@ Details: It defines the styles for foxslider components as listed below:
 		background-image: url( $images-path + "/icons/arrows.png" );
 		background-repeat: none;
 		background-position: 0px 0px;
-		
+
 		&.control-left {
 			float: left;
 			left: 20px;
