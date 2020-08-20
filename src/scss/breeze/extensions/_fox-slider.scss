@@ -181,6 +181,11 @@ Details: It defines the styles for foxslider components as listed below:
 				background-position: -48px 0px;
 			}
 		}
+
+		&.disabled {
+			background-color: transparent !important;
+			color: #A5A5A5 !important;
+		}
 	}
 
 	/* Slider Bullets */
@@ -319,6 +324,11 @@ Details: It defines the styles for foxslider components as listed below:
 			&:hover {
 				background-position: -48px 0px;
 			}
+		}
+
+		&.disabled {
+			background-color: transparent !important;
+			color: #A5A5A5 !important;
 		}
 	}
 

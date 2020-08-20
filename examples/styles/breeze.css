@@ -3172,9 +3172,6 @@ from secondary for highlighting purpose.
 .bkg.bkg-black {
   background-color: #000000 !important; }
 
-.bkg.bkg-black-transparent {
-  background-color: rgba(0, 0, 0, 0.6) !important; }
-
 .bkg.bkg-gray {
   background-color: #7F7F7F !important; }
 
