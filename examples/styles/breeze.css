@@ -4893,6 +4893,16 @@ also include classes to arrange content within container or parent element.
   .col-pad-h.col-pad-xlarge .col, .col-pad-h.col-pad-xlarge .colf {
     padding: 0 4em; }
 
+.container-max {
+  width: 100%;
+  height: 100%; }
+  .container-max .content-wrap {
+    width: 100%;
+    height: 100%; }
+    .container-max .content-wrap .content {
+      width: 100%;
+      height: 100%; }
+
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
  * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
@@ -6633,6 +6643,10 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 @media only screen and (max-width: 1024px) {
   .cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
     width: 50%; } }
+
+@media only screen and (max-width: 480px) {
+  .cmt-switch-wrap.cmt-switch-row-2 .cmt-switch, .cmt-switch-wrap.cmt-switch-row-4 .cmt-switch, .cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+    width: 100%; } }
 
 /**********************************************************************
 Description: It defines the styles of button elements available in Breeze CSS Framework.
@@ -9043,7 +9057,7 @@ Basic - The basic header define the styles for primary header having logo and me
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100000; }
+    z-index: 100001; }
   .header.header-absolute {
     position: absolute;
     top: 0;
@@ -9155,15 +9169,20 @@ Basic - The basic header define the styles for primary header having logo and me
           .header-basic.header-small #menu-main li a {
             line-height: 50px; } }
 
-.header-basic-duo .header-logo .logo img {
-  -webkit-transition: all 250ms ease-in-out 0s;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s; }
-
-.header-basic-duo .header-logo .logo-small {
-  display: none; }
+.header-basic-duo .header-logo {
+  -webkit-transition: all 420ms ease-in-out 0s;
+  -moz-transition: all 420ms ease-in-out 0s;
+  -ms-transition: all 420ms ease-in-out 0s;
+  -o-transition: all 420ms ease-in-out 0s;
+  transition: all 420ms ease-in-out 0s; }
+  .header-basic-duo .header-logo .logo img {
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+  .header-basic-duo .header-logo .logo-small {
+    display: none; }
 
 .header-basic-duo.header-small .header-logo .logo {
   display: none !important; }
@@ -10095,51 +10114,51 @@ Details: It defines the styles of card components as listed below:
     color: #E6E6E6; }
 
 .card-basic .card-content-wrap .card-header {
-  padding: 1rem; }
+  padding: 0.25rem 1rem; }
   .card-basic .card-content-wrap .card-header .card-header-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-header .card-header-info {
     font-size: 1.08em; }
   .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-title, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-header .card-header-title + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-title + .card-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-header .card-header-info + .card-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 .card-basic .card-content-wrap .card-data {
-  padding: 1rem; }
+  padding: 0.25rem 1rem; }
 
 .card-basic .card-content-wrap .card-content {
-  padding: 1rem; }
+  padding: 0.25rem 1rem; }
   .card-basic .card-content-wrap .card-content .card-content-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-content .card-content-info {
     font-size: 1.08em; }
   .card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-content .card-content-info + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-content .card-content-summary + .card-content-data {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-content .card-content-data {
-    padding: 1rem 0; }
+    padding: 0.25rem 0; }
 
 .card-basic .card-content-wrap .card-footer {
-  padding: 1rem; }
+  padding: 0.25rem 1rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title {
     font-size: 1.17em;
     font-family: Verdana, Geneva, sans-serif; }
   .card-basic .card-content-wrap .card-footer .card-footer-info {
     font-size: 1.08em; }
   .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .card-basic .card-content-wrap .card-footer .card-footer-info + .card-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 /**********************************************************************
 Description: It defines the styles of card panels used to display data and forms.
@@ -10177,7 +10196,7 @@ Details: It defines the styles of card panels as listed below:
     padding-left: 1.5rem; }
 
 /**********************************************************************
-Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form
 			 components displayed on search pages, panels having content, form etc.
 
 Dependencies: variables, variables-ext, mixins
@@ -10242,7 +10261,7 @@ Details: It defines the styles of box components as listed below:
     color: #E6E6E6; }
 
 .box-basic .box-content-wrap .box-header-wrap {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title {
     font-size: 1.58em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -10251,14 +10270,14 @@ Details: It defines the styles of box components as listed below:
   .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-content {
     font-size: 1.08em; }
   .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-title, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info + .box-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 .box-basic .box-content-wrap .box-data {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
 
 .box-basic .box-content-wrap .box-content .box-content-title {
   font-size: 1.58em;
@@ -10271,30 +10290,30 @@ Details: It defines the styles of box components as listed below:
   font-size: 1.08em; }
 
 .box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .box-basic .box-content-wrap .box-content .box-content-info + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .box-basic .box-content-wrap .box-content .box-content-summary + .box-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .box-basic .box-content-wrap .box-content .box-content-data {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
 
 .box-basic .box-content-wrap .box-footer-wrap .box-footer {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title {
     font-size: 1.17em;
     font-family: Verdana, Geneva, sans-serif; }
   .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info {
     font-size: 1.08em; }
   .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-title, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info + .box-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 /**********************************************************************
 Description: It defines the styles of box panels used to display data and forms.
@@ -10736,7 +10755,7 @@ Details: It defines the styles for header components as listed below:
     color: #E6E6E6; }
 
 .block-basic .block-content-wrap .block-header-wrap {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title {
     font-size: 2em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -10745,11 +10764,11 @@ Details: It defines the styles for header components as listed below:
   .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-content {
     font-size: 1.08em; }
   .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-title, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info + .block-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-title {
   font-size: 2em;
@@ -10762,19 +10781,19 @@ Details: It defines the styles for header components as listed below:
   font-size: 1.08em; }
 
 .block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-info + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-summary + .block-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .block-basic .block-content-wrap .block-content .block-content-data {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
 
 .block-basic .block-content-wrap .block-footer-wrap .block-footer {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -10783,11 +10802,11 @@ Details: It defines the styles for header components as listed below:
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
     font-size: 1.08em; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 /**********************************************************************
 Description: It defines the styles of the pagination having links to navigate pages.
@@ -11161,20 +11180,20 @@ page background and even content wrapper background in the form of image or text
     color: #E6E6E6; }
 
 .page-basic .page-content-wrap .page-header-wrap .page-header {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title {
     font-size: 2.67em;
     font-family: Verdana, Geneva, sans-serif; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info {
     font-size: 1.58em; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-content {
-    font-size: 1.08em; }
+    font-size: 1.17em; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-title, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-icon + .page-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-info, .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title + .page-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info + .page-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-title {
   font-size: 2.67em;
@@ -11184,29 +11203,29 @@ page background and even content wrapper background in the form of image or text
   font-size: 1.58em; }
 
 .page-basic .page-content-wrap .page-content .page-content-summary {
-  padding: 1rem 0;
-  font-size: 1.08em; }
+  padding: 0.25rem 0;
+  font-size: 1.17em; }
 
 .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-info + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-summary + .page-content-data {
-  margin-top: 0.5rem; }
+  margin-top: 0.25rem; }
 
 .page-basic .page-content-wrap .page-content .page-content-data {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
 
 .page-basic .page-content-wrap .page-footer-wrap .page-footer {
-  padding: 1rem 0; }
+  padding: 0.25rem 0; }
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title {
     font-size: 1.58em;
     font-family: Verdana, Geneva, sans-serif; }
@@ -11215,10 +11234,10 @@ page background and even content wrapper background in the form of image or text
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-content {
     font-size: 1.08em; }
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-title, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-icon + .page-header-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-info, .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title + .page-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info + .page-footer-content {
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
 
 /*# sourceMappingURL=breeze.css.map */

@@ -135,4 +135,14 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 			}
 		}
 	}
+
+	&.cmt-switch-row-2, &.cmt-switch-row-4, &.cmt-switch-row-5 {
+
+		@include responsive-max( screen-mobile-large ) {
+
+			.cmt-switch {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -1,5 +1,5 @@
 /**********************************************************************
-Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form 
+Description: It defines the styles of box components available in Breeze Framework. The boxes can be used to form
 			 components displayed on search pages, panels having content, form etc.
 
 Dependencies: variables, variables-ext, mixins
@@ -145,24 +145,24 @@ Details: It defines the styles of box components as listed below:
 				.box-footer-content {
 					// Footer Content
 				}
-				
+
 				.box-footer-actions {
 					// Footer Actions
 				}
 			}
 		}
 	}
-	
+
 	&.box-primary {
 		background-color: $color-primary;
 		color: $color-primary-text;
 	}
-	
+
 	&.box-secondary {
 		background-color: $color-secondary;
 		color: $color-secondary-text;
 	}
-	
+
 	&.box-tertiary {
 		background-color: $color-tertiary;
 		color: $color-tertiary-text;
@@ -177,7 +177,7 @@ Details: It defines the styles of box components as listed below:
 	.box-content-wrap {
 
 		.box-header-wrap {
-			padding: 1rem 0;
+			padding: 0.25rem 0;
 
 			.box-header {
 
@@ -195,21 +195,21 @@ Details: It defines the styles of box components as listed below:
 				}
 
 				.box-header-icon + .box-header-title, .box-header-icon + .box-header-info, .box-header-icon + .box-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.box-header-title + .box-header-info, .box-header-title + .box-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.box-header-info + .box-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}
 
 		.box-data {
-			padding: 1rem 0;
+			padding: 0.25rem 0;
 		}
 
 		.box-content {
@@ -228,26 +228,26 @@ Details: It defines the styles of box components as listed below:
 			}
 
 			.box-content-title + .box-content-info, .box-content-title + .box-content-summary, .box-content-title + .box-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.box-content-info + .box-content-summary, .box-content-info + .box-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.box-content-summary + .box-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.box-content-data {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 			}
 		}
 
 		.box-footer-wrap {
 
 			.box-footer {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 
 				.box-footer-title {
 					font-size: $font-size-5;
@@ -259,15 +259,15 @@ Details: It defines the styles of box components as listed below:
 				}
 
 				.box-footer-icon + .box-header-title, .box-footer-icon + .box-header-info, .box-footer-icon + .box-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.box-footer-title + .box-footer-info, .box-footer-title + .box-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.box-footer-info + .box-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}

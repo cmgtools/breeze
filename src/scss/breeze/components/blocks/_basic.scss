@@ -308,7 +308,7 @@ Details: It defines the styles for header components as listed below:
 	.block-content-wrap {
 
 		.block-header-wrap {
-			padding: 1rem 0;
+			padding: 0.25rem 0;
 
 			.block-header {
 
@@ -326,15 +326,15 @@ Details: It defines the styles for header components as listed below:
 				}
 
 				.block-header-icon + .block-header-title, .block-header-icon + .block-header-info, .block-header-icon + .block-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.block-header-title + .block-header-info, .block-header-title + .block-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.block-header-info + .block-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}
@@ -355,26 +355,26 @@ Details: It defines the styles for header components as listed below:
 			}
 
 			.block-content-title + .block-content-info, .block-content-title + .block-content-summary, .block-content-title + .block-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.block-content-info + .block-content-summary, .block-content-info + .block-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.block-content-summary + .block-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.block-content-data {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 			}
 		}
 
 		.block-footer-wrap {
 
 			.block-footer {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 
 				.block-footer-title {
 					font-size: $font-size-4;
@@ -390,15 +390,15 @@ Details: It defines the styles for header components as listed below:
 				}
 
 				.block-footer-icon + .block-footer-title, .block-footer-icon + .block-footer-info, .block-footer-icon + .block-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.block-footer-title + .block-footer-info, .block-footer-title + .block-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				.block-footer-info + .block-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}

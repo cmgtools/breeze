@@ -19,7 +19,7 @@ Basic - The basic header define the styles for primary header having logo and me
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 100000; // modal popups must override this index
+		z-index: 100001; // modal popups must override this index
 	}
 
 	&.header-absolute {
@@ -200,6 +200,7 @@ Basic - The basic header define the styles for primary header having logo and me
 .header-basic-duo {
 
 	.header-logo {
+		@include transit-all( $transit-eio, $transit-time-medium );
 
 		.logo {
 

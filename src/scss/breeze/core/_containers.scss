@@ -825,6 +825,21 @@ also include classes to arrange content within container or parent element.
 	}
 }
 
+.container-max {
+	width: 100%;
+	height: 100%;
+
+	.content-wrap {
+		width: 100%;
+		height: 100%;
+
+		.content {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
 // Instructions to configure full height containers
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.

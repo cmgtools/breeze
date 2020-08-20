@@ -287,7 +287,7 @@ page background and even content wrapper background in the form of image or text
 		.page-header-wrap {
 
 			.page-header {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 
 				.page-header-title {
 					font-size: $font-size-1;
@@ -299,22 +299,22 @@ page background and even content wrapper background in the form of image or text
 				}
 
 				.page-header-content {
-					font-size: $font-size-6;
+					font-size: $font-size-5;
 				}
 
 				// Icon Spacing
 				.page-header-icon + .page-header-title, .page-header-icon + .page-header-info, .page-header-icon + .page-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				// Title Spacing
 				.page-header-title + .page-header-info, .page-header-title + .page-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				// Info Spacing
 				.page-header-info + .page-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}
@@ -331,43 +331,43 @@ page background and even content wrapper background in the form of image or text
 			}
 
 			.page-content-summary {
-				padding: 1rem 0;
-				font-size: $font-size-6;
+				padding: 0.25rem 0;
+				font-size: $font-size-5;
 			}
 
 			// Banner Spacing
 			.page-content-banner + .page-content-title, .page-content-banner + .page-content-info, .page-content-banner + .page-content-summary, .page-content-banner + .page-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			// Video Spacing
 			.page-content-video + .page-content-title, .page-content-video + .page-content-info, .page-content-video + .page-content-summary, .page-content-video + .page-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			// Title Spacing
 			.page-content-title + .page-content-info, .page-content-title + .page-content-summary, .page-content-title + .page-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			// Info Spacing
 			.page-content-info + .page-content-summary, .page-content-info + .page-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.page-content-summary + .page-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.page-content-data {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 			}
 		}
 
 		.page-footer-wrap {
 
 			.page-footer {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 
 				.page-footer-title {
 					font-size: $font-size-3;
@@ -384,17 +384,17 @@ page background and even content wrapper background in the form of image or text
 
 				// Icon Spacing
 				.page-footer-icon + .page-header-title, .page-footer-icon + .page-header-info, .page-footer-icon + .page-header-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				// Title Spacing
 				.page-footer-title + .page-footer-info, .page-footer-title + .page-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 
 				// Info Spacing
 				.page-footer-info + .page-footer-content {
-					margin-top: 0.5rem;
+					margin-top: 0.25rem;
 				}
 			}
 		}
