@@ -142,13 +142,6 @@ of JS and purely css solutions.
 			float: left;
 			width: 25%;
 		}
-
-		@include responsive-max( screen-tablet-large ) {
-
-			label {
-				width: 50%;
-			}
-		}
 	}
 
 	&.cmt-choice-row-5 {
@@ -157,8 +150,21 @@ of JS and purely css solutions.
 			float: left;
 			width: 20%;
 		}
+	}
 
-		@include responsive-max( screen-tablet-large ) {
+	@include responsive-max( screen-mobile-large ) {
+
+		&.cmt-choice-row-4, &.cmt-choice-row-5 {
+
+			label {
+				width: 100%;
+			}
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		&.cmt-choice-row-4, &.cmt-choice-row-5 {
 
 			label {
 				width: 50%;
