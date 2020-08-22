@@ -11014,8 +11014,6 @@ Basic - The basic data grid having default coloring.
 @media only screen and (min-width: 1025px) {
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: flex; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
-    display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data {
     display: flex; }
     .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
@@ -11027,7 +11025,8 @@ Basic - The basic data grid having default coloring.
     display: flex; } }
 
 .grid-data-basic {
-  background-color: lightgray;
+  background-color: #F2F2F2;
+  color: #363636;
   padding: 10px; }
   .grid-data-basic .grid-header-wrap .grid-header {
     background-color: #3C4655;
