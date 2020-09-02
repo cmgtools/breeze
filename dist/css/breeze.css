@@ -2103,6 +2103,22 @@ Zoom - The zoom animation use the scale property to zoom in and zoom out an elem
   -webkit-animation: zoom-out 2s infinite linear;
   animation: zoom-out 2s infinite linear; }
 
+@keyframes zoominout-rotate {
+  0% {
+    transform: rotate(0deg) scale(1, 1); }
+  50% {
+    transform: rotate(10deg) scale(1.5, 1.5); }
+  100% {
+    transform: rotate(0deg) scale(1, 1); } }
+
+@keyframes zoominout {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }
+
 /**********************************************************************
 Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com),
 HTML5 Doctor(http://html5doctor.com) and HTML5 Boilerplate aims to make a
@@ -4562,10 +4578,7 @@ also include classes to arrange content within container or parent element.
     width: 48%; }
   .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both; }
-  .max-cols-100 .colc:first-child {
-    margin-left: 1%;
-    margin-right: 1%; }
-  .max-cols-100 .colc:last-child {
+  .max-cols-100 .colc:first-child, .max-cols-100 .colc:last-child, .max-cols-100 .colc.colc1 {
     margin-left: 1%;
     margin-right: 1%; }
   .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
