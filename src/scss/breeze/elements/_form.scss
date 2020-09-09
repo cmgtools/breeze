@@ -510,6 +510,13 @@ height from form elements.*/
 	}
 }
 
+@include responsive-min ( screen-mobile-large ) {
+
+	.frm-split-40-60 .help-block {
+		padding-left: 40%;
+	}
+}
+
 // == Forms =========================
 
 .form {
