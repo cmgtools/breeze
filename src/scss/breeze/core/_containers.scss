@@ -629,7 +629,7 @@ also include classes to arrange content within container or parent element.
 	}
 }
 
-// Responsive Columns full width on mobile only
+// Responsive Columns - Full width on mobile only
 @include responsive-max( screen-mobile-large ) {
 
 	.max-cols-100m {

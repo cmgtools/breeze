@@ -9,22 +9,20 @@ Details: It defines the custom element styles as listed below:
 
 Choice - The choice allows user to select single or multiple options from available
 options. It include radio and checkbox html components and change their default behaviour
-by showing good looking icons instead of browser dependentent graphics. These are indepedent
-of JS and purely css solutions.
+by showing breeze icons instead of browser icons.
 ***********************************************************************/
 
 // == Choice ========================
 
-// Choices using radio or checkbox
+// Choices using radio or checkbox and breeze icons
 
-.cmt-choice {
+.choice {
 
 	span, a {
 		vertical-align: baseline;
 	}
 
-	input[type=checkbox],
-	input[type=radio] {
+	input[type=checkbox], input[type=radio] {
 		cursor: pointer;
 		display: none;
 	}
@@ -45,8 +43,8 @@ of JS and purely css solutions.
 		margin-right: 8px;
 	}
 
-	input[type=checkbox]+.label::before,
-	input[type=radio]+.label::before {
+	input[type=checkbox] + .label::before,
+	input[type=radio] + .label::before {
 		font-family: "cmti-core";
 		font-weight: normal;
 		color: gray;
@@ -61,7 +59,7 @@ of JS and purely css solutions.
 
 	input[type=checkbox]:checked, input[type=checkbox]:focus,
 	input[type=radio]:checked, input[type=radio]:focus {
-		outline:none !important;
+		outline: none !important;
 	}
 
 	input[type=checkbox]:checked + .label::before,
@@ -94,59 +92,82 @@ of JS and purely css solutions.
 	// Display Content - Icon
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		//content: "\e0a2";
 		content: "\e90e";
 	}
 
 	input[type=radio]:checked + .label::before {
-		//content: "\e0a3";
 		content: "\e90f";
 	}
 
 	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
-		//content: "\3b";
 		content: "\e84d";
 	}
 
 	input[type=checkbox]:checked + .label::before {
-		//content: "\3a";
 		content: "\e84f";
+	}
+}
+
+// == Label Choices =================
+
+// Custom Choices without the radio or checkbox icon.
+
+.choice-label {
+	text-align: center;
+
+	input[type=checkbox], input[type=radio] {
+		display: none;
+	}
+
+	input[type=checkbox] + label, input[type=radio] + label {
+		display: inline-block;
+		background-color: $color-btn;
+		text: $color-btn-text;
+
+		&:hover {
+			background-color: $color-btn-h;
+			text: $color-btn-text-h;
+		}
 	}
 }
 
 // == Choices - arrangements ========
 
-.cmt-choice {
+.choice-layout {
 	@extend %clearfix;
 
-	&.cmt-choice-inline {
+	.choice-wrap {
+		margin-bottom: 1em;
+	}
 
-		label {
+	&.choice-layout-inline {
+
+		.choice label {
 			display: inline-block;
 			margin-right: 1em;
 			width: auto;
 		}
 	}
 
-	&.cmt-choice-row-2 {
+	&.choice-layout-row-2 {
 
-		label {
+		.choice label {
 			float: left;
 			width: 50%;
 		}
 	}
 
-	&.cmt-choice-row-4 {
+	&.choice-layout-row-4 {
 
-		label {
+		.choice label {
 			float: left;
 			width: 25%;
 		}
 	}
 
-	&.cmt-choice-row-5 {
+	&.choice-layout-row-5 {
 
-		label {
+		.choice label {
 			float: left;
 			width: 20%;
 		}
@@ -154,9 +175,9 @@ of JS and purely css solutions.
 
 	@include responsive-max( screen-mobile-large ) {
 
-		&.cmt-choice-row-4, &.cmt-choice-row-5 {
+		&.choice-layout-row-4, &.choice-layout-row-5 {
 
-			label {
+			.choice label {
 				width: 100%;
 			}
 		}
@@ -164,9 +185,9 @@ of JS and purely css solutions.
 
 	@include responsive-max( screen-tablet-large ) {
 
-		&.cmt-choice-row-4, &.cmt-choice-row-5 {
+		&.choice-layout-row-4, &.choice-layout-row-5 {
 
-			label {
+			.choice label {
 				width: 50%;
 			}
 		}

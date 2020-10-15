@@ -18,7 +18,7 @@ CMT Select Native - It works without cmtSelect plugin.
 
 // == Select ========================
 
-.cmt-select-wrap {
+.select-wrap {
 	width: 100%;
 	display: inline-block;
 	margin: 0;
@@ -28,11 +28,11 @@ CMT Select Native - It works without cmtSelect plugin.
 		display: none;
 	}
 
-	.cmt-select {
+	.select {
 		position: relative;
 
 		// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
-		.cmt-selected {
+		.selected {
 			cursor: pointer;
 			position: relative;
 			z-index: 99999;
@@ -50,6 +50,7 @@ CMT Select Native - It works without cmtSelect plugin.
 				text-align: left;
 				color: $color-field-text;
 				vertical-align: middle;
+				padding-right: 1em;
 			}
 
 			// icon for select box
@@ -68,7 +69,7 @@ CMT Select Native - It works without cmtSelect plugin.
 		}
 
 		// Select options
-		.cmt-select-list {
+		.select-list {
 			position: absolute;
 			width: 100%;
 			background-color: $color-field;
@@ -93,12 +94,12 @@ CMT Select Native - It works without cmtSelect plugin.
 	}
 }
 
-.cmt-multiselect {
+.multiselect {
 	position: relative;
 	margin: 0;
 
 	// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
-	.cmt-selected {
+	.selected {
 		cursor: pointer;
 		position: relative;
 		z-index: 100000;
@@ -117,6 +118,7 @@ CMT Select Native - It works without cmtSelect plugin.
 			text-align: left;
 			color: $color-field-text;
 			font-size: 1em;
+			padding-right: 1em;
 		}
 
 		// icon for select box
@@ -135,7 +137,7 @@ CMT Select Native - It works without cmtSelect plugin.
 	}
 
 	// Select options
-	.cmt-select-list {
+	.select-list {
 		position: absolute;
 		width: 100%;
 		background-color: $color-field;
@@ -160,7 +162,7 @@ CMT Select Native - It works without cmtSelect plugin.
 	}
 }
 
-.cmt-select-native {
+.select-native {
 	position: relative;
 	display: inline-block;
 	width: 100%;

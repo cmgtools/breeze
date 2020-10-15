@@ -327,13 +327,13 @@ order to place group at appropriate postion.
 		}
 	}
 
-	&.btn-border-black {
-		color: $color-black !important;
-		@include shadow-inset( 0, 0, 0, $color-black, 1px );
+	&.btn-border-white {
+		color: $color-white !important;
+		@include shadow-inset( 0, 0, 0, $color-white, 1px );
 
 		&:hover {
-			color: $color-white !important;
-			background-color: $color-black !important;
+			color: $color-black !important;
+			background-color: $color-white !important;
 		}
 	}
 
@@ -536,11 +536,12 @@ a, .link {
 	right: 0.25em;
 	width: 1.5em;
 	height: 1.5em;
-	line-height: 1.2em;
+	line-height: 1.4em;
 	display: inline-block;
 	cursor: pointer;
 	@include circled1( $color-tertiary, $color-tertiary-text );
 	@include transit-bkg-color( $transit-eio, $transit-time-medium );
+	padding: 0 !important;
 
 	.icon {
 		font-size: 1em;
@@ -554,7 +555,7 @@ a, .link {
 	&.btn-icon-o-small {
 		width: 2em;
 		height: 2em;
-		line-height: 1.6em;
+		line-height: 1.8em;
 
 		.icon {
 			font-size: 1.5em;

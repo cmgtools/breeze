@@ -190,7 +190,7 @@ Background Fixed : The background will be filled 100% with fixed image and allow
 Background Element : The element will adjust itself to allow img tag to fill it completely. The element
 must be child of parent having fixed height.
 
-Textures - Textures are special tiles having a pattern occupying few pixels. These will give special effects
+Texture - Texture is tile arrangement having a pattern occupying few pixels. These will give special effects
 to underlying content and images.
 
 Blur - Blus is another mixin adding lens effect to blur underlying content and images.
@@ -198,14 +198,14 @@ Blur - Blus is another mixin adding lens effect to blur underlying content and i
 Media Queries - These mixins are pre-defined media queries using the screen sizes declared in variables file.
 This section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .cmt-choice, .cmt-switch-wrap, .frm-split-40-60 .form-group, .mapper, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .choice-layout, .switch-layout, .frm-split-40-60 .form-group, .mapper, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .cmt-choice:before, .cmt-switch-wrap:before, .frm-split-40-60 .form-group:before, .mapper:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .cmt-choice:after, .cmt-switch-wrap:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .choice-layout:before, .switch-layout:before, .frm-split-40-60 .form-group:before, .mapper:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .cmt-choice:after, .cmt-switch-wrap:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -2534,6 +2534,24 @@ html, body {
   float: none !important;
   margin: 0 auto; }
 
+@media only screen and (min-width: 1025px) {
+  .clear-desktop.clear-left {
+    clear: left !important; }
+  .clear-desktop.clear-right {
+    clear: right !important; } }
+
+@media only screen and (max-width: 1024px) {
+  .clear-tablet.clear-left {
+    clear: left !important; }
+  .clear-tablet.clear-right {
+    clear: right !important; } }
+
+@media only screen and (max-width: 480px) {
+  .clear-mobile.clear-left {
+    clear: left !important; }
+  .clear-mobile.clear-right {
+    clear: right !important; } }
+
 /**
  * Pre-defined width and height, handy at few places.
  */
@@ -2812,7 +2830,7 @@ html, body {
 .hidden-space {
   visibility: hidden !important; }
 
-.pointer, .cmt-click {
+.pointer, .click {
   cursor: pointer; }
 
 .pointer-none {
@@ -2896,7 +2914,7 @@ Coloring - It is one of the most important factor while designing website follow
 CMGTools have taken extra care in this area and tried to manage colors by dividing them into 3 major
 variations forming a standard color palette. The primary color is dominating for the entire design and
 secondary is contrary to primary to be used for components. The tertiary color can also be used apart
-from secondary for highlighting purpose.
+from secondary for highlighting purposes.
 */
 .color {
   /**
@@ -2997,13 +3015,13 @@ from secondary for highlighting purpose.
     color: #FFFFFF !important; }
   .color.color-yellow {
     background-color: #FFDC00 !important;
-    color: #FFFFFF !important; }
+    color: #8B4513 !important; }
   .color.color-yellow-l {
     background-color: #FFE544 !important;
-    color: #FFFFFF !important; }
+    color: #8B4513 !important; }
   .color.color-yellow-d {
     background-color: #DDBF00 !important;
-    color: #FFFFFF !important; }
+    color: #8B4513 !important; }
   .color.color-red {
     background-color: #FF4136 !important;
     color: #FFFFFF !important; }
@@ -3057,7 +3075,7 @@ from secondary for highlighting purpose.
     color: #FFFFFF !important; }
   .color.color-silver {
     background-color: #E7E8E7 !important;
-    color: #FFFFFF !important; }
+    color: #8B4513 !important; }
   .color.color-maroon {
     background-color: #542628 !important;
     color: #FFFFFF !important; }
@@ -3302,6 +3320,51 @@ from secondary for highlighting purpose.
 .bkg.bkg-navy {
   background-color: #003653 !important; }
 
+.bkg-transparent.bkg-transparent-primary {
+  background-color: rgba(242, 242, 242, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-primary-l {
+  background-color: rgba(242, 242, 242, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-primary-h {
+  background-color: rgba(242, 242, 242, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-secondary {
+  background-color: rgba(60, 70, 85, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-secondary-l {
+  background-color: rgba(60, 70, 85, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-secondary-h {
+  background-color: rgba(60, 70, 85, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-tertiary {
+  background-color: rgba(135, 186, 69, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-tertiary-l {
+  background-color: rgba(135, 186, 69, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-tertiary-h {
+  background-color: rgba(135, 186, 69, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-white {
+  background-color: rgba(255, 255, 255, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-white-l {
+  background-color: rgba(255, 255, 255, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-white-h {
+  background-color: rgba(255, 255, 255, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-gray {
+  background-color: rgba(127, 127, 127, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-gray-l {
+  background-color: rgba(127, 127, 127, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-gray-h {
+  background-color: rgba(127, 127, 127, 0.8) !important; }
+
 .bkg-transparent.bkg-transparent-black {
   background-color: rgba(0, 0, 0, 0.6) !important; }
 
@@ -3311,65 +3374,209 @@ from secondary for highlighting purpose.
 .bkg-transparent.bkg-transparent-black-h {
   background-color: rgba(0, 0, 0, 0.8) !important; }
 
+.bkg-transparent.bkg-transparent-blue {
+  background-color: rgba(0, 116, 217, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-blue-l {
+  background-color: rgba(0, 116, 217, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-blue-h {
+  background-color: rgba(0, 116, 217, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-purple {
+  background-color: rgba(137, 70, 196, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-purple-l {
+  background-color: rgba(137, 70, 196, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-purple-h {
+  background-color: rgba(137, 70, 196, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-orange {
+  background-color: rgba(255, 133, 27, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-orange-l {
+  background-color: rgba(255, 133, 27, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-orange-h {
+  background-color: rgba(255, 133, 27, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-yellow {
+  background-color: rgba(255, 220, 0, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-yellow-l {
+  background-color: rgba(255, 220, 0, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-yellow-h {
+  background-color: rgba(255, 220, 0, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-red {
+  background-color: rgba(255, 65, 54, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-red-l {
+  background-color: rgba(255, 65, 54, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-red-h {
+  background-color: rgba(255, 65, 54, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-pink {
+  background-color: rgba(228, 40, 124, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-pink-l {
+  background-color: rgba(228, 40, 124, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-pink-h {
+  background-color: rgba(228, 40, 124, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-magenta {
+  background-color: rgba(178, 0, 178, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-magenta-l {
+  background-color: rgba(178, 0, 178, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-magenta-h {
+  background-color: rgba(178, 0, 178, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-green {
+  background-color: rgba(124, 170, 45, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-green-l {
+  background-color: rgba(124, 170, 45, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-green-h {
+  background-color: rgba(124, 170, 45, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-brown {
+  background-color: rgba(139, 69, 19, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-brown-l {
+  background-color: rgba(139, 69, 19, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-brown-h {
+  background-color: rgba(139, 69, 19, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-aqua {
+  background-color: rgba(138, 226, 227, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-aqua-l {
+  background-color: rgba(138, 226, 227, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-aqua-h {
+  background-color: rgba(138, 226, 227, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-golden {
+  background-color: rgba(233, 192, 17, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-golden-l {
+  background-color: rgba(233, 192, 17, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-golden-h {
+  background-color: rgba(233, 192, 17, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-silver {
+  background-color: rgba(231, 232, 231, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-silver-l {
+  background-color: rgba(231, 232, 231, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-silver-h {
+  background-color: rgba(231, 232, 231, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-maroon {
+  background-color: rgba(84, 38, 40, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-maroon-l {
+  background-color: rgba(84, 38, 40, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-maroon-h {
+  background-color: rgba(84, 38, 40, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-olive {
+  background-color: rgba(163, 165, 76, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-olive-l {
+  background-color: rgba(163, 165, 76, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-olive-h {
+  background-color: rgba(163, 165, 76, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-lime {
+  background-color: rgba(211, 242, 53, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-lime-l {
+  background-color: rgba(211, 242, 53, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-lime-h {
+  background-color: rgba(211, 242, 53, 0.8) !important; }
+
+.bkg-transparent.bkg-transparent-navy {
+  background-color: rgba(0, 54, 83, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-navy-l {
+  background-color: rgba(0, 54, 83, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-navy-h {
+  background-color: rgba(0, 54, 83, 0.8) !important; }
+
 .text.text-primary {
+  color: #F2F2F2 !important; }
+
+.text.text-primary-text {
   color: #363636 !important; }
 
 .text.text-primary-l {
+  color: white !important; }
+
+.text.text-primary-text-l {
   color: #171717 !important; }
 
 .text.text-primary-d {
+  color: lightgray !important; }
+
+.text.text-primary-text-d {
   color: #555555 !important; }
 
 .text.text-secondary {
+  color: #3C4655 !important; }
+
+.text.text-secondary-text {
   color: #96B0D6 !important; }
 
 .text.text-secondary-l {
+  color: #556479 !important; }
+
+.text.text-secondary-text-l {
   color: #6a8fc5 !important; }
 
 .text.text-secondary-d {
+  color: #232831 !important; }
+
+.text.text-secondary-text-d {
   color: #c2d1e7 !important; }
 
 .text.text-tertiary {
+  color: #87BA45 !important; }
+
+.text.text-tertiary-text {
   color: #E6E6E6 !important; }
 
 .text.text-tertiary-l {
+  color: #a4cb72 !important; }
+
+.text.text-tertiary-text-l {
   color: #678d34 !important; }
 
 .text.text-tertiary-d {
-  color: #c1db9e !important; }
-
-.text.text-primary-b {
-  color: #F2F2F2 !important; }
-
-.text.text-primary-b-l {
-  color: white !important; }
-
-.text.text-primary-b-d {
-  color: lightgray !important; }
-
-.text.text-secondary-b {
-  color: #3C4655 !important; }
-
-.text.text-secondary-b-l {
-  color: #556479 !important; }
-
-.text.text-secondary-b-d {
-  color: #232831 !important; }
-
-.text.text-tertiary-b {
-  color: #87BA45 !important; }
-
-.text.text-tertiary-b-l {
-  color: #a4cb72 !important; }
-
-.text.text-tertiary-b-d {
   color: #678d34 !important; }
+
+.text.text-tertiary-text-d {
+  color: #c1db9e !important; }
 
 .text.text-link {
   color: #298ccf !important; }
 
-.text.text-black {
-  color: #000000 !important; }
+.text.text-white {
+  color: #FFFFFF !important; }
 
 .text.text-gray {
   color: #7F7F7F !important; }
@@ -3380,8 +3587,8 @@ from secondary for highlighting purpose.
 .text.text-gray-d {
   color: #595959 !important; }
 
-.text.text-white {
-  color: #FFFFFF !important; }
+.text.text-black {
+  color: #000000 !important; }
 
 .text.text-blue {
   color: #0074D9 !important; }
@@ -4003,10 +4210,10 @@ p, span, em, div, a {
     margin-left: 2em; }
   .reader p {
     min-height: 1em; }
-  .reader .wrap-editor-image {
+  .reader .image-wrap {
     margin: 1em 0;
     text-align: center; }
-    .reader .wrap-editor-image .image-caption {
+    .reader .image-wrap .image-caption {
       text-align: center;
       margin: 0.5em 0; }
 
@@ -5946,6 +6153,22 @@ also include classes to arrange content within container or parent element.
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear; }
 
+@keyframes zoominout-rotate {
+  0% {
+    transform: rotate(0deg) scale(1, 1); }
+  50% {
+    transform: rotate(10deg) scale(1.5, 1.5); }
+  100% {
+    transform: rotate(0deg) scale(1, 1); } }
+
+@keyframes zoominout {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }
+
 @-moz-keyframes width {
   from {
     width: 0; } }
@@ -6211,57 +6434,57 @@ Details: It defines the custom element styles as listed below:
 Time picker - The time picker element allows users to choose time. It depends on
 cmtTimePicker jQuery plugin available in Velocity JS Framework.
 ***********************************************************************/
-.cmt-timepicker {
+.timepicker {
   position: absolute;
   display: none; }
-  .cmt-timepicker .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+  .timepicker .timepicker-content .timepicker-hr-wrap .timepicker-hr {
     text-align: center; }
-  .cmt-timepicker .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+  .timepicker .timepicker-content .timepicker-min-wrap .timepicker-min {
     text-align: center; }
 
-.cmt-timepicker-basic {
+.timepicker-basic {
   background: #3C4655;
   color: #96B0D6;
   border: 1px solid #595959; }
-  .cmt-timepicker-basic .cmt-timepicker-header {
+  .timepicker-basic .timepicker-header {
     border-bottom: 1px solid #595959; }
-    .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm {
+    .timepicker-basic .timepicker-header .timepicker-apm {
       padding: 0.5em; }
-      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-am {
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-am {
         cursor: pointer;
         border-right: 1px solid #7F7F7F; }
-      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-pm {
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-pm {
         cursor: pointer; }
-      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-mm {
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-mm {
         border-left: 1px solid #595959; }
-      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.active {
+      .timepicker-basic .timepicker-header .timepicker-apm.active {
         background: #556479;
         color: #6a8fc5; }
-  .cmt-timepicker-basic .cmt-timepicker-content {
+  .timepicker-basic .timepicker-content {
     border-bottom: 1px solid #595959; }
-    .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+    .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr {
       padding: 0.5em;
       border-left: 1px solid #7F7F7F;
       border-bottom: 1px solid #7F7F7F;
       cursor: pointer; }
-      .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr.active {
+      .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr.active {
         background: #556479;
         color: #6a8fc5; }
-    .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap {
+    .timepicker-basic .timepicker-content .timepicker-min-wrap {
       border-left: 1px solid #595959; }
-      .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+      .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min {
         padding: 0.5em;
         border-left: 1px solid #7F7F7F;
         border-bottom: 1px solid #7F7F7F;
         cursor: pointer; }
-        .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min.active {
+        .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min.active {
           background: #556479;
           color: #6a8fc5; }
-  .cmt-timepicker-basic .cmt-timepicker-footer {
+  .timepicker-basic .timepicker-footer {
     padding: 0.25em; }
-    .cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-ok {
+    .timepicker-basic .timepicker-footer .timepicker-ok {
       margin-left: 0.25em; }
-    .cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-close {
+    .timepicker-basic .timepicker-footer .timepicker-close {
       margin-left: 0.25em; }
 
 /**********************************************************************
@@ -6312,15 +6535,15 @@ CMT Multiselect -
 
 CMT Select Native - It works without cmtSelect plugin.
 ***********************************************************************/
-.cmt-select-wrap {
+.select-wrap {
   width: 100%;
   display: inline-block;
   margin: 0; }
-  .cmt-select-wrap select {
+  .select-wrap select {
     display: none; }
-  .cmt-select-wrap .cmt-select {
+  .select-wrap .select {
     position: relative; }
-    .cmt-select-wrap .cmt-select .cmt-selected {
+    .select-wrap .select .selected {
       cursor: pointer;
       position: relative;
       z-index: 99999;
@@ -6330,23 +6553,24 @@ CMT Select Native - It works without cmtSelect plugin.
       -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
       -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
       box-shadow: inset 0 0 0 1px #F2F2F2; }
-      .cmt-select-wrap .cmt-select .cmt-selected .s-text {
+      .select-wrap .select .selected .s-text {
         display: inline-block;
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
         text-align: left;
         color: #363636;
-        vertical-align: middle; }
-      .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+        vertical-align: middle;
+        padding-right: 1em; }
+      .select-wrap .select .selected .s-icon {
         position: absolute;
         top: 0;
         right: 0;
         display: inline-block;
         padding: 0.3em 0.5em; }
-      .cmt-select-wrap .cmt-select .cmt-selected.disabled {
+      .select-wrap .select .selected.disabled {
         cursor: default; }
-    .cmt-select-wrap .cmt-select .cmt-select-list {
+    .select-wrap .select .select-list {
       position: absolute;
       width: 100%;
       background-color: #F2F2F2;
@@ -6356,20 +6580,20 @@ CMT Select Native - It works without cmtSelect plugin.
       -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
       -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
       box-shadow: inset 0 0 0 1px #F2F2F2; }
-      .cmt-select-wrap .cmt-select .cmt-select-list li {
+      .select-wrap .select .select-list li {
         width: 100%;
         overflow: hidden;
         cursor: pointer;
         background-color: #F2F2F2;
         padding: 0.25em; }
-      .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
+      .select-wrap .select .select-list li:hover {
         color: #FFFFFF;
         background-color: #E74343; }
 
-.cmt-multiselect {
+.multiselect {
   position: relative;
   margin: 0; }
-  .cmt-multiselect .cmt-selected {
+  .multiselect .selected {
     cursor: pointer;
     position: relative;
     z-index: 100000;
@@ -6380,23 +6604,24 @@ CMT Select Native - It works without cmtSelect plugin.
     -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
     -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
     box-shadow: inset 0 0 0 1px #F2F2F2; }
-    .cmt-multiselect .cmt-selected .s-text {
+    .multiselect .selected .s-text {
       display: inline-block;
       width: 100%;
       overflow: hidden;
       white-space: nowrap;
       text-align: left;
       color: #363636;
-      font-size: 1em; }
-    .cmt-multiselect .cmt-selected .s-icon {
+      font-size: 1em;
+      padding-right: 1em; }
+    .multiselect .selected .s-icon {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block;
       padding: 0 0.5em; }
-    .cmt-multiselect .cmt-selected.disabled {
+    .multiselect .selected.disabled {
       cursor: default; }
-  .cmt-multiselect .cmt-select-list {
+  .multiselect .select-list {
     position: absolute;
     width: 100%;
     background-color: #F2F2F2;
@@ -6407,21 +6632,21 @@ CMT Select Native - It works without cmtSelect plugin.
     -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
     -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
     box-shadow: inset 0 0 0 1px #F2F2F2; }
-    .cmt-multiselect .cmt-select-list li {
+    .multiselect .select-list li {
       width: 100%;
       overflow: hidden;
       cursor: pointer;
       background-color: #FFFFFF;
       padding: 0.25em; }
-    .cmt-multiselect .cmt-select-list li:hover {
+    .multiselect .select-list li:hover {
       color: #FFFFFF;
       background-color: #E74343; }
 
-.cmt-select-native {
+.select-native {
   position: relative;
   display: inline-block;
   width: 100%; }
-  .cmt-select-native select {
+  .select-native select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -6429,12 +6654,12 @@ CMT Select Native - It works without cmtSelect plugin.
     cursor: pointer;
     padding-right: 1.8em;
     text-shadow: 0 0 0 #000; }
-  .cmt-select-native select:-moz-focusring {
+  .select-native select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000; }
-  .cmt-select-native select::-ms-expand {
+  .select-native select::-ms-expand {
     display: none; }
-  .cmt-select-native .icon, .cmt-select-native .cmti, .cmt-select-native .fa {
+  .select-native .icon, .select-native .cmti, .select-native .fa {
     position: absolute;
     right: 0;
     border: none;
@@ -6457,27 +6682,25 @@ Details: It defines the custom element styles as listed below:
 
 Choice - The choice allows user to select single or multiple options from available
 options. It include radio and checkbox html components and change their default behaviour
-by showing good looking icons instead of browser dependentent graphics. These are indepedent
-of JS and purely css solutions.
+by showing breeze icons instead of browser icons.
 ***********************************************************************/
-.cmt-choice span, .cmt-choice a {
+.choice span, .choice a {
   vertical-align: baseline; }
 
-.cmt-choice input[type=checkbox],
-.cmt-choice input[type=radio] {
+.choice input[type=checkbox], .choice input[type=radio] {
   cursor: pointer;
   display: none; }
 
-.cmt-choice label {
+.choice label {
   cursor: pointer;
   padding: 0; }
 
-.cmt-choice input[type=checkbox] + .label.pad-label::before,
-.cmt-choice input[type=radio] + .label.pad-label::before {
+.choice input[type=checkbox] + .label.pad-label::before,
+.choice input[type=radio] + .label.pad-label::before {
   margin-right: 8px; }
 
-.cmt-choice input[type=checkbox] + .label::before,
-.cmt-choice input[type=radio] + .label::before {
+.choice input[type=checkbox] + .label::before,
+.choice input[type=radio] + .label::before {
   font-family: "cmti-core";
   font-weight: normal;
   color: gray;
@@ -6487,64 +6710,79 @@ of JS and purely css solutions.
   margin-top: -5px;
   line-height: 13px; }
 
-.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=checkbox]:focus,
-.cmt-choice input[type=radio]:checked, .cmt-choice input[type=radio]:focus {
+.choice input[type=checkbox]:checked, .choice input[type=checkbox]:focus,
+.choice input[type=radio]:checked, .choice input[type=radio]:focus {
   outline: none !important; }
 
-.cmt-choice input[type=checkbox]:checked + .label::before,
-.cmt-choice input[type=radio]:checked + .label::before {
+.choice input[type=checkbox]:checked + .label::before,
+.choice input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
   color: #E74343; }
 
-.cmt-choice input[type=checkbox]:checked + .label,
-.cmt-choice input[type=radio]:checked + .label {
+.choice input[type=checkbox]:checked + .label,
+.choice input[type=radio]:checked + .label {
   color: #b51717; }
 
-.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=checkbox]:checked + .label::before,
-.cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-choice input[type=radio]:checked + .label::before {
+.choice input[type=checkbox]:hover + .label::before, .choice input[type=checkbox] + .label:hover::before, .choice input[type=checkbox]:checked + .label::before,
+.choice input[type=radio]:hover + .label::before, .choice input[type=radio] + .label:hover::before, .choice input[type=radio]:checked + .label::before {
   color: #FF3636; }
 
-.cmt-choice input[type=checkbox]:disabled + .label::before,
-.cmt-choice input[type=radio]:disabled + .label::before {
+.choice input[type=checkbox]:disabled + .label::before,
+.choice input[type=radio]:disabled + .label::before {
   background-color: #DDD !important;
   color: #BBB; }
 
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.choice input[type=radio] + .label::before, .choice input[type=radio]:disabled + .label::before {
   content: "\e90e"; }
 
-.cmt-choice input[type=radio]:checked + .label::before {
+.choice input[type=radio]:checked + .label::before {
   content: "\e90f"; }
 
-.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
+.choice input[type=checkbox] + .label::before, .choice input[type=checkbox]:disabled + .label::before {
   content: "\e84d"; }
 
-.cmt-choice input[type=checkbox]:checked + .label::before {
+.choice input[type=checkbox]:checked + .label::before {
   content: "\e84f"; }
 
-.cmt-choice.cmt-choice-inline label {
+.choice-label {
+  text-align: center; }
+  .choice-label input[type=checkbox], .choice-label input[type=radio] {
+    display: none; }
+  .choice-label input[type=checkbox] + label, .choice-label input[type=radio] + label {
+    display: inline-block;
+    background-color: #E74343;
+    text: #FFFFFF; }
+    .choice-label input[type=checkbox] + label:hover, .choice-label input[type=radio] + label:hover {
+      background-color: #FF3636;
+      text: #FFFFFF; }
+
+.choice-layout .choice-wrap {
+  margin-bottom: 1em; }
+
+.choice-layout.choice-layout-inline .choice label {
   display: inline-block;
   margin-right: 1em;
   width: auto; }
 
-.cmt-choice.cmt-choice-row-2 label {
+.choice-layout.choice-layout-row-2 .choice label {
   float: left;
   width: 50%; }
 
-.cmt-choice.cmt-choice-row-4 label {
+.choice-layout.choice-layout-row-4 .choice label {
   float: left;
   width: 25%; }
 
-.cmt-choice.cmt-choice-row-5 label {
+.choice-layout.choice-layout-row-5 .choice label {
   float: left;
   width: 20%; }
 
 @media only screen and (max-width: 480px) {
-  .cmt-choice.cmt-choice-row-4 label, .cmt-choice.cmt-choice-row-5 label {
+  .choice-layout.choice-layout-row-4 .choice label, .choice-layout.choice-layout-row-5 .choice label {
     width: 100%; } }
 
 @media only screen and (max-width: 1024px) {
-  .cmt-choice.cmt-choice-row-4 label, .cmt-choice.cmt-choice-row-5 label {
+  .choice-layout.choice-layout-row-4 .choice label, .choice-layout.choice-layout-row-5 .choice label {
     width: 50%; } }
 
 /**********************************************************************
@@ -6558,29 +6796,29 @@ Details: It defines the custom element styles as listed below:
 
 Rating - The rating element can be used to provide ratings.
 ***********************************************************************/
-.cmt-rating {
+.rating {
   text-align: left; }
-  .cmt-rating .wrap-stars .star {
+  .rating .stars-wrap .star {
     display: inline-block;
     padding: 0.30em;
     margin-bottom: 0.75rem;
     cursor: pointer; }
-  .cmt-rating .wrap-messages .star-message {
+  .rating .message-wrap .star-message {
     display: none;
     padding: 0.30em;
     margin-bottom: 0.75rem; }
-    .cmt-rating .wrap-messages .star-message.selected {
+    .rating .message-wrap .star-message.selected {
       display: inline-block; }
-  .cmt-rating.read-only .wrap-stars .star {
+  .rating.read-only .stars-wrap .star {
     cursor: default; }
 
-.cmt-rating-native {
+.rating-native {
   text-align: left; }
-  .cmt-rating-native input[type=checkbox] + .label.label-rating::before, .cmt-rating-native input[type=radio] + .label.label-rating::before {
+  .rating-native input[type=checkbox] + .label.label-rating::before, .rating-native input[type=radio] + .label.label-rating::before {
     margin-right: 8px; }
-  .cmt-rating-native input[type=radio] + .label::before, .cmt-rating-native input[type=radio]:disabled + .label::before {
+  .rating-native input[type=radio] + .label::before, .rating-native input[type=radio]:disabled + .label::before {
     content: "\e946"; }
-  .cmt-rating-native input[type=radio]:checked + .label::before {
+  .rating-native input[type=radio]:checked + .label::before {
     content: "\e944"; }
 
 /**********************************************************************
@@ -6594,91 +6832,98 @@ Details: It defines the custom element styles as listed below:
 
 Switch - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
 ***********************************************************************/
-.cmt-switch {
+.switch {
   position: relative;
   display: inline-block; }
-  .cmt-switch label, .cmt-switch .label {
+  .switch label, .switch .label {
     vertical-align: middle; }
-  .cmt-switch label {
+  .switch label {
     margin-right: 1em; }
-  .cmt-switch .cmt-toggle {
+  .switch .switch-toggle {
     position: absolute;
     margin-left: -9999px;
     visibility: hidden; }
-  .cmt-switch .cmt-toggle + label {
+  .switch .switch-toggle + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
     outline: none;
     user-select: none; }
-  .cmt-switch .cmt-toggle-round + label {
-    width: 5em !important;
-    height: 1.5em;
+  .switch .switch-toggle-round + label {
+    width: 60px !important;
+    border-radius: 30px;
+    height: 30px;
     padding: 0.5em;
-    background-color: lightgray;
-    border-radius: 0.5em; }
-  .cmt-switch .cmt-toggle-round + label:before,
-  .cmt-switch .cmt-toggle-round + label:after {
+    background: transparent;
+    -webkit-box-shadow: inset 0 0 0 1px #7F7F7F;
+    -moz-box-shadow: inset 0 0 0 1px #7F7F7F;
+    box-shadow: inset 0 0 0 1px #7F7F7F; }
+  .switch .switch-toggle-round + label:before,
+  .switch .switch-toggle-round + label:after {
     display: inline-block;
     position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
     content: ""; }
-  .cmt-switch .cmt-toggle-round + label:before {
+  .switch .switch-toggle-round + label:before {
     right: 1px;
-    background-color: #FFFFFF;
-    border-radius: 0.5em;
+    border-radius: 30px;
+    width: 52px;
+    background: transparent;
     -moz-transition: background-color 420ms ease-in-out 0s;
     -ms-transition: background-color 420ms ease-in-out 0s;
     -o-transition: background-color 420ms ease-in-out 0s;
     -webkit-transition: background-color 420ms ease-in-out 0s;
     transition: background-color 420ms ease-in-out 0s; }
-  .cmt-switch .cmt-toggle-round + label:after {
-    width: 1.5em;
-    background-color: #0074D9;
-    border-radius: 0.5em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  .switch .switch-toggle-round + label:after {
+    width: 22px;
+    height: 22px;
+    background-color: #7F7F7F;
+    border-radius: 11px;
+    opacity: 0.6;
     -webkit-transition: margin 420ms ease-out 0s;
     -moz-transition: margin 420ms ease-out 0s;
     -ms-transition: margin 420ms ease-out 0s;
     -o-transition: margin 420ms ease-out 0s;
     transition: margin 420ms ease-out 0s; }
-  .cmt-switch .cmt-toggle-round:checked + label:before {
-    background-color: #7CAA2D; }
-  .cmt-switch .cmt-toggle-round:checked + label:after {
-    margin-left: 3.5em; }
+  .switch .switch-toggle-round:checked + label:before {
+    background-color: rgba(135, 186, 69, 0.25);
+    width: 52px; }
+  .switch .switch-toggle-round:checked + label:after {
+    margin-left: 30px;
+    background-color: #87BA45; }
 
-.cmt-switch-wrap .cmt-switch {
+.switch-layout .switch {
   margin-bottom: 1em; }
 
-.cmt-switch-wrap.cmt-switch-inline .cmt-switch {
+.switch-layout.switch-layout-inline .switch {
   display: inline-block;
   margin-right: 1em;
   width: auto; }
 
-.cmt-switch-wrap.cmt-switch-row-2 .cmt-switch {
+.switch-layout.switch-layout-row-2 .switch {
   float: left;
   width: 50%; }
 
-.cmt-switch-wrap.cmt-switch-row-4 .cmt-switch {
+.switch-layout.switch-layout-row-4 .switch {
   float: left;
   width: 25%; }
 
 @media only screen and (max-width: 1024px) {
-  .cmt-switch-wrap.cmt-switch-row-4 .cmt-switch {
+  .switch-layout.switch-layout-row-4 .switch {
     width: 50%; } }
 
-.cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+.switch-layout.switch-layout-row-5 .switch {
   float: left;
   width: 20%; }
 
 @media only screen and (max-width: 1024px) {
-  .cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+  .switch-layout.switch-layout-row-5 .switch {
     width: 50%; } }
 
 @media only screen and (max-width: 480px) {
-  .cmt-switch-wrap.cmt-switch-row-2 .cmt-switch, .cmt-switch-wrap.cmt-switch-row-4 .cmt-switch, .cmt-switch-wrap.cmt-switch-row-5 .cmt-switch {
+  .switch-layout.switch-layout-row-2 .switch, .switch-layout.switch-layout-row-4 .switch, .switch-layout.switch-layout-row-5 .switch {
     width: 100%; } }
 
 /**********************************************************************
@@ -6876,14 +7121,14 @@ order to place group at appropriate postion.
     .btn-border.btn-border-link:hover {
       color: #FFFFFF !important;
       background-color: #298ccf !important; }
-  .btn-border.btn-border-black {
-    color: #000000 !important;
-    -webkit-box-shadow: inset 0 0 0 1px #000000;
-    -moz-box-shadow: inset 0 0 0 1px #000000;
-    box-shadow: inset 0 0 0 1px #000000; }
-    .btn-border.btn-border-black:hover {
-      color: #FFFFFF !important;
-      background-color: #000000 !important; }
+  .btn-border.btn-border-white {
+    color: #FFFFFF !important;
+    -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
+    -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
+    box-shadow: inset 0 0 0 1px #FFFFFF; }
+    .btn-border.btn-border-white:hover {
+      color: #000000 !important;
+      background-color: #FFFFFF !important; }
   .btn-border.btn-border-white {
     color: #FFFFFF !important;
     -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -7033,7 +7278,7 @@ a:hover, .link:hover {
   right: 0.25em;
   width: 1.5em;
   height: 1.5em;
-  line-height: 1.2em;
+  line-height: 1.4em;
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
@@ -7049,7 +7294,8 @@ a:hover, .link:hover {
   -ms-transition: background-color 420ms ease-in-out 0s;
   -o-transition: background-color 420ms ease-in-out 0s;
   -webkit-transition: background-color 420ms ease-in-out 0s;
-  transition: background-color 420ms ease-in-out 0s; }
+  transition: background-color 420ms ease-in-out 0s;
+  padding: 0 !important; }
   .btn-icon-o .icon {
     font-size: 1em; }
   .btn-icon-o:hover {
@@ -7058,7 +7304,7 @@ a:hover, .link:hover {
   .btn-icon-o.btn-icon-o-small {
     width: 2em;
     height: 2em;
-    line-height: 1.6em; }
+    line-height: 1.8em; }
     .btn-icon-o.btn-icon-o-small .icon {
       font-size: 1.5em; }
   .btn-icon-o.btn-icon-o-medium {
@@ -7154,7 +7400,7 @@ form {
   margin: 0 auto;
   position: relative; }
 
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .cmt-select-wrap .cmt-selected, .form .cmt-checkbox, .form .cmt-switch {
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .select-wrap .select .selected, .form .checkbox, .form .switch {
   border: none;
   box-shadow: none;
   outline: none;
@@ -7163,24 +7409,24 @@ form {
   margin: 0;
   display: inline-block; }
 
-.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .frm-element, .cmt-select-wrap {
+.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .frm-element, .select-wrap {
   width: 100%; }
-  .frm-element-25.btn, label.frm-element-25, input.frm-element-25[type="text"], input.frm-element-25[type="email"], input.frm-element-25[type="password"], textarea.frm-element-25, select.frm-element-25, input.frm-element-25[type="submit"], input.frm-element-25[type="button"], button.frm-element-25, .frm-element-25.frm-element, .frm-element-25.cmt-select-wrap {
+  .frm-element-25.btn, label.frm-element-25, input.frm-element-25[type="text"], input.frm-element-25[type="email"], input.frm-element-25[type="password"], textarea.frm-element-25, select.frm-element-25, input.frm-element-25[type="submit"], input.frm-element-25[type="button"], button.frm-element-25, .frm-element-25.frm-element, .frm-element-25.select-wrap {
     width: 25% !important; }
-  .frm-element-50.btn, label.frm-element-50, input.frm-element-50[type="text"], input.frm-element-50[type="email"], input.frm-element-50[type="password"], textarea.frm-element-50, select.frm-element-50, input.frm-element-50[type="submit"], input.frm-element-50[type="button"], button.frm-element-50, .frm-element-50.frm-element, .frm-element-50.cmt-select-wrap {
+  .frm-element-50.btn, label.frm-element-50, input.frm-element-50[type="text"], input.frm-element-50[type="email"], input.frm-element-50[type="password"], textarea.frm-element-50, select.frm-element-50, input.frm-element-50[type="submit"], input.frm-element-50[type="button"], button.frm-element-50, .frm-element-50.frm-element, .frm-element-50.select-wrap {
     width: 50% !important; }
-  .frm-element-75.btn, label.frm-element-75, input.frm-element-75[type="text"], input.frm-element-75[type="email"], input.frm-element-75[type="password"], textarea.frm-element-75, select.frm-element-75, input.frm-element-75[type="submit"], input.frm-element-75[type="button"], button.frm-element-75, .frm-element-75.frm-element, .frm-element-75.cmt-select-wrap {
+  .frm-element-75.btn, label.frm-element-75, input.frm-element-75[type="text"], input.frm-element-75[type="email"], input.frm-element-75[type="password"], textarea.frm-element-75, select.frm-element-75, input.frm-element-75[type="submit"], input.frm-element-75[type="button"], button.frm-element-75, .frm-element-75.frm-element, .frm-element-75.select-wrap {
     width: 75% !important; }
-  .frm-element-small.btn, label.frm-element-small, input.frm-element-small[type="text"], input.frm-element-small[type="email"], input.frm-element-small[type="password"], textarea.frm-element-small, select.frm-element-small, input.frm-element-small[type="submit"], input.frm-element-small[type="button"], button.frm-element-small, .frm-element-small.frm-element, .frm-element-small.cmt-select-wrap {
+  .frm-element-small.btn, label.frm-element-small, input.frm-element-small[type="text"], input.frm-element-small[type="email"], input.frm-element-small[type="password"], textarea.frm-element-small, select.frm-element-small, input.frm-element-small[type="submit"], input.frm-element-small[type="button"], button.frm-element-small, .frm-element-small.frm-element, .frm-element-small.select-wrap {
     width: 80px !important; }
-  .frm-element-medium.btn, label.frm-element-medium, input.frm-element-medium[type="text"], input.frm-element-medium[type="email"], input.frm-element-medium[type="password"], textarea.frm-element-medium, select.frm-element-medium, input.frm-element-medium[type="submit"], input.frm-element-medium[type="button"], button.frm-element-medium, .frm-element-medium.frm-element, .frm-element-medium.cmt-select-wrap {
+  .frm-element-medium.btn, label.frm-element-medium, input.frm-element-medium[type="text"], input.frm-element-medium[type="email"], input.frm-element-medium[type="password"], textarea.frm-element-medium, select.frm-element-medium, input.frm-element-medium[type="submit"], input.frm-element-medium[type="button"], button.frm-element-medium, .frm-element-medium.frm-element, .frm-element-medium.select-wrap {
     width: 120px !important; }
-  .frm-element-large.btn, label.frm-element-large, input.frm-element-large[type="text"], input.frm-element-large[type="email"], input.frm-element-large[type="password"], textarea.frm-element-large, select.frm-element-large, input.frm-element-large[type="submit"], input.frm-element-large[type="button"], button.frm-element-large, .frm-element-large.frm-element, .frm-element-large.cmt-select-wrap {
+  .frm-element-large.btn, label.frm-element-large, input.frm-element-large[type="text"], input.frm-element-large[type="email"], input.frm-element-large[type="password"], textarea.frm-element-large, select.frm-element-large, input.frm-element-large[type="submit"], input.frm-element-large[type="button"], button.frm-element-large, .frm-element-large.frm-element, .frm-element-large.select-wrap {
     width: 180px !important; }
-  .frm-element-xlarge.btn, label.frm-element-xlarge, input.frm-element-xlarge[type="text"], input.frm-element-xlarge[type="email"], input.frm-element-xlarge[type="password"], textarea.frm-element-xlarge, select.frm-element-xlarge, input.frm-element-xlarge[type="submit"], input.frm-element-xlarge[type="button"], button.frm-element-xlarge, .frm-element-xlarge.frm-element, .frm-element-xlarge.cmt-select-wrap {
+  .frm-element-xlarge.btn, label.frm-element-xlarge, input.frm-element-xlarge[type="text"], input.frm-element-xlarge[type="email"], input.frm-element-xlarge[type="password"], textarea.frm-element-xlarge, select.frm-element-xlarge, input.frm-element-xlarge[type="submit"], input.frm-element-xlarge[type="button"], button.frm-element-xlarge, .frm-element-xlarge.frm-element, .frm-element-xlarge.select-wrap {
     width: 250px !important; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .cmt-select-wrap .cmt-selected {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .form .select-wrap .select .selected {
   background-color: #F2F2F2;
   color: #363636;
   text-align: left;
@@ -7192,26 +7438,26 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
   box-shadow: inset 0 0 0 1px #F2F2F2; }
-  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .form .cmt-select-wrap .cmt-selected:hover {
+  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .form .select-wrap .select .selected:hover {
     background-color: #E9E9E9;
     color: #363636;
     -webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
     -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
     box-shadow: inset 0 0 0 1px #E9E9E9; }
-  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .form .cmt-select-wrap .cmt-selected:focus {
+  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .form .select-wrap .select .selected:focus {
     background-color: #E1E1E1;
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
+  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .form .select-wrap .select .selected:disabled {
     background-color: #CCCCCC !important;
     color: #909090 !important;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
 
-.form .cmt-checkbox, .form .cmt-switch {
+.form .checkbox, .form .switch {
   color: #363636;
   text-align: left;
   -webkit-transition: all 250ms ease-in-out 0s;
@@ -7219,11 +7465,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s; }
-  .form .cmt-checkbox:hover, .form .cmt-switch:hover {
+  .form .checkbox:hover, .form .switch:hover {
     color: #363636; }
-  .form .cmt-checkbox:focus, .form .cmt-switch:focus {
+  .form .checkbox:focus, .form .switch:focus {
     color: #4F688E; }
-  .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
+  .form .checkbox:disabled, .form .switch:disabled {
     color: #909090 !important; }
 
 .btn-icon, input[type="submit"], input[type="button"], button {
@@ -7264,7 +7510,7 @@ input[type="submit"], input[type="button"], button, .btn {
 label, input[type="text"], input[type="email"], input[type="password"], textarea {
   line-height: 1.4em; }
 
-select, .cmt-select-wrap .cmt-selected {
+select, .select-wrap .selected {
   line-height: 1.4em; }
 
 .btn-icon {
@@ -7277,7 +7523,7 @@ select, .cmt-select-wrap .cmt-selected {
   -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
   box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25); }
 
-/** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
+/** Iconified Elements - Works in presence of Breeze Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 .frm-icon-element {
   position: relative;
   display: inline-block;
@@ -7344,19 +7590,19 @@ select, .cmt-select-wrap .cmt-selected {
   /* Internet Explorer 10-11 */
   color: #aaaaaa; }
 
-.cmt-checkbox, .cmt-switch {
+.checkbox, .switch {
   -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 0px #F2F2F2;
   box-shadow: inset 0 0 0 0px #F2F2F2;
   background: none;
   padding-left: 0; }
-  .cmt-checkbox:hover, .cmt-switch:hover {
+  .checkbox:hover, .switch:hover {
     background: none;
     color: #363636; }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button,
-.frm-rounded-all .btn, .frm-rounded-all select, .frm-rounded-all .cmt-selected {
+.frm-rounded-all .btn, .frm-rounded-all select, .frm-rounded-all .select .selected {
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -7364,7 +7610,7 @@ select, .cmt-select-wrap .cmt-selected {
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button,
-.frm-rounded-top .btn, .frm-rounded-top select, .frm-rounded-top .cmt-selected {
+.frm-rounded-top .btn, .frm-rounded-top select, .frm-rounded-top .select .selected {
   border-radius: 5px 5px 0 0;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-top-right: 5px;
@@ -7375,7 +7621,7 @@ select, .cmt-select-wrap .cmt-selected {
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button,
-.frm-rounded-right .btn, .frm-rounded-right select, .frm-rounded-right .cmt-selected {
+.frm-rounded-right .btn, .frm-rounded-right select, .frm-rounded-right .select .selected {
   border-radius: 0 5px 5px 0;
   -webkit-border-radius-top-right: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -7386,7 +7632,7 @@ select, .cmt-select-wrap .cmt-selected {
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button,
-.frm-rounded-bottom .btn, .frm-rounded-bottom select, .frm-rounded-bottom .cmt-selected {
+.frm-rounded-bottom .btn, .frm-rounded-bottom select, .frm-rounded-bottom .select .selected {
   border-radius: 0 0 5px 5px;
   -webkit-border-radius-bottom-left: 5px;
   -webkit-border-radius-bottom-right: 5px;
@@ -7397,7 +7643,7 @@ select, .cmt-select-wrap .cmt-selected {
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button,
-.frm-rounded-left .btn, .frm-rounded-left select, .frm-rounded-left .cmt-selected {
+.frm-rounded-left .btn, .frm-rounded-left select, .frm-rounded-left .select .selected {
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -7432,7 +7678,7 @@ select, .cmt-select-wrap .cmt-selected {
   -moz-border-radius-bottom-right: 5px; }
 
 .frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+.frm-ignore-100 .btn, .frm-ignore-100 .checkbox, .frm-ignore-100 .switch, .frm-ignore-100 .choice {
   float: none;
   width: auto; }
 
@@ -7461,22 +7707,22 @@ height from form elements.*/
   clear: none; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .switch, .frm-split-40-60 .select-wrap,
 .frm-split-40-60 .icon-picker {
   width: 60%;
   float: left; }
 
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-checkbox label {
+.frm-split-40-60 .checkbox, .frm-split-40-60 .checkbox label {
   width: 100%;
   float: left; }
 
-.frm-split-40-60 .cmt-switch {
+.frm-split-40-60 .switch {
   width: 60%;
   float: left; }
 
 .frm-element-60 input[type="text"], .frm-element-60 input[type="email"], .frm-element-60 input[type="password"],
 .frm-element-60 textarea, .frm-element-60 select,
-.frm-element-60 .cmt-select-wrap, .frm-element-60 .icon-picker {
+.frm-element-60 .select-wrap, .frm-element-60 .icon-picker {
   width: 100%; }
 
 .frm-split-40-60 .frm-icon-element {
@@ -7492,11 +7738,15 @@ height from form elements.*/
 @media only screen and (max-width: 480px) {
   .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
   .frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
-  .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch,
-  .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+  .frm-split-40-60 select, .frm-split-40-60 .checkbox, .frm-split-40-60 .switch,
+  .frm-element-60, .frm-split-40-60 label, .select-wrap, .frm-icon-element {
     width: 100%; }
   .frm-split-40-60 .help-block {
     padding-left: 0; } }
+
+@media only screen and (min-width: 481px) {
+  .frm-split-40-60 .help-block {
+    padding-left: 40%; } }
 
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap, .form .btn, .form .btn-icon {
   margin-bottom: 0.5rem; }
@@ -7504,7 +7754,7 @@ height from form elements.*/
 .form .frm-element-25, .form .frm-element-50, .form .frm-element-75, .form .frm-element-small, .form .frm-element-medium, .form .frm-element-large, .form .frm-element-xlarge {
   margin-bottom: 0.5rem; }
 
-.form .cmt-checkbox, .form .cmt-switch, .form .cmt-select-wrap {
+.form .checkbox, .form .switch, .form .select-wrap {
   margin-bottom: 0.5rem; }
 
 .form .warning, .form .error, .form .success, .form .info {
@@ -7547,7 +7797,7 @@ height from form elements.*/
   color: #E74343 !important; }
 
 /**********************************************************************
-Description: It defines the table styles for CMT-UI css framework.
+Description: It defines the table styles og Breeze Framework.
 
 Dependencies: variables, mixins
 
@@ -7595,10 +7845,10 @@ table td {
     @media only screen and (min-width: 1025px) {
       .table.table-responsive > tbody > tr > td {
         display: table-cell; } }
-  .table.table-responsive .wrap-table {
+  .table.table-responsive .table-wrap {
     width: 68%; }
     @media only screen and (min-width: 1025px) {
-      .table.table-responsive .wrap-table {
+      .table.table-responsive .table-wrap {
         width: 100%; } }
 
 /**********************************************************************
@@ -7844,7 +8094,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
     color: #E6E6E6; }
 
 /**********************************************************************
-Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
+Description: It defines the styles for breadcrumbs available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -7902,7 +8152,7 @@ on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
 
 .auto-suggest {
   position: relative; }
-  .auto-suggest .wrap-auto-list {
+  .auto-suggest .auto-list-wrap {
     position: absolute;
     top: 2em;
     left: 0;
@@ -7911,14 +8161,14 @@ on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
     z-index: 1000000;
     background-color: lightgray;
     color: #555555; }
-    .auto-suggest .wrap-auto-list .list-item, .auto-suggest .wrap-auto-list li {
+    .auto-suggest .auto-list-wrap .list-item, .auto-suggest .auto-list-wrap li {
       background-color: lightgray;
       color: #555555;
       cursor: pointer; }
-      .auto-suggest .wrap-auto-list .list-item:nth-child(even), .auto-suggest .wrap-auto-list li:nth-child(even) {
+      .auto-suggest .auto-list-wrap .list-item:nth-child(even), .auto-suggest .auto-list-wrap li:nth-child(even) {
         background-color: white;
         color: #171717; }
-      .auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
+      .auto-suggest .auto-list-wrap .list-item:hover, .auto-suggest .auto-list-wrap li:hover {
         background-color: #3C4655;
         color: #96B0D6; }
 
@@ -9124,6 +9374,11 @@ Basic - The basic header define the styles for primary header having logo and me
     top: 0;
     width: 100%;
     z-index: 100001; }
+  .header.header-announcement {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100002; }
   .header.header-absolute {
     position: absolute;
     top: 0;
@@ -10643,18 +10898,18 @@ Basic - The basic widget defines the styles of widget having text and background
     background-color: #87BA45;
     color: #E6E6E6; }
 
-.widget-basic .widget-content-wrap .widget-header {
+.widget-basic .widget-content-wrap .widget-header-wrap .widget-header {
   padding: 1rem 0; }
-  .widget-basic .widget-content-wrap .widget-header .widget-header-title {
+  .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-title {
     font-size: 1.33em;
     font-family: Verdana, Geneva, sans-serif; }
-  .widget-basic .widget-content-wrap .widget-header .widget-header-info {
+  .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-info {
     font-size: 1.08em; }
-  .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-content {
+  .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-icon + .widget-header-content {
     margin-top: 0.5rem; }
-  .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-content {
+  .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-title + .widget-header-info, .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-title + .widget-header-content {
     margin-top: 0.5rem; }
-  .widget-basic .widget-content-wrap .widget-header .widget-header-info + .widget-header-content {
+  .widget-basic .widget-content-wrap .widget-header-wrap .widget-header .widget-header-info + .widget-header-content {
     margin-top: 0.5rem; }
 
 .widget-basic .widget-content-wrap .widget-content {

@@ -60,7 +60,7 @@ Background Fixed : The background will be filled 100% with fixed image and allow
 Background Element : The element will adjust itself to allow img tag to fill it completely. The element
 must be child of parent having fixed height.
 
-Textures - Textures are special tiles having a pattern occupying few pixels. These will give special effects
+Texture - Texture is tile arrangement having a pattern occupying few pixels. These will give special effects
 to underlying content and images.
 
 Blur - Blus is another mixin adding lens effect to blur underlying content and images.
@@ -346,7 +346,7 @@ This section includes mixins for in-between, desktop first and mobile first appr
 }
 
 // Align child - vertically and horizontally at center
-@mixin vh-align-center {
+@mixin vhalign-center {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
@@ -394,32 +394,32 @@ This section includes mixins for in-between, desktop first and mobile first appr
 // the other child got greater z-index. Initially it's set to hidden and can be made visible
 // when required. most useful example is having a full cover pre-loader with spinner on top of
 // all other elements.
-@mixin max-area-cover( $display: none, $color: $color-primary-text ) {
+@mixin max-area-cover( $display: none, $text: $color-primary-text ) {
 	@include max-area;
 	z-index: 1000000;
 	display: $display;
 	// Text alignment and color
 	text-align: center;
-	color: $color;
+	color: $text;
 }
 
-@mixin max-area-cover-color( $bkg-color: $color-black, $display: none, $color: $color-primary-text ) {
-	@include max-area-cover( $display, $color );
+@mixin max-area-cover-color( $bkg-color: $color-black, $display: none, $text: $color-primary-text ) {
+	@include max-area-cover( $display, $text );
 	background-color: $bkg-color;
 }
 
-@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none, $color: $color-primary-text ) {
-	@include max-area-cover( $display, $color );
+@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none, $text: $color-primary-text ) {
+	@include max-area-cover( $display, $text );
 	background-color: rgba( $r, $g, $b, 0 );
 }
 
-@mixin max-area-cover-transparent( $bkg-color: $color-black, $alpha: $color-transparent-medium, $display: none, $color: $color-primary-text ) {
-	@include max-area-cover( $display, $color );
+@mixin max-area-cover-transparent( $bkg-color: $color-black, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
+	@include max-area-cover( $display, $text );
 	background-color: rgba( $bkg-color, $alpha );
 }
 
-@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none, $color: $color-primary-text ) {
-	@include max-area-cover( $display, $color );
+@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
+	@include max-area-cover( $display, $text );
 	background-color: rgba( $r, $g, $b, $alpha );
 }
 
@@ -607,9 +607,9 @@ Notes:
 	}
 }
 
-// Textures
+// Texture
 
-%textures {
+%texture {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1666,7 +1666,7 @@ Notes:
 
 // Align Element Children
 .vhalign-center {
-	@include vh-align-center;
+	@include vhalign-center;
 }
 
 // Max Area - No clubbing
@@ -1775,7 +1775,7 @@ Notes:
 // Default Texture
 
 .texture {
-	@extend %textures;
+	@extend %texture;
 
 	&.texture-default {
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
@@ -1905,14 +1905,14 @@ Notes:
 
 // Add default image
 .pattern {
-	@extend %textures;
+	@extend %texture;
 
 	&.pattern-default {
 		background-image: url( $images-path + "pattern-default.png" );
 	}
 }
 
-//Line Clamping
+// Line Clamping
 
 .line-clamp-2 > *, .line-clamp-3 > * {
 	display: none;

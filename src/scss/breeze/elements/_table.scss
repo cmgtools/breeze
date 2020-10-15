@@ -1,5 +1,5 @@
 /**********************************************************************
-Description: It defines the table styles for CMT-UI css framework.
+Description: It defines the table styles og Breeze Framework.
 
 Dependencies: variables, mixins
 
@@ -112,7 +112,7 @@ table {
 			}
 		}
 
-		.wrap-table {
+		.table-wrap {
 			width: 68%;
 
 			@include responsive-min( screen-tablet-large ) {

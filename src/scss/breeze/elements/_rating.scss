@@ -12,10 +12,10 @@ Rating - The rating element can be used to provide ratings.
 
 // == Rating ========================
 
-.cmt-rating {
+.rating {
 	text-align: left;
 
-	.wrap-stars {
+	.stars-wrap {
 
 		.star {
 			display: inline-block;
@@ -25,7 +25,7 @@ Rating - The rating element can be used to provide ratings.
 		}
 	}
 
-	.wrap-messages {
+	.message-wrap {
 
 		.star-message {
 			display: none;
@@ -40,7 +40,7 @@ Rating - The rating element can be used to provide ratings.
 
 	&.read-only {
 
-		.wrap-stars {
+		.stars-wrap {
 
 			.star {
 				cursor: default;
@@ -49,10 +49,8 @@ Rating - The rating element can be used to provide ratings.
 	}
 }
 
-.cmt-rating-native {
+.rating-native {
 	text-align: left;
-
-	// Radio or Checkbox - these styles work together with cmt-choice
 
 	input[type=checkbox] + .label.label-rating::before, input[type=radio] + .label.label-rating::before {
 		margin-right: 8px;

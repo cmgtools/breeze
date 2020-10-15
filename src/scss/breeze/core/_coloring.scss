@@ -16,7 +16,7 @@ Coloring - It is one of the most important factor while designing website follow
 CMGTools have taken extra care in this area and tried to manage colors by dividing them into 3 major
 variations forming a standard color palette. The primary color is dominating for the entire design and
 secondary is contrary to primary to be used for components. The tertiary color can also be used apart
-from secondary for highlighting purpose.
+from secondary for highlighting purposes.
 */
 
 .color {
@@ -170,17 +170,17 @@ from secondary for highlighting purpose.
 
 	&.color-yellow {
 		background-color: $color-yellow !important;
-		color: $color-white !important;
+		color: $color-brown !important;
 	}
 
 	&.color-yellow-l {
 		background-color: $color-yellow-l !important;
-		color: $color-white !important;
+		color: $color-brown !important;
 	}
 
 	&.color-yellow-d {
 		background-color: $color-yellow-d !important;
-		color: $color-white !important;
+		color: $color-brown !important;
 	}
 
 	&.color-red {
@@ -270,7 +270,7 @@ from secondary for highlighting purpose.
 
 	&.color-silver {
 		background-color: $color-silver !important;
-		color: $color-white !important;
+		color: $color-brown !important;
 	}
 
 	&.color-maroon {
@@ -317,7 +317,7 @@ from secondary for highlighting purpose.
 		background-color: $color-dropbox !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-evernote {
 		background-color: $color-evernote !important;
 		color: $color-white !important;
@@ -362,17 +362,17 @@ from secondary for highlighting purpose.
 		background-color: $color-quora !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-reddit {
 		background-color: $color-reddit !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-rss {
 		background-color: $color-rss !important;
 		color: $color-white !important;
 	}
-	
+
 	&.color-skype {
 		background-color: $color-skype !important;
 		color: $color-white !important;
@@ -638,6 +638,66 @@ from secondary for highlighting purpose.
 
 .bkg-transparent {
 
+	&.bkg-transparent-primary {
+		background-color: $color-transparent-primary !important;
+	}
+
+	&.bkg-transparent-primary-l {
+		background-color: $color-transparent-primary-l !important;
+	}
+
+	&.bkg-transparent-primary-h {
+		background-color: $color-transparent-primary-h !important;
+	}
+
+	&.bkg-transparent-secondary {
+		background-color: $color-transparent-secondary !important;
+	}
+
+	&.bkg-transparent-secondary-l {
+		background-color: $color-transparent-secondary-l !important;
+	}
+
+	&.bkg-transparent-secondary-h {
+		background-color: $color-transparent-secondary-h !important;
+	}
+
+	&.bkg-transparent-tertiary {
+		background-color: $color-transparent-tertiary !important;
+	}
+
+	&.bkg-transparent-tertiary-l {
+		background-color: $color-transparent-tertiary-l !important;
+	}
+
+	&.bkg-transparent-tertiary-h {
+		background-color: $color-transparent-tertiary-h !important;
+	}
+
+	&.bkg-transparent-white {
+		background-color: $color-transparent-white !important;
+	}
+
+	&.bkg-transparent-white-l {
+		background-color: $color-transparent-white-l !important;
+	}
+
+	&.bkg-transparent-white-h {
+		background-color: $color-transparent-white-h !important;
+	}
+
+	&.bkg-transparent-gray {
+		background-color: $color-transparent-gray !important;
+	}
+
+	&.bkg-transparent-gray-l {
+		background-color: $color-transparent-gray-l !important;
+	}
+
+	&.bkg-transparent-gray-h {
+		background-color: $color-transparent-gray-h !important;
+	}
+
 	&.bkg-transparent-black {
 		background-color: $color-transparent-black !important;
 	}
@@ -649,6 +709,198 @@ from secondary for highlighting purpose.
 	&.bkg-transparent-black-h {
 		background-color: $color-transparent-black-h !important;
 	}
+
+	&.bkg-transparent-blue {
+		background-color: $color-transparent-blue !important;
+	}
+
+	&.bkg-transparent-blue-l {
+		background-color: $color-transparent-blue-l !important;
+	}
+
+	&.bkg-transparent-blue-h {
+		background-color: $color-transparent-blue-h !important;
+	}
+
+	&.bkg-transparent-purple {
+		background-color: $color-transparent-purple !important;
+	}
+
+	&.bkg-transparent-purple-l {
+		background-color: $color-transparent-purple-h !important;
+	}
+
+	&.bkg-transparent-purple-h {
+		background-color: $color-transparent-purple-h !important;
+	}
+
+	&.bkg-transparent-orange {
+		background-color: $color-transparent-orange !important;
+	}
+
+	&.bkg-transparent-orange-l {
+		background-color: $color-transparent-orange-l !important;
+	}
+
+	&.bkg-transparent-orange-h {
+		background-color: $color-transparent-orange-h !important;
+	}
+
+	&.bkg-transparent-yellow {
+		background-color: $color-transparent-yellow !important;
+	}
+
+	&.bkg-transparent-yellow-l {
+		background-color: $color-transparent-yellow-l !important;
+	}
+
+	&.bkg-transparent-yellow-h {
+		background-color: $color-transparent-yellow-h !important;
+	}
+
+	&.bkg-transparent-red {
+		background-color: $color-transparent-red !important;
+	}
+
+	&.bkg-transparent-red-l {
+		background-color: $color-transparent-red-l !important;
+	}
+
+	&.bkg-transparent-red-h {
+		background-color: $color-transparent-red-h !important;
+	}
+
+	&.bkg-transparent-pink {
+		background-color: $color-transparent-pink !important;
+	}
+
+	&.bkg-transparent-pink-l {
+		background-color: $color-transparent-pink-l !important;
+	}
+
+	&.bkg-transparent-pink-h {
+		background-color: $color-transparent-pink-h !important;
+	}
+
+	&.bkg-transparent-magenta {
+		background-color: $color-transparent-magenta !important;
+	}
+
+	&.bkg-transparent-magenta-l {
+		background-color: $color-transparent-magenta-l !important;
+	}
+
+	&.bkg-transparent-magenta-h {
+		background-color: $color-transparent-magenta-h !important;
+	}
+
+	&.bkg-transparent-green {
+		background-color: $color-transparent-green !important;
+	}
+
+	&.bkg-transparent-green-l {
+		background-color: $color-transparent-green-l !important;
+	}
+
+	&.bkg-transparent-green-h {
+		background-color: $color-transparent-green-h !important;
+	}
+
+	&.bkg-transparent-brown {
+		background-color: $color-transparent-brown !important;
+	}
+
+	&.bkg-transparent-brown-l {
+		background-color: $color-transparent-brown-l !important;
+	}
+
+	&.bkg-transparent-brown-h {
+		background-color: $color-transparent-brown-h !important;
+	}
+
+	&.bkg-transparent-aqua {
+		background-color: $color-transparent-aqua !important;
+	}
+
+	&.bkg-transparent-aqua-l {
+		background-color: $color-transparent-aqua-l !important;
+	}
+
+	&.bkg-transparent-aqua-h {
+		background-color: $color-transparent-aqua-h !important;
+	}
+
+	&.bkg-transparent-golden {
+		background-color: $color-transparent-golden !important;
+	}
+
+	&.bkg-transparent-golden-l {
+		background-color: $color-transparent-golden-l !important;
+	}
+
+	&.bkg-transparent-golden-h {
+		background-color: $color-transparent-golden-h !important;
+	}
+
+	&.bkg-transparent-silver {
+		background-color: $color-transparent-silver !important;
+	}
+
+	&.bkg-transparent-silver-l {
+		background-color: $color-transparent-silver-h !important;
+	}
+
+	&.bkg-transparent-silver-h {
+		background-color: $color-transparent-silver-h !important;
+	}
+
+	&.bkg-transparent-maroon {
+		background-color: $color-transparent-maroon !important;
+	}
+
+	&.bkg-transparent-maroon-l {
+		background-color: $color-transparent-maroon-l !important;
+	}
+
+	&.bkg-transparent-maroon-h {
+		background-color: $color-transparent-maroon-h !important;
+	}
+
+	&.bkg-transparent-olive {
+		background-color: $color-transparent-olive !important;
+	}
+
+	&.bkg-transparent-olive-l {
+		background-color: $color-transparent-olive-l !important;
+	}
+
+	&.bkg-transparent-olive-h {
+		background-color: $color-transparent-olive-h !important;
+	}
+
+	&.bkg-transparent-lime {
+		background-color: $color-transparent-lime !important;
+	}
+
+	&.bkg-transparent-lime-l {
+		background-color: $color-transparent-lime-l !important;
+	}
+
+	&.bkg-transparent-lime-h {
+		background-color: $color-transparent-lime-h !important;
+	}
+
+	&.bkg-transparent-navy {
+		background-color: $color-transparent-navy !important;
+	}
+
+	&.bkg-transparent-navy-l {
+		background-color: $color-transparent-navy-l !important;
+	}
+
+	&.bkg-transparent-navy-h {
+		background-color: $color-transparent-navy-h !important;
+	}
 }
 
 // Text Colors =========================================
@@ -656,83 +908,83 @@ from secondary for highlighting purpose.
 .text {
 
 	&.text-primary {
+		color: $color-primary !important;
+	}
+
+	&.text-primary-text {
 		color: $color-primary-text !important;
 	}
 
 	&.text-primary-l {
+		color: $color-primary-l !important;
+	}
+
+	&.text-primary-text-l {
 		color: $color-primary-text-l !important;
 	}
 
 	&.text-primary-d {
+		color: $color-primary-d !important;
+	}
+
+	&.text-primary-text-d {
 		color: $color-primary-text-d !important;
 	}
 
 	&.text-secondary {
+		color: $color-secondary !important;
+	}
+
+	&.text-secondary-text {
 		color: $color-secondary-text !important;
 	}
 
 	&.text-secondary-l {
+		color: $color-secondary-l !important;
+	}
+
+	&.text-secondary-text-l {
 		color: $color-secondary-text-l !important;
 	}
 
 	&.text-secondary-d {
+		color: $color-secondary-d !important;
+	}
+
+	&.text-secondary-text-d {
 		color: $color-secondary-text-d !important;
 	}
 
 	&.text-tertiary {
+		color: $color-tertiary !important;
+	}
+
+	&.text-tertiary-text {
 		color: $color-tertiary-text !important;
 	}
 
 	&.text-tertiary-l {
+		color: $color-tertiary-l !important;
+	}
+
+	&.text-tertiary-text-l {
 		color: $color-tertiary-text-l !important;
 	}
 
 	&.text-tertiary-d {
-		color: $color-tertiary-text-d !important;
-	}
-
-	&.text-primary-b {
-		color: $color-primary !important;
-	}
-
-	&.text-primary-b-l {
-		color: $color-primary-l !important;
-	}
-
-	&.text-primary-b-d {
-		color: $color-primary-d !important;
-	}
-
-	&.text-secondary-b {
-		color: $color-secondary !important;
-	}
-
-	&.text-secondary-b-l {
-		color: $color-secondary-l !important;
-	}
-
-	&.text-secondary-b-d {
-		color: $color-secondary-d !important;
-	}
-
-	&.text-tertiary-b {
-		color: $color-tertiary !important;
-	}
-
-	&.text-tertiary-b-l {
-		color: $color-tertiary-l !important;
-	}
-
-	&.text-tertiary-b-d {
 		color: $color-tertiary-d !important;
+	}
+
+	&.text-tertiary-text-d {
+		color: $color-tertiary-text-d !important;
 	}
 
 	&.text-link {
 		color: $color-link !important;
 	}
 
-	&.text-black {
-		color: $color-black !important;
+	&.text-white {
+		color: $color-white !important;
 	}
 
 	&.text-gray {
@@ -747,8 +999,8 @@ from secondary for highlighting purpose.
 		color: $color-gray-d !important;
 	}
 
-	&.text-white {
-		color: $color-white !important;
+	&.text-black {
+		color: $color-black !important;
 	}
 
 	&.text-blue {

@@ -12,7 +12,7 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 
 // == Switch ========================
 
-.cmt-switch {
+.switch {
 	position: relative;
 	display: inline-block;
 
@@ -24,13 +24,13 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 		margin-right: 1em;
 	}
 
-	.cmt-toggle {
+	.switch-toggle {
 		position: absolute;
 		margin-left: -9999px;
 		visibility: hidden;
 	}
 
-	.cmt-toggle + label {
+	.switch-toggle + label {
 		display: inline-block;
 		position: relative;
 		cursor: pointer;
@@ -38,7 +38,7 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 		user-select: none;
 	}
 
-	.cmt-toggle-round + label {
+	.switch-toggle-round + label {
 		width: 60px !important;
 		border-radius: 30px;
 		height: 30px;
@@ -47,8 +47,8 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 		@include shadow-inset( 0, 0, 0, $color-border, 1px );
 	}
 
-	.cmt-toggle-round + label:before,
-	.cmt-toggle-round + label:after {
+	.switch-toggle-round + label:before,
+	.switch-toggle-round + label:after {
 	  display: inline-block;
 	  position: absolute;
 	  top: 4px;
@@ -57,7 +57,7 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 	  content: "";
 	}
 
-	.cmt-toggle-round + label:before {
+	.switch-toggle-round + label:before {
 		right: 1px;
 		border-radius: 30px;
 		width: 52px;
@@ -65,7 +65,7 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 		@include transit-bkg-color( $transit-eio, $transit-time-medium );
 	}
 
-	.cmt-toggle-round + label:after {
+	.switch-toggle-round + label:after {
 		width: 22px;
 		height: 22px;
 		background-color: $color-border;
@@ -74,12 +74,12 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 		@include transit-margin( $transit-eio, $transit-time-medium );
 	}
 
-	.cmt-toggle-round:checked + label:before {
+	.switch-toggle-round:checked + label:before {
 		background-color: $color-transparent-tertiary-l;
 		width: 52px;
 	}
 
-	.cmt-toggle-round:checked + label:after {
+	.switch-toggle-round:checked + label:after {
 		margin-left: 30px;
 		background-color: $color-tertiary;
 	}
@@ -87,65 +87,65 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 
 // == Switches - arrangements =======
 
-.cmt-switch-wrap {
+.switch-layout {
 	@extend %clearfix;
 
-	.cmt-switch {
+	.switch {
 		margin-bottom: 1em;
 	}
 
-	&.cmt-switch-inline {
+	&.switch-layout-inline {
 
-		.cmt-switch {
+		.switch {
 			display: inline-block;
 			margin-right: 1em;
 			width: auto;
 		}
 	}
 
-	&.cmt-switch-row-2 {
+	&.switch-layout-row-2 {
 
-		.cmt-switch {
+		.switch {
 			float: left;
 			width: 50%;
 		}
 	}
 
-	&.cmt-switch-row-4 {
+	&.switch-layout-row-4 {
 
-		.cmt-switch {
+		.switch {
 			float: left;
 			width: 25%;
 		}
 
 		@include responsive-max( screen-tablet-large ) {
 
-			.cmt-switch {
+			.switch {
 				width: 50%;
 			}
 		}
 	}
 
-	&.cmt-switch-row-5 {
+	&.switch-layout-row-5 {
 
-		.cmt-switch {
+		.switch {
 			float: left;
 			width: 20%;
 		}
 
 		@include responsive-max( screen-tablet-large ) {
 
-			.cmt-switch {
+			.switch {
 				width: 50%;
 			}
 		}
 	}
 
-	&.cmt-switch-row-2, &.cmt-switch-row-4, &.cmt-switch-row-5 {
+	&.switch-layout-row-2, &.switch-layout-row-4, &.switch-layout-row-5 {
 
 		@include responsive-max( screen-mobile-large ) {
 
-			.cmt-switch {
+			.switch {
 				width: 100%;
 			}
 		}
