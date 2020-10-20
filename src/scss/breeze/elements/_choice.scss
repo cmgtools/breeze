@@ -18,93 +18,85 @@ by showing breeze icons instead of browser icons.
 
 .choice {
 
-	span, a {
-		vertical-align: baseline;
-	}
-
-	input[type=checkbox], input[type=radio] {
-		cursor: pointer;
-		display: none;
-	}
-
-	label {
+	.choice-option {
 		cursor: pointer;
 		padding: 0;
-	}
 
-	.label {
-		//margin-top: 0.25em;
-	}
+		span, a {
+			vertical-align: baseline;
+		}
 
-	// Normal State
+		input[type=checkbox], input[type=radio] {
+			cursor: pointer;
+			display: none;
+		}
 
-	input[type=checkbox] + .label.pad-label::before,
-	input[type=radio] + .label.pad-label::before {
-		margin-right: 8px;
-	}
+		// Normal State
 
-	input[type=checkbox] + .label::before,
-	input[type=radio] + .label::before {
-		font-family: "cmti-core";
-		font-weight: normal;
-		color: gray;
-		border-radius: 16px;
-		display: inline-block;
-		vertical-align: middle;
-		margin-top: -5px;
-		line-height: 13px;
-	}
+		input[type=checkbox] + .label::before,
+		input[type=radio] + .label::before {
+			font-family: "cmti-core";
+			font-weight: normal;
+			color: gray;
+			border-radius: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -0.1em;
+			margin-right: 8px;
+			line-height: 13px;
+		}
 
-	// Checked State
+		// Checked State
 
-	input[type=checkbox]:checked, input[type=checkbox]:focus,
-	input[type=radio]:checked, input[type=radio]:focus {
-		outline: none !important;
-	}
+		input[type=checkbox]:checked, input[type=checkbox]:focus,
+		input[type=radio]:checked, input[type=radio]:focus {
+			outline: none !important;
+		}
 
-	input[type=checkbox]:checked + .label::before,
-	input[type=radio]:checked + .label::before {
-		display: inline-block;
-		background-color: #F5F8FC;
-		color: $color-btn;
-	}
+		input[type=checkbox]:checked + .label::before,
+		input[type=radio]:checked + .label::before {
+			display: inline-block;
+			background-color: #F5F8FC;
+			color: $color-btn;
+		}
 
-	input[type=checkbox]:checked + .label,
-	input[type=radio]:checked + .label {
-		color: $color-btn-a;
-	}
+		input[type=checkbox]:checked + .label,
+		input[type=radio]:checked + .label {
+			color: $color-btn-a;
+		}
 
-	// Hover State - Normal, Checked
+		// Hover State - Normal, Checked
 
-	input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
-	input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
-		color: $color-btn-h;
-	}
+		input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
+		input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
+			color: $color-btn-h;
+		}
 
-	// Disabled State
+		// Disabled State
 
-	input[type=checkbox]:disabled + .label::before,
-	input[type=radio]:disabled + .label::before {
-		background-color: #DDD !important;
-		color: #BBB;
-	}
+		input[type=checkbox]:disabled + .label::before,
+		input[type=radio]:disabled + .label::before {
+			background-color: #DDD !important;
+			color: #BBB;
+		}
 
-	// Display Content - Icon
+		// Display Icon
 
-	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		content: "\e90e";
-	}
+		input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
+			content: "\e90e";
+		}
 
-	input[type=radio]:checked + .label::before {
-		content: "\e90f";
-	}
+		input[type=radio]:checked + .label::before {
+			content: "\e90f";
+		}
 
-	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
-		content: "\e84d";
-	}
+		input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
+			content: "\e84d";
+		}
 
-	input[type=checkbox]:checked + .label::before {
-		content: "\e84f";
+		input[type=checkbox]:checked + .label::before {
+			content: "\e84f";
+		}
 	}
 }
 
@@ -112,21 +104,24 @@ by showing breeze icons instead of browser icons.
 
 // Custom Choices without the radio or checkbox icon.
 
-.choice-label {
+.choice-custom {
 	text-align: center;
 
-	input[type=checkbox], input[type=radio] {
-		display: none;
-	}
+	.choice-option {
 
-	input[type=checkbox] + label, input[type=radio] + label {
-		display: inline-block;
-		background-color: $color-btn;
-		text: $color-btn-text;
+		input[type=checkbox], input[type=radio] {
+			display: none;
+		}
 
-		&:hover {
-			background-color: $color-btn-h;
-			text: $color-btn-text-h;
+		input[type=checkbox] + .label, input[type=radio] + .label {
+			display: inline-block;
+			background-color: $color-btn;
+			text: $color-btn-text;
+
+			&:hover {
+				background-color: $color-btn-h;
+				text: $color-btn-text-h;
+			}
 		}
 	}
 }
@@ -136,13 +131,13 @@ by showing breeze icons instead of browser icons.
 .choice-layout {
 	@extend %clearfix;
 
-	.choice-wrap {
+	.choice-option {
 		margin-bottom: 1em;
 	}
 
 	&.choice-layout-inline {
 
-		.choice label {
+		.choice-option {
 			display: inline-block;
 			margin-right: 1em;
 			width: auto;
@@ -151,7 +146,7 @@ by showing breeze icons instead of browser icons.
 
 	&.choice-layout-row-2 {
 
-		.choice label {
+		.choice-option {
 			float: left;
 			width: 50%;
 		}
@@ -159,7 +154,7 @@ by showing breeze icons instead of browser icons.
 
 	&.choice-layout-row-4 {
 
-		.choice label {
+		.choice-option {
 			float: left;
 			width: 25%;
 		}
@@ -167,7 +162,7 @@ by showing breeze icons instead of browser icons.
 
 	&.choice-layout-row-5 {
 
-		.choice label {
+		.choice-option {
 			float: left;
 			width: 20%;
 		}
@@ -177,7 +172,7 @@ by showing breeze icons instead of browser icons.
 
 		&.choice-layout-row-4, &.choice-layout-row-5 {
 
-			.choice label {
+			.choice-option {
 				width: 100%;
 			}
 		}
@@ -187,7 +182,7 @@ by showing breeze icons instead of browser icons.
 
 		&.choice-layout-row-4, &.choice-layout-row-5 {
 
-			.choice label {
+			.choice-option {
 				width: 50%;
 			}
 		}

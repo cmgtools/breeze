@@ -195,10 +195,10 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 // == Mapper - arrangements =========
 
-.mapper {
+.mapper-layout {
 	@extend %clearfix;
 
-	&.mapper-inline {
+	&.mapper-layout-inline {
 
 		.mapper-item {
 			display: inline-block;
@@ -208,7 +208,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 		}
 	}
 
-	&.mapper-row-2 {
+	&.mapper-layout-row-2 {
 
 		.mapper-item {
 			float: left;
@@ -217,7 +217,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 		}
 	}
 
-	&.mapper-row-3 {
+	&.mapper-layout-row-3 {
 
 		.mapper-item {
 			float: left;
@@ -226,7 +226,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 		}
 	}
 
-	&.mapper-row-4 {
+	&.mapper-layout-row-4 {
 
 		.mapper-item {
 			float: left;
@@ -235,7 +235,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 		}
 	}
 
-	&.mapper-row-5 {
+	&.mapper-layout-row-5 {
 
 		.mapper-item {
 			float: left;
@@ -246,7 +246,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 	@include responsive-max( screen-mobile-large ) {
 
-		&.mapper-row-4, &.mapper-row-5 {
+		&.mapper-layout-row-4, &.mapper-layout-row-5 {
 
 			.mapper-item {
 				width: 98%;
@@ -256,7 +256,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 	@include responsive-max( screen-tablet-large ) {
 
-		&.mapper-row-3, &.mapper-row-4, &.mapper-row-5 {
+		&.mapper-layout-row-3, &.mapper-layout-row-4, &.mapper-layout-row-5 {
 
 			.mapper-item {
 				width: 48%;

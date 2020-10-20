@@ -330,7 +330,7 @@ select, .select-wrap .selected {
 
 // == Custom Elements ===============
 
-.checkbox, .switch {
+.choice, .switch {
 	@include shadow-inset( 0, 0, 0, $color-shadow-inset, 0px );
 	background: none;
 	padding-left: 0;
@@ -396,7 +396,7 @@ select, .select-wrap .selected {
 .frm-ignore-100 {
 
 	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-	.btn, .checkbox, .switch, .choice {
+	.btn, .choice, .switch {
 		float: none;
 		width: auto;
 	}
@@ -459,7 +459,7 @@ height from form elements.*/
 	float: left;
 }
 
-.frm-split-40-60 .checkbox, .frm-split-40-60 .checkbox label {
+.frm-split-40-60 .choice {
 	width: 100%;
 	float: left;
 }
@@ -500,7 +500,7 @@ height from form elements.*/
 
 	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
 	.frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
-	.frm-split-40-60 select, .frm-split-40-60 .checkbox, .frm-split-40-60 .switch,
+	.frm-split-40-60 select, .frm-split-40-60 .choice, .frm-split-40-60 .switch,
 	.frm-element-60, .frm-split-40-60 label, .select-wrap, .frm-icon-element {
 		width: 100%;
 	}
@@ -526,7 +526,7 @@ height from form elements.*/
 		@extend %element-style-field;
 	}
 
-	.checkbox, .switch {
+	.choice, .switch {
 		@extend %element-style;
 		@extend %element-style-flag;
 	}
@@ -539,7 +539,7 @@ height from form elements.*/
 		margin-bottom: 0.5rem;
 	}
 
-	.checkbox, .switch, .select-wrap {
+	.choice, .switch, .select-wrap {
 		margin-bottom: 0.5rem;
 	}
 

@@ -198,14 +198,14 @@ Blur - Blus is another mixin adding lens effect to blur underlying content and i
 Media Queries - These mixins are pre-defined media queries using the screen sizes declared in variables file.
 This section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .choice-layout, .switch-layout, .frm-split-40-60 .form-group, .mapper, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+.clearfix, .row, .icon-picker-wrap, .choice-layout, .switch-layout, .frm-split-40-60 .form-group, .mapper-layout, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .choice-layout:before, .switch-layout:before, .frm-split-40-60 .form-group:before, .mapper:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .icon-picker-wrap:before, .choice-layout:before, .switch-layout:before, .frm-split-40-60 .form-group:before, .mapper-layout:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -6684,105 +6684,90 @@ Choice - The choice allows user to select single or multiple options from availa
 options. It include radio and checkbox html components and change their default behaviour
 by showing breeze icons instead of browser icons.
 ***********************************************************************/
-.choice span, .choice a {
-  vertical-align: baseline; }
-
-.choice input[type=checkbox], .choice input[type=radio] {
-  cursor: pointer;
-  display: none; }
-
-.choice label {
+.choice .choice-option {
   cursor: pointer;
   padding: 0; }
-
-.choice input[type=checkbox] + .label.pad-label::before,
-.choice input[type=radio] + .label.pad-label::before {
-  margin-right: 8px; }
-
-.choice input[type=checkbox] + .label::before,
-.choice input[type=radio] + .label::before {
-  font-family: "cmti-core";
-  font-weight: normal;
-  color: gray;
-  border-radius: 16px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -5px;
-  line-height: 13px; }
-
-.choice input[type=checkbox]:checked, .choice input[type=checkbox]:focus,
-.choice input[type=radio]:checked, .choice input[type=radio]:focus {
-  outline: none !important; }
-
-.choice input[type=checkbox]:checked + .label::before,
-.choice input[type=radio]:checked + .label::before {
-  display: inline-block;
-  background-color: #F5F8FC;
-  color: #E74343; }
-
-.choice input[type=checkbox]:checked + .label,
-.choice input[type=radio]:checked + .label {
-  color: #b51717; }
-
-.choice input[type=checkbox]:hover + .label::before, .choice input[type=checkbox] + .label:hover::before, .choice input[type=checkbox]:checked + .label::before,
-.choice input[type=radio]:hover + .label::before, .choice input[type=radio] + .label:hover::before, .choice input[type=radio]:checked + .label::before {
-  color: #FF3636; }
-
-.choice input[type=checkbox]:disabled + .label::before,
-.choice input[type=radio]:disabled + .label::before {
-  background-color: #DDD !important;
-  color: #BBB; }
-
-.choice input[type=radio] + .label::before, .choice input[type=radio]:disabled + .label::before {
-  content: "\e90e"; }
-
-.choice input[type=radio]:checked + .label::before {
-  content: "\e90f"; }
-
-.choice input[type=checkbox] + .label::before, .choice input[type=checkbox]:disabled + .label::before {
-  content: "\e84d"; }
-
-.choice input[type=checkbox]:checked + .label::before {
-  content: "\e84f"; }
-
-.choice-label {
-  text-align: center; }
-  .choice-label input[type=checkbox], .choice-label input[type=radio] {
+  .choice .choice-option span, .choice .choice-option a {
+    vertical-align: baseline; }
+  .choice .choice-option input[type=checkbox], .choice .choice-option input[type=radio] {
+    cursor: pointer;
     display: none; }
-  .choice-label input[type=checkbox] + label, .choice-label input[type=radio] + label {
+  .choice .choice-option input[type=checkbox] + .label::before,
+  .choice .choice-option input[type=radio] + .label::before {
+    font-family: "cmti-core";
+    font-weight: normal;
+    color: gray;
+    border-radius: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -0.1em;
+    margin-right: 8px;
+    line-height: 13px; }
+  .choice .choice-option input[type=checkbox]:checked, .choice .choice-option input[type=checkbox]:focus,
+  .choice .choice-option input[type=radio]:checked, .choice .choice-option input[type=radio]:focus {
+    outline: none !important; }
+  .choice .choice-option input[type=checkbox]:checked + .label::before,
+  .choice .choice-option input[type=radio]:checked + .label::before {
+    display: inline-block;
+    background-color: #F5F8FC;
+    color: #E74343; }
+  .choice .choice-option input[type=checkbox]:checked + .label,
+  .choice .choice-option input[type=radio]:checked + .label {
+    color: #b51717; }
+  .choice .choice-option input[type=checkbox]:hover + .label::before, .choice .choice-option input[type=checkbox] + .label:hover::before, .choice .choice-option input[type=checkbox]:checked + .label::before,
+  .choice .choice-option input[type=radio]:hover + .label::before, .choice .choice-option input[type=radio] + .label:hover::before, .choice .choice-option input[type=radio]:checked + .label::before {
+    color: #FF3636; }
+  .choice .choice-option input[type=checkbox]:disabled + .label::before,
+  .choice .choice-option input[type=radio]:disabled + .label::before {
+    background-color: #DDD !important;
+    color: #BBB; }
+  .choice .choice-option input[type=radio] + .label::before, .choice .choice-option input[type=radio]:disabled + .label::before {
+    content: "\e90e"; }
+  .choice .choice-option input[type=radio]:checked + .label::before {
+    content: "\e90f"; }
+  .choice .choice-option input[type=checkbox] + .label::before, .choice .choice-option input[type=checkbox]:disabled + .label::before {
+    content: "\e84d"; }
+  .choice .choice-option input[type=checkbox]:checked + .label::before {
+    content: "\e84f"; }
+
+.choice-custom {
+  text-align: center; }
+  .choice-custom .choice-option input[type=checkbox], .choice-custom .choice-option input[type=radio] {
+    display: none; }
+  .choice-custom .choice-option input[type=checkbox] + .label, .choice-custom .choice-option input[type=radio] + .label {
     display: inline-block;
     background-color: #E74343;
     text: #FFFFFF; }
-    .choice-label input[type=checkbox] + label:hover, .choice-label input[type=radio] + label:hover {
+    .choice-custom .choice-option input[type=checkbox] + .label:hover, .choice-custom .choice-option input[type=radio] + .label:hover {
       background-color: #FF3636;
       text: #FFFFFF; }
 
-.choice-layout .choice-wrap {
+.choice-layout .choice-option {
   margin-bottom: 1em; }
 
-.choice-layout.choice-layout-inline .choice label {
+.choice-layout.choice-layout-inline .choice-option {
   display: inline-block;
   margin-right: 1em;
   width: auto; }
 
-.choice-layout.choice-layout-row-2 .choice label {
+.choice-layout.choice-layout-row-2 .choice-option {
   float: left;
   width: 50%; }
 
-.choice-layout.choice-layout-row-4 .choice label {
+.choice-layout.choice-layout-row-4 .choice-option {
   float: left;
   width: 25%; }
 
-.choice-layout.choice-layout-row-5 .choice label {
+.choice-layout.choice-layout-row-5 .choice-option {
   float: left;
   width: 20%; }
 
 @media only screen and (max-width: 480px) {
-  .choice-layout.choice-layout-row-4 .choice label, .choice-layout.choice-layout-row-5 .choice label {
+  .choice-layout.choice-layout-row-4 .choice-option, .choice-layout.choice-layout-row-5 .choice-option {
     width: 100%; } }
 
 @media only screen and (max-width: 1024px) {
-  .choice-layout.choice-layout-row-4 .choice label, .choice-layout.choice-layout-row-5 .choice label {
+  .choice-layout.choice-layout-row-4 .choice-option, .choice-layout.choice-layout-row-5 .choice-option {
     width: 50%; } }
 
 /**********************************************************************
@@ -7400,7 +7385,7 @@ form {
   margin: 0 auto;
   position: relative; }
 
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .select-wrap .select .selected, .form .checkbox, .form .switch {
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .form .select-wrap .select .selected, .form .choice, .form .switch {
   border: none;
   box-shadow: none;
   outline: none;
@@ -7457,7 +7442,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
     box-shadow: inset 0 0 0 1px #CCCCCC; }
 
-.form .checkbox, .form .switch {
+.form .choice, .form .switch {
   color: #363636;
   text-align: left;
   -webkit-transition: all 250ms ease-in-out 0s;
@@ -7465,11 +7450,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s; }
-  .form .checkbox:hover, .form .switch:hover {
+  .form .choice:hover, .form .switch:hover {
     color: #363636; }
-  .form .checkbox:focus, .form .switch:focus {
+  .form .choice:focus, .form .switch:focus {
     color: #4F688E; }
-  .form .checkbox:disabled, .form .switch:disabled {
+  .form .choice:disabled, .form .switch:disabled {
     color: #909090 !important; }
 
 .btn-icon, input[type="submit"], input[type="button"], button {
@@ -7590,13 +7575,13 @@ select, .select-wrap .selected {
   /* Internet Explorer 10-11 */
   color: #aaaaaa; }
 
-.checkbox, .switch {
+.choice, .switch {
   -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 0px #F2F2F2;
   box-shadow: inset 0 0 0 0px #F2F2F2;
   background: none;
   padding-left: 0; }
-  .checkbox:hover, .switch:hover {
+  .choice:hover, .switch:hover {
     background: none;
     color: #363636; }
 
@@ -7678,7 +7663,7 @@ select, .select-wrap .selected {
   -moz-border-radius-bottom-right: 5px; }
 
 .frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .btn, .frm-ignore-100 .checkbox, .frm-ignore-100 .switch, .frm-ignore-100 .choice {
+.frm-ignore-100 .btn, .frm-ignore-100 .choice, .frm-ignore-100 .switch {
   float: none;
   width: auto; }
 
@@ -7712,7 +7697,7 @@ height from form elements.*/
   width: 60%;
   float: left; }
 
-.frm-split-40-60 .checkbox, .frm-split-40-60 .checkbox label {
+.frm-split-40-60 .choice {
   width: 100%;
   float: left; }
 
@@ -7738,7 +7723,7 @@ height from form elements.*/
 @media only screen and (max-width: 480px) {
   .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
   .frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
-  .frm-split-40-60 select, .frm-split-40-60 .checkbox, .frm-split-40-60 .switch,
+  .frm-split-40-60 select, .frm-split-40-60 .choice, .frm-split-40-60 .switch,
   .frm-element-60, .frm-split-40-60 label, .select-wrap, .frm-icon-element {
     width: 100%; }
   .frm-split-40-60 .help-block {
@@ -7754,7 +7739,7 @@ height from form elements.*/
 .form .frm-element-25, .form .frm-element-50, .form .frm-element-75, .form .frm-element-small, .form .frm-element-medium, .form .frm-element-large, .form .frm-element-xlarge {
   margin-bottom: 0.5rem; }
 
-.form .checkbox, .form .switch, .form .select-wrap {
+.form .choice, .form .switch, .form .select-wrap {
   margin-bottom: 0.5rem; }
 
 .form .warning, .form .error, .form .success, .form .info {
@@ -8414,38 +8399,38 @@ Action - The action mapper will allow users to toggle each item individually by 
     padding: 0.25rem;
     font-size: 1.25em; }
 
-.mapper.mapper-inline .mapper-item {
+.mapper-layout.mapper-layout-inline .mapper-item {
   display: inline-block;
   width: auto;
   margin-right: 1em;
   margin-bottom: 0.5em; }
 
-.mapper.mapper-row-2 .mapper-item {
+.mapper-layout.mapper-layout-row-2 .mapper-item {
   float: left;
   width: 48%;
   margin: 0 1%; }
 
-.mapper.mapper-row-3 .mapper-item {
+.mapper-layout.mapper-layout-row-3 .mapper-item {
   float: left;
   width: 31%;
   margin: 0 1%; }
 
-.mapper.mapper-row-4 .mapper-item {
+.mapper-layout.mapper-layout-row-4 .mapper-item {
   float: left;
   width: 23%;
   margin: 0 1%; }
 
-.mapper.mapper-row-5 .mapper-item {
+.mapper-layout.mapper-layout-row-5 .mapper-item {
   float: left;
   width: 18%;
   margin: 0 1%; }
 
 @media only screen and (max-width: 480px) {
-  .mapper.mapper-row-4 .mapper-item, .mapper.mapper-row-5 .mapper-item {
+  .mapper-layout.mapper-layout-row-4 .mapper-item, .mapper-layout.mapper-layout-row-5 .mapper-item {
     width: 98%; } }
 
 @media only screen and (max-width: 1024px) {
-  .mapper.mapper-row-3 .mapper-item, .mapper.mapper-row-4 .mapper-item, .mapper.mapper-row-5 .mapper-item {
+  .mapper-layout.mapper-layout-row-3 .mapper-item, .mapper-layout.mapper-layout-row-4 .mapper-item, .mapper-layout.mapper-layout-row-5 .mapper-item {
     width: 48%; } }
 
 /* Extension to circled */
