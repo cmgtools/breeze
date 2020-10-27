@@ -337,13 +337,13 @@ order to place group at appropriate postion.
 		}
 	}
 
-	&.btn-border-white {
-		color: $color-white !important;
-		@include shadow-inset( 0, 0, 0, $color-white, 1px );
+	&.btn-border-black {
+		color: $color-black !important;
+		@include shadow-inset( 0, 0, 0, $color-black, 1px );
 
 		&:hover {
-			color: $color-black !important;
-			background-color: $color-white !important;
+			color: $color-white !important;
+			background-color: $color-black !important;
 		}
 	}
 
