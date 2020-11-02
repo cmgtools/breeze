@@ -198,14 +198,14 @@ Blur - Blus is another mixin adding lens effect to blur underlying content and i
 Media Queries - These mixins are pre-defined media queries using the screen sizes declared in variables file.
 This section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .icon-picker-wrap, .choice-layout, .switch-layout, .frm-split-40-60 .form-group, .mapper-layout, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
+.clearfix, .row, .choice-layout, .switch-layout, .frm-split-40-60 .form-group, .mapper-layout, .icon-picker-wrap, .header-basic, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .icon-picker-wrap:before, .choice-layout:before, .switch-layout:before, .frm-split-40-60 .form-group:before, .mapper-layout:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .choice-layout:before, .switch-layout:before, .frm-split-40-60 .form-group:before, .mapper-layout:before, .icon-picker-wrap:before, .header-basic:before, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .icon-picker-wrap:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .icon-picker-wrap:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .choice-layout:after, .switch-layout:after, .frm-split-40-60 .form-group:after, .mapper-layout:after, .icon-picker-wrap:after, .header-basic:after, .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -6360,165 +6360,6 @@ blockquote:after {
   content: "\e90c"; }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze CSS
-Framework. Most of these elements are also dependent on Velocity JS Framework. Though
-the JS implementation can also be done for other standard libraries.
-
-Dependencies: variables, mixins, transitions, transformations
-
-Details: It defines the custom element styles as listed below:
-
-Icon picker - The icon picker element allows users to pick an item. It depends on
-cmtIconPicker jQuery plugin available in Velocity JS Framework.
-***********************************************************************/
-.icon-picker-wrap {
-  width: 100%; }
-  .icon-picker-wrap .icon-picker {
-    position: relative;
-    display: inline-block; }
-    .icon-picker-wrap .icon-picker .picker-icon-wrap {
-      display: inline-block;
-      position: relative;
-      width: 48px;
-      height: 48px;
-      text-align: center;
-      cursor: pointer;
-      background-color: #3C4655;
-      color: #96B0D6;
-      -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-      -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-      -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-      -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-      transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
-      .icon-picker-wrap .icon-picker .picker-icon-wrap:hover {
-        background-color: #E74343;
-        color: #FFFFFF; }
-      .icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
-        display: inline-block;
-        height: 48px;
-        line-height: 48px;
-        font-size: 32px;
-        cursor: pointer; }
-    .icon-picker-wrap .icon-picker .picker-icon-sets {
-      background-color: lightgray;
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 48px;
-      z-index: 1000000; }
-      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set {
-        width: 264px;
-        padding: 5px;
-        height: 216px; }
-        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap {
-          margin: 2px;
-          width: 48px;
-          height: 48px; }
-          .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap .picker-icon {
-            display: inline-block;
-            width: 48px;
-            height: 48px;
-            line-height: 48px;
-            font-size: 36px;
-            cursor: pointer; }
-
-/**********************************************************************
-Description: It defines the styles of time picker elements available in Breeze CSS
-Framework. Most of these elements are also dependent on Velocity JS Framework. Though
-the JS implementation can also be done for other standard libraries.
-
-Dependencies: variables, mixins, transitions, transformations
-
-Details: It defines the custom element styles as listed below:
-
-Time picker - The time picker element allows users to choose time. It depends on
-cmtTimePicker jQuery plugin available in Velocity JS Framework.
-***********************************************************************/
-.timepicker {
-  position: absolute;
-  display: none; }
-  .timepicker .timepicker-content .timepicker-hr-wrap .timepicker-hr {
-    text-align: center; }
-  .timepicker .timepicker-content .timepicker-min-wrap .timepicker-min {
-    text-align: center; }
-
-.timepicker-basic {
-  background: #3C4655;
-  color: #96B0D6;
-  border: 1px solid #595959; }
-  .timepicker-basic .timepicker-header {
-    border-bottom: 1px solid #595959; }
-    .timepicker-basic .timepicker-header .timepicker-apm {
-      padding: 0.5em; }
-      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-am {
-        cursor: pointer;
-        border-right: 1px solid #7F7F7F; }
-      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-pm {
-        cursor: pointer; }
-      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-mm {
-        border-left: 1px solid #595959; }
-      .timepicker-basic .timepicker-header .timepicker-apm.active {
-        background: #556479;
-        color: #6a8fc5; }
-  .timepicker-basic .timepicker-content {
-    border-bottom: 1px solid #595959; }
-    .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr {
-      padding: 0.5em;
-      border-left: 1px solid #7F7F7F;
-      border-bottom: 1px solid #7F7F7F;
-      cursor: pointer; }
-      .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr.active {
-        background: #556479;
-        color: #6a8fc5; }
-    .timepicker-basic .timepicker-content .timepicker-min-wrap {
-      border-left: 1px solid #595959; }
-      .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min {
-        padding: 0.5em;
-        border-left: 1px solid #7F7F7F;
-        border-bottom: 1px solid #7F7F7F;
-        cursor: pointer; }
-        .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min.active {
-          background: #556479;
-          color: #6a8fc5; }
-  .timepicker-basic .timepicker-footer {
-    padding: 0.25em; }
-    .timepicker-basic .timepicker-footer .timepicker-ok {
-      margin-left: 0.25em; }
-    .timepicker-basic .timepicker-footer .timepicker-close {
-      margin-left: 0.25em; }
-
-/**********************************************************************
-Description: It defines the styles of elements list available in Breeze CSS Framework.
-
-Dependencies: variables, mixins, transitions, transformations
-
-Details: It defines the custom element styles as listed below:
-
-Radio List - A list of radio elements.
-***********************************************************************/
-.list.list-style-circle {
-  list-style-type: circle; }
-
-.list.list-style-square {
-  list-style-type: square; }
-
-.list.list-style-decimal {
-  list-style-type: decimal; }
-
-.list.list-style-image-default {
-  list-style-image: url("../images/list-default.jpg"); }
-
-.list.list-position-inside {
-  list-style-position: inside; }
-
-.list.list-position-outside {
-  list-style-position: outside; }
-
-.list.list-radio label {
-  width: auto;
-  clear: none; }
-
-/**********************************************************************
 Description: It defines the styles of select elements available in Breeze CSS
 Framework. Most of these elements are also dependent on Velocity JS Framework. Though
 the JS implementation can also be done for other standard libraries.
@@ -7782,6 +7623,37 @@ height from form elements.*/
   color: #E74343 !important; }
 
 /**********************************************************************
+Description: It defines the styles of elements list available in Breeze CSS Framework.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Radio List - A list of radio elements.
+***********************************************************************/
+.list.list-style-circle {
+  list-style-type: circle; }
+
+.list.list-style-square {
+  list-style-type: square; }
+
+.list.list-style-decimal {
+  list-style-type: decimal; }
+
+.list.list-style-image-default {
+  list-style-image: url("../images/list-default.jpg"); }
+
+.list.list-position-inside {
+  list-style-position: inside; }
+
+.list.list-position-outside {
+  list-style-position: outside; }
+
+.list.list-radio label {
+  width: auto;
+  clear: none; }
+
+/**********************************************************************
 Description: It defines the table styles og Breeze Framework.
 
 Dependencies: variables, mixins
@@ -8432,6 +8304,134 @@ Action - The action mapper will allow users to toggle each item individually by 
 @media only screen and (max-width: 1024px) {
   .mapper-layout.mapper-layout-row-3 .mapper-item, .mapper-layout.mapper-layout-row-4 .mapper-item, .mapper-layout.mapper-layout-row-5 .mapper-item {
     width: 48%; } }
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Icon picker - The icon picker element allows users to pick an item. It depends on
+cmtIconPicker jQuery plugin available in Velocity JS Framework.
+***********************************************************************/
+.icon-picker-wrap {
+  width: 100%; }
+  .icon-picker-wrap .icon-picker {
+    position: relative;
+    display: inline-block; }
+    .icon-picker-wrap .icon-picker .picker-icon-wrap {
+      display: inline-block;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #3C4655;
+      color: #96B0D6;
+      -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+      .icon-picker-wrap .icon-picker .picker-icon-wrap:hover {
+        background-color: #E74343;
+        color: #FFFFFF; }
+      .icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
+        display: inline-block;
+        height: 48px;
+        line-height: 48px;
+        font-size: 32px;
+        cursor: pointer; }
+    .icon-picker-wrap .icon-picker .picker-icon-sets {
+      background-color: lightgray;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 48px;
+      z-index: 1000000; }
+      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set {
+        width: 264px;
+        padding: 5px;
+        height: 216px; }
+        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap {
+          margin: 2px;
+          width: 48px;
+          height: 48px; }
+          .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-set .picker-icon-wrap .picker-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 36px;
+            cursor: pointer; }
+
+/**********************************************************************
+Description: It defines the styles of time picker elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Time picker - The time picker element allows users to choose time. It depends on
+cmtTimePicker jQuery plugin available in Velocity JS Framework.
+***********************************************************************/
+.timepicker {
+  position: absolute;
+  display: none; }
+  .timepicker .timepicker-content .timepicker-hr-wrap .timepicker-hr {
+    text-align: center; }
+  .timepicker .timepicker-content .timepicker-min-wrap .timepicker-min {
+    text-align: center; }
+
+.timepicker-basic {
+  background: #3C4655;
+  color: #96B0D6;
+  border: 1px solid #595959; }
+  .timepicker-basic .timepicker-header {
+    border-bottom: 1px solid #595959; }
+    .timepicker-basic .timepicker-header .timepicker-apm {
+      padding: 0.5em; }
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-am {
+        cursor: pointer;
+        border-right: 1px solid #7F7F7F; }
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-pm {
+        cursor: pointer; }
+      .timepicker-basic .timepicker-header .timepicker-apm.timepicker-mm {
+        border-left: 1px solid #595959; }
+      .timepicker-basic .timepicker-header .timepicker-apm.active {
+        background: #556479;
+        color: #6a8fc5; }
+  .timepicker-basic .timepicker-content {
+    border-bottom: 1px solid #595959; }
+    .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr {
+      padding: 0.5em;
+      border-left: 1px solid #7F7F7F;
+      border-bottom: 1px solid #7F7F7F;
+      cursor: pointer; }
+      .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr.active {
+        background: #556479;
+        color: #6a8fc5; }
+    .timepicker-basic .timepicker-content .timepicker-min-wrap {
+      border-left: 1px solid #595959; }
+      .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min {
+        padding: 0.5em;
+        border-left: 1px solid #7F7F7F;
+        border-bottom: 1px solid #7F7F7F;
+        cursor: pointer; }
+        .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min.active {
+          background: #556479;
+          color: #6a8fc5; }
+  .timepicker-basic .timepicker-footer {
+    padding: 0.25em; }
+    .timepicker-basic .timepicker-footer .timepicker-ok {
+      margin-left: 0.25em; }
+    .timepicker-basic .timepicker-footer .timepicker-close {
+      margin-left: 0.25em; }
 
 /* Extension to circled */
 .circledp {
