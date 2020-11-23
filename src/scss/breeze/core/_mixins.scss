@@ -403,22 +403,12 @@ This section includes mixins for in-between, desktop first and mobile first appr
 	color: $text;
 }
 
-@mixin max-area-cover-color( $bkg-color: $color-black, $display: none, $text: $color-primary-text ) {
-	@include max-area-cover( $display, $text );
-	background-color: $bkg-color;
-}
-
-@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none, $text: $color-primary-text ) {
-	@include max-area-cover( $display, $text );
-	background-color: rgba( $r, $g, $b, 0 );
-}
-
-@mixin max-area-cover-transparent( $bkg-color: $color-black, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
+@mixin max-area-cover-color( $bkg-color: $color-black, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
 	@include max-area-cover( $display, $text );
 	background-color: rgba( $bkg-color, $alpha );
 }
 
-@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
+@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none, $text: $color-primary-text ) {
 	@include max-area-cover( $display, $text );
 	background-color: rgba( $r, $g, $b, $alpha );
 }
@@ -1706,20 +1696,12 @@ Notes:
 	@include max-area-cover;
 }
 
-.max-area-cover-color {
-	@include max-area-cover-color;
+.max-area-cover-black {
+	@include max-area-cover-color( $color-black, 1, none, $color-primary-text );
 }
 
-.max-area-cover-rgb {
-	@include max-area-cover-rgb;
-}
-
-.max-area-cover-transparent {
-	@include max-area-cover-transparent;
-}
-
-.max-area-cover-transparent-rgb {
-	@include max-area-cover-transparent-rgb;
+.max-area-cover-black-transparent {
+	@include max-area-cover-color( $color-black, $color-transparent-medium, none, $color-primary-text );
 }
 
 // Max Area Cover - Show pre-loaders. Little JS is required to hide pre-loader on loading the page.

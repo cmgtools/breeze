@@ -1318,7 +1318,7 @@ Notes:
   text-align: center;
   color: #363636; }
 
-.max-area-cover-color {
+.max-area-cover-black {
   position: absolute;
   top: 0;
   left: 0;
@@ -1328,33 +1328,9 @@ Notes:
   display: none;
   text-align: center;
   color: #363636;
-  background-color: #000000; }
+  background-color: black; }
 
-.max-area-cover-rgb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000000;
-  display: none;
-  text-align: center;
-  color: #363636;
-  background-color: rgba(0, 0, 0, 0); }
-
-.max-area-cover-transparent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000000;
-  display: none;
-  text-align: center;
-  color: #363636;
-  background-color: rgba(0, 0, 0, 0.6); }
-
-.max-area-cover-transparent-rgb {
+.max-area-cover-black-transparent {
   position: absolute;
   top: 0;
   left: 0;
@@ -8928,6 +8904,47 @@ Details: It defines the menu components as listed below:
         .vnav-slider-wrap .vnav-slider-content ul li a:hover {
           color: #298ccf; }
 
+@media only screen and (max-width: 1024px) {
+  #menu-main {
+    display: none; } }
+
+@media only screen and (min-width: 1025px) {
+  #menu-main {
+    padding: 10px;
+    padding-right: 0;
+    text-align: right;
+    display: block;
+    z-index: 1;
+    float: right; } }
+
+@media only screen and (max-width: 1024px) {
+  #menu-main-mobile {
+    position: absolute;
+    display: none;
+    width: 320px;
+    right: 0; }
+    #menu-main-mobile li {
+      box-shadow: 0 -4px 2px -5px #87BA45; }
+      #menu-main-mobile li a, #menu-main-mobile li .link {
+        background-color: white;
+        color: #171717;
+        padding: 1em 0;
+        -webkit-transition: all 250ms ease-in-out 0s;
+        -moz-transition: all 250ms ease-in-out 0s;
+        -ms-transition: all 250ms ease-in-out 0s;
+        -o-transition: all 250ms ease-in-out 0s;
+        transition: all 250ms ease-in-out 0s; }
+        #menu-main-mobile li a:hover, #menu-main-mobile li .link:hover {
+          background-color: lightgray;
+          color: #298ccf; }
+      #menu-main-mobile li:active a, #menu-main-mobile li:active .link {
+        background-color: #87BA45;
+        color: #E6E6E6; } }
+
+@media only screen and (max-width: 480px) {
+  #menu-main-mobile {
+    width: 100%; } }
+
 /**********************************************************************
 Description: It defines the styles for collapsible menu components available in CMT-UI css framework.
 
@@ -9399,30 +9416,6 @@ Basic - The basic header define the styles for primary header having logo and me
         padding: 5px 10px; }
         .header-basic .header-logo .logo img {
           height: 40px; }
-      .header-basic #menu-main {
-        display: none; }
-      .header-basic #menu-main-mobile {
-        position: absolute;
-        display: none;
-        width: 320px;
-        right: 0; }
-        .header-basic #menu-main-mobile li {
-          box-shadow: 0 -4px 2px -5px #87BA45; }
-          .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
-            background-color: white;
-            color: #171717;
-            padding: 1em 0;
-            -webkit-transition: all 250ms ease-in-out 0s;
-            -moz-transition: all 250ms ease-in-out 0s;
-            -ms-transition: all 250ms ease-in-out 0s;
-            -o-transition: all 250ms ease-in-out 0s;
-            transition: all 250ms ease-in-out 0s; }
-            .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
-              background-color: lightgray;
-              color: #298ccf; }
-          .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
-            background-color: #87BA45;
-            color: #E6E6E6; }
       .header-basic #mobile-actions {
         margin: 5px 10px;
         line-height: 40px;
@@ -9442,9 +9435,6 @@ Basic - The basic header define the styles for primary header having logo and me
           transition: all 250ms ease-in-out 0s; }
           .header-basic #mobile-actions .mobile-action:hover {
             color: #298ccf; } }
-  @media only screen and (max-width: 480px) {
-    .header-basic #menu-main-mobile {
-      width: 100%; } }
   @media only screen and (min-width: 1025px) {
     .header-basic {
       height: 80px;
@@ -9453,13 +9443,6 @@ Basic - The basic header define the styles for primary header having logo and me
         padding: 5px 10px 5px 0; }
         .header-basic .header-logo .logo img {
           height: 70px; }
-      .header-basic #menu-main {
-        padding: 10px;
-        padding-right: 0;
-        text-align: right;
-        display: block;
-        z-index: 1;
-        float: right; }
       .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
         display: none; }
       .header-basic.header-small {
