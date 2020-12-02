@@ -8251,7 +8251,8 @@ Action - The action mapper will allow users to toggle each item individually by 
   display: inline-block;
   width: auto;
   margin-right: 1em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  padding-right: 2em; }
 
 .mapper-layout.mapper-layout-row-2 .mapper-item {
   float: left;
