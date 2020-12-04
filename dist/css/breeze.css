@@ -7883,7 +7883,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 .actions-list-data {
   position: absolute;
   display: none;
-  z-index: 10000; }
+  z-index: 100000; }
   .actions-list-data .action {
     display: inline-block;
     width: 100%;
