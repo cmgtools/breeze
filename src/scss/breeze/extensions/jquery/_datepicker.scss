@@ -32,7 +32,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-title {
-	padding: 1em 0;
+	padding: 0.5em 0;
 
 	.ui-datepicker-month, .ui-datepicker-year {
 		width: 72px;
@@ -46,20 +46,16 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 
 .ui-datepicker-prev {
 	float: left;
-	padding: 1em;
+	padding: 0.5em;
 }
 
 .ui-datepicker-next {
 	float: right;
-	padding: 1em;
+	padding: 0.5em;
 }
 
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
 	background-color: $color-tertiary-d;
-}
-
-.ui-datepicker-title {
-	font-weight: bold;
 }
 
 .ui-datepicker-calendar {

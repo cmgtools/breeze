@@ -70,6 +70,19 @@ might be displayed around the slides.
 	}
 }
 
+.slider-with-lightbox {
+
+	.slider-slides-wrap {
+
+		.slider-slides {
+
+			.slider-slide {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
 // == Basic =========================
 
 // Basic slider having fixed width slides
