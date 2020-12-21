@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2020-12-03
+ * Velocity - v1.0.0-alpha1 - 2020-12-17
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -1942,6 +1942,11 @@ cmt.components.base.SliderComponent.prototype.normaliseSliders = function() {
     }
 };
 
+cmt.components.base.SliderComponent.prototype.getSlider = function( sliderKey ) {
+
+	return this.sliders[ this.indexKey + sliderKey ];
+};
+
 cmt.components.base.SliderComponent.prototype.addSlide = function( sliderKey, slideHtml ) {
 
 	this.sliders[ this.indexKey + sliderKey ].addSlide( slideHtml );
@@ -1960,6 +1965,16 @@ cmt.components.base.SliderComponent.prototype.scrollToPosition = function( slide
 cmt.components.base.SliderComponent.prototype.scrollToSlide = function( sliderKey, slideKey, animate ) {
 
 	this.sliders[ this.indexKey + sliderKey ].scrollToSlide( slideKey, animate );
+};
+
+cmt.components.base.SliderComponent.prototype.showPrevSlide = function( sliderKey ) {
+
+	this.sliders[ this.indexKey + sliderKey ].showPrevSlide();
+};
+
+cmt.components.base.SliderComponent.prototype.showNextSlide = function( sliderKey ) {
+
+	this.sliders[ this.indexKey + sliderKey ].showNextSlide();
 };
 
 // == Slider ==============================
@@ -2619,6 +2634,7 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 	var element		= this.element;
 	var lightboxId	= this.options.lightboxId;
 	var lightbox	= jQuery( '#' + lightboxId );
+	var bkg			= lightbox.find( '.lightbox-data-bkg' );
 
 	// Configure
 	var screenWidth		= jQuery( window ).width();
@@ -2633,7 +2649,7 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 
 	if( self.options.lightboxBkg ) {
 
-		lightbox.find( '.lightbox-data-bkg' ).addClass( 'lightbox-bkg-wrap' );
+		bkg.addClass( 'lightbox-bkg-wrap' );
 	}
 
 	var sliderHtml = '<div class="slider slider-basic slider-lightbox">';
@@ -2653,11 +2669,11 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 
 			if( self.options.lightboxBkg ) {
 
-				lightbox.find( '.lightbox-data-bkg' ).css( 'background-image', 'url(' + imageUrl + ')' );
+				bkg.css( 'background-image', 'url(' + imageUrl + ')' );
 			}
 			else {
 
-				lightbox.find( '.lightbox-data-bkg' ).html( '<img src="' + imageUrl + '"/>' );
+				bkg.html( '<img src="' + imageUrl + '"/>' );
 			}
 		}
 		else {
@@ -2675,14 +2691,63 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 		jQuery( 'body' ).css( { 'overflow': 'hidden', 'height': jQuery( window ).height() } );
 	}
 
+	bkg.attr( 'data-idx', slideId );
+	bkg.attr( 'data-max', element.find( '.slider-slide' ).length );
+
 	lightbox.fadeIn( 'slow' );
 
 	// Sliders
 	lightboxData.find( '.slider-lightbox' ).cmtSlider({
 		lControlContent: '<i class="fa fa-2x fa-angle-left valign-center"></i>',
 		rControlContent: '<i class="fa fa-2x fa-angle-right valign-center"></i>',
-		circular: false,
+		circular: true,
 		onSlideClick: self.setLightboxBkg
+	});
+
+	lightboxData.find( '.lightbox-control' ).unbind( 'click' );
+
+	lightboxData.find( '.lightbox-control-left' ).click( function() {
+
+		var slider	= lightboxData.find( '.slider-lightbox' ).cmtSlider( 'getSlider' );
+		var element	= slider.element;
+
+		slider.showPrevSlide();
+
+		var slideId = parseInt( bkg.attr( 'data-idx' ) );
+		var total	= parseInt( bkg.attr( 'data-max' ) );
+
+		if( ( slideId == 0 ) ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( total - 1 ) + ']'), ( total - 1 ) );
+		}
+		else {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( slideId - 1 ) + ']'), ( slideId - 1 ) );
+		}
+	});
+
+	lightboxData.find( '.lightbox-control-right' ).click( function() {
+
+		var slider	= lightboxData.find( '.slider-lightbox' ).cmtSlider( 'getSlider' );
+		var element	= slider.element;
+
+		slider.showNextSlide();
+
+		var slideId = parseInt( bkg.attr( 'data-idx' ) );
+		var total	= parseInt( bkg.attr( 'data-max' ) );
+
+		if( ( slideId == 0 && total == 1 ) || ( slideId == ( total - 1 ) ) ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=0]'), 0 );
+		}
+		else if( slideId == 0 && total > 1 ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=1]'), 1 );
+		}
+		else {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( slideId + 1 ) + ']'), ( slideId + 1 ) );
+		}
 	});
 }
 
@@ -2692,7 +2757,7 @@ cmt.components.base.Slider.prototype.setLightboxBkg = function( slider, slide, s
 
 	var bkg = slider.closest( '.lightbox-slider-wrap' ).find( '.lightbox-data-bkg' );
 
-	slider.find( '.slide' ).removeClass( 'active' );
+	slider.find( '.slider-slide' ).removeClass( 'active' );
 	slide.addClass( 'active' );
 
 	bkg.hide();
@@ -2705,6 +2770,9 @@ cmt.components.base.Slider.prototype.setLightboxBkg = function( slider, slide, s
 
 		bkg.html( '<img src="' + imageUrl + '"/>' );
 	}
+
+	bkg.attr( 'data-idx', slideId );
+	bkg.attr( 'data-max', slider.find( '.slider-slide' ).length );
 
 	bkg.fadeIn( 'slow' );
 }
@@ -3972,7 +4040,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 					}
 				};
 
-				var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+				var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 				// start upload
 				xhr.open("POST", urlParams, true );
@@ -3998,7 +4066,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			formData.append( 'file', file );
 
-			var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+			var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 			jQuery.ajax({
 			  type:			"POST",
@@ -4059,7 +4127,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			formData.append( 'file', imageData, fileName );
 
-			var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+			var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 			jQuery.ajax({
 			  type:			"POST",
@@ -6403,6 +6471,13 @@ function hideMessagePopup() {
 				});
 			}
 		},
+		// Returns the active slider
+		getSlider: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			return component.getSlider( sliderKey );
+		},
 		// Adds a new slide using the given HTML and re-arrange the slides
 		addSlide: function( slideHtml ) {
 
@@ -6430,6 +6505,20 @@ function hideMessagePopup() {
 			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
 
 			component.scrollToSlide( sliderKey, slideKey, animate );
+		},
+		// Scroll slider to the given position in %
+		showPrevSlide: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			component.showPrevSlide( sliderKey );
+		},
+		// Scroll slider to the given slide
+		showNextSlide: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			component.showNextSlide( sliderKey );
 		}
 	};
 

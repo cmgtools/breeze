@@ -7372,7 +7372,8 @@ select, .select-wrap .selected {
     width: 70%; }
   .frm-field-button input[type="submit"], .frm-field-button input[type="button"], .frm-field-button button, .frm-field-button .btn {
     width: 30%;
-    margin-left: -4px; }
+    margin-left: -5px;
+    border-left: none; }
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
