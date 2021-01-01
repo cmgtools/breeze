@@ -65,6 +65,10 @@ CMT Select Native - It works without cmtSelect plugin.
 			// disabled
 			&.disabled {
 				cursor: default;
+
+				.s-text, .s-icon {
+					color: $color-field-d;
+				}
 			}
 		}
 
