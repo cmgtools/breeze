@@ -62,7 +62,7 @@ by showing breeze icons instead of browser icons.
 
 		input[type=checkbox]:checked + .label,
 		input[type=radio]:checked + .label {
-			color: $color-btn-a;
+			//color: $color-btn-a;
 		}
 
 		// Hover State - Normal, Checked

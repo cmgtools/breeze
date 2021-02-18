@@ -6388,7 +6388,7 @@ CMT Select Native - It works without cmtSelect plugin.
       .select-wrap .select .selected.disabled {
         cursor: default; }
         .select-wrap .select .selected.disabled .s-text, .select-wrap .select .selected.disabled .s-icon {
-          color: #CCCCCC; }
+          color: #909090; }
     .select-wrap .select .select-list {
       position: absolute;
       width: 100%;
@@ -6530,9 +6530,6 @@ by showing breeze icons instead of browser icons.
     display: inline-block;
     background-color: #F5F8FC;
     color: #E74343; }
-  .choice .choice-option input[type=checkbox]:checked + .label,
-  .choice .choice-option input[type=radio]:checked + .label {
-    color: #b51717; }
   .choice .choice-option input[type=checkbox]:hover + .label::before, .choice .choice-option input[type=checkbox] + .label:hover::before, .choice .choice-option input[type=checkbox]:checked + .label::before,
   .choice .choice-option input[type=radio]:hover + .label::before, .choice .choice-option input[type=radio] + .label:hover::before, .choice .choice-option input[type=radio]:checked + .label::before {
     color: #FF3636; }
