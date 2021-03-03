@@ -4500,11 +4500,11 @@ also include classes to arrange content within container or parent element.
     width: 100%; }
   .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%; }
-  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
+  .max-cols-25 > .col:nth-child(5), .max-cols-25 > .col-small:nth-child(5), .max-cols-25s > .col:nth-child(5), .max-cols-25s > .col-small:nth-child(5) {
     clear: both; }
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-50s > .col1, .max-cols-50s > .col2, .max-cols-50s > .col3, .max-cols-50s > .col4, .max-cols-50s > .col5, .max-cols-50s > .col6, .max-cols-50s > .col7, .max-cols-50s > .col8, .max-cols-50s > .col9, .max-cols-50s > .col10, .max-cols-50s > .col11, .max-cols-50s > .col12, .max-cols-50s > .col13, .max-cols-50s > .col14, .max-cols-50s > .col15 {
     width: 48%; }
-  .max-cols-50 > .col:nth-child(odd), .max-cols-50s > .col:nth-child(odd) {
+  .max-cols-50 > .col:nth-child(odd), .max-cols-50 > .col-small:nth-child(odd), .max-cols-50s > .col:nth-child(odd), .max-cols-50s > .col-small:nth-child(odd) {
     clear: both; }
   .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }

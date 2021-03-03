@@ -171,7 +171,7 @@ also include classes to arrange content within container or parent element.
 			width: 23%;
 		}
 
-		& >.col:nth-child( 5 ) {
+		& >.col:nth-child( 5 ), & >.col-small:nth-child( 5 ) {
 			clear: both;
 		}
 	}
@@ -182,7 +182,7 @@ also include classes to arrange content within container or parent element.
 			width: 48%;
 		}
 
-		& >.col:nth-child( odd ) {
+		& >.col:nth-child( odd ), & >.col-small:nth-child( odd ) {
 			clear: both;
 		}
 	}
