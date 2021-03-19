@@ -1,0 +1,28 @@
+.counter {
+	display: inline-block;
+
+	.counter-dec {
+		display: inline-block;
+	}
+
+	.counter-val {
+
+	}
+
+	.counter-inc {
+		display: inline-block;
+	}
+}
+
+.counter-basic {
+
+	.counter-control {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+		padding: 0.5em;
+	}
+
+	.counter-val {
+		width: 75px;
+	}
+}

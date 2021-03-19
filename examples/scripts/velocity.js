@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2021-02-18
+ * Velocity - v1.0.0-alpha1 - 2021-03-19
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -3448,8 +3448,11 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			var min		= cmt.utils.data.hasAttribute( counter, 'data-min' ) ? counter.attr( 'data-min' ) : settings.min;
 			var max		= cmt.utils.data.hasAttribute( counter, 'data-max' ) ? counter.attr( 'data-max' ) : settings.max;
-			var val		= cmt.utils.data.hasAttribute( counter, 'data-val' ) ? counter.attr( 'data-val' ) : settings.val;
-			var cval	= val;
+			var cval	= cmt.utils.data.hasAttribute( counter, 'data-val' ) ? counter.attr( 'data-val' ) : settings.val;
+
+			min		= parseInt( min );
+			max		= parseInt( max );
+			cval	= parseInt( cval );
 
 			var incBtn	= counter.find( '.counter-inc' );
 			var decBtn	= counter.find( '.counter-dec' );
@@ -3460,13 +3463,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			incBtn.click( function() {
 
-				cval = field.val();
+				cval = parseInt( field.val() );
 
 				if( cval < max ) {
 
 					cval++;
 
 					field.val( cval );
+					field.change();
 
 					if( cval >= max ) {
 
@@ -3485,13 +3489,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			decBtn.click( function() {
 
-				cval = field.val();
+				cval = parseInt( field.val() );
 
 				if( cval > min ) {
 
 					cval--;
 
 					field.val( cval );
+					field.change();
 
 					if( cval <= min ) {
 
