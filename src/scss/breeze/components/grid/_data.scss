@@ -241,10 +241,6 @@ Basic - The basic data grid having default coloring.
 
 						.grid-row {
 
-							.grid-row-header {
-								display: none;
-							}
-
 							.grid-row-data {
 								display: flex;
 
@@ -273,7 +269,8 @@ Basic - The basic data grid having default coloring.
 
 // Basic Grid
 .grid-data-basic {
-	background-color: $color-primary-d;
+	background-color: $color-primary;
+	color: $color-primary-text;
 	padding: 10px;
 
 	// Grid Header

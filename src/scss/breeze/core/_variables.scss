@@ -116,8 +116,8 @@ $font-size-micro: 0.50em;
 //$font-size-6: 1.2em;
 
 //$font-size-7: 1em;
-
 //$font-size-8: 0.833em;
+
 //$font-size-tiny: 0.694em;
 
 // Font Size Scheme - Following standard introduced by w3 in html 4, followed by firefox and safari
@@ -163,6 +163,7 @@ $screen-desktop-large: 1600px; // HD+
 $screen-desktop-xlarge: 1920px; // FHD
 $screen-desktop-xxlarge: 3840px; // 4K UHD
 $screen-desktop-xxxlarge: 4096px; // True 4K
+$screen-desktop-extreme: 7680px; // 8K
 
 // Standard size for element's radius, border, shadow, padding, margin
 $size-default-px: 1px;

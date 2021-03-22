@@ -113,28 +113,31 @@ Basic - The basic widget defines the styles of widget having text and background
 
 	.widget-content-wrap {
 
-		.widget-header {
-			padding: 1rem 0;
+		.widget-header-wrap {
 
-			.widget-header-title {
-				font-size: $font-size-4;
-				font-family: $font-heading;
-			}
+			.widget-header {
+				padding: 1rem 0;
 
-			.widget-header-info {
-				font-size: $font-size-6;
-			}
-			
-			.widget-header-icon + .widget-header-title, .widget-header-icon + .widget-header-info, .widget-header-icon + .widget-header-content {
-				margin-top: 0.5rem;
-			}
+				.widget-header-title {
+					font-size: $font-size-4;
+					font-family: $font-heading;
+				}
 
-			.widget-header-title + .widget-header-info, .widget-header-title + .widget-header-content {
-				margin-top: 0.5rem;
-			}
+				.widget-header-info {
+					font-size: $font-size-6;
+				}
 
-			.widget-header-info + .widget-header-content {
-				margin-top: 0.5rem;
+				.widget-header-icon + .widget-header-title, .widget-header-icon + .widget-header-info, .widget-header-icon + .widget-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.widget-header-title + .widget-header-info, .widget-header-title + .widget-header-content {
+					margin-top: 0.5rem;
+				}
+
+				.widget-header-info + .widget-header-content {
+					margin-top: 0.5rem;
+				}
 			}
 		}
 

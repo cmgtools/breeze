@@ -136,6 +136,51 @@ html, body {
 	margin: 0 auto;
 }
 
+// Floating Blocks - Clear or float the elements on larger devices
+@include responsive-min( screen-tablet-large ) {
+
+	.clear-desktop {
+
+		&.clear-left {
+			clear: left !important;
+		}
+
+		&.clear-right {
+			clear: right !important;
+		}
+	}
+}
+
+// Floating Blocks - Clear or float the elements on smaller devices
+@include responsive-max( screen-tablet-large ) {
+
+	.clear-tablet {
+
+		&.clear-left {
+			clear: left !important;
+		}
+
+		&.clear-right {
+			clear: right !important;
+		}
+	}
+}
+
+// Floating Blocks - Clear or float the elements on mobile devices
+@include responsive-max( screen-mobile-large ) {
+
+	.clear-mobile {
+
+		&.clear-left {
+			clear: left !important;
+		}
+
+		&.clear-right {
+			clear: right !important;
+		}
+	}
+}
+
 /**
  * Pre-defined width and height, handy at few places.
  */
@@ -282,14 +327,17 @@ html, body {
 
 .avatar {
 	display: inline-block;
-	width: 32px;
-
-	img {
-		width: 32px;
-	}
 
 	&.avatar-center {
 		margin: 0 auto;
+	}
+
+	&.avatar-default {
+		width: 32px;
+
+		img {
+			width: 32px;
+		}
 	}
 
 	&.avatar-small {
@@ -652,7 +700,7 @@ html, body {
 
 // Cursors - Direct
 
-.pointer, .cmt-click {
+.pointer, .click {
 	cursor: pointer;
 }
 
@@ -717,19 +765,6 @@ html, body {
 		color: $color-white !important;
 	}
 }
-
-// Disabled - Moved out to form
-/*
-.disabled {
-	background-color: $color-btn-d !important;
-	color: $color-btn-text-d !important;
-
-	&:hover {
-		background-color: $color-btn-d !important;
-		color: $color-btn-text-d !important;
-	}
-}
-*/
 
 // Fluid Elements (blocks, images)
 

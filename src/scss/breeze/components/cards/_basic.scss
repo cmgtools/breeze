@@ -149,7 +149,7 @@ Details: It defines the styles of card components as listed below:
 	.card-content-wrap {
 
 		.card-header {
-			padding: 1rem;
+			padding: 0.25rem 1rem;
 
 			.card-header-title {
 				font-size: $font-size-4;
@@ -161,24 +161,24 @@ Details: It defines the styles of card components as listed below:
 			}
 
 			.card-header-icon + .card-header-title, .card-header-icon + .card-header-info, .card-header-icon + .card-header-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-header-title + .card-header-info, .card-header-title + .card-header-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-header-info + .card-header-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 		}
 
 		.card-data {
-			padding: 1rem;
+			padding: 0.25rem 1rem;
 		}
 
 		.card-content {
-			padding: 1rem;
+			padding: 0.25rem 1rem;
 
 			.card-content-title {
 				font-size: $font-size-4;
@@ -190,24 +190,24 @@ Details: It defines the styles of card components as listed below:
 			}
 
 			.card-content-title + .card-content-info, .card-content-title + .card-content-summary, .card-content-title + .card-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-content-info + .card-content-summary, .card-content-info + .card-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-content-summary + .card-content-data {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-content-data {
-				padding: 1rem 0;
+				padding: 0.25rem 0;
 			}
 		}
 
 		.card-footer {
-			padding: 1rem;
+			padding: 0.25rem 1rem;
 
 			.card-footer-title {
 				font-size: $font-size-5;
@@ -217,17 +217,17 @@ Details: It defines the styles of card components as listed below:
 			.card-footer-info {
 				font-size: $font-size-6;
 			}
-			
+
 			.card-footer-icon + .card-footer-title, .card-footer-icon + .card-footer-info, .card-footer-icon + .card-footer-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-footer-title + .card-footer-info, .card-footer-title + .card-footer-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 
 			.card-footer-info + .card-footer-content {
-				margin-top: 0.5rem;
+				margin-top: 0.25rem;
 			}
 		}
 	}

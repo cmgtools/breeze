@@ -19,7 +19,14 @@ Basic - The basic header define the styles for primary header having logo and me
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 100000; // modal popups must override this index
+		z-index: 100001; // modal popups must override this index
+	}
+
+	&.header-announcement {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100002; // modal popups must override this index
 	}
 
 	&.header-absolute {
@@ -48,6 +55,7 @@ Basic - The basic header define the styles for primary header having logo and me
 	color: $color-header-text;
 	position: relative;
 	@extend %clearfix;
+	@include transit-width-height( $transit-eio, $transit-time-small );
 
 	// Absolute positioned on left side wrapping the logo
 	.header-logo {
@@ -67,43 +75,6 @@ Basic - The basic header define the styles for primary header having logo and me
 
 				img {
 					height: 40px;
-				}
-			}
-		}
-
-		// Optional- Wrap within #menu-main-wrap
-		#menu-main {
-			display: none;
-		}
-
-		// Optional- Wrap within #menu-mobile-wrap
-		#menu-main-mobile {
-			position: absolute;
-			display: none;
-			width: 320px;
-			right: 0;
-
-			li {
-				box-shadow: 0 -4px 2px -5px $color-tertiary;
-
-				a, .link {
-					background-color: $color-primary-l;
-					color: $color-primary-text-l;
-					padding: 1em 0;
-					@include transit-all( $transit-eio, $transit-time-small );
-
-					&:hover {
-						background-color: $color-primary-d;
-						color: $color-link;
-					}
-				}
-
-				&:active {
-
-					a, .link {
-						background-color: $color-tertiary;
-						color: $color-tertiary-text;
-					}
 				}
 			}
 		}
@@ -130,13 +101,6 @@ Basic - The basic header define the styles for primary header having logo and me
 		}
 	}
 
-	@include responsive-max( screen-mobile-large ) {
-
-		#menu-main-mobile {
-			width: 100%;
-		}
-	}
-
     @include responsive-min( screen-tablet-large ) {
 		height: 80px;
 		padding: 0 5%;
@@ -150,15 +114,6 @@ Basic - The basic header define the styles for primary header having logo and me
 					height: 70px;
 				}
 			}
-		}
-
-		#menu-main {
-			padding: 10px;
-			padding-right: 0;
-			text-align: right;
-			display: block;
-			z-index: 1;
-			float: right;
 		}
 
 		#mobile-actions, #menu-mobile-wrap {
@@ -199,9 +154,17 @@ Basic - The basic header define the styles for primary header having logo and me
 .header-basic-duo {
 
 	.header-logo {
+		@include transit-all( $transit-eio, $transit-time-medium );
+
+		.logo {
+
+			img {
+				@include transit-all( $transit-eio, $transit-time-small );
+			}
+		}
 
 		.logo-small {
-			display: none !important;
+			display: none;
 		}
 	}
 

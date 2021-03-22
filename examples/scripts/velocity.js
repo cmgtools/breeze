@@ -1,5 +1,5 @@
 /**
- * Velocity - v1.0.0-alpha1 - 2020-04-10
+ * Velocity - v1.0.0-alpha1 - 2021-03-19
  * Description: Velocity is a JavaScript library which provide utilities, ui components and MVC framework implementation.
  * License: GPL-3.0-or-later
  * Author: Bhagwat Singh Chouhan
@@ -750,7 +750,7 @@ cmt.utils.intltel = {
 			cmt.utils.intltel.validateIntlField( jQuery( this ) );
 		});
 
-		jQuery( '.intl-tel-input' ).closest( '.form' ).on( 'submit', function() {
+		jQuery( '.intl-tel-number' ).closest( '.form' ).on( 'submit', function() {
 
 			var result = true;
 
@@ -1865,6 +1865,8 @@ cmt.components.base.SliderComponent = function() {
 cmt.components.base.SliderComponent.inherits( cmt.components.base.BaseComponent );
 
 cmt.components.base.SliderComponent.prototype.defaults = {
+	// Normaliser
+	normalise: true,
 	// Controls
 	controls: true,
 	lControlContent: null,
@@ -1940,6 +1942,11 @@ cmt.components.base.SliderComponent.prototype.normaliseSliders = function() {
     }
 };
 
+cmt.components.base.SliderComponent.prototype.getSlider = function( sliderKey ) {
+
+	return this.sliders[ this.indexKey + sliderKey ];
+};
+
 cmt.components.base.SliderComponent.prototype.addSlide = function( sliderKey, slideHtml ) {
 
 	this.sliders[ this.indexKey + sliderKey ].addSlide( slideHtml );
@@ -1958,6 +1965,16 @@ cmt.components.base.SliderComponent.prototype.scrollToPosition = function( slide
 cmt.components.base.SliderComponent.prototype.scrollToSlide = function( sliderKey, slideKey, animate ) {
 
 	this.sliders[ this.indexKey + sliderKey ].scrollToSlide( slideKey, animate );
+};
+
+cmt.components.base.SliderComponent.prototype.showPrevSlide = function( sliderKey ) {
+
+	this.sliders[ this.indexKey + sliderKey ].showPrevSlide();
+};
+
+cmt.components.base.SliderComponent.prototype.showNextSlide = function( sliderKey ) {
+
+	this.sliders[ this.indexKey + sliderKey ].showNextSlide();
 };
 
 // == Slider ==============================
@@ -1989,13 +2006,16 @@ cmt.components.base.Slider = function( component, element ) {
 
 cmt.components.base.Slider.prototype.init = function() {
 
-	var settings	= this.options;
+	var settings = this.options;
 
 	// Slider View
 	this.initView();
 
 	// Init Slides based on configuration params
-	this.normalise();
+	if( settings.normalise ) {
+
+		this.normalise();
+	}
 
 	// Indexify the Slides
 	this.indexSlides();
@@ -2066,6 +2086,8 @@ cmt.components.base.Slider.prototype.initView = function() {
 	this.element.html( view );
 
 	this.element.find( '.slider-slides' ).append( slides );
+
+	this.slides = this.element.find( '.slider-slide' );
 };
 
 // Make filmstrip of all slides
@@ -2612,6 +2634,7 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 	var element		= this.element;
 	var lightboxId	= this.options.lightboxId;
 	var lightbox	= jQuery( '#' + lightboxId );
+	var bkg			= lightbox.find( '.lightbox-data-bkg' );
 
 	// Configure
 	var screenWidth		= jQuery( window ).width();
@@ -2626,7 +2649,7 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 
 	if( self.options.lightboxBkg ) {
 
-		lightbox.find( '.lightbox-data-bkg' ).addClass( 'lightbox-bkg-wrap' );
+		bkg.addClass( 'lightbox-bkg-wrap' );
 	}
 
 	var sliderHtml = '<div class="slider slider-basic slider-lightbox">';
@@ -2646,11 +2669,11 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 
 			if( self.options.lightboxBkg ) {
 
-				lightbox.find( '.lightbox-data-bkg' ).css( 'background-image', 'url(' + imageUrl + ')' );
+				bkg.css( 'background-image', 'url(' + imageUrl + ')' );
 			}
 			else {
 
-				lightbox.find( '.lightbox-data-bkg' ).html( '<img src="' + imageUrl + '"/>' );
+				bkg.html( '<img src="' + imageUrl + '"/>' );
 			}
 		}
 		else {
@@ -2668,14 +2691,63 @@ cmt.components.base.Slider.prototype.showLightbox = function( slide, slideId ) {
 		jQuery( 'body' ).css( { 'overflow': 'hidden', 'height': jQuery( window ).height() } );
 	}
 
+	bkg.attr( 'data-idx', slideId );
+	bkg.attr( 'data-max', element.find( '.slider-slide' ).length );
+
 	lightbox.fadeIn( 'slow' );
 
 	// Sliders
 	lightboxData.find( '.slider-lightbox' ).cmtSlider({
 		lControlContent: '<i class="fa fa-2x fa-angle-left valign-center"></i>',
 		rControlContent: '<i class="fa fa-2x fa-angle-right valign-center"></i>',
-		circular: false,
+		circular: true,
 		onSlideClick: self.setLightboxBkg
+	});
+
+	lightboxData.find( '.lightbox-control' ).unbind( 'click' );
+
+	lightboxData.find( '.lightbox-control-left' ).click( function() {
+
+		var slider	= lightboxData.find( '.slider-lightbox' ).cmtSlider( 'getSlider' );
+		var element	= slider.element;
+
+		slider.showPrevSlide();
+
+		var slideId = parseInt( bkg.attr( 'data-idx' ) );
+		var total	= parseInt( bkg.attr( 'data-max' ) );
+
+		if( ( slideId == 0 ) ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( total - 1 ) + ']'), ( total - 1 ) );
+		}
+		else {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( slideId - 1 ) + ']'), ( slideId - 1 ) );
+		}
+	});
+
+	lightboxData.find( '.lightbox-control-right' ).click( function() {
+
+		var slider	= lightboxData.find( '.slider-lightbox' ).cmtSlider( 'getSlider' );
+		var element	= slider.element;
+
+		slider.showNextSlide();
+
+		var slideId = parseInt( bkg.attr( 'data-idx' ) );
+		var total	= parseInt( bkg.attr( 'data-max' ) );
+
+		if( ( slideId == 0 && total == 1 ) || ( slideId == ( total - 1 ) ) ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=0]'), 0 );
+		}
+		else if( slideId == 0 && total > 1 ) {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=1]'), 1 );
+		}
+		else {
+
+			self.setLightboxBkg( element, element.find( '[data-idx=' + ( slideId + 1 ) + ']'), ( slideId + 1 ) );
+		}
 	});
 }
 
@@ -2685,7 +2757,7 @@ cmt.components.base.Slider.prototype.setLightboxBkg = function( slider, slide, s
 
 	var bkg = slider.closest( '.lightbox-slider-wrap' ).find( '.lightbox-data-bkg' );
 
-	slider.find( '.slide' ).removeClass( 'active' );
+	slider.find( '.slider-slide' ).removeClass( 'active' );
 	slide.addClass( 'active' );
 
 	bkg.hide();
@@ -2698,6 +2770,9 @@ cmt.components.base.Slider.prototype.setLightboxBkg = function( slider, slide, s
 
 		bkg.html( '<img src="' + imageUrl + '"/>' );
 	}
+
+	bkg.attr( 'data-idx', slideId );
+	bkg.attr( 'data-max', slider.find( '.slider-slide' ).length );
 
 	bkg.fadeIn( 'slow' );
 }
@@ -2838,8 +2913,8 @@ cmt.components.jquery = cmt.components.jquery || {};
 		// == Init == //
 
 		// Configure Plugin
-		var settings 		= cmtjq.extend( {}, cmtjq.fn.cmtAutoFill.defaults, options );
-		var fillers			= this;
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtAutoFill.defaults, options );
+		var fillers		= this;
 
 		// Iterate and initialise all the fillers
 		fillers.each( function() {
@@ -2861,12 +2936,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 			// Auto Fill
 			filler.find( '.auto-fill-text' ).blur( function() {
 
-				var wrapFill	= jQuery( this ).closest( '.wrap-fill' );
+				//var wrapFill = jQuery( this ).closest( '.wrap-fill' );
 
-				wrapFill.find( '.wrap-auto-list' ).slideUp();
+				//wrapFill.find( '.wrap-auto-list' ).slideUp();
 
 				// Clear fields
-				wrapFill.find( '.fill-clear' ).val( '' );
+				//wrapFill.find( '.fill-clear' ).val( '' );
+
+				filler.find( '.auto-fill-items' ).slideUp();
 			});
 		}
 	};
@@ -3043,30 +3120,30 @@ cmt.components.jquery = cmt.components.jquery || {};
 				if( null != heightAutoMobile && heightAutoMobile ) {
 
 					if( window.innerWidth <= heightAutoMobileWidth ) {
-						
+
 						if( fullHeight ) {
 
 							block.css( { 'height': 'auto', 'min-height': screenHeight + 'px' } );
 
-							var contentWrap = block.children( '.block-content-wrap' );
+							var contentWrap = block.children( '> .block-content-wrap' );
 
-							if( contentWrap.hasClass( 'valign-center' ) ) {
+							if( contentWrap.length > 0 && contentWrap.hasClass( 'valign-center' ) ) {
 
 								contentWrap.removeClass( 'valign-center' );
 							}
 						}
 						else {
-							
+
 							block.css( { 'height': 'auto' } );
 						}
 					}
 				}
 
 				// adjust content wrap and block height in case content height exceeds
-				var contentWrap	= block.find( '.block-content-wrap' );
-				var content		= block.find( '.block-content' );
+				var contentWrap	= block.find( '> .block-content-wrap' );
+				var content		= block.find( '> .block-content' );
 
-				if( content !== undefined && ( content.height() > contentWrap.height() ) ) {
+				if( contentWrap.length > 0 && content.length > 0 && ( content.height() > contentWrap.height() ) ) {
 
 					var newHeight 	= ( content.height() + 100 ) + 'px';
 					var diff		= content.height() - contentWrap.height();
@@ -3121,7 +3198,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 						block.css( { 'height': ( screenHeight / 2 ) + 'px' } );
 					}
 				}
-				
+
 				// Apply Quarter to Full Height
 				if( settings.qtfHeight ) {
 
@@ -3274,6 +3351,71 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 
 /**
+ * Collapsible plugin can be used to keep the title visible, but show or hide content.
+ */
+
+( function( cmtjq ) {
+
+	cmtjq.fn.cmtCollapsible = function( options ) {
+
+		// == Init == //
+
+		// Configure Plugin
+		var settings		= cmtjq.extend( {}, cmtjq.fn.cmtCollapsible.defaults, options );
+		var collapsibles	= this;
+
+		// Iterate and initialise all the collapsibles
+		collapsibles.each( function() {
+
+			var collapsible = cmtjq( this );
+
+			init( collapsible );
+		});
+
+		// return control
+		return;
+
+		// == Private Functions == //
+
+		function init( collapsible ) {
+
+			var trigger	= collapsible.find( '.cmt-collapsible-trigger' );
+			var header	= collapsible.find( '.cmt-collapsible-header' );
+			var view	= collapsible.find( '.cmt-collapsible-content' );
+
+			// Hide View
+			if( settings.hideView ) {
+
+				view.hide();
+			}
+
+			// Listen click
+			trigger.click( function() {
+
+				view.slideToggle();
+			});
+
+			// Header Trigger
+			if( settings.headerTrigger ) {
+
+				header.click( function() {
+
+					view.slideToggle();
+				});
+			}
+		}
+	};
+
+	// Default Settings
+	cmtjq.fn.cmtCollapsible.defaults = {
+		hideView: true,
+		headerTrigger: true
+	};
+
+})( jQuery );
+
+
+/**
  * The Counter Widget increment or decrement numerical value of a field.
  */
 
@@ -3306,8 +3448,11 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			var min		= cmt.utils.data.hasAttribute( counter, 'data-min' ) ? counter.attr( 'data-min' ) : settings.min;
 			var max		= cmt.utils.data.hasAttribute( counter, 'data-max' ) ? counter.attr( 'data-max' ) : settings.max;
-			var val		= cmt.utils.data.hasAttribute( counter, 'data-val' ) ? counter.attr( 'data-val' ) : settings.val;
-			var cval	= val;
+			var cval	= cmt.utils.data.hasAttribute( counter, 'data-val' ) ? counter.attr( 'data-val' ) : settings.val;
+
+			min		= parseInt( min );
+			max		= parseInt( max );
+			cval	= parseInt( cval );
 
 			var incBtn	= counter.find( '.counter-inc' );
 			var decBtn	= counter.find( '.counter-dec' );
@@ -3318,13 +3463,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			incBtn.click( function() {
 
-				cval = field.val();
+				cval = parseInt( field.val() );
 
 				if( cval < max ) {
 
 					cval++;
 
 					field.val( cval );
+					field.change();
 
 					if( cval >= max ) {
 
@@ -3343,13 +3489,14 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			decBtn.click( function() {
 
-				cval = field.val();
+				cval = parseInt( field.val() );
 
 				if( cval > min ) {
 
 					cval--;
 
 					field.val( cval );
+					field.change();
 
 					if( cval <= min ) {
 
@@ -3898,7 +4045,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 					}
 				};
 
-				var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+				var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 				// start upload
 				xhr.open("POST", urlParams, true );
@@ -3924,7 +4071,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			formData.append( 'file', file );
 
-			var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+			var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 			jQuery.ajax({
 			  type:			"POST",
@@ -3985,7 +4132,7 @@ cmt.components.jquery = cmt.components.jquery || {};
 
 			formData.append( 'file', imageData, fileName );
 
-			var urlParams = fileUploadUrl + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
+			var urlParams = siteUrl + fileUploader.attr( 'uploader' ) + "?directory=" + encodeURIComponent( directory ) + "&type=" + encodeURIComponent( type ) + "&gen=" + encodeURIComponent( gen );
 
 			jQuery.ajax({
 			  type:			"POST",
@@ -4345,6 +4492,22 @@ cmt.components.jquery = cmt.components.jquery || {};
 				jQuery( this ).toggleClass( 'active' );
 			});
 
+			// Import
+			grid.find( '.trigger-import-toggle' ).click( function() {
+
+				grid.find( '.grid-import-wrap' ).fadeToggle( 'slow' );
+
+				jQuery( this ).toggleClass( 'active' );
+			});
+
+			// Export
+			grid.find( '.trigger-export-toggle' ).click( function() {
+
+				grid.find( '.grid-export-wrap' ).fadeToggle( 'slow' );
+
+				jQuery( this ).toggleClass( 'active' );
+			});
+
 			grid.find( '.trigger-report-generate' ).click( function() {
 
 				var pageUrl	= window.location.href;
@@ -4405,7 +4568,11 @@ cmt.components.jquery = cmt.components.jquery || {};
 				}
 				else {
 
-					pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'search', column );
+					if( null != column ) {
+
+						pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'search', column );
+					}
+
 					pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'keywords', keywords );
 				}
 
@@ -4427,7 +4594,11 @@ cmt.components.jquery = cmt.components.jquery || {};
 					}
 					else {
 
-						pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'search', column );
+						if( null != column ) {
+
+							pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'search', column );
+						}
+
 						pageUrl	= cmt.utils.data.updateUrlParam( pageUrl, 'keywords', keywords );
 					}
 
@@ -5925,34 +6096,34 @@ function hideMessagePopup() {
 		 * 1. Find the selected option if there is any.
 		 * 2. Wrap the select in a div and access the wrapper div.
 		 * 3. If copyId config is set, the select id attribute will be moved to wrapper div.
-		 * 4. The class cmt-select-wrap will be assigned to wrapper div.
+		 * 4. The class .select-wrap will be assigned to wrapper div.
 		 * 5. If wrapperClass config is set, these additional classes will be assigned to wrapper div.
 		 * 6. The icon span having class s-icon will be created. If iconClass and iconHtml are set, the icon span will be assigned these classes and html.
-		 * 7. The custom select div will be created having class cmt-select and child div element having class cmt-selected.
-		 * 8. The span having class s-text will be appended to cmt-selected div. The span s-icon will follow s-text.
-		 * 9. A ul having class cmt-select-list will be appended to cmt-select.
-		 * 10. The select options will be iterated and li elements will be formed and appended to cmt-select-list.
-		 * 11. The custom select i.e. cmt-select will be appended to wrapper div i.e. cmt-select-wrap.
-		 * 12. The cmt-select-list will be hidden by default.
+		 * 7. The custom select div will be created having class .select and child div element having class .selected.
+		 * 8. The span having class s-text will be appended to .selected div. The span s-icon will follow s-text.
+		 * 9. A ul having class .select-list will be appended to .select.
+		 * 10. The select options will be iterated and li elements will be formed and appended to select-list.
+		 * 11. The custom select i.e. select will be appended to wrapper div i.e. select-wrap.
+		 * 12. The select-list will be hidden by default.
 		 * 13. If select is disabled, disabled class will be assigned to custom select.
-		 * 14. Toggle behaviour added to cmt-selected for cmt-select-list.
-		 * 15. Click listener added to all the list elements to change select value and update s-text of cmt-selected.
+		 * 14. Toggle behaviour added to selected for select-list.
+		 * 15. Click listener added to all the list elements to change select value and update s-text of selected.
 		 * 16. Global listener added to hide select list if user click on other area.
 		 */
 		function init( dropDown ) {
 
 			// Find Selected Option
-			var selected	= dropDown.children( 'option:selected' );
+			var selected = dropDown.children( 'option:selected' );
 
 			// Wrap Select
 			dropDown.wrap( '<div></div>' );
 
-			var wrapper		= dropDown.parent();
+			var wrapper = dropDown.parent();
 
 			if( settings.copyId ) {
 
 				// Find select Id
-				var selectId	= dropDown.attr( 'id' );
+				var selectId = dropDown.attr( 'id' );
 
 				// Transfer Id to wrapper
 				if( null != selectId && selectId.length > 0 ) {
@@ -5966,7 +6137,7 @@ function hideMessagePopup() {
 			}
 
 			// Assign class to wrapper
-			wrapper.addClass( 'cmt-select-wrap' );
+			wrapper.addClass( 'select-wrap' );
 
 			if( null != settings.wrapperClass ) {
 
@@ -5974,34 +6145,34 @@ function hideMessagePopup() {
 			}
 
 			// Generate Icon Html
-			var iconHtml	= '<span class="s-icon">';
+			var iconHtml = '<span class="s-icon">';
 
 			if( null != settings.iconClass ) {
 
-				iconHtml	= '<span class="s-icon ' + settings.iconClass + '">';
+				iconHtml = '<span class="s-icon ' + settings.iconClass + '">';
 			}
 
 			if( null != settings.iconHtml ) {
 
-				iconHtml	+= settings.iconHtml + "</span>";
+				iconHtml += settings.iconHtml + "</span>";
 			}
 			else {
 
-				iconHtml	+= "</span>";
+				iconHtml += "</span>";
 			}
 
 			// Generate Custom Select Html
-			var customHtml	= "<div class='cmt-select'><div class='cmt-selected'><span class='s-text'>" + selected.html() + "</span>" + iconHtml + "</div><ul class='cmt-select-list'>";
+			var customHtml	= "<div class='select'><div class='selected'><span class='s-text'>" + selected.html() + "</span>" + iconHtml + "</div><ul class='select-list'>";
 
 			if( settings.copyOptionClass ) {
 
-				var selected	= dropDown.find( ':selected' );
+				var selected = dropDown.find( ':selected' );
 
 				if( selected.length == 1 ) {
 
 					var classes = selected.attr( 'class' );
 
-					customHtml	= "<div class='cmt-select'><div class='cmt-selected'><span class='s-text " + classes + "'>" + selected.html() + "</span>" + iconHtml + "</div><ul class='cmt-select-list'>";
+					customHtml	= "<div class='select'><div class='selected'><span class='s-text " + classes + "'>" + selected.html() + "</span>" + iconHtml + "</div><ul class='select-list'>";
 				}
 			}
 
@@ -6025,9 +6196,9 @@ function hideMessagePopup() {
 			// Append Custom Select to wrapper
 			wrapper.append( customHtml );
 
-			var customSelect	= wrapper.children( '.cmt-select' );
-			var customSelected	= wrapper.children( '.cmt-select' ).children( '.cmt-selected' );
-			var customList		= wrapper.children( '.cmt-select' ).children( '.cmt-select-list' );
+			var customSelect	= wrapper.children( '.select' );
+			var customSelected	= wrapper.children( '.select' ).children( '.selected' );
+			var customList		= wrapper.children( '.select' ).children( '.select-list' );
 
 			// Hide List by default
 			customList.hide();
@@ -6080,7 +6251,7 @@ function hideMessagePopup() {
 					var selected	= jQuery( this );
 					var parent		= selected.parents().eq( 1 );
 
-					parent.children( '.cmt-selected' ).children( '.s-text' ).html( selected.html() );
+					parent.children( '.selected' ).children( '.s-text' ).html( selected.html() );
 					parent.parent().children( 'select' ).val( selected.attr( 'data-value' ) ).change();
 
 					customList.hide();
@@ -6117,8 +6288,8 @@ function hideMessagePopup() {
 		dropDown.html( optionsHtml );
 
 		var selected	= dropDown.children( 'option:selected' );
-	 	var list		= selectWrap.find( '.cmt-select-list' );
-	 	var sText		= selectWrap.find( '.cmt-selected' ).children( '.s-text' );
+	 	var list		= selectWrap.find( '.select-list' );
+	 	var sText		= selectWrap.find( '.selected' ).children( '.s-text' );
 		var listHtml	= '';
 
 		dropDown.children( 'option' ).each( function( index ) {
@@ -6150,7 +6321,7 @@ function hideMessagePopup() {
 		dropDown.val( value );
 
 		var selected	= dropDown.children( 'option:selected' );
-	 	var sText		= selectWrap.find( '.cmt-selected' ).children( '.s-text' );
+	 	var sText		= selectWrap.find( '.selected' ).children( '.s-text' );
 
 		sText.html( selected.html() );
 	};
@@ -6203,12 +6374,12 @@ function hideMessagePopup() {
 			}
 
 			// Generate Select Html
-			var customHtml = '<div class="cmt-selected"><span class="s-text">' + dropDown.attr( 'title' ) + '</span>' + iconHtml + '</div>';
+			var customHtml = '<div class="selected"><span class="s-text">' + dropDown.attr( 'title' ) + '</span>' + iconHtml + '</div>';
 
 			// Prepend
 			dropDown.prepend( customHtml );
 
-			var selectList = dropDown.find( '.cmt-select-list' );
+			var selectList = dropDown.find( '.select-list' );
 
 			// Hide List by default
 			selectList.hide();
@@ -6223,7 +6394,7 @@ function hideMessagePopup() {
 			else {
 
 				// Add listener to selected val
-				dropDown.find( '.cmt-selected' ).click( function( e ) {
+				dropDown.find( '.selected' ).click( function( e ) {
 
 					if( !selectList.is( ':visible' ) ) {
 
@@ -6313,6 +6484,13 @@ function hideMessagePopup() {
 				});
 			}
 		},
+		// Returns the active slider
+		getSlider: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			return component.getSlider( sliderKey );
+		},
 		// Adds a new slide using the given HTML and re-arrange the slides
 		addSlide: function( slideHtml ) {
 
@@ -6340,6 +6518,20 @@ function hideMessagePopup() {
 			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
 
 			component.scrollToSlide( sliderKey, slideKey, animate );
+		},
+		// Scroll slider to the given position in %
+		showPrevSlide: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			component.showPrevSlide( sliderKey );
+		},
+		// Scroll slider to the given slide
+		showNextSlide: function() {
+
+			var sliderKey = parseInt( jQuery( this[ 0 ] ).attr( 'data-idx' ) );
+
+			component.showNextSlide( sliderKey );
 		}
 	};
 
@@ -6740,12 +6932,12 @@ function hideMessagePopup() {
 
 ( function( cmtjq ) {
 
-	cmtjq.fn.cmtCircledp = function( options ) {
+	cmtjq.fn.cmtCircled = function( options ) {
 
 		// == Init == //
 
 		// Configure Modules
-		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtCircledp.defaults, options );
+		var settings	= cmtjq.extend( {}, cmtjq.fn.cmtCircled.defaults, options );
 		var circles		= this;
 
 		// Iterate and initialise all the circles
@@ -6787,7 +6979,7 @@ function hideMessagePopup() {
 	};
 
 	// Default Settings
-	cmtjq.fn.cmtCircledp.defaults = {
+	cmtjq.fn.cmtCircled.defaults = {
 
 	};
 

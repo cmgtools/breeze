@@ -13,19 +13,19 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 
 // == Structure - Time Picker =======
 
-.cmt-timepicker {
+.timepicker {
 	position: absolute;
 	display: none;
 
-	.cmt-timepicker-header {
+	.timepicker-header {
 
-		.cmt-timepicker-apm {
+		.timepicker-apm {
 
-			&.cmt-timepicker-am {
+			&.timepicker-am {
 
 			}
 
-			&.cmt-timepicker-pm {
+			&.timepicker-pm {
 
 			}
 
@@ -35,11 +35,11 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 		}
 	}
 
-	.cmt-timepicker-content {
+	.timepicker-content {
 
-		.cmt-timepicker-hr-wrap {
+		.timepicker-hr-wrap {
 
-			.cmt-timepicker-hr {
+			.timepicker-hr {
 				text-align: center;
 
 				&.active {
@@ -48,9 +48,9 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 			}
 		}
 
-		.cmt-timepicker-min-wrap {
+		.timepicker-min-wrap {
 
-			.cmt-timepicker-min {
+			.timepicker-min {
 				text-align: center;
 
 				&.active {
@@ -60,17 +60,17 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 		}
 	}
 
-	.cmt-timepicker-footer {
+	.timepicker-footer {
 
-		.cmt-timepicker-time {
-
-		}
-
-		.cmt-timepicker-ok {
+		.timepicker-time {
 
 		}
 
-		.cmt-timepicker-close {
+		.timepicker-ok {
+
+		}
+
+		.timepicker-close {
 
 		}
 	}
@@ -78,27 +78,27 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 
 // == Basic Time Picker =============
 
-.cmt-timepicker-basic {
+.timepicker-basic {
 	background: $color-secondary;
 	color: $color-secondary-text;
 	border: 1px solid $color-border-d;
 
-	.cmt-timepicker-header {
+	.timepicker-header {
 		border-bottom: 1px solid $color-border-d;
 
-		.cmt-timepicker-apm {
+		.timepicker-apm {
 			padding: 0.5em;
 
-			&.cmt-timepicker-am {
+			&.timepicker-am {
 				cursor: pointer;
 				border-right: 1px solid $color-border;
 			}
 
-			&.cmt-timepicker-pm {
+			&.timepicker-pm {
 				cursor: pointer;
 			}
 
-			&.cmt-timepicker-mm {
+			&.timepicker-mm {
 				border-left: 1px solid $color-border-d;
 			}
 
@@ -109,12 +109,12 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 		}
 	}
 
-	.cmt-timepicker-content {
+	.timepicker-content {
 		border-bottom: 1px solid $color-border-d;
 
-		.cmt-timepicker-hr-wrap {
+		.timepicker-hr-wrap {
 
-			.cmt-timepicker-hr {
+			.timepicker-hr {
 				padding: 0.5em;
 				border-left: 1px solid $color-border;
 				border-bottom: 1px solid $color-border;
@@ -127,10 +127,10 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 			}
 		}
 
-		.cmt-timepicker-min-wrap {
+		.timepicker-min-wrap {
 			border-left: 1px solid $color-border-d;
 
-			.cmt-timepicker-min {
+			.timepicker-min {
 				padding: 0.5em;
 				border-left: 1px solid $color-border;
 				border-bottom: 1px solid $color-border;
@@ -144,18 +144,18 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 		}
 	}
 
-	.cmt-timepicker-footer {
+	.timepicker-footer {
 		padding: 0.25em;
 
-		.cmt-timepicker-time {
+		.timepicker-time {
 
 		}
 
-		.cmt-timepicker-ok {
+		.timepicker-ok {
 			margin-left: 0.25em;
 		}
 
-		.cmt-timepicker-close {
+		.timepicker-close {
 			margin-left: 0.25em;
 		}
 	}

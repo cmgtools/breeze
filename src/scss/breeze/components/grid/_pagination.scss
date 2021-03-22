@@ -85,6 +85,7 @@ Full - Full pagination having both info and pagination links.
 
 // == Basic Pagination ==============
 
+// The basic pagination without page info
 .pagination-basic {
 
 	li, .page-link {
@@ -140,6 +141,7 @@ Full - Full pagination having both info and pagination links.
 
 // == Full Pagination ===============
 
+// The full pagination without page info and pagination links
 .pagination-full {
 	display: block;
 
@@ -170,7 +172,7 @@ Full - Full pagination having both info and pagination links.
 					color: $color-secondary-text;
 					padding: 0.5em 0.75em;
 					text-decoration: none;
-					
+
 					&:hover {
 						background-color: $color-primary;
 						color: $color-primary-text;
@@ -178,7 +180,7 @@ Full - Full pagination having both info and pagination links.
 				}
 
 				&.first, &.prev, &.next, &.last {
-					
+
 					&.link-disabled span {
 						background-color: $color-gray;
 						color: $color-white;

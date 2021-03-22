@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "cmti-currency";
+  src: url("../fonts/breeze/cmti-currency.eot");
+  src: url("../fonts/breeze/cmti-currency.eot?#iefix") format("embedded-opentype"), url("../fonts/breeze/cmti-currency.woff") format("woff"), url("../fonts/breeze/cmti-currency.ttf") format("truetype"), url("../fonts/breeze/cmti-currency.svg#cmti-core") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-cmti-currency]:before {
+  font-family: "cmti-currency" !important;
+  content: attr(data-cmti);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  text-align: center;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="cmti-currency-"]:before,
+[class*=" cmti-currency-"]:before {
+  font-family: "cmti-currency" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.cmti-currency {
+  font-family: "cmti-currency"; }
+
+.cmti-currency-dollar:before {
+  content: '\e800'; }
+
+/* '' */
+.cmti-currency-dollar-l:before {
+  content: '\e801'; }
+
+/* '' */
+.cmti-currency-dollar-o:before {
+  content: '\e802'; }
+
+/* '' */
+.cmti-currency-ethereum:before {
+  content: '\e803'; }
+
+/* '' */
+.cmti-currency-ethereum-o:before {
+  content: '\e804'; }
+
+/* '' */
+.cmti-currency-euro:before {
+  content: '\e805'; }
+
+/* '' */
+.cmti-currency-euro-l:before {
+  content: '\e806'; }
+
+/* '' */
+.cmti-currency-euro-o:before {
+  content: '\e807'; }
+
+/* '' */
+.cmti-currency-gbp:before {
+  content: '\e808'; }
+
+/* '' */
+.cmti-currency-gbp-l:before {
+  content: '\e809'; }
+
+/* '' */
+.cmti-currency-gbp-o:before {
+  content: '\e80a'; }
+
+/* '' */
+.cmti-currency-naira:before {
+  content: '\e80b'; }
+
+/* '' */
+.cmti-currency-naira-l:before {
+  content: '\e80c'; }
+
+/* '' */
+.cmti-currency-naira-o:before {
+  content: '\e80d'; }
+
+/* '' */
+.cmti-currency-note:before {
+  content: '\e80e'; }
+
+/* '' */
+.cmti-currency-riyal:before {
+  content: '\e80f'; }
+
+/* '' */
+.cmti-currency-rupee:before {
+  content: '\e810'; }
+
+/* '' */
+.cmti-currency-rupee-l:before {
+  content: '\e811'; }
+
+/* '' */
+.cmti-currency-rupee-o:before {
+  content: '\e812'; }
+
+/* '' */
+.cmti-currency-bitcoin:before {
+  content: '\e813'; }
+
+/* '' */
+.cmti-currency-bitcoin-l:before {
+  content: '\e814'; }
+
+/* '' */
+.cmti-currency-bitcoin-o:before {
+  content: '\e815'; }
+
+/* '' */
+
+/*# sourceMappingURL=breeze-icons-currency.css.map */

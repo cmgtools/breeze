@@ -42,6 +42,8 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 // == Mapper - List =================
 
+// The mappers arranged in a list view with hierarchy.
+
 .mapper-list {
 	width: 100%;
 	margin: 0 auto;
@@ -52,20 +54,20 @@ Action - The action mapper will allow users to toggle each item individually by 
 		// Add scroll based on needs
 
 		.mapper-item {
-			display: inline-block;
 			width: 100%;
-			margin: 10px;
-			background-color: $color-white;
+			background-color: $color-secondary;
+			padding: 0.5rem 0;
+			margin: 0.25rem 0;
 
-			&.depth-1 {
+			&.item-depth-1 {
 				padding-left: 15px;
 			}
 
-			&.depth-2 {
+			&.item-depth-2 {
 				padding-left: 30px;
 			}
 
-			&.depth-3 {
+			&.item-depth-3 {
 				padding-left: 45px;
 			}
 		}
@@ -75,6 +77,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 // == Mapper - Auto =================
 
 // Auto Suggest with mapper - It works together with auto fill component
+
 .mapper-auto {
 
 	// Auto Fill element, request trigger
@@ -83,37 +86,36 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 		.mapper-item {
 			background-color: $color-secondary;
-			display: inline-block;
-			padding: 0.5rem;
-			margin-right: 0.5rem;
+			padding: 0.5rem 0;
 		}
 	}
 }
 
 // == Mapper - Auto - Items =========
 
+// Works with .mapper-auto having auto fill component
+
 .mapper-auto-items {
 
 	.mapper-items {
 
 		.mapper-item {
-			padding-right: 2.5em;
-			margin-bottom: 0.5em;
+			background-color: $color-secondary;
+			padding: 0.5rem 0;
 
 			.mapper-item-remove {
-
+				// Trigger to remove mapping
 			}
 		}
 	}
 
 	.spinner {
 		position: absolute;
-		top: 0.25em;
-		right: 0.25em;
+		top: 0;
+		right: 0;
 		z-index: 1;
-		background: $color-primary-d;
-		color: $color-primary-text-d;
-		padding: 0.25em;
+		padding: 0.25rem;
+		font-size: 1.25em;
 	}
 }
 
@@ -129,41 +131,43 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 		.mapper-item {
 			background-color: $color-secondary;
-			display: inline-block;
-			padding: 0.5rem;
-			margin-right: 0.5rem;
+			padding: 0.5rem 0;
 		}
 	}
 }
 
 // == Mapper - Submit - Items =======
 
+// Use an input field to get the items csv
+// Works with .mapper-submit having submit field
+
 .mapper-submit-items {
 
 	.mapper-items {
 
 		.mapper-item {
-			padding-right: 2.5em;
-			margin-bottom: 0.5em;
+			background-color: $color-secondary;
+			padding: 0.5rem 0;
 
 			.mapper-item-remove {
-
+				// Trigger to remove mapping
 			}
 		}
 	}
 
 	.spinner {
 		position: absolute;
-		top: 0.25em;
-		right: 0.25em;
+		top: 0;
+		right: 0;
 		z-index: 1;
-		background: $color-primary-d;
-		color: $color-primary-text-d;
-		padding: 0.25em;
+		padding: 0.25rem;
+		font-size: 1.25em;
 	}
 }
 
 // == Mapper - Action ===============
+
+// Uses checkbox to map or unmap the mapping
 
 .mapper-action {
 	width: 100%;
@@ -175,9 +179,89 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 		.mapper-item {
 			background-color: $color-secondary;
+			padding: 0.5rem 0;
+		}
+	}
+
+	.spinner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		padding: 0.25rem;
+		font-size: 1.25em;
+	}
+}
+
+// == Mapper - arrangements =========
+
+.mapper-layout {
+	@extend %clearfix;
+
+	&.mapper-layout-inline {
+
+		.mapper-item {
 			display: inline-block;
-			padding: 0.5rem;
-			margin-right: 0.5rem;
+			width: auto;
+			margin-right: 1em;
+			margin-bottom: 0.5em;
+			padding-right: 2em;
+		}
+	}
+
+	&.mapper-layout-row-2 {
+
+		.mapper-item {
+			float: left;
+			width: 48%;
+			margin: 0 1%;
+		}
+	}
+
+	&.mapper-layout-row-3 {
+
+		.mapper-item {
+			float: left;
+			width: 31%;
+			margin: 0 1%;
+		}
+	}
+
+	&.mapper-layout-row-4 {
+
+		.mapper-item {
+			float: left;
+			width: 23%;
+			margin: 0 1%;
+		}
+	}
+
+	&.mapper-layout-row-5 {
+
+		.mapper-item {
+			float: left;
+			width: 18%;
+			margin: 0 1%;
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+
+		&.mapper-layout-row-4, &.mapper-layout-row-5 {
+
+			.mapper-item {
+				width: 98%;
+			}
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		&.mapper-layout-row-3, &.mapper-layout-row-4, &.mapper-layout-row-5 {
+
+			.mapper-item {
+				width: 48%;
+			}
 		}
 	}
 }

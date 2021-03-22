@@ -9,158 +9,180 @@ Details: It defines the custom element styles as listed below:
 
 Choice - The choice allows user to select single or multiple options from available
 options. It include radio and checkbox html components and change their default behaviour
-by showing good looking icons instead of browser dependentent graphics. These are indepedent
-of JS and purely css solutions.
+by showing breeze icons instead of browser icons.
 ***********************************************************************/
 
 // == Choice ========================
 
-// Choices using radio or checkbox
+// Choices using radio or checkbox and breeze icons
 
-.cmt-choice {
+.choice {
 
-	span, a {
-		vertical-align: baseline;
-	}
-
-	input[type=checkbox],
-	input[type=radio] {
-		cursor: pointer;
-		display: none;
-	}
-
-	label {
+	.choice-option {
 		cursor: pointer;
 		padding: 0;
+
+		span, a {
+			vertical-align: baseline;
+		}
+
+		input[type=checkbox], input[type=radio] {
+			cursor: pointer;
+			display: none;
+		}
+
+		// Normal State
+
+		input[type=checkbox] + .label::before,
+		input[type=radio] + .label::before {
+			font-family: "cmti-core";
+			font-weight: normal;
+			color: gray;
+			border-radius: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -0.1em;
+			margin-right: 8px;
+			line-height: 13px;
+		}
+
+		// Checked State
+
+		input[type=checkbox]:checked, input[type=checkbox]:focus,
+		input[type=radio]:checked, input[type=radio]:focus {
+			outline: none !important;
+		}
+
+		input[type=checkbox]:checked + .label::before,
+		input[type=radio]:checked + .label::before {
+			display: inline-block;
+			background-color: #F5F8FC;
+			color: $color-btn;
+		}
+
+		input[type=checkbox]:checked + .label,
+		input[type=radio]:checked + .label {
+			//color: $color-btn-a;
+		}
+
+		// Hover State - Normal, Checked
+
+		input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
+		input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
+			color: $color-btn-h;
+		}
+
+		// Disabled State
+
+		input[type=checkbox]:disabled + .label::before,
+		input[type=radio]:disabled + .label::before {
+			background-color: #DDD !important;
+			color: #BBB;
+		}
+
+		// Display Icon
+
+		input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
+			content: "\e90e";
+		}
+
+		input[type=radio]:checked + .label::before {
+			content: "\e90f";
+		}
+
+		input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
+			content: "\e84d";
+		}
+
+		input[type=checkbox]:checked + .label::before {
+			content: "\e84f";
+		}
 	}
+}
 
-	.label {
-		//margin-top: 0.25em;
-	}
+// == Label Choices =================
 
-	// Normal State
+// Custom Choices without the radio or checkbox icon.
 
-	input[type=checkbox] + .label.pad-label::before,
-	input[type=radio] + .label.pad-label::before {
-		margin-right: 8px;
-	}
+.choice-custom {
+	text-align: center;
 
-	input[type=checkbox]+.label::before,
-	input[type=radio]+.label::before {
-		font-family: "cmti-core";
-		font-weight: normal;
-		color: gray;
-		border-radius: 16px;
-		display: inline-block;
-		vertical-align: middle;
-		margin-top: -5px;
-		line-height: 13px;
-	}
+	.choice-option {
 
-	// Checked State
+		input[type=checkbox], input[type=radio] {
+			display: none;
+		}
 
-	input[type=checkbox]:checked, input[type=checkbox]:focus,
-	input[type=radio]:checked, input[type=radio]:focus {
-		outline:none !important;
-	}
+		input[type=checkbox] + .label, input[type=radio] + .label {
+			display: inline-block;
+			background-color: $color-btn;
+			text: $color-btn-text;
 
-	input[type=checkbox]:checked + .label::before,
-	input[type=radio]:checked + .label::before {
-		display: inline-block;
-		background-color: #F5F8FC;
-		color: $color-btn;
-	}
-
-	input[type=checkbox]:checked + .label,
-	input[type=radio]:checked + .label {
-		color: $color-btn-a;
-	}
-
-	// Hover State - Normal, Checked
-
-	input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
-	input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
-		color: $color-btn-h;
-	}
-
-	// Disabled State
-
-	input[type=checkbox]:disabled + .label::before,
-	input[type=radio]:disabled + .label::before {
-		background-color: #DDD !important;
-		color: #BBB;
-	}
-
-	// Display Content - Icon
-
-	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
-		//content: "\e0a2";
-		content: "\e90e";
-	}
-
-	input[type=radio]:checked + .label::before {
-		//content: "\e0a3";
-		content: "\e90f";
-	}
-
-	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
-		//content: "\3b";
-		content: "\e84d";
-	}
-
-	input[type=checkbox]:checked + .label::before {
-		//content: "\3a";
-		content: "\e84f";
+			&:hover {
+				background-color: $color-btn-h;
+				text: $color-btn-text-h;
+			}
+		}
 	}
 }
 
 // == Choices - arrangements ========
 
-.cmt-choice {
+.choice-layout {
 	@extend %clearfix;
 
-	&.cmt-choice-inline {
+	.choice-option {
+		margin-bottom: 1em;
+	}
 
-		label {
+	&.choice-layout-inline {
+
+		.choice-option {
 			display: inline-block;
 			margin-right: 1em;
 			width: auto;
 		}
 	}
 
-	&.cmt-choice-row-2 {
+	&.choice-layout-row-2 {
 
-		label {
+		.choice-option {
 			float: left;
 			width: 50%;
 		}
 	}
 
-	&.cmt-choice-row-4 {
+	&.choice-layout-row-4 {
 
-		label {
+		.choice-option {
 			float: left;
 			width: 25%;
 		}
+	}
 
-		@include responsive-max( screen-tablet-large ) {
+	&.choice-layout-row-5 {
 
-			label {
-				width: 50%;
+		.choice-option {
+			float: left;
+			width: 20%;
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+
+		&.choice-layout-row-4, &.choice-layout-row-5 {
+
+			.choice-option {
+				width: 100%;
 			}
 		}
 	}
 
-	&.cmt-choice-row-5 {
+	@include responsive-max( screen-tablet-large ) {
 
-		label {
-			float: left;
-			width: 20%;
-		}
+		&.choice-layout-row-4, &.choice-layout-row-5 {
 
-		@include responsive-max( screen-tablet-large ) {
-
-			label {
+			.choice-option {
 				width: 50%;
 			}
 		}
