@@ -8282,6 +8282,21 @@ Action - The action mapper will allow users to toggle each item individually by 
   .mapper-layout.mapper-layout-row-3 .mapper-item, .mapper-layout.mapper-layout-row-4 .mapper-item, .mapper-layout.mapper-layout-row-5 .mapper-item {
     width: 48%; } }
 
+.counter {
+  display: inline-block; }
+  .counter .counter-dec {
+    display: inline-block; }
+  .counter .counter-inc {
+    display: inline-block; }
+
+.counter-basic .counter-control {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  padding: 0.5em; }
+
+.counter-basic .counter-val {
+  width: 75px; }
+
 /**********************************************************************
 Description: It defines the styles of custom elements available in Breeze CSS
 Framework. Most of these elements are also dependent on Velocity JS Framework. Though
