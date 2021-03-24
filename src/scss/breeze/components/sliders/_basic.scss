@@ -57,14 +57,13 @@ might be displayed around the slides.
 		cursor: pointer;
 		position: absolute;
 		z-index: 10;
+		top: 0;
 
 		&.slider-control-left {
-			top: 0;
 			left: 0;
 		}
 
 		&.slider-control-right {
-			top: 0;
 			right: 0;
 		}
 	}

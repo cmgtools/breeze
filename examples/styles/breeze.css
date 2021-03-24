@@ -9812,12 +9812,11 @@ might be displayed around the slides.
   .slider .slider-control {
     cursor: pointer;
     position: absolute;
-    z-index: 10; }
+    z-index: 10;
+    top: 0; }
     .slider .slider-control.slider-control-left {
-      top: 0;
       left: 0; }
     .slider .slider-control.slider-control-right {
-      top: 0;
       right: 0; }
 
 .slider-with-lightbox .slider-slides-wrap .slider-slides .slider-slide {
