@@ -8184,11 +8184,9 @@ Action - The action mapper will allow users to toggle each item individually by 
   width: 100%;
   margin: 0 auto; }
   .mapper-list .mapper-items {
-    height: 250px;
-    background-color: #F2F2F2; }
+    height: 250px; }
     .mapper-list .mapper-items .mapper-item {
       width: 100%;
-      background-color: #3C4655;
       padding: 0.5rem 0;
       margin: 0.25rem 0; }
       .mapper-list .mapper-items .mapper-item.item-depth-1 {
@@ -8199,11 +8197,9 @@ Action - The action mapper will allow users to toggle each item individually by 
         padding-left: 45px; }
 
 .mapper-auto .mapper-items .mapper-item {
-  background-color: #3C4655;
   padding: 0.5rem 0; }
 
 .mapper-auto-items .mapper-items .mapper-item {
-  background-color: #3C4655;
   padding: 0.5rem 0; }
 
 .mapper-auto-items .spinner {
@@ -8218,11 +8214,9 @@ Action - The action mapper will allow users to toggle each item individually by 
   width: 100%;
   margin: 0 auto; }
   .mapper-submit .mapper-items .mapper-item {
-    background-color: #3C4655;
     padding: 0.5rem 0; }
 
 .mapper-submit-items .mapper-items .mapper-item {
-  background-color: #3C4655;
   padding: 0.5rem 0; }
 
 .mapper-submit-items .spinner {
@@ -8237,7 +8231,6 @@ Action - The action mapper will allow users to toggle each item individually by 
   width: 100%;
   margin: 0 auto; }
   .mapper-action .mapper-items .mapper-item {
-    background-color: #3C4655;
     padding: 0.5rem 0; }
   .mapper-action .spinner {
     position: absolute;

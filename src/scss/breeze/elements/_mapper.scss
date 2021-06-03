@@ -50,12 +50,12 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 	.mapper-items {
 		height: 250px;
-		background-color: $color-primary;
+		//background-color: $color-primary;
 		// Add scroll based on needs
 
 		.mapper-item {
 			width: 100%;
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 			margin: 0.25rem 0;
 
@@ -85,7 +85,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 	.mapper-items {
 
 		.mapper-item {
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 		}
 	}
@@ -100,7 +100,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 	.mapper-items {
 
 		.mapper-item {
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 
 			.mapper-item-remove {
@@ -130,7 +130,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 	.mapper-items {
 
 		.mapper-item {
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 		}
 	}
@@ -146,7 +146,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 	.mapper-items {
 
 		.mapper-item {
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 
 			.mapper-item-remove {
@@ -178,7 +178,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 	.mapper-items {
 
 		.mapper-item {
-			background-color: $color-secondary;
+			//background-color: $color-secondary;
 			padding: 0.5rem 0;
 		}
 	}
