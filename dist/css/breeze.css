@@ -402,6 +402,12 @@ Notes:
   -moz-border-radius: 13px;
   border-radius: 13px; }
 
+.rounded.rounded-25 {
+  -webkit-border-radius: 25%;
+  -khtml-border-radius: 25%;
+  -moz-border-radius: 25%;
+  border-radius: 25%; }
+
 .rounded.rounded-50 {
   -webkit-border-radius: 50%;
   -khtml-border-radius: 50%;
@@ -8275,17 +8281,20 @@ Action - The action mapper will allow users to toggle each item individually by 
   .mapper-layout.mapper-layout-row-3 .mapper-item, .mapper-layout.mapper-layout-row-4 .mapper-item, .mapper-layout.mapper-layout-row-5 .mapper-item {
     width: 48%; } }
 
-.counter {
+.counter .counter-dec {
   display: inline-block; }
-  .counter .counter-dec {
-    display: inline-block; }
-  .counter .counter-inc {
-    display: inline-block; }
+
+.counter .counter-inc {
+  display: inline-block; }
 
 .counter-basic .counter-control {
   background-color: #87BA45;
   color: #E6E6E6;
-  padding: 0.5em; }
+  padding: 0.5em;
+  cursor: pointer; }
+  .counter-basic .counter-control .disabled {
+    background-color: #3C4655;
+    color: #96B0D6; }
 
 .counter-basic .counter-val {
   width: 75px; }

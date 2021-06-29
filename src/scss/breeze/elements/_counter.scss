@@ -1,5 +1,4 @@
 .counter {
-	display: inline-block;
 
 	.counter-dec {
 		display: inline-block;
@@ -20,6 +19,12 @@
 		background-color: $color-tertiary;
 		color: $color-tertiary-text;
 		padding: 0.5em;
+		cursor: pointer;
+
+		.disabled {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+		}
 	}
 
 	.counter-val {

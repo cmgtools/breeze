@@ -823,6 +823,10 @@ Notes:
 		@include rounded( $size-xlarge );
 	}
 
+	&.rounded-25 {
+		@include rounded( 25% );
+	}
+
 	&.rounded-50 {
 		@include rounded( 50% );
 	}
