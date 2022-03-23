@@ -1,5 +1,7 @@
 module.exports = function( grunt ) {
 
+	const sass = require("node-sass");
+
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
@@ -9,6 +11,7 @@ module.exports = function( grunt ) {
 
 		sass: {
 	        options: {
+				implementation: sass,
 	            sourceMap: true
 	        },
 	        dist: {
